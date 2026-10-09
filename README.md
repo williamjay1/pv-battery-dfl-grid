@@ -1,8 +1,8 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23255309.svg)](https://doi.org/10.5281/zenodo.23255309)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23255406.svg)](https://doi.org/10.5281/zenodo.23255406)
 
 # Decision-focused learning for residential battery control
 
-**Archived release:** https://doi.org/10.5281/zenodo.23255309 (all versions: 10.5281/zenodo.23255308)
+**Archived release:** https://doi.org/10.5281/zenodo.23255406 (all versions: 10.5281/zenodo.23255308)
 
 Code and processed data for the manuscript
 
@@ -82,7 +82,7 @@ dispatch. The manuscript states this boundary explicitly.
 
 ## Citation
 
-See `CITATION.cff`. The archived snapshot is deposited on Zenodo under DOI 10.5281/zenodo.23255309, which is also the
+See `CITATION.cff`. The archived snapshot is deposited on Zenodo under DOI 10.5281/zenodo.23255406, which is also the
 identifier quoted in the manuscript's data availability statement.
 
 ## Licence
