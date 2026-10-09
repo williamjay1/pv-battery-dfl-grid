@@ -1,0 +1,11 @@
+Execution corrections retained for transparency
+
+1. The first new continuous-control preflight failed at Python parsing, before any model fitting, because an audit loss expression had an unmatched parenthesis. The first log is retained as continuous_audit.log; the corrected run is continuous_audit_retry1.log and its full numerical audit passes. No numerical training case was skipped.
+
+2. A running result aggregator once noticed an NPZ path while that file was still being compressed and received BadZipFile. Its failed log control_analysis_latest.log is retained. Aggregation now requires the corresponding JSON completion marker as well as the NPZ; retried summaries succeed. This was a concurrent I/O race, not a damaged completed research artifact or a discarded unfavorable result.
+
+3. To overlap late-stage replay with training, a second queue inadvertently launched the same frozen_msecont_tou_wear0.01 replay already running in the original sequential queue. Both deterministic MSE duplicates completed before cancellation could reach them; their identical setup was not a selection opportunity. The subsequent duplicate DFL replay (started03:43:05 local, launcherPID77720/childPID104920) was cancelled after verifying its full command line, while the earlier original DFL replay (started03:42:47, launcherPID83224/childPID69088) continued. The duplicate's early_replay log remains. No unique model run was cancelled and no parameter was changed. Completed artifacts are independently audited after both queues end.
+
+4. Completed training/dispatch revision-only jobs are retained by existence and completion checks on rerun. Original study files are not overwritten. Re-entered duplicate jobs print that they retain existing results. Per-candidate training traces and timing in JSON are the authoritative history where a queue's console log only contains a later skip notice.
+
+5. The StoreNet pre-run hash manifest covered primary ToU checkpoints but omitted six pre-existing flat-tariff checkpoints. A post-run audit lists every actual loaded checkpoint with current hash/mtime and explicitly identifies original-freeze coverage. This does not backdate coverage of flat checkpoints. The original ToU hash check passed before predictions.

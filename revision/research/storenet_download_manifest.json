@@ -1,0 +1,145 @@
+{
+  "created_utc": "2026-10-08T19:09:55.907555+00:00",
+  "files": [
+    {
+      "household": 1,
+      "url": "https://ndownloader.figshare.com/files/46657426",
+      "path": "F:\\AcademicData\\pv_battery_dfl_grid_20261005\\raw\\revision_external_20261009\\storenet_H1_W_20261009.csv",
+      "bytes": 25712485,
+      "sha256": "5f1aecbcba4a9c41c8c42c8a07ac490958607646f93ec9796d19178acf1ee21c"
+    },
+    {
+      "household": 2,
+      "url": "https://ndownloader.figshare.com/files/46657432",
+      "path": "F:\\AcademicData\\pv_battery_dfl_grid_20261005\\raw\\revision_external_20261009\\storenet_H2_W_20261009.csv",
+      "bytes": 26311199,
+      "sha256": "9a6c0b4e87f156d71a7f2e97954dcc6835468917caadf06e688356d9ed926b8f"
+    },
+    {
+      "household": 3,
+      "url": "https://ndownloader.figshare.com/files/46657441",
+      "path": "F:\\AcademicData\\pv_battery_dfl_grid_20261005\\raw\\revision_external_20261009\\storenet_H3_W_20261009.csv",
+      "bytes": 26285261,
+      "sha256": "a1e06f05ead2e2d171d7344569ca8e1333af065a88be59c1f9bc7d4c966a3a89"
+    },
+    {
+      "household": 4,
+      "url": "https://ndownloader.figshare.com/files/46657246",
+      "path": "F:\\AcademicData\\pv_battery_dfl_grid_20261005\\raw\\revision_external_20261009\\storenet_H4_W_20261009.csv",
+      "bytes": 29035442,
+      "sha256": "ff7a73a9b544cd4c204709f09b59986a8eb4bbf2cd35ef197d7f59f143b4517b"
+    },
+    {
+      "household": 5,
+      "url": "https://ndownloader.figshare.com/files/46657450",
+      "path": "F:\\AcademicData\\pv_battery_dfl_grid_20261005\\raw\\revision_external_20261009\\storenet_H5_W_20261009.csv",
+      "bytes": 26436037,
+      "sha256": "3b7ac29afe378cc4f4f03ac366ead46850d4b3edb3a06aa4baf72fcbdb263ad5"
+    },
+    {
+      "household": 6,
+      "url": "https://ndownloader.figshare.com/files/46657243",
+      "path": "F:\\AcademicData\\pv_battery_dfl_grid_20261005\\raw\\revision_external_20261009\\storenet_H6_W_20261009.csv",
+      "bytes": 25652496,
+      "sha256": "cb2a94e2641fa5abae90df37b42bb7bdb923715aa09bc3d7c35f94e39bdad2c5"
+    },
+    {
+      "household": 7,
+      "url": "https://ndownloader.figshare.com/files/46657447",
+      "path": "F:\\AcademicData\\pv_battery_dfl_grid_20261005\\raw\\revision_external_20261009\\storenet_H7_W_20261009.csv",
+      "bytes": 26253419,
+      "sha256": "520a07049ad90662c136506a1e4790537c8b0be8f87df32f0f52920380c819c1"
+    },
+    {
+      "household": 8,
+      "url": "https://ndownloader.figshare.com/files/46657453",
+      "path": "F:\\AcademicData\\pv_battery_dfl_grid_20261005\\raw\\revision_external_20261009\\storenet_H8_W_20261009.csv",
+      "bytes": 25962474,
+      "sha256": "7428f3e804a89c9e23f6a96563029aa2fd96ce95c7f788ad2c23142897a6877d"
+    },
+    {
+      "household": 9,
+      "url": "https://ndownloader.figshare.com/files/46657234",
+      "path": "F:\\AcademicData\\pv_battery_dfl_grid_20261005\\raw\\revision_external_20261009\\storenet_H9_W_20261009.csv",
+      "bytes": 25486997,
+      "sha256": "47ef617b379cc2be2acf2c72cd1ca2522d7736009edb2712060cb7591f41a350"
+    },
+    {
+      "household": 10,
+      "url": "https://ndownloader.figshare.com/files/46657249",
+      "path": "F:\\AcademicData\\pv_battery_dfl_grid_20261005\\raw\\revision_external_20261009\\storenet_H10_W_20261009.csv",
+      "bytes": 26243860,
+      "sha256": "50b94d5294f29a25456e14a1183291df9d2783f674678b6244545c0970a7ec53"
+    },
+    {
+      "household": 11,
+      "url": "https://ndownloader.figshare.com/files/46657240",
+      "path": "F:\\AcademicData\\pv_battery_dfl_grid_20261005\\raw\\revision_external_20261009\\storenet_H11_W_20261009.csv",
+      "bytes": 26012381,
+      "sha256": "69fc639e62ed2377a96b96e776db035368acdb2c479708d9ee4d27e30de785ec"
+    },
+    {
+      "household": 12,
+      "url": "https://ndownloader.figshare.com/files/46657417",
+      "path": "F:\\AcademicData\\pv_battery_dfl_grid_20261005\\raw\\revision_external_20261009\\storenet_H12_W_20261009.csv",
+      "bytes": 25775627,
+      "sha256": "9115bcc92cbf2402fef937fad72df85ece5459e10c14a54006be3e89d1491614"
+    },
+    {
+      "household": 13,
+      "url": "https://ndownloader.figshare.com/files/46657444",
+      "path": "F:\\AcademicData\\pv_battery_dfl_grid_20261005\\raw\\revision_external_20261009\\storenet_H13_W_20261009.csv",
+      "bytes": 26207181,
+      "sha256": "b4a272cfaba5e61c3c00e41f62ad94156b4f10d14445755a02cdd8f2a1f2676e"
+    },
+    {
+      "household": 14,
+      "url": "https://ndownloader.figshare.com/files/46657438",
+      "path": "F:\\AcademicData\\pv_battery_dfl_grid_20261005\\raw\\revision_external_20261009\\storenet_H14_W_20261009.csv",
+      "bytes": 23991311,
+      "sha256": "6cae6cd46e8d987e3f4788ac2c13be613a5ea7d85c8931643065dd583b2143c3"
+    },
+    {
+      "household": 15,
+      "url": "https://ndownloader.figshare.com/files/46657231",
+      "path": "F:\\AcademicData\\pv_battery_dfl_grid_20261005\\raw\\revision_external_20261009\\storenet_H15_W_20261009.csv",
+      "bytes": 25686282,
+      "sha256": "cbe2725e771475f1947ef1091bee9e4f7d8574e818f18e58e97e345346ad47b3"
+    },
+    {
+      "household": 16,
+      "url": "https://ndownloader.figshare.com/files/46657423",
+      "path": "F:\\AcademicData\\pv_battery_dfl_grid_20261005\\raw\\revision_external_20261009\\storenet_H16_W_20261009.csv",
+      "bytes": 25238153,
+      "sha256": "0b5d5d7c869e6829175298fb0acc97e1032f31e21da020cccc1043a836c6a0dc"
+    },
+    {
+      "household": 17,
+      "url": "https://ndownloader.figshare.com/files/46657237",
+      "path": "F:\\AcademicData\\pv_battery_dfl_grid_20261005\\raw\\revision_external_20261009\\storenet_H17_W_20261009.csv",
+      "bytes": 25922951,
+      "sha256": "7432d0fc3f417964158e3585bf93f351895eb38736ea78b2debd7fbeef45ec81"
+    },
+    {
+      "household": 18,
+      "url": "https://ndownloader.figshare.com/files/46657435",
+      "path": "F:\\AcademicData\\pv_battery_dfl_grid_20261005\\raw\\revision_external_20261009\\storenet_H18_W_20261009.csv",
+      "bytes": 25726232,
+      "sha256": "df5f8e63ccec382692471c114386ca28a3658eb4cc27807297c37bab1e155a44"
+    },
+    {
+      "household": 19,
+      "url": "https://ndownloader.figshare.com/files/46657429",
+      "path": "F:\\AcademicData\\pv_battery_dfl_grid_20261005\\raw\\revision_external_20261009\\storenet_H19_W_20261009.csv",
+      "bytes": 25564772,
+      "sha256": "1cbce140e06aaac4898c9ca3315312be71337d4a60c625996cd5facec62e2284"
+    },
+    {
+      "household": 20,
+      "url": "https://ndownloader.figshare.com/files/46657420",
+      "path": "F:\\AcademicData\\pv_battery_dfl_grid_20261005\\raw\\revision_external_20261009\\storenet_H20_W_20261009.csv",
+      "bytes": 25823765,
+      "sha256": "f2915ab3a5647ab1e402cf70a5f7fcf63c220652db63e8c23546e0c1f9e6eac0"
+    }
+  ]
+}

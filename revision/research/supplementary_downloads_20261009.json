@@ -1,0 +1,25 @@
+[
+  {
+    "path": "F:\\AcademicData\\pv_battery_dfl_grid_20261005\\raw\\revision_external_20261009\\epsr_v2g_112082_20261009.pdf",
+    "url": "https://pure.tudelft.nl/ws/portalfiles/portal/253350644/1-s2.0-S0378779625006704-main.pdf",
+    "bytes": 2599867,
+    "sha256": "f2efcf73a9f627adb7367c31d89b843453348915014f9971d836199056cfa0cd"
+  },
+  {
+    "name": "epsr_flexibility_ssrn_5446668_20261009.pdf",
+    "url": "https://papers.ssrn.com/sol3/Delivery.cfm/743993de-293e-4bc8-a48e-de40abf27685-MECA.pdf?abstractid=5446668&mirid=1",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "path": "F:\\AcademicData\\pv_battery_dfl_grid_20261005\\raw\\revision_external_20261009\\storenet_figshare_H4_metadata_20261009.json",
+    "url": "https://api.figshare.com/v2/articles/25927198",
+    "bytes": 3370,
+    "sha256": "4c6f8f639b5840cac91b9a1a97aa262316963b170caecd38dea6ccd690b7e66d"
+  },
+  {
+    "path": "F:\\AcademicData\\pv_battery_dfl_grid_20261005\\raw\\revision_external_20261009\\storenet_processing_retry_20261009.py",
+    "url": "https://ndownloader.figshare.com/files/46659085",
+    "bytes": 8698,
+    "sha256": "ace22286fe4242a732fcb847c78648d0b747227fbfd6bb749e2d8dc27c521db2"
+  }
+]

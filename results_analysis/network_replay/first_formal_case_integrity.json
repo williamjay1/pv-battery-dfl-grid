@@ -1,0 +1,9 @@
+{
+  "case": "mlp_seed11_panel0_b28_all_tou_eulv_src1p05_fixed_test_tight.npz",
+  "converged_slots": 15216,
+  "max_physical_balance_residual_kw": 4.8872036768621285e-05,
+  "row_alignment": true,
+  "mask_alignment": true,
+  "input_finitemask_equal": true,
+  "mean_bill_matches_byhouse": true
+}

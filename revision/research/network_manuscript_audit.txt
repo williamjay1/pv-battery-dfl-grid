@@ -1,0 +1,19 @@
+NETWORK MANUSCRIPT READ-ONLY AUDIT
+2026-10-08T20:08:16.324068+00:00
+PASS
+Numerical/table checks: 441/441 pass.
+
+Required corrections:
+
+Verified conclusions:
+- Table 5 boundaries are consistent with actual evidence; no field-compliance, dynamics, lifetime or primary thermal-congestion claim.
+- Sections 3.3 and 3.5 correctly retain increased conditional severity at source1.05/1.00, nonzero wide-band undervoltage, rural transformer overload, nonuniform SAA voltage ordering, and adverse matched-persistence network changes.
+- Continued MSE is the primary comparator in five source/topology conditions, four PF/Z brackets and ten mappings; frozen MSE is secondary. Full tariff/adoption cells encode nine independent physical deployments rather than 12.
+- Geography uses 27/27 households and160 common clean dates. Cost and voltage denominators are27. Its gap-of-gaps confidence intervals are descriptive and not causal geography estimates.
+- Mechanism day date2012-08-24,22:00 demand delta-2.41705157kW,mean voltage+0.00073359988pu,maxabs0.00206410885pu; full19case error and nearzero-case caveat match saved arrays.
+- All overnight-support-matched direct-net additions completed. DFL versus net24_night reduces cost but increases import peaks in all four panels; signed diagnostic results must remain separately labeled.
+- No manuscript/source files were changed by this read-only audit. No new experimental setting was run.
+
+Exact manuscript hashes:
+revision_20261009\manuscript\article_full.txt: 460c0fdc2024da2dbd66c8755d8cb94c0129ab7a1e816489e497fc53f1e80023
+revision_20261009\manuscript\supplement_full.txt: 15d27d875bf4e19fceccf3a356b165df51e5aac765fd0431a730721937ca7caa

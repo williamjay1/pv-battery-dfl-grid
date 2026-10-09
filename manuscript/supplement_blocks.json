@@ -1,0 +1,1542 @@
+{
+ "title": "Supplementary methods and results",
+ "blocks": [
+  {
+   "type": "title",
+   "text": "Supplementary methods and results"
+  },
+  {
+   "type": "paragraph",
+   "text": "Companion to: When does decision-focused learning add value to residential battery control? Private costs and AC feeder consequences."
+  },
+  {
+   "type": "heading",
+   "text": "S1. Source chronology, coverage and sample formation"
+  },
+  {
+   "type": "paragraph",
+   "text": "The source-clock half-hours and data-quality indicators are retained. Nominal PV capacity is taken from information available before each target day, not estimated by outcome maximization. Known-household training has 132,200 days and validation 44,373; test evaluation has 88,609 known and 20,032 held-out GC/PV-valid days. The CL-valid absolute-cost sample is 107,713 days. Estimated measurements and required-channel gaps are excluded, and no missing meter record is synthesized. Feeder complete dates must satisfy every assigned household’s required channels. The expanded private comparison and joint feeder comparison thus answer different estimands."
+  },
+  {
+   "type": "table",
+   "caption": "Table S1a. Jointly clean dates by calendar month.",
+   "headers": [
+    "Month",
+    "Calendar",
+    "Panel 1",
+    "Panel 2",
+    "Panel 3",
+    "Held-out"
+   ],
+   "rows": [
+    [
+     "2012-07",
+     "31",
+     "0",
+     "12",
+     "31",
+     "31"
+    ],
+    [
+     "2012-08",
+     "31",
+     "8",
+     "0",
+     "31",
+     "23"
+    ],
+    [
+     "2012-09",
+     "30",
+     "20",
+     "0",
+     "30",
+     "30"
+    ],
+    [
+     "2012-10",
+     "31",
+     "31",
+     "0",
+     "31",
+     "31"
+    ],
+    [
+     "2012-11",
+     "30",
+     "30",
+     "1",
+     "30",
+     "30"
+    ],
+    [
+     "2012-12",
+     "31",
+     "31",
+     "31",
+     "31",
+     "31"
+    ],
+    [
+     "2013-01",
+     "31",
+     "31",
+     "25",
+     "25",
+     "25"
+    ],
+    [
+     "2013-02",
+     "28",
+     "7",
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "2013-03",
+     "31",
+     "0",
+     "0",
+     "0",
+     "0"
+    ],
+    [
+     "2013-04",
+     "30",
+     "17",
+     "10",
+     "18",
+     "21"
+    ],
+    [
+     "2013-05",
+     "31",
+     "23",
+     "20",
+     "22",
+     "22"
+    ],
+    [
+     "2013-06",
+     "30",
+     "21",
+     "30",
+     "27",
+     "30"
+    ],
+    [
+     "Total",
+     "365",
+     "219",
+     "129",
+     "276",
+     "274"
+    ]
+   ],
+   "note": "Counts are actual evaluated dates, not bootstrap replicates. Panel 2 coverage is 35.3% of the calendar. Zero months remain in the calendar-axis resampling array."
+  },
+  {
+   "type": "table",
+   "caption": "Table S1b. Load and PV on retained feeder dates versus individually valid dates.",
+   "headers": [
+    "Panel",
+    "Joint dates",
+    "Joint demand (kWh/day)",
+    "Joint PV (kWh/day)",
+    "Individual days",
+    "Individual demand",
+    "Individual PV"
+   ],
+   "rows": [
+    [
+     "1",
+     "219",
+     "18.24",
+     "5.91",
+     "19968",
+     "18.98",
+     "5.70"
+    ],
+    [
+     "2",
+     "129",
+     "18.41",
+     "6.05",
+     "19764",
+     "17.13",
+     "6.94"
+    ],
+    [
+     "3",
+     "276",
+     "17.85",
+     "5.86",
+     "19897",
+     "17.43",
+     "5.86"
+    ],
+    [
+     "Held-out",
+     "274",
+     "18.22",
+     "5.65",
+     "19943",
+     "17.53",
+     "5.75"
+    ]
+   ],
+   "note": "Both descriptions use observed gross GC+CL and PV. Individually valid days need not support all-site AC replay and are not a missing-data correction. Main private GC/PV comparisons additionally allow CL cancellation."
+  },
+  {
+   "type": "heading",
+   "text": "S2. Learning and baseline specifications"
+  },
+  {
+   "type": "paragraph",
+   "text": "The 774-input PV network uses 128/64 ReLU hidden units and 48 softplus outputs. Supervised configuration selection precedes three-seed initialization. DFL and continued MSE share 4,096 training pairs, 1,024 validation pairs, batch 32, four epochs, AdamW weight decay 10⁻⁴, gradient clipping at norm 1, and learning-rate candidates 10⁻⁴ and 3×10⁻⁵. Initial checkpoints are eligible; downstream validation cost chooses each arm’s checkpoint. All initialization, sampling and selection records are retained, including unsuccessful settings. Night restriction fixes 00:00–04:00 and 21:00–24:00 to zero. The window follows the measured generation support of the Ausgrid test records."
+  },
+  {
+   "type": "paragraph",
+   "text": "Three-offset and twelve-offset calibration use bounds 0.25×tanh(parameter) in capacity-normalized units, three epochs of Adam at 0.03 and training batch 32. Calibration uses 2,048 known training and 2,048 validation examples. Validation chooses shrinkage in {0,0.25,0.5,0.75,1}. The seasonal variant crosses three fixed daytime windows with DJF/MAM/JJA/SON. Direct net-load prediction uses signed linear outputs, the same inputs, and full training/validation splits; two prespecified AdamW configurations are selected by validation MSE with at most 30 epochs and patience six. Six four-hour windows by four seasons give 24 cost-calibration parameters. The primary direct-net comparison applies an explicit support-matched nighttime projection, and the unrestricted signed variant is reported separately."
+  },
+  {
+   "type": "paragraph",
+   "text": "The stronger demand network has 256/128 hidden units and softplus outputs. Validation chooses the mixture of the original HGB and this network among weights 0,0.25,0.5,0.75,1; it selects 0.5. A previous-day profile is the persistence comparator. Residual scenarios use the original frozen forecast backbone and 20 joint load/PV daily residual paths from 147 clean validation dates. A deterministic donor policy supplies household-held-out residuals. Shared battery actions apply in every scenario; no oracle recourse, network coordination or test residual fitting is introduced."
+  },
+  {
+   "type": "table",
+   "caption": "Table S2. Complete all-household baseline comparison.",
+   "headers": [
+    "Tariff",
+    "Method",
+    "Full cost",
+    "Retail",
+    "Throughput",
+    "Paired Δ (cents)",
+    "95% interval"
+   ],
+   "rows": [
+    [
+     "tou",
+     "msecont",
+     "3.53815",
+     "3.29425",
+     "12.195",
+     "0",
+     "Reference"
+    ],
+    [
+     "tou",
+     "dfl",
+     "3.52683",
+     "3.28929",
+     "11.877",
+     "-1.131",
+     "-1.282 to -0.997"
+    ],
+    [
+     "tou",
+     "calibrated3",
+     "3.53202",
+     "3.29433",
+     "11.884",
+     "-0.612",
+     "-0.685 to -0.537"
+    ],
+    [
+     "tou",
+     "stochastic20",
+     "3.50217",
+     "3.28616",
+     "10.801",
+     "-3.593",
+     "-3.899 to -3.277"
+    ],
+    [
+     "tou",
+     "seasonal12",
+     "3.53235",
+     "3.29400",
+     "11.918",
+     "-0.579",
+     "-0.723 to -0.432"
+    ],
+    [
+     "tou",
+     "net_mse_night",
+     "3.57396",
+     "3.32495",
+     "12.451",
+     "3.568",
+     "3.151 to 4.028"
+    ],
+    [
+     "tou",
+     "net_calibrated24_night",
+     "3.55907",
+     "3.32795",
+     "11.556",
+     "2.087",
+     "1.733 to 2.485"
+    ],
+    [
+     "tou",
+     "net_mse",
+     "3.57398",
+     "3.32496",
+     "12.451",
+     "3.570",
+     "3.153 to 4.030"
+    ],
+    [
+     "tou",
+     "net_calibrated24",
+     "3.56029",
+     "3.32817",
+     "11.606",
+     "2.209",
+     "1.847 to 2.621"
+    ],
+    [
+     "flat",
+     "msecont",
+     "3.74045",
+     "3.67408",
+     "3.318",
+     "0",
+     "Reference"
+    ],
+    [
+     "flat",
+     "dfl",
+     "3.72835",
+     "3.65093",
+     "3.871",
+     "-1.216",
+     "-1.426 to -0.987"
+    ],
+    [
+     "flat",
+     "calibrated3",
+     "3.73478",
+     "3.66022",
+     "3.728",
+     "-0.565",
+     "-0.703 to -0.408"
+    ],
+    [
+     "flat",
+     "stochastic20",
+     "3.69327",
+     "3.60592",
+     "4.367",
+     "-4.725",
+     "-5.187 to -4.177"
+    ],
+    [
+     "flat",
+     "seasonal12",
+     "3.73705",
+     "3.66160",
+     "3.773",
+     "-0.339",
+     "-0.526 to -0.138"
+    ],
+    [
+     "flat",
+     "net_mse_night",
+     "3.75486",
+     "3.69202",
+     "3.142",
+     "1.443",
+     "1.153 to 1.769"
+    ],
+    [
+     "flat",
+     "net_calibrated24_night",
+     "3.74349",
+     "3.67416",
+     "3.466",
+     "0.306",
+     "0.045 to 0.602"
+    ],
+    [
+     "flat",
+     "net_mse",
+     "3.75502",
+     "3.69214",
+     "3.144",
+     "1.458",
+     "1.170 to 1.785"
+    ],
+    [
+     "flat",
+     "net_calibrated24",
+     "3.74384",
+     "3.67369",
+     "3.507",
+     "0.341",
+     "0.078 to 0.630"
+    ]
+   ],
+   "note": "Cost and retail: AUD/day, same 107,713 CL-valid days; listed throughput is independently reaggregated on that same mask. Paired Δ uses 108,641 GC/PV days, identical CL charge cancels. Negative Δ favors the row method over continued MSE. Seed 11; unsuccessful candidates are retained."
+  },
+  {
+   "type": "paragraph",
+   "text": "Predictive metrics are diagnostic, not downstream selection criteria for task learning. The common and selected mixed demand validation RMSEs are 0.547316 and 0.542329 kW, respectively; the neural-only demand model has 0.5510 kW validation RMSE. On the 244 known households and 88,609 test household-days, the original unrestricted signed direct-net MSE has about 0.6253 kW test RMSE versus about 0.6184 kW for the separated MSE net input. These diagnostic values come from the unrestricted signed variant rather than the support-matched baseline and do not establish architecture necessity. Complete split and role metrics accompany the machine-readable reproduction records."
+  },
+  {
+   "type": "heading",
+   "text": "S3. Resource conditions and numerical definitions"
+  },
+  {
+   "type": "paragraph",
+   "text": "Resource timings use 1,024 fixed validation pairs, 20 warmups and three serial method repeats, with one numerical thread per subprocess. Other analysis jobs run concurrently. Windows CPU-clock granularity affects individual process-CPU measurements; both wall and CPU summaries are retained. Common original supervised fitting is excluded. Continued-MSE/DFL resource refits reproduce their original fitting protocol, while performance uses the original frozen models. All sample counts, validation procedures and memory scope are reported rather than treating different fitting procedures as equal-budget attribution tests."
+  },
+  {
+   "type": "table",
+   "caption": "Table S3. Full resource measurement.",
+   "headers": [
+    "Method",
+    "Learn (s)",
+    "Mean wall (ms)",
+    "p95 wall (ms)",
+    "Mean CPU (ms)",
+    "Replay RSS (MB)",
+    "Learn RSS (MB)"
+   ],
+   "rows": [
+    [
+     "msecont",
+     "21.76",
+     "1.453",
+     "1.883",
+     "1.429",
+     "618.4",
+     "854.8"
+    ],
+    [
+     "dfl",
+     "385.58",
+     "1.461",
+     "1.915",
+     "1.419",
+     "619.2",
+     "938.8"
+    ],
+    [
+     "calibrated3",
+     "87.31",
+     "1.476",
+     "1.889",
+     "1.460",
+     "807.9",
+     "936.2"
+    ],
+    [
+     "stochastic20",
+     "0.01",
+     "9.344",
+     "11.754",
+     "9.145",
+     "618.5",
+     "Undefined"
+    ]
+   ],
+   "note": "RSS includes interpreter, dependencies and loaded arrays. No memory claim for a hypothetical embedded deployment is inferred. SAA learning is residual extraction only."
+  },
+  {
+   "type": "heading",
+   "text": "S4. Direction, severity, worst locations and event persistence"
+  },
+  {
+   "type": "table",
+   "caption": "Table S4a. Voltage direction and conditional severity.",
+   "headers": [
+    "Network",
+    "Source",
+    "Method",
+    "Over (%)",
+    "Under (%)",
+    "Cond. over (pu)",
+    "Cond. under (pu)"
+   ],
+   "rows": [
+    [
+     "eulv",
+     "1.050",
+     "dfl",
+     "17.901",
+     "0.023",
+     "0.003159",
+     "0.006814"
+    ],
+    [
+     "eulv",
+     "1.050",
+     "msecont",
+     "18.751",
+     "0.026",
+     "0.003144",
+     "0.007081"
+    ],
+    [
+     "eulv",
+     "1.025",
+     "dfl",
+     "0.000",
+     "0.198",
+     "Undefined",
+     "0.013400"
+    ],
+    [
+     "eulv",
+     "1.000",
+     "dfl",
+     "0.000",
+     "1.359",
+     "Undefined",
+     "0.013459"
+    ],
+    [
+     "rural1",
+     "1.025",
+     "dfl",
+     "0.000",
+     "0.000",
+     "Undefined",
+     "Undefined"
+    ],
+    [
+     "semiurb4",
+     "1.025",
+     "dfl",
+     "0.000",
+     "0.000",
+     "Undefined",
+     "Undefined"
+    ],
+    [
+     "eulv",
+     "1.025",
+     "msecont",
+     "0.000",
+     "0.207",
+     "Undefined",
+     "0.013702"
+    ],
+    [
+     "eulv",
+     "1.000",
+     "msecont",
+     "0.000",
+     "1.460",
+     "Undefined",
+     "0.013346"
+    ],
+    [
+     "rural1",
+     "1.025",
+     "msecont",
+     "0.000",
+     "0.000",
+     "Undefined",
+     "Undefined"
+    ],
+    [
+     "semiurb4",
+     "1.025",
+     "msecont",
+     "0.000",
+     "0.000",
+     "Undefined",
+     "Undefined"
+    ]
+   ],
+   "note": "All comparisons use panel 1, seed 11, full ToU. Conditional magnitude is pooled over event-bearing customer half-hours; no event means undefined, not zero."
+  },
+  {
+   "type": "table",
+   "caption": "Table S4b. Voltage tails, worst sites and persistence.",
+   "headers": [
+    "Network",
+    "Source",
+    "Method",
+    "q99 (pu)",
+    "Max (pu)",
+    "Worst O/U site",
+    "Longest O (h)",
+    "Longest U (h)"
+   ],
+   "rows": [
+    [
+     "eulv",
+     "1.050",
+     "dfl",
+     "1.058259",
+     "1.071583",
+     "53/29",
+     "14.0",
+     "0.5"
+    ],
+    [
+     "eulv",
+     "1.050",
+     "msecont",
+     "1.058341",
+     "1.071964",
+     "50/29",
+     "14.5",
+     "0.5"
+    ],
+    [
+     "eulv",
+     "1.025",
+     "dfl",
+     "1.033462",
+     "1.047158",
+     "Undefined/29",
+     "0.0",
+     "2.0"
+    ],
+    [
+     "eulv",
+     "1.000",
+     "dfl",
+     "1.008671",
+     "1.022767",
+     "Undefined/29",
+     "0.0",
+     "7.0"
+    ],
+    [
+     "rural1",
+     "1.025",
+     "dfl",
+     "1.024385",
+     "1.029856",
+     "Undefined/Undefined",
+     "0.0",
+     "0.0"
+    ],
+    [
+     "semiurb4",
+     "1.025",
+     "dfl",
+     "1.024468",
+     "1.028303",
+     "Undefined/Undefined",
+     "0.0",
+     "0.0"
+    ],
+    [
+     "eulv",
+     "1.025",
+     "msecont",
+     "1.033545",
+     "1.047548",
+     "Undefined/29",
+     "0.0",
+     "2.0"
+    ],
+    [
+     "eulv",
+     "1.000",
+     "msecont",
+     "1.008758",
+     "1.023165",
+     "Undefined/29",
+     "0.0",
+     "7.0"
+    ],
+    [
+     "rural1",
+     "1.025",
+     "msecont",
+     "1.024355",
+     "1.028839",
+     "Undefined/Undefined",
+     "0.0",
+     "0.0"
+    ],
+    [
+     "semiurb4",
+     "1.025",
+     "msecont",
+     "1.024454",
+     "1.027830",
+     "Undefined/Undefined",
+     "0.0",
+     "0.0"
+    ]
+   ],
+   "note": "Site indices are 1-based household assignment slots. In SimBench, these 55 slots repeat the voltage of the corresponding 13 or 41 native load locations, and pooled voltage statistics weight those 55 assignments; they are not native bus indices. No-event worst sites are undefined. Episode lengths concatenate contiguous observed half-hours and break on missing dates; they describe half-hour-average excursions, not subinterval dynamics. Node quantiles, episode counts and p95 lengths remain in machine arrays."
+  },
+  {
+   "type": "heading",
+   "text": "S5. Physical and mapping brackets"
+  },
+  {
+   "type": "table",
+   "caption": "Table S5. Matched network-model sensitivity.",
+   "headers": [
+    "Family",
+    "Setting",
+    "Voltage Δ (pp)",
+    "Import Δ (kW)",
+    "Export Δ (kW)",
+    "Loss Δ (kWh/day)"
+   ],
+   "rows": [
+    [
+     "physical_brackets",
+     "PF 0.95; Z 0.9",
+     "-0.847",
+     "-1.758",
+     "0.387",
+     "-0.374"
+    ],
+    [
+     "physical_brackets",
+     "PF 0.9; Z 1.0",
+     "-0.734",
+     "-1.776",
+     "0.387",
+     "-0.422"
+    ],
+    [
+     "physical_brackets",
+     "PF 1.0; Z 1.0",
+     "-1.083",
+     "-1.771",
+     "0.387",
+     "-0.413"
+    ],
+    [
+     "physical_brackets",
+     "PF 0.95; Z 1.1",
+     "-0.876",
+     "-1.791",
+     "0.387",
+     "-0.465"
+    ],
+    [
+     "mapping",
+     "0",
+     "-0.965",
+     "-1.765",
+     "0.386",
+     "-0.445"
+    ],
+    [
+     "mapping",
+     "1",
+     "-0.667",
+     "-1.752",
+     "0.386",
+     "-0.382"
+    ],
+    [
+     "mapping",
+     "2",
+     "-0.953",
+     "-1.755",
+     "0.385",
+     "-0.468"
+    ],
+    [
+     "mapping",
+     "3",
+     "-0.735",
+     "-1.779",
+     "0.386",
+     "-0.446"
+    ],
+    [
+     "mapping",
+     "4",
+     "-0.886",
+     "-1.754",
+     "0.386",
+     "-0.431"
+    ],
+    [
+     "mapping",
+     "5",
+     "-0.823",
+     "-1.776",
+     "0.388",
+     "-0.455"
+    ],
+    [
+     "mapping",
+     "6",
+     "-0.716",
+     "-1.751",
+     "0.385",
+     "-0.395"
+    ],
+    [
+     "mapping",
+     "7",
+     "-0.795",
+     "-1.750",
+     "0.387",
+     "-0.427"
+    ],
+    [
+     "mapping",
+     "8",
+     "-0.837",
+     "-1.746",
+     "0.389",
+     "-0.425"
+    ],
+    [
+     "mapping",
+     "9",
+     "-0.812",
+     "-1.745",
+     "0.386",
+     "-0.381"
+    ]
+   ],
+   "note": "DFL minus continued MSE; seed 11, panel 1. Transformer rating and parameters are unchanged during line-impedance scaling. These are bounded model sensitivity cases, not calibration to an observed physical feeder."
+  },
+  {
+   "type": "heading",
+   "text": "S6. Frozen transport, matched retraining and inventory accounting"
+  },
+  {
+   "type": "table",
+   "caption": "Table S6. Complete private-cost condition matrix.",
+   "headers": [
+    "Family",
+    "Setting",
+    "Question",
+    "Paired days",
+    "Δ (cents/day)",
+    "95% interval",
+    "Benefiting HH (%)"
+   ],
+   "rows": [
+    [
+     "Load",
+     "persistence",
+     "frozen",
+     "108641",
+     "0.312",
+     "-0.064 to 0.673",
+     "55.5"
+    ],
+    [
+     "Load",
+     "persistence",
+     "matched",
+     "108641",
+     "-1.475",
+     "-1.847 to -1.138",
+     "97.7"
+    ],
+    [
+     "Load",
+     "strong",
+     "frozen",
+     "108641",
+     "-1.194",
+     "-1.343 to -1.057",
+     "96.7"
+    ],
+    [
+     "Load",
+     "strong",
+     "matched",
+     "108641",
+     "-1.235",
+     "-1.417 to -1.059",
+     "96.7"
+    ],
+    [
+     "Wear",
+     "0",
+     "frozen actions repriced",
+     "108641",
+     "-0.495",
+     "-0.660 to -0.346",
+     "86.0"
+    ],
+    [
+     "Wear",
+     "0",
+     "frozen signals reoptimized",
+     "108641",
+     "-0.495",
+     "-0.660 to -0.346",
+     "86.0"
+    ],
+    [
+     "Wear",
+     "0",
+     "matched signals reoptimized",
+     "108641",
+     "-0.792",
+     "-0.987 to -0.605",
+     "94.3"
+    ],
+    [
+     "Wear",
+     "0.01",
+     "frozen actions repriced",
+     "108641",
+     "-0.813",
+     "-0.969 to -0.675",
+     "94.6"
+    ],
+    [
+     "Wear",
+     "0.01",
+     "frozen signals reoptimized",
+     "108641",
+     "-0.813",
+     "-0.969 to -0.675",
+     "94.6"
+    ],
+    [
+     "Wear",
+     "0.01",
+     "matched signals reoptimized",
+     "108641",
+     "-0.868",
+     "-1.038 to -0.714",
+     "96.0"
+    ],
+    [
+     "Wear",
+     "0.04",
+     "frozen actions repriced",
+     "108641",
+     "-1.767",
+     "-1.910 to -1.634",
+     "97.0"
+    ],
+    [
+     "Wear",
+     "0.04",
+     "frozen signals reoptimized",
+     "108641",
+     "-1.767",
+     "-1.910 to -1.634",
+     "97.0"
+    ],
+    [
+     "Wear",
+     "0.04",
+     "matched signals reoptimized",
+     "108641",
+     "-2.416",
+     "-2.566 to -2.265",
+     "95.7"
+    ],
+    [
+     "Continuous SOC",
+     "raw_operating",
+     "frozen",
+     "108641",
+     "-1.135",
+     "-1.282 to -1.003",
+     "96.7"
+    ],
+    [
+     "Continuous SOC",
+     "inventory_adjusted",
+     "frozen",
+     "108641",
+     "-1.135",
+     "-1.283 to -1.001",
+     "96.7"
+    ],
+    [
+     "Continuous SOC",
+     "raw_operating",
+     "matched",
+     "108641",
+     "-1.313",
+     "-1.455 to -1.174",
+     "96.3"
+    ],
+    [
+     "Continuous SOC",
+     "inventory_adjusted",
+     "matched",
+     "108641",
+     "-1.313",
+     "-1.457 to -1.172",
+     "96.3"
+    ]
+   ],
+   "note": "DFL minus its condition-matched MSE comparator, seed 11. Frozen repricing changes no action; frozen reoptimization changes the controller objective; matched retraining changes the signal under that objective. Macro estimands and held-out/known cohorts are separately retained in control_transfer_summary. Inventory-adjusted cost is not actual retail settlement."
+  },
+  {
+   "type": "paragraph",
+   "text": "Continuous SOC uses daily 24-hour QPs and two-day training rollout. Of the original sampled anchors, 4,088 training and 1,021 validation windows have the next day in the appropriate split. Each training window starts at 5 kWh; test carries energy across 328 complete evaluated household segments and does not reset every two days. The terminal inventory function includes both linear and quadratic terms. Segment corrections telescope as V(start)−V(end); invalid observation boundaries are common across arms. Average daily terminal energy is about 5.22 kWh for matched learners. The finite-difference gradient check includes 20 real examples, three joint net/SOC directions and three step scales, with a maximum best-scale absolute discrepancy of 5.32×10⁻¹⁰. This establishes local KKT consistency, not a globally smooth active-set map."
+  },
+  {
+   "type": "heading",
+   "text": "S7. Network consequences after input and controller change"
+  },
+  {
+   "type": "table",
+   "caption": "Table S7. Control-condition private and AC outcome contrasts.",
+   "headers": [
+    "Condition",
+    "Panel",
+    "Cost Δ (cents)",
+    "Over Δ (pp)",
+    "Over 95% interval",
+    "Import Δ (kW)",
+    "Loss Δ (kWh)"
+   ],
+   "rows": [
+    [
+     "continuous_frozen_transfer",
+     "1",
+     "-1.153",
+     "-0.831",
+     "-0.975 to -0.700",
+     "-1.637",
+     "-0.400"
+    ],
+    [
+     "continuous_frozen_transfer",
+     "Held-out",
+     "-1.030",
+     "-0.724",
+     "-0.922 to -0.537",
+     "-1.118",
+     "-0.406"
+    ],
+    [
+     "continuous_matched_retraining",
+     "1",
+     "-1.377",
+     "-1.136",
+     "-1.310 to -0.972",
+     "-2.638",
+     "-0.564"
+    ],
+    [
+     "continuous_matched_retraining",
+     "Held-out",
+     "-1.099",
+     "-1.040",
+     "-1.273 to -0.824",
+     "-2.082",
+     "-0.601"
+    ],
+    [
+     "load_persistence_frozen_transfer",
+     "1",
+     "0.303",
+     "-0.709",
+     "-0.845 to -0.572",
+     "-2.183",
+     "-0.409"
+    ],
+    [
+     "load_persistence_frozen_transfer",
+     "Held-out",
+     "0.479",
+     "-0.678",
+     "-0.831 to -0.534",
+     "-1.954",
+     "-0.447"
+    ],
+    [
+     "load_persistence_matched_retraining",
+     "1",
+     "-1.625",
+     "0.373",
+     "0.177 to 0.576",
+     "2.508",
+     "0.337"
+    ],
+    [
+     "load_persistence_matched_retraining",
+     "Held-out",
+     "-1.580",
+     "0.606",
+     "0.465 to 0.750",
+     "2.513",
+     "0.426"
+    ],
+    [
+     "load_strong_frozen_transfer",
+     "1",
+     "-1.220",
+     "-0.893",
+     "-1.049 to -0.743",
+     "-2.000",
+     "-0.435"
+    ],
+    [
+     "load_strong_frozen_transfer",
+     "Held-out",
+     "-1.105",
+     "-0.772",
+     "-0.969 to -0.591",
+     "-1.293",
+     "-0.430"
+    ],
+    [
+     "load_strong_matched_retraining",
+     "1",
+     "-1.286",
+     "-0.759",
+     "-0.973 to -0.563",
+     "-1.185",
+     "-0.364"
+    ],
+    [
+     "load_strong_matched_retraining",
+     "Held-out",
+     "-1.123",
+     "-0.703",
+     "-0.946 to -0.473",
+     "-0.464",
+     "-0.382"
+    ],
+    [
+     "wear0.01_frozen_transfer",
+     "1",
+     "-0.818",
+     "-0.850",
+     "-0.994 to -0.714",
+     "-1.774",
+     "-0.419"
+    ],
+    [
+     "wear0.01_frozen_transfer",
+     "Held-out",
+     "-0.718",
+     "-0.746",
+     "-0.938 to -0.570",
+     "-1.228",
+     "-0.419"
+    ],
+    [
+     "wear0.01_matched_retraining",
+     "1",
+     "-0.825",
+     "-0.797",
+     "-0.960 to -0.627",
+     "-0.938",
+     "-0.328"
+    ],
+    [
+     "wear0.01_matched_retraining",
+     "Held-out",
+     "-0.771",
+     "-0.632",
+     "-0.838 to -0.445",
+     "-0.437",
+     "-0.332"
+    ],
+    [
+     "wear0.04_frozen_transfer",
+     "1",
+     "-1.735",
+     "-0.850",
+     "-0.994 to -0.714",
+     "-1.774",
+     "-0.419"
+    ],
+    [
+     "wear0.04_frozen_transfer",
+     "Held-out",
+     "-1.641",
+     "-0.746",
+     "-0.938 to -0.570",
+     "-1.228",
+     "-0.419"
+    ],
+    [
+     "wear0.04_matched_retraining",
+     "1",
+     "-2.385",
+     "-1.382",
+     "-1.561 to -1.228",
+     "-4.796",
+     "-0.830"
+    ],
+    [
+     "wear0.04_matched_retraining",
+     "Held-out",
+     "-2.179",
+     "-1.363",
+     "-1.597 to -1.155",
+     "-4.255",
+     "-0.886"
+    ],
+    [
+     "wear0_frozen_transfer",
+     "1",
+     "-0.512",
+     "-0.850",
+     "-0.994 to -0.714",
+     "-1.774",
+     "-0.419"
+    ],
+    [
+     "wear0_frozen_transfer",
+     "Held-out",
+     "-0.410",
+     "-0.746",
+     "-0.938 to -0.570",
+     "-1.228",
+     "-0.419"
+    ],
+    [
+     "wear0_matched_retraining",
+     "1",
+     "-0.743",
+     "-0.459",
+     "-0.667 to -0.254",
+     "0.606",
+     "-0.112"
+    ],
+    [
+     "wear0_matched_retraining",
+     "Held-out",
+     "-0.672",
+     "-0.365",
+     "-0.601 to -0.130",
+     "1.016",
+     "-0.149"
+    ]
+   ],
+   "note": "Seed 11, full ToU, original European LV source 1.05 pu. Each group has its own matched reference; raw network private costs are not inventory-adjusted continuous economics. Panel numbering follows the main article. The matched-persistence counterexample is retained even though network outcomes worsen."
+  },
+  {
+   "type": "heading",
+   "text": "S8. Export protection and system rating"
+  },
+  {
+   "type": "table",
+   "caption": "Table S8. Equal export-limit protection layer.",
+   "headers": [
+    "Panel",
+    "Cost Δ (cents/day)",
+    "Over Δ (pp)",
+    "Under Δ (pp)",
+    "Import Δ (kW)",
+    "Export Δ (kW)"
+   ],
+   "rows": [
+    [
+     "1",
+     "-1.123",
+     "-0.850",
+     "-0.003",
+     "-1.774",
+     "0.387"
+    ],
+    [
+     "2",
+     "-1.267",
+     "-1.254",
+     "-0.001",
+     "-1.415",
+     "0.155"
+    ],
+    [
+     "3",
+     "-1.125",
+     "-1.044",
+     "-0.003",
+     "-1.452",
+     "0.135"
+    ]
+   ],
+   "note": "DFL minus continued MSE, seed 11; all three fixed panels. Actual PV curtailment and lost export income are audited per household and half-hour. Official 3 kW guidance is prospective, not historical compliance. Battery actions are frozen before this common protection layer."
+  },
+  {
+   "type": "paragraph",
+   "text": "Curtailment is highly panel dependent. Panel 1 is almost nonbinding, Panel 2 curtails approximately 10.68–10.89 kWh/feeder-day, and Panel 3 approximately 0.090–0.115. Power-factor brackets are engineering assumptions supported by relevant operator guidance; they are not derived from these historical household meters. The main 800 kVA transformer is unchanged. In the rural 160 kVA topology, 55 historical households are aggregated to 13 native load locations, causing some nominal-rating exceedance even without voltage events; this is a constructed load-transfer stress case, not a measurement of that real circuit."
+  },
+  {
+   "type": "heading",
+   "text": "S9. Geography and household distribution checks"
+  },
+  {
+   "type": "table",
+   "caption": "Table S9. Matched 27-household geographic-cohort check.",
+   "headers": [
+    "Outcome",
+    "Grouped gap",
+    "Dispersed gap",
+    "Difference of gaps",
+    "95% interval"
+   ],
+   "rows": [
+    [
+     "daily_operating_cost_aud",
+     "-0.012901",
+     "-0.012200",
+     "-0.000701",
+     "-0.002856 to 0.001178"
+    ],
+    [
+     "daily_over_pct",
+     "-0.482735",
+     "-0.629823",
+     "0.147087",
+     "-0.024193 to 0.309537"
+    ],
+    [
+     "daily_under_pct",
+     "0.000000",
+     "0.000000",
+     "0.000000",
+     "0.000000 to 0.000000"
+    ],
+    [
+     "daily_import_peak_kw",
+     "-0.373586",
+     "-0.591451",
+     "0.217866",
+     "0.075067 to 0.366068"
+    ],
+    [
+     "daily_export_peak_kw",
+     "0.081268",
+     "0.003852",
+     "0.077416",
+     "-0.026673 to 0.178800"
+    ],
+    [
+     "daily_loss_kwh",
+     "-0.058477",
+     "-0.055584",
+     "-0.002893",
+     "-0.010446 to 0.004785"
+    ]
+   ],
+   "note": "Gap is DFL minus continued MSE. Same 27 locations and 160 dates, same known/held-out role counts. Matching uses pretest log daily gross demand and PV capacity; standardized differences are approximately −0.029 and −0.011. The dispersed cohort spans 21 postcodes with no more than two households per postcode. Units follow outcome names: AUD/owner-day, percentage points, kW or kWh/day. No real-neighborhood connectivity or causal geographic effect is inferred."
+  },
+  {
+   "type": "paragraph",
+   "text": "The main nine deployment cells retain three-seed paired household-level cost and voltage summaries. Among full ToU owners, 3.6–7.3% have higher mean cost across fixed-panel/adoption combinations. In the 28-owner case, nonowner exposure changes are −0.3479/−0.2793/−0.2725 percentage points across the three fixed panels, versus −0.5317/−0.5103/−0.4881 for owners. Both groups can benefit on average while individual sites or customers still lose. Capacity and pretest-demand tertile cutpoints are fixed from known pretest records, not selected for subgroup significance; the full results remain descriptive without additional subgroup significance claims."
+  },
+  {
+   "type": "heading",
+   "text": "S10. External data and freeze chronology"
+  },
+  {
+   "type": "table",
+   "caption": "Table S10. All external scale, tariff and seed outcomes.",
+   "headers": [
+    "Reference",
+    "Tariff",
+    "Training seed",
+    "Cost Δ (cents/day)",
+    "95% interval"
+   ],
+   "rows": [
+    [
+     "2.2",
+     "tou",
+     "11",
+     "-1.942",
+     "-2.457 to -1.448"
+    ],
+    [
+     "2.2",
+     "tou",
+     "23",
+     "-1.412",
+     "-2.012 to -0.794"
+    ],
+    [
+     "2.2",
+     "tou",
+     "47",
+     "-0.400",
+     "-0.816 to 0.014"
+    ],
+    [
+     "2.2",
+     "tou",
+     "Seed mean",
+     "-1.252",
+     "-1.741 to -0.767"
+    ],
+    [
+     "2.2",
+     "flat",
+     "11",
+     "-0.383",
+     "-0.706 to -0.070"
+    ],
+    [
+     "2.2",
+     "flat",
+     "23",
+     "-0.107",
+     "-0.381 to 0.172"
+    ],
+    [
+     "2.2",
+     "flat",
+     "47",
+     "0.857",
+     "0.431 to 1.283"
+    ],
+    [
+     "2.2",
+     "flat",
+     "Seed mean",
+     "0.122",
+     "-0.194 to 0.458"
+    ],
+    [
+     "2.0",
+     "tou",
+     "11",
+     "-2.140",
+     "-2.578 to -1.707"
+    ],
+    [
+     "2.0",
+     "tou",
+     "23",
+     "-1.759",
+     "-2.289 to -1.237"
+    ],
+    [
+     "2.0",
+     "tou",
+     "47",
+     "-0.818",
+     "-1.220 to -0.431"
+    ],
+    [
+     "2.0",
+     "tou",
+     "Seed mean",
+     "-1.573",
+     "-2.017 to -1.139"
+    ],
+    [
+     "2.0",
+     "flat",
+     "11",
+     "-0.276",
+     "-0.588 to 0.034"
+    ],
+    [
+     "2.0",
+     "flat",
+     "23",
+     "-0.072",
+     "-0.323 to 0.183"
+    ],
+    [
+     "2.0",
+     "flat",
+     "47",
+     "0.767",
+     "0.365 to 1.170"
+    ],
+    [
+     "2.0",
+     "flat",
+     "Seed mean",
+     "0.140",
+     "-0.165 to 0.444"
+    ],
+    [
+     "2.4",
+     "tou",
+     "11",
+     "-1.628",
+     "-2.175 to -1.115"
+    ],
+    [
+     "2.4",
+     "tou",
+     "23",
+     "-0.922",
+     "-1.587 to -0.236"
+    ],
+    [
+     "2.4",
+     "tou",
+     "47",
+     "0.140",
+     "-0.299 to 0.551"
+    ],
+    [
+     "2.4",
+     "tou",
+     "Seed mean",
+     "-0.803",
+     "-1.332 to -0.275"
+    ],
+    [
+     "2.4",
+     "flat",
+     "11",
+     "-0.496",
+     "-0.850 to -0.157"
+    ],
+    [
+     "2.4",
+     "flat",
+     "23",
+     "-0.191",
+     "-0.470 to 0.100"
+    ],
+    [
+     "2.4",
+     "flat",
+     "47",
+     "0.914",
+     "0.480 to 1.357"
+    ],
+    [
+     "2.4",
+     "flat",
+     "Seed mean",
+     "0.076",
+     "-0.261 to 0.415"
+    ]
+   ],
+   "note": "Each row uses 2,224 identical scored household-days across ten verified PV households in 2020; all references are normalization scales rather than verified nameplates. Negative Δ favors DFL. Three-seed rows average paired daily differences before resampling all 366 calendar positions. Flat-price checkpoints carry hashes and original timestamps verified after evaluation."
+  },
+  {
+   "type": "paragraph",
+   "text": "All 20 StoreNet power CSV files were downloaded and inspected. Verified PV household IDs are 1,2,3,4,5,7,10,11,13,17. There are 3,439 target days passing interval quality before the seven-day-history requirement and 2,224 scored days after it. Mean nominal capacity is not inferred from production maxima. A half-hour must contain at least 27 of 30 valid minutes in each required channel; available power observations are averaged without interpolation. Original minute-grid power missingness is retained; the companion interpolated energy pipeline is unused. Public OPSD household data were also assessed, but cumulative-meter interpretation, load reconstruction and insufficient verified capacity fields made them a weaker frozen-transfer candidate; its download and screening record is retained without claiming an external result from that dataset."
+  },
+  {
+   "type": "heading",
+   "text": "S11. Numerical and independent consistency checks"
+  },
+  {
+   "type": "paragraph",
+   "text": "Original strictly convex battery-layer checks include primal state and energy balance, KKT differentiation, action selection under alternative regularization, independent settlement, and an equal-buy/sell negative control. The reported checks add independent measured-cost recomputation on the expanded dispatch, a real-data continuous-SOC gradient audit, inventory-boundary reconciliation and per-element export-curtailment and lost-revenue verification. AC local sensitivities are checked against full nonlinear replay and halved perturbations. These checks distinguish model implementation from field fidelity; no solver residual is treated as evidence about unknown household wiring, impedances, phase assignments, or inverter response."
+  },
+  {
+   "type": "paragraph",
+   "text": "State and settlement checks passed for all 78 completed dispatch files, comprising 42 Ausgrid and 36 external files. External recomputation had zero stored-cost discrepancy; the largest rounded-state bound and cyclic-end discrepancies were 1.43e-06 and 1.91e-06 kWh. An additional independent settlement implementation recomputed all 18 expanded comparison files directly from observed load, generation and saved charge/discharge actions, with no failed or unfinished file in that comparison."
+  },
+  {
+   "type": "paragraph",
+   "text": "The network analysis contains 133 completed scenario results: 130 nonlinear AC replays and 3 geographic replays restricted to the common-date mask. All new replays converged, and the maximum absolute active-power balance residual was 1.08e-05 kW. Numerical convergence does not imply satisfaction of voltage or equipment constraints. Export checks include curtailed generation and foregone export revenue."
+  },
+  {
+   "type": "paragraph",
+   "text": "The local reproduction package contains source-data acquisition records, model weights, derived inputs, saved dispatch, numerical audits and the code required to reconstruct the reported tables and figures. It supports independent cost, observation-mask and checkpoint checks. Fresh training from source data additionally requires the documented public-data acquisition and cache-generation steps. Source-data and software licenses are recorded with the corresponding materials; the package is a local research artifact and has not been assigned a public DOI."
+  }
+ ]
+}

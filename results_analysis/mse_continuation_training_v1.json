@@ -1,0 +1,623 @@
+{
+  "status": "complete",
+  "test_used_for_fitting_or_selection": false,
+  "selection": "MSE continuation independently chooses its LR from the same two-candidate grid, validation bill and epoch-zero option; DFL same-LR control retained separately",
+  "same_train_and_validation_pairs_as_dfl": true,
+  "train_household_days": 4096,
+  "validation_household_days": 1024,
+  "tuning": [
+    {
+      "tariff": "tou",
+      "seed": 11,
+      "config": {
+        "learning_rate": 0.0001,
+        "epochs": 4,
+        "batch_size": 32
+      },
+      "start_validation_bill": 3.2647298301833283,
+      "best_validation_bill": 3.264319448115055,
+      "best_epoch": 3,
+      "trace": [
+        {
+          "epoch": 1,
+          "train_normalized_mse": 0.012176036605524132,
+          "validation_bill_aud_per_day": 3.267698362050605
+        },
+        {
+          "epoch": 2,
+          "train_normalized_mse": 0.012087830229575047,
+          "validation_bill_aud_per_day": 3.2671590858980983
+        },
+        {
+          "epoch": 3,
+          "train_normalized_mse": 0.012050091030687327,
+          "validation_bill_aud_per_day": 3.264319448115055
+        },
+        {
+          "epoch": 4,
+          "train_normalized_mse": 0.011997035748208873,
+          "validation_bill_aud_per_day": 3.266631065505721
+        }
+      ],
+      "elapsed_seconds": 4.506791400024667
+    },
+    {
+      "tariff": "tou",
+      "seed": 11,
+      "config": {
+        "learning_rate": 3e-05,
+        "epochs": 4,
+        "batch_size": 32
+      },
+      "start_validation_bill": 3.2647298301833283,
+      "best_validation_bill": 3.2647298301833283,
+      "best_epoch": 0,
+      "trace": [
+        {
+          "epoch": 1,
+          "train_normalized_mse": 0.012145462165790377,
+          "validation_bill_aud_per_day": 3.2664060447838743
+        },
+        {
+          "epoch": 2,
+          "train_normalized_mse": 0.01210411516512977,
+          "validation_bill_aud_per_day": 3.265680562246354
+        },
+        {
+          "epoch": 3,
+          "train_normalized_mse": 0.012080153337592492,
+          "validation_bill_aud_per_day": 3.2654543583412465
+        },
+        {
+          "epoch": 4,
+          "train_normalized_mse": 0.012062476533174049,
+          "validation_bill_aud_per_day": 3.2662502876714834
+        }
+      ],
+      "elapsed_seconds": 5.204762400011532
+    },
+    {
+      "tariff": "flat",
+      "seed": 11,
+      "config": {
+        "learning_rate": 0.0001,
+        "epochs": 4,
+        "batch_size": 32
+      },
+      "start_validation_bill": 3.4786613104729414,
+      "best_validation_bill": 3.47673056604732,
+      "best_epoch": 3,
+      "trace": [
+        {
+          "epoch": 1,
+          "train_normalized_mse": 0.012176036605524132,
+          "validation_bill_aud_per_day": 3.4814066913249446
+        },
+        {
+          "epoch": 2,
+          "train_normalized_mse": 0.012087830229575047,
+          "validation_bill_aud_per_day": 3.478855638737532
+        },
+        {
+          "epoch": 3,
+          "train_normalized_mse": 0.012050091030687327,
+          "validation_bill_aud_per_day": 3.47673056604732
+        },
+        {
+          "epoch": 4,
+          "train_normalized_mse": 0.011997035748208873,
+          "validation_bill_aud_per_day": 3.4791297902445533
+        }
+      ],
+      "elapsed_seconds": 4.094784000015352
+    },
+    {
+      "tariff": "flat",
+      "seed": 11,
+      "config": {
+        "learning_rate": 3e-05,
+        "epochs": 4,
+        "batch_size": 32
+      },
+      "start_validation_bill": 3.4786613104729414,
+      "best_validation_bill": 3.478329418399034,
+      "best_epoch": 2,
+      "trace": [
+        {
+          "epoch": 1,
+          "train_normalized_mse": 0.012145462165790377,
+          "validation_bill_aud_per_day": 3.4800069964737776
+        },
+        {
+          "epoch": 2,
+          "train_normalized_mse": 0.01210411516512977,
+          "validation_bill_aud_per_day": 3.478329418399034
+        },
+        {
+          "epoch": 3,
+          "train_normalized_mse": 0.012080153337592492,
+          "validation_bill_aud_per_day": 3.478473189206478
+        },
+        {
+          "epoch": 4,
+          "train_normalized_mse": 0.012062476533174049,
+          "validation_bill_aud_per_day": 3.4788034073140857
+        }
+      ],
+      "elapsed_seconds": 5.138407099992037
+    }
+  ],
+  "selections": [
+    {
+      "tariff": "tou",
+      "mse_selected_config": {
+        "learning_rate": 0.0001,
+        "epochs": 4,
+        "batch_size": 32
+      },
+      "dfl_selected_config": {
+        "learning_rate": 0.0001,
+        "epochs": 4,
+        "batch_size": 32
+      },
+      "same_lr_equals_primary": true,
+      "selection_basis": "seed11 validation bill only; same two LR candidates and epoch-zero option"
+    },
+    {
+      "tariff": "flat",
+      "mse_selected_config": {
+        "learning_rate": 0.0001,
+        "epochs": 4,
+        "batch_size": 32
+      },
+      "dfl_selected_config": {
+        "learning_rate": 0.0001,
+        "epochs": 4,
+        "batch_size": 32
+      },
+      "same_lr_equals_primary": true,
+      "selection_basis": "seed11 validation bill only; same two LR candidates and epoch-zero option"
+    }
+  ],
+  "records": [
+    {
+      "tariff": "tou",
+      "seed": 11,
+      "config": {
+        "learning_rate": 0.0001,
+        "epochs": 4,
+        "batch_size": 32
+      },
+      "start_validation_bill": 3.2647298301833283,
+      "best_validation_bill": 3.264319448115055,
+      "best_epoch": 3,
+      "trace": [
+        {
+          "epoch": 1,
+          "train_normalized_mse": 0.012176036605524132,
+          "validation_bill_aud_per_day": 3.267698362050605
+        },
+        {
+          "epoch": 2,
+          "train_normalized_mse": 0.012087830229575047,
+          "validation_bill_aud_per_day": 3.2671590858980983
+        },
+        {
+          "epoch": 3,
+          "train_normalized_mse": 0.012050091030687327,
+          "validation_bill_aud_per_day": 3.264319448115055
+        },
+        {
+          "epoch": 4,
+          "train_normalized_mse": 0.011997035748208873,
+          "validation_bill_aud_per_day": 3.266631065505721
+        }
+      ],
+      "elapsed_seconds": 4.506791400024667,
+      "role": "strong_mse_continuation"
+    },
+    {
+      "tariff": "tou",
+      "seed": 11,
+      "config": {
+        "learning_rate": 0.0001,
+        "epochs": 4,
+        "batch_size": 32
+      },
+      "start_validation_bill": 3.2647298301833283,
+      "best_validation_bill": 3.264319448115055,
+      "best_epoch": 3,
+      "trace": [
+        {
+          "epoch": 1,
+          "train_normalized_mse": 0.012176036605524132,
+          "validation_bill_aud_per_day": 3.267698362050605
+        },
+        {
+          "epoch": 2,
+          "train_normalized_mse": 0.012087830229575047,
+          "validation_bill_aud_per_day": 3.2671590858980983
+        },
+        {
+          "epoch": 3,
+          "train_normalized_mse": 0.012050091030687327,
+          "validation_bill_aud_per_day": 3.264319448115055
+        },
+        {
+          "epoch": 4,
+          "train_normalized_mse": 0.011997035748208873,
+          "validation_bill_aud_per_day": 3.266631065505721
+        }
+      ],
+      "elapsed_seconds": 4.506791400024667,
+      "role": "strict_same_lr_control",
+      "identical_to_primary": true
+    },
+    {
+      "tariff": "tou",
+      "seed": 23,
+      "config": {
+        "learning_rate": 0.0001,
+        "epochs": 4,
+        "batch_size": 32
+      },
+      "start_validation_bill": 3.2651624950563303,
+      "best_validation_bill": 3.264705326429582,
+      "best_epoch": 2,
+      "trace": [
+        {
+          "epoch": 1,
+          "train_normalized_mse": 0.011892866445123218,
+          "validation_bill_aud_per_day": 3.266128184025048
+        },
+        {
+          "epoch": 2,
+          "train_normalized_mse": 0.011789379870606354,
+          "validation_bill_aud_per_day": 3.264705326429582
+        },
+        {
+          "epoch": 3,
+          "train_normalized_mse": 0.011725395852408838,
+          "validation_bill_aud_per_day": 3.2657304651518095
+        },
+        {
+          "epoch": 4,
+          "train_normalized_mse": 0.011661897631711327,
+          "validation_bill_aud_per_day": 3.2666617173872625
+        }
+      ],
+      "elapsed_seconds": 4.7031446999753825,
+      "role": "strong_mse_continuation"
+    },
+    {
+      "tariff": "tou",
+      "seed": 23,
+      "config": {
+        "learning_rate": 0.0001,
+        "epochs": 4,
+        "batch_size": 32
+      },
+      "start_validation_bill": 3.2651624950563303,
+      "best_validation_bill": 3.264705326429582,
+      "best_epoch": 2,
+      "trace": [
+        {
+          "epoch": 1,
+          "train_normalized_mse": 0.011892866445123218,
+          "validation_bill_aud_per_day": 3.266128184025048
+        },
+        {
+          "epoch": 2,
+          "train_normalized_mse": 0.011789379870606354,
+          "validation_bill_aud_per_day": 3.264705326429582
+        },
+        {
+          "epoch": 3,
+          "train_normalized_mse": 0.011725395852408838,
+          "validation_bill_aud_per_day": 3.2657304651518095
+        },
+        {
+          "epoch": 4,
+          "train_normalized_mse": 0.011661897631711327,
+          "validation_bill_aud_per_day": 3.2666617173872625
+        }
+      ],
+      "elapsed_seconds": 4.7031446999753825,
+      "role": "strict_same_lr_control",
+      "identical_to_primary": true
+    },
+    {
+      "tariff": "tou",
+      "seed": 47,
+      "config": {
+        "learning_rate": 0.0001,
+        "epochs": 4,
+        "batch_size": 32
+      },
+      "start_validation_bill": 3.262837953761103,
+      "best_validation_bill": 3.262837953761103,
+      "best_epoch": 0,
+      "trace": [
+        {
+          "epoch": 1,
+          "train_normalized_mse": 0.012922320354846306,
+          "validation_bill_aud_per_day": 3.264578765960822
+        },
+        {
+          "epoch": 2,
+          "train_normalized_mse": 0.012840552408306394,
+          "validation_bill_aud_per_day": 3.2637998468799614
+        },
+        {
+          "epoch": 3,
+          "train_normalized_mse": 0.012791992652637418,
+          "validation_bill_aud_per_day": 3.264639459657069
+        },
+        {
+          "epoch": 4,
+          "train_normalized_mse": 0.01272346103360178,
+          "validation_bill_aud_per_day": 3.2641840019626898
+        }
+      ],
+      "elapsed_seconds": 4.49401929997839,
+      "role": "strong_mse_continuation"
+    },
+    {
+      "tariff": "tou",
+      "seed": 47,
+      "config": {
+        "learning_rate": 0.0001,
+        "epochs": 4,
+        "batch_size": 32
+      },
+      "start_validation_bill": 3.262837953761103,
+      "best_validation_bill": 3.262837953761103,
+      "best_epoch": 0,
+      "trace": [
+        {
+          "epoch": 1,
+          "train_normalized_mse": 0.012922320354846306,
+          "validation_bill_aud_per_day": 3.264578765960822
+        },
+        {
+          "epoch": 2,
+          "train_normalized_mse": 0.012840552408306394,
+          "validation_bill_aud_per_day": 3.2637998468799614
+        },
+        {
+          "epoch": 3,
+          "train_normalized_mse": 0.012791992652637418,
+          "validation_bill_aud_per_day": 3.264639459657069
+        },
+        {
+          "epoch": 4,
+          "train_normalized_mse": 0.01272346103360178,
+          "validation_bill_aud_per_day": 3.2641840019626898
+        }
+      ],
+      "elapsed_seconds": 4.49401929997839,
+      "role": "strict_same_lr_control",
+      "identical_to_primary": true
+    },
+    {
+      "tariff": "flat",
+      "seed": 11,
+      "config": {
+        "learning_rate": 0.0001,
+        "epochs": 4,
+        "batch_size": 32
+      },
+      "start_validation_bill": 3.4786613104729414,
+      "best_validation_bill": 3.47673056604732,
+      "best_epoch": 3,
+      "trace": [
+        {
+          "epoch": 1,
+          "train_normalized_mse": 0.012176036605524132,
+          "validation_bill_aud_per_day": 3.4814066913249446
+        },
+        {
+          "epoch": 2,
+          "train_normalized_mse": 0.012087830229575047,
+          "validation_bill_aud_per_day": 3.478855638737532
+        },
+        {
+          "epoch": 3,
+          "train_normalized_mse": 0.012050091030687327,
+          "validation_bill_aud_per_day": 3.47673056604732
+        },
+        {
+          "epoch": 4,
+          "train_normalized_mse": 0.011997035748208873,
+          "validation_bill_aud_per_day": 3.4791297902445533
+        }
+      ],
+      "elapsed_seconds": 4.094784000015352,
+      "role": "strong_mse_continuation"
+    },
+    {
+      "tariff": "flat",
+      "seed": 11,
+      "config": {
+        "learning_rate": 0.0001,
+        "epochs": 4,
+        "batch_size": 32
+      },
+      "start_validation_bill": 3.4786613104729414,
+      "best_validation_bill": 3.47673056604732,
+      "best_epoch": 3,
+      "trace": [
+        {
+          "epoch": 1,
+          "train_normalized_mse": 0.012176036605524132,
+          "validation_bill_aud_per_day": 3.4814066913249446
+        },
+        {
+          "epoch": 2,
+          "train_normalized_mse": 0.012087830229575047,
+          "validation_bill_aud_per_day": 3.478855638737532
+        },
+        {
+          "epoch": 3,
+          "train_normalized_mse": 0.012050091030687327,
+          "validation_bill_aud_per_day": 3.47673056604732
+        },
+        {
+          "epoch": 4,
+          "train_normalized_mse": 0.011997035748208873,
+          "validation_bill_aud_per_day": 3.4791297902445533
+        }
+      ],
+      "elapsed_seconds": 4.094784000015352,
+      "role": "strict_same_lr_control",
+      "identical_to_primary": true
+    },
+    {
+      "tariff": "flat",
+      "seed": 23,
+      "config": {
+        "learning_rate": 0.0001,
+        "epochs": 4,
+        "batch_size": 32
+      },
+      "start_validation_bill": 3.4780784470577815,
+      "best_validation_bill": 3.475804664958814,
+      "best_epoch": 2,
+      "trace": [
+        {
+          "epoch": 1,
+          "train_normalized_mse": 0.011892866445123218,
+          "validation_bill_aud_per_day": 3.4783904463280395
+        },
+        {
+          "epoch": 2,
+          "train_normalized_mse": 0.011789379870606354,
+          "validation_bill_aud_per_day": 3.475804664958814
+        },
+        {
+          "epoch": 3,
+          "train_normalized_mse": 0.011725395852408838,
+          "validation_bill_aud_per_day": 3.47742542540736
+        },
+        {
+          "epoch": 4,
+          "train_normalized_mse": 0.011661897631711327,
+          "validation_bill_aud_per_day": 3.478841437428621
+        }
+      ],
+      "elapsed_seconds": 4.7536416000220925,
+      "role": "strong_mse_continuation"
+    },
+    {
+      "tariff": "flat",
+      "seed": 23,
+      "config": {
+        "learning_rate": 0.0001,
+        "epochs": 4,
+        "batch_size": 32
+      },
+      "start_validation_bill": 3.4780784470577815,
+      "best_validation_bill": 3.475804664958814,
+      "best_epoch": 2,
+      "trace": [
+        {
+          "epoch": 1,
+          "train_normalized_mse": 0.011892866445123218,
+          "validation_bill_aud_per_day": 3.4783904463280395
+        },
+        {
+          "epoch": 2,
+          "train_normalized_mse": 0.011789379870606354,
+          "validation_bill_aud_per_day": 3.475804664958814
+        },
+        {
+          "epoch": 3,
+          "train_normalized_mse": 0.011725395852408838,
+          "validation_bill_aud_per_day": 3.47742542540736
+        },
+        {
+          "epoch": 4,
+          "train_normalized_mse": 0.011661897631711327,
+          "validation_bill_aud_per_day": 3.478841437428621
+        }
+      ],
+      "elapsed_seconds": 4.7536416000220925,
+      "role": "strict_same_lr_control",
+      "identical_to_primary": true
+    },
+    {
+      "tariff": "flat",
+      "seed": 47,
+      "config": {
+        "learning_rate": 0.0001,
+        "epochs": 4,
+        "batch_size": 32
+      },
+      "start_validation_bill": 3.4766303860609544,
+      "best_validation_bill": 3.4766303860609544,
+      "best_epoch": 0,
+      "trace": [
+        {
+          "epoch": 1,
+          "train_normalized_mse": 0.012922320354846306,
+          "validation_bill_aud_per_day": 3.4790579674090547
+        },
+        {
+          "epoch": 2,
+          "train_normalized_mse": 0.012840552408306394,
+          "validation_bill_aud_per_day": 3.4775507000964954
+        },
+        {
+          "epoch": 3,
+          "train_normalized_mse": 0.012791992652637418,
+          "validation_bill_aud_per_day": 3.4785212202271065
+        },
+        {
+          "epoch": 4,
+          "train_normalized_mse": 0.01272346103360178,
+          "validation_bill_aud_per_day": 3.4774748888929503
+        }
+      ],
+      "elapsed_seconds": 3.9632038000272587,
+      "role": "strong_mse_continuation"
+    },
+    {
+      "tariff": "flat",
+      "seed": 47,
+      "config": {
+        "learning_rate": 0.0001,
+        "epochs": 4,
+        "batch_size": 32
+      },
+      "start_validation_bill": 3.4766303860609544,
+      "best_validation_bill": 3.4766303860609544,
+      "best_epoch": 0,
+      "trace": [
+        {
+          "epoch": 1,
+          "train_normalized_mse": 0.012922320354846306,
+          "validation_bill_aud_per_day": 3.4790579674090547
+        },
+        {
+          "epoch": 2,
+          "train_normalized_mse": 0.012840552408306394,
+          "validation_bill_aud_per_day": 3.4775507000964954
+        },
+        {
+          "epoch": 3,
+          "train_normalized_mse": 0.012791992652637418,
+          "validation_bill_aud_per_day": 3.4785212202271065
+        },
+        {
+          "epoch": 4,
+          "train_normalized_mse": 0.01272346103360178,
+          "validation_bill_aud_per_day": 3.4774748888929503
+        }
+      ],
+      "elapsed_seconds": 3.9632038000272587,
+      "role": "strict_same_lr_control",
+      "identical_to_primary": true
+    }
+  ],
+  "elapsed_seconds": 82.74917339999229
+}

@@ -1,0 +1,23 @@
+{
+  "status": "checked",
+  "records": [
+    {
+      "old": "calibrated",
+      "new": "calibrated3",
+      "date_equal": true,
+      "clean_equal": true,
+      "charge_kw_max_abs_difference": 0.0,
+      "discharge_kw_max_abs_difference": 0.0,
+      "bill_aud_max_abs_difference": 1.0921206339276068e-07
+    },
+    {
+      "old": "stochastic",
+      "new": "stochastic20",
+      "date_equal": true,
+      "clean_equal": true,
+      "charge_kw_max_abs_difference": 0.0,
+      "discharge_kw_max_abs_difference": 0.0,
+      "bill_aud_max_abs_difference": 9.703465408961165e-08
+    }
+  ]
+}

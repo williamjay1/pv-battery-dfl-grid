@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "recorded_utc": "2026-10-08T20:28:48.235957+00:00",
+  "stage": "Local content revision and visual delivery freeze; no external submission",
+  "documents": [
+    {
+      "file": "EPSR_Revised_Manuscript.docx",
+      "sha256": "ef4d37d09e6952811e25041d0faac997ce72e5c1b96d42c1611c8646a6935bc5",
+      "tables": 5,
+      "table_cells_exactly_match_source": true,
+      "references": 37,
+      "native_math_objects": 18
+    },
+    {
+      "file": "EPSR_Supplementary_Material.docx",
+      "sha256": "ef8c82f5289e668ef177f235514ac6f89a2149db8919b10d512191e5c0da1ffc",
+      "tables": 12,
+      "table_cells_exactly_match_source": true,
+      "references": 0,
+      "native_math_objects": 0
+    },
+    {
+      "file": "逐条修改说明.docx",
+      "sha256": "e25ad4fd8f76dc1dd7d5c44af12539fee7e7660b7cf74ed0f5b4a79fdaec0186",
+      "tables": 1,
+      "table_cells_exactly_match_source": true,
+      "references": 0,
+      "native_math_objects": 0
+    }
+  ],
+  "visual_audit": "research/delivery_visual_audit.json",
+  "figure_bundle": {
+    "file": "Nature_Style_Figures.zip",
+    "sha256": "300f672b0636b5bd0cca044495c2b8a8a6d1647d4eb8a2361ab4d00f79960413",
+    "bytes": 8270402,
+    "status": "PASS"
+  },
+  "review_items_addressed": 29,
+  "reproduction_final_sync": "Await final independently unpacked run after this freeze."
+}

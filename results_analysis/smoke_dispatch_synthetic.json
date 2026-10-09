@@ -1,0 +1,10 @@
+{
+  "objective_aud": 0.5145170561421055,
+  "max_balance_residual": 1.1102230246251565e-16,
+  "terminal_energy_kwh": 5.0,
+  "max_simultaneous_charge_discharge_kw": 0.0,
+  "status": "PASS",
+  "input": "synthetic 48-slot example; no empirical finding",
+  "scope": "LP energy balance and feasible battery trajectory only; no DFL, AC power flow, or differentiable QP verified",
+  "wall_seconds": 0.005210099974647164
+}

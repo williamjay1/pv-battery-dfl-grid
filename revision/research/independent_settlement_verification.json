@@ -1,0 +1,301 @@
+{
+  "scope": "Independent settlement/state recomputation from measured panel and stored actions; not independent field validation.",
+  "checks": [
+    {
+      "file": "revision_20261009/dispatch/calibrated3_flat_seed11_expanded.npz",
+      "sha256": "4de86ec14c0654da0ddf4fb8c766308bec3fdd69265005e858f70560ab3ab12d",
+      "gcgg_days": 108641,
+      "fullcost_days": 107713,
+      "max_abs_errors": {
+        "excluding_cl": 2.662651255036508e-07,
+        "full_cost": 7.860036586038177e-07,
+        "retail": 7.860036586038177e-07,
+        "throughput": 0.0,
+        "terminal_energy": 2.907424612175191e-07
+      },
+      "mean_excluding_cl": 3.341582266865544,
+      "mean_full_cost": 3.734784102513835,
+      "passed": true
+    },
+    {
+      "file": "revision_20261009/dispatch/calibrated3_tou_seed11_expanded.npz",
+      "sha256": "239288bbbf428f4d8d9e0eba966c1ab6fb66dc5d9febd0f4d5c89b2f63517cad",
+      "gcgg_days": 108641,
+      "fullcost_days": 107713,
+      "max_abs_errors": {
+        "excluding_cl": 3.430060999676243e-07,
+        "full_cost": 8.255941779111708e-07,
+        "retail": 8.255941779111708e-07,
+        "throughput": 0.0,
+        "terminal_energy": 3.495737495029516e-07
+      },
+      "mean_excluding_cl": 3.13589961204361,
+      "mean_full_cost": 3.5320188100545424,
+      "passed": true
+    },
+    {
+      "file": "revision_20261009/dispatch/dfl_flat_seed11_expanded.npz",
+      "sha256": "463b87f2e0be895a4eaa392836c86aca54e73a998ebc0f33d5f7ae28c12e5831",
+      "gcgg_days": 108641,
+      "fullcost_days": 107713,
+      "max_abs_errors": {
+        "excluding_cl": 2.662651255036508e-07,
+        "full_cost": 7.909210388845622e-07,
+        "retail": 7.909210388845622e-07,
+        "throughput": 0.0,
+        "terminal_energy": 1.9224225944469708e-07
+      },
+      "mean_excluding_cl": 3.3350727363222217,
+      "mean_full_cost": 3.7283529578496903,
+      "passed": true
+    },
+    {
+      "file": "revision_20261009/dispatch/dfl_tou_seed11_expanded.npz",
+      "sha256": "d3955c8416bdf0f0e33ece0a6f7bfd684fc60e4a49c578160c80774b57be4093",
+      "gcgg_days": 108641,
+      "fullcost_days": 107713,
+      "max_abs_errors": {
+        "excluding_cl": 3.4300611417847904e-07,
+        "full_cost": 8.255941779111708e-07,
+        "retail": 8.255941779111708e-07,
+        "throughput": 0.0,
+        "terminal_energy": 2.9139509472031477e-07
+      },
+      "mean_excluding_cl": 3.1307084665032385,
+      "mean_full_cost": 3.5268295863772936,
+      "passed": true
+    },
+    {
+      "file": "revision_20261009/dispatch/msecont_flat_seed11_expanded.npz",
+      "sha256": "925df191feea7181e49babbfe4588f56ec969274cf160be5ad56da163b5627fd",
+      "gcgg_days": 108641,
+      "fullcost_days": 107713,
+      "max_abs_errors": {
+        "excluding_cl": 2.662651255036508e-07,
+        "full_cost": 7.86003655051104e-07,
+        "retail": 7.860036568274609e-07,
+        "throughput": 0.0,
+        "terminal_energy": 1.9848228127727907e-07
+      },
+      "mean_excluding_cl": 3.3472341301036126,
+      "mean_full_cost": 3.740446142272534,
+      "passed": true
+    },
+    {
+      "file": "revision_20261009/dispatch/msecont_tou_seed11_expanded.npz",
+      "sha256": "742ce886e8c1355ec32ac2c71b3be31cc1be85c2e57113122f2ffd9982fa333b",
+      "gcgg_days": 108641,
+      "fullcost_days": 107713,
+      "max_abs_errors": {
+        "excluding_cl": 3.430060999676243e-07,
+        "full_cost": 8.255941814638845e-07,
+        "retail": 8.255941814638845e-07,
+        "throughput": 0.0,
+        "terminal_energy": 3.006088249435379e-07
+      },
+      "mean_excluding_cl": 3.142018169081058,
+      "mean_full_cost": 3.53814776374653,
+      "passed": true
+    },
+    {
+      "file": "revision_20261009/dispatch/net_calibrated24_flat_seed11_expanded.npz",
+      "sha256": "f0c57c82fa04e3d5b137f3a440c12ac50ef0023dd07ae36655ab179bd387fab5",
+      "gcgg_days": 108641,
+      "fullcost_days": 107713,
+      "max_abs_errors": {
+        "excluding_cl": 2.662651255036508e-07,
+        "full_cost": 7.860036568274609e-07,
+        "retail": 7.860036568274609e-07,
+        "throughput": 0.0,
+        "terminal_energy": 3.314994101444313e-07
+      },
+      "mean_excluding_cl": 3.3506454908266554,
+      "mean_full_cost": 3.743838597172673,
+      "passed": true
+    },
+    {
+      "file": "revision_20261009/dispatch/net_calibrated24_night_flat_seed11_expanded.npz",
+      "sha256": "e7519bea3f8dae4363b0a7e887fe38f7450658646deef026dfda4c32396e6c58",
+      "gcgg_days": 108641,
+      "fullcost_days": 107713,
+      "max_abs_errors": {
+        "excluding_cl": 2.662651255036508e-07,
+        "full_cost": 7.810862729940027e-07,
+        "retail": 7.810862747703595e-07,
+        "throughput": 0.0,
+        "terminal_energy": 3.6332687702866906e-07
+      },
+      "mean_excluding_cl": 3.3502925669219086,
+      "mean_full_cost": 3.743489113942963,
+      "passed": true
+    },
+    {
+      "file": "revision_20261009/dispatch/net_calibrated24_night_tou_seed11_expanded.npz",
+      "sha256": "b0bc21ce9a896ece3be9a0d1775d2902d68e71a80e5deeca3fed046a6522c17f",
+      "gcgg_days": 108641,
+      "fullcost_days": 107713,
+      "max_abs_errors": {
+        "excluding_cl": 3.430061070730517e-07,
+        "full_cost": 8.255941814638845e-07,
+        "retail": 8.255941814638845e-07,
+        "throughput": 0.0,
+        "terminal_energy": 4.41737094014627e-07
+      },
+      "mean_excluding_cl": 3.162883529015364,
+      "mean_full_cost": 3.5590694712399094,
+      "passed": true
+    },
+    {
+      "file": "revision_20261009/dispatch/net_calibrated24_tou_seed11_expanded.npz",
+      "sha256": "5d4aeec02e4ed4b3c351f59cf0b26e02908e37b01e940c99ddc3905810ce28b2",
+      "gcgg_days": 108641,
+      "fullcost_days": 107713,
+      "max_abs_errors": {
+        "excluding_cl": 3.430061070730517e-07,
+        "full_cost": 8.255941814638845e-07,
+        "retail": 8.255941814638845e-07,
+        "throughput": 0.0,
+        "terminal_energy": 4.1988371624057663e-07
+      },
+      "mean_excluding_cl": 3.1641038867147344,
+      "mean_full_cost": 3.5602863595113434,
+      "passed": true
+    },
+    {
+      "file": "revision_20261009/dispatch/net_mse_flat_seed11_expanded.npz",
+      "sha256": "3ca686900f5aa76e4672cf1ec3a8b21e398f44bc7efda0f5563e09ce034b3e41",
+      "gcgg_days": 108641,
+      "fullcost_days": 107713,
+      "max_abs_errors": {
+        "excluding_cl": 2.662651255036508e-07,
+        "full_cost": 7.860036568274609e-07,
+        "retail": 7.860036586038177e-07,
+        "throughput": 0.0,
+        "terminal_energy": 1.9597223488432292e-07
+      },
+      "mean_excluding_cl": 3.361817705353757,
+      "mean_full_cost": 3.7550164352741757,
+      "passed": true
+    },
+    {
+      "file": "revision_20261009/dispatch/net_mse_night_flat_seed11_expanded.npz",
+      "sha256": "b0f06878a7b232c9c7acf3ee0eda7483008bb36de82607a6aac16e3ba926c9cd",
+      "gcgg_days": 108641,
+      "fullcost_days": 107713,
+      "max_abs_errors": {
+        "excluding_cl": 2.662651255036508e-07,
+        "full_cost": 7.860036568274609e-07,
+        "retail": 7.860036586038177e-07,
+        "throughput": 0.0,
+        "terminal_energy": 1.9597223488432292e-07
+      },
+      "mean_excluding_cl": 3.361661486323066,
+      "mean_full_cost": 3.754859590174177,
+      "passed": true
+    },
+    {
+      "file": "revision_20261009/dispatch/net_mse_night_tou_seed11_expanded.npz",
+      "sha256": "24acb9912a4ae7b3cb8b2368e504c9e48fed40f2c7b2a9b8aec0439dd9c02bde",
+      "gcgg_days": 108641,
+      "fullcost_days": 107713,
+      "max_abs_errors": {
+        "excluding_cl": 3.430061070730517e-07,
+        "full_cost": 8.255941779111708e-07,
+        "retail": 8.255941779111708e-07,
+        "throughput": 0.0,
+        "terminal_energy": 2.996910577479639e-07
+      },
+      "mean_excluding_cl": 3.1776992463237828,
+      "mean_full_cost": 3.5739643113106037,
+      "passed": true
+    },
+    {
+      "file": "revision_20261009/dispatch/net_mse_tou_seed11_expanded.npz",
+      "sha256": "dcf8274cd4a35ea4f7597aa64257922aad0c8ba8b3bc5dcfb9491e5f86cc22da",
+      "gcgg_days": 108641,
+      "fullcost_days": 107713,
+      "max_abs_errors": {
+        "excluding_cl": 3.430061070730517e-07,
+        "full_cost": 8.255941779111708e-07,
+        "retail": 8.255941779111708e-07,
+        "throughput": 0.0,
+        "terminal_energy": 2.996910577479639e-07
+      },
+      "mean_excluding_cl": 3.1777194164350138,
+      "mean_full_cost": 3.5739845972007296,
+      "passed": true
+    },
+    {
+      "file": "revision_20261009/dispatch/seasonal12_flat_seed11_expanded.npz",
+      "sha256": "3e566014c1255f8260a95edc7674e3e20e014f4bb28dbc2ec60b4a7e10ed54d6",
+      "gcgg_days": 108641,
+      "fullcost_days": 107713,
+      "max_abs_errors": {
+        "excluding_cl": 2.662651183982234e-07,
+        "full_cost": 7.909210388845622e-07,
+        "retail": 7.909210388845622e-07,
+        "throughput": 0.0,
+        "terminal_energy": 2.891065147281324e-07
+      },
+      "mean_excluding_cl": 3.3438412669171718,
+      "mean_full_cost": 3.7370516997689136,
+      "passed": true
+    },
+    {
+      "file": "revision_20261009/dispatch/seasonal12_tou_seed11_expanded.npz",
+      "sha256": "228d8024e117f6d6cc961627ef7dd80cdc8be5c4384d4ec12433d7ca70ab2f62",
+      "gcgg_days": 108641,
+      "fullcost_days": 107713,
+      "max_abs_errors": {
+        "excluding_cl": 3.430060999676243e-07,
+        "full_cost": 8.255941779111708e-07,
+        "retail": 8.255941779111708e-07,
+        "throughput": 0.0,
+        "terminal_energy": 3.6303035244600323e-07
+      },
+      "mean_excluding_cl": 3.136231601854486,
+      "mean_full_cost": 3.5323490630400243,
+      "passed": true
+    },
+    {
+      "file": "revision_20261009/dispatch/stochastic20_flat_seed11_expanded.npz",
+      "sha256": "f2c0494c53e8091f4331fa0fdee9cf29f6b34781a15ca2bd0ce1ac649cb60d26",
+      "gcgg_days": 108641,
+      "fullcost_days": 107713,
+      "max_abs_errors": {
+        "excluding_cl": 2.662651255036508e-07,
+        "full_cost": 7.860036568274609e-07,
+        "retail": 7.860036586038177e-07,
+        "throughput": 0.0,
+        "terminal_energy": 1.438150816213124e-07
+      },
+      "mean_excluding_cl": 3.299986751139392,
+      "mean_full_cost": 3.6932662688050106,
+      "passed": true
+    },
+    {
+      "file": "revision_20261009/dispatch/stochastic20_tou_seed11_expanded.npz",
+      "sha256": "22a52b2482c2716be9ef5afa3c659f6cf928a1c7b52b21b1dca09a98505e49f8",
+      "gcgg_days": 108641,
+      "fullcost_days": 107713,
+      "max_abs_errors": {
+        "excluding_cl": 3.430061070730517e-07,
+        "full_cost": 8.255941814638845e-07,
+        "retail": 8.255941814638845e-07,
+        "throughput": 0.0,
+        "terminal_energy": 2.926681137438436e-07
+      },
+      "mean_excluding_cl": 3.1060835769102835,
+      "mean_full_cost": 3.502174774652032,
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "not_ready": [],
+  "primary_delta_check": {
+    "computed": -0.011309702576284428,
+    "reported": -0.011309702576284428,
+    "absolute_error": 0.0,
+    "passed": true
+  }
+}

@@ -1,0 +1,627 @@
+{
+  "methods": [
+    "msecont_tou_seed11_expanded",
+    "dfl_tou_seed11_expanded",
+    "calibrated3_tou_seed11_expanded",
+    "stochastic20_tou_seed11_expanded",
+    "seasonal12_tou_seed11_expanded"
+  ],
+  "reference": "msecont_tou_seed11_expanded",
+  "mask_policy": "same individual history+GC/PV household days for paired economics; full retail requires valid CL too",
+  "currency": "AUD per household-day",
+  "resampling": "paired circular 7-calendar-day blocks, 2000 replicates, fixed seed9417; never treats replicas as new tests",
+  "cohorts": {
+    "all299": {
+      "n_households": 299,
+      "gcgg_household_days": 108641,
+      "fullcost_household_days": 107713,
+      "absolute": {
+        "msecont_tou_seed11_expanded": {
+          "mean_operating_excluding_cl": 3.142018167492496,
+          "mean_full_operating_cost": 3.5381477778779,
+          "mean_retail_only": 3.2942546690442898,
+          "mean_throughput_kwh": 12.200081926863666
+        },
+        "dfl_tou_seed11_expanded": {
+          "mean_operating_excluding_cl": 3.1307084649162116,
+          "mean_full_operating_cost": 3.5268296005106143,
+          "mean_retail_only": 3.289294393737876,
+          "mean_throughput_kwh": 11.88189801154471
+        },
+        "calibrated3_tou_seed11_expanded": {
+          "mean_operating_excluding_cl": 3.135899610460558,
+          "mean_full_operating_cost": 3.5320188241918475,
+          "mean_retail_only": 3.2943332112007795,
+          "mean_throughput_kwh": 11.889404413152104
+        },
+        "stochastic20_tou_seed11_expanded": {
+          "mean_operating_excluding_cl": 3.106083575300251,
+          "mean_full_operating_cost": 3.502174788762589,
+          "mean_retail_only": 3.286163689977739,
+          "mean_throughput_kwh": 10.809274756180171
+        },
+        "seasonal12_tou_seed11_expanded": {
+          "mean_operating_excluding_cl": 3.1362316002652566,
+          "mean_full_operating_cost": 3.5323490771714448,
+          "mean_retail_only": 3.2939963497439853,
+          "mean_throughput_kwh": 11.923235366459844
+        }
+      },
+      "paired": {
+        "dfl_tou_seed11_expanded__minus__msecont_tou_seed11_expanded": {
+          "micro_mean_difference": -0.011309702576284428,
+          "micro_calendar_block95": [
+            -0.012817021084985341,
+            -0.009972838459438646
+          ],
+          "macro_mean_difference": -0.011307607782831354,
+          "household_median_difference": -0.011837250979147262,
+          "household_p10_p90": [
+            -0.020489079107958382,
+            -0.0062074053527685705
+          ],
+          "fraction_households_benefit": 0.9665551839464883,
+          "retail_component_difference": -0.004946024269905276,
+          "wear_component_difference": -0.006363678306379152
+        },
+        "calibrated3_tou_seed11_expanded__minus__msecont_tou_seed11_expanded": {
+          "micro_mean_difference": -0.0061185570319383185,
+          "micro_calendar_block95": [
+            -0.00684564495443545,
+            -0.005366067002011895
+          ],
+          "macro_mean_difference": -0.006122520619960977,
+          "household_median_difference": -0.006238124629307268,
+          "household_p10_p90": [
+            -0.012917114204633885,
+            -0.001391495582986309
+          ],
+          "fraction_households_benefit": 0.9264214046822743,
+          "retail_component_difference": 9.499324229294305e-05,
+          "wear_component_difference": -0.006213550274231263
+        },
+        "calibrated3_tou_seed11_expanded__minus__dfl_tou_seed11_expanded": {
+          "micro_mean_difference": 0.005191145544346109,
+          "micro_calendar_block95": [
+            0.004087789085167955,
+            0.006385598568480024
+          ],
+          "macro_mean_difference": 0.0051850871628703775,
+          "household_median_difference": 0.005519363945099207,
+          "household_p10_p90": [
+            -0.0012892411884848811,
+            0.01449562204702439
+          ],
+          "fraction_households_benefit": 0.12374581939799331,
+          "retail_component_difference": 0.00504101751219822,
+          "wear_component_difference": 0.00015012803214789028
+        },
+        "stochastic20_tou_seed11_expanded__minus__msecont_tou_seed11_expanded": {
+          "micro_mean_difference": -0.03593459219224467,
+          "micro_calendar_block95": [
+            -0.038991853110529134,
+            -0.03276757482394453
+          ],
+          "macro_mean_difference": -0.035883794084092965,
+          "household_median_difference": -0.036676469042626225,
+          "household_p10_p90": [
+            -0.0715446504432535,
+            -0.0022041844408379617
+          ],
+          "fraction_households_benefit": 0.9130434782608695,
+          "retail_component_difference": -0.008118448778574797,
+          "wear_component_difference": -0.02781614341366987
+        },
+        "stochastic20_tou_seed11_expanded__minus__dfl_tou_seed11_expanded": {
+          "micro_mean_difference": -0.024624889615960238,
+          "micro_calendar_block95": [
+            -0.027287385271149333,
+            -0.0220245670503712
+          ],
+          "macro_mean_difference": -0.024576186301261616,
+          "household_median_difference": -0.02406001069811514,
+          "household_p10_p90": [
+            -0.058031046789237394,
+            0.01145168090587071
+          ],
+          "fraction_households_benefit": 0.842809364548495,
+          "retail_component_difference": -0.0031724245086695198,
+          "wear_component_difference": -0.021452465107290722
+        },
+        "stochastic20_tou_seed11_expanded__minus__calibrated3_tou_seed11_expanded": {
+          "micro_mean_difference": -0.029816035160306353,
+          "micro_calendar_block95": [
+            -0.032594850990772126,
+            -0.027188955787559796
+          ],
+          "macro_mean_difference": -0.02976127346413199,
+          "household_median_difference": -0.02821979607227818,
+          "household_p10_p90": [
+            -0.06641018334593192,
+            0.005535999555140252
+          ],
+          "fraction_households_benefit": 0.8729096989966555,
+          "retail_component_difference": -0.00821344202086774,
+          "wear_component_difference": -0.02160259313943861
+        },
+        "seasonal12_tou_seed11_expanded__minus__msecont_tou_seed11_expanded": {
+          "micro_mean_difference": -0.005786567227239318,
+          "micro_calendar_block95": [
+            -0.007229957163552305,
+            -0.004320489332251538
+          ],
+          "macro_mean_difference": -0.005795848226988061,
+          "household_median_difference": -0.005675834131665689,
+          "household_p10_p90": [
+            -0.013409797327380329,
+            0.000393686499000654
+          ],
+          "fraction_households_benefit": 0.882943143812709,
+          "retail_component_difference": -0.00024963601916287286,
+          "wear_component_difference": -0.005536931208076445
+        },
+        "seasonal12_tou_seed11_expanded__minus__dfl_tou_seed11_expanded": {
+          "micro_mean_difference": 0.00552313534904511,
+          "micro_calendar_block95": [
+            0.004239413917985459,
+            0.006822979975289337
+          ],
+          "macro_mean_difference": 0.005511759555843292,
+          "household_median_difference": 0.006099577097253413,
+          "household_p10_p90": [
+            -0.0011051517719036612,
+            0.01583252662649135
+          ],
+          "fraction_households_benefit": 0.13377926421404682,
+          "retail_component_difference": 0.004696388250742403,
+          "wear_component_difference": 0.0008267470983027074
+        },
+        "seasonal12_tou_seed11_expanded__minus__calibrated3_tou_seed11_expanded": {
+          "micro_mean_difference": 0.0003319898046990011,
+          "micro_calendar_block95": [
+            -0.0007148090747004145,
+            0.0014307208420504646
+          ],
+          "macro_mean_difference": 0.00032667239297291535,
+          "household_median_difference": 0.000995285656915262,
+          "household_p10_p90": [
+            -0.004041117673914703,
+            0.004044727310432052
+          ],
+          "fraction_households_benefit": 0.3712374581939799,
+          "retail_component_difference": -0.00034462926145581603,
+          "wear_component_difference": 0.0006766190661548171
+        },
+        "seasonal12_tou_seed11_expanded__minus__stochastic20_tou_seed11_expanded": {
+          "micro_mean_difference": 0.030148024965005352,
+          "micro_calendar_block95": [
+            0.027839368949769874,
+            0.03242395306396077
+          ],
+          "macro_mean_difference": 0.030087945857104906,
+          "household_median_difference": 0.029621015460643222,
+          "household_p10_p90": [
+            -0.0061650686316513945,
+            0.06726562444403271
+          ],
+          "fraction_households_benefit": 0.12709030100334448,
+          "retail_component_difference": 0.007868812759411922,
+          "wear_component_difference": 0.022279212205593427
+        }
+      }
+    },
+    "known244": {
+      "n_households": 244,
+      "gcgg_household_days": 88609,
+      "fullcost_household_days": 87798,
+      "absolute": {
+        "msecont_tou_seed11_expanded": {
+          "mean_operating_excluding_cl": 3.1489460522526453,
+          "mean_full_operating_cost": 3.5365748799439656,
+          "mean_retail_only": 3.290847286972075,
+          "mean_throughput_kwh": 12.294338631036672
+        },
+        "dfl_tou_seed11_expanded": {
+          "mean_operating_excluding_cl": 3.137275702843956,
+          "mean_full_operating_cost": 3.5248875817434633,
+          "mean_retail_only": 3.2855583297078463,
+          "mean_throughput_kwh": 11.974387199785706
+        },
+        "calibrated3_tou_seed11_expanded": {
+          "mean_operating_excluding_cl": 3.1429342668486866,
+          "mean_full_operating_cost": 3.530541337064361,
+          "mean_retail_only": 3.2909770876697397,
+          "mean_throughput_kwh": 11.986092939788739
+        },
+        "stochastic20_tou_seed11_expanded": {
+          "mean_operating_excluding_cl": 3.1079570829217107,
+          "mean_full_operating_cost": 3.495467163941003,
+          "mean_retail_only": 3.2778197195616245,
+          "mean_throughput_kwh": 10.895663315649664
+        },
+        "seasonal12_tou_seed11_expanded": {
+          "mean_operating_excluding_cl": 3.1432886434347553,
+          "mean_full_operating_cost": 3.5308925148151586,
+          "mean_retail_only": 3.2906276516512505,
+          "mean_throughput_kwh": 12.02158872264696
+        }
+      },
+      "paired": {
+        "dfl_tou_seed11_expanded__minus__msecont_tou_seed11_expanded": {
+          "micro_mean_difference": -0.011670349408688812,
+          "micro_calendar_block95": [
+            -0.013145147672730279,
+            -0.010360542929752886
+          ],
+          "macro_mean_difference": -0.011666378956854255,
+          "household_median_difference": -0.011861949100942428,
+          "household_p10_p90": [
+            -0.020394870658508164,
+            -0.006321648564240271
+          ],
+          "fraction_households_benefit": 0.9713114754098361,
+          "retail_component_difference": -0.005271320783669534,
+          "wear_component_difference": -0.006399028625019278
+        },
+        "calibrated3_tou_seed11_expanded__minus__msecont_tou_seed11_expanded": {
+          "micro_mean_difference": -0.00601178540395876,
+          "micro_calendar_block95": [
+            -0.006745013853801602,
+            -0.0052745519595804435
+          ],
+          "macro_mean_difference": -0.006014961562716517,
+          "household_median_difference": -0.006156375440849741,
+          "household_p10_p90": [
+            -0.012589318009104962,
+            -0.0014154431383901942
+          ],
+          "fraction_households_benefit": 0.9221311475409836,
+          "retail_component_difference": 0.00015312842099990889,
+          "wear_component_difference": -0.006164913824958669
+        },
+        "calibrated3_tou_seed11_expanded__minus__dfl_tou_seed11_expanded": {
+          "micro_mean_difference": 0.005658564004730051,
+          "micro_calendar_block95": [
+            0.004549752615052997,
+            0.006828645837543299
+          ],
+          "macro_mean_difference": 0.005651417394137739,
+          "household_median_difference": 0.0059236622938174995,
+          "household_p10_p90": [
+            -0.0011000009347061747,
+            0.014726996179954727
+          ],
+          "fraction_households_benefit": 0.11065573770491803,
+          "retail_component_difference": 0.005424449204669443,
+          "wear_component_difference": 0.00023411480006060793
+        },
+        "stochastic20_tou_seed11_expanded__minus__msecont_tou_seed11_expanded": {
+          "micro_mean_difference": -0.04098896933093458,
+          "micro_calendar_block95": [
+            -0.04394217453822724,
+            -0.03785527017069619
+          ],
+          "macro_mean_difference": -0.04090486466820705,
+          "household_median_difference": -0.03867014121212954,
+          "household_p10_p90": [
+            -0.07210929200418614,
+            -0.00959932711046711
+          ],
+          "fraction_households_benefit": 0.9590163934426229,
+          "retail_component_difference": -0.013015463023194392,
+          "wear_component_difference": -0.02797350630774019
+        },
+        "stochastic20_tou_seed11_expanded__minus__dfl_tou_seed11_expanded": {
+          "micro_mean_difference": -0.029318619922245766,
+          "micro_calendar_block95": [
+            -0.03196739295825223,
+            -0.026742693279610416
+          ],
+          "macro_mean_difference": -0.029238485711352787,
+          "household_median_difference": -0.025898685001927747,
+          "household_p10_p90": [
+            -0.05984813960918264,
+            -0.0005469099602672113
+          ],
+          "fraction_households_benefit": 0.9016393442622951,
+          "retail_component_difference": -0.007744142239524857,
+          "wear_component_difference": -0.02157447768272091
+        },
+        "stochastic20_tou_seed11_expanded__minus__calibrated3_tou_seed11_expanded": {
+          "micro_mean_difference": -0.03497718392697582,
+          "micro_calendar_block95": [
+            -0.037715514971144115,
+            -0.03239164602929216
+          ],
+          "macro_mean_difference": -0.03488990310549053,
+          "household_median_difference": -0.03062399406802177,
+          "household_p10_p90": [
+            -0.06780835761630727,
+            -0.0032514029601211315
+          ],
+          "fraction_households_benefit": 0.9262295081967213,
+          "retail_component_difference": -0.0131685914441943,
+          "wear_component_difference": -0.021808592482781518
+        },
+        "seasonal12_tou_seed11_expanded__minus__msecont_tou_seed11_expanded": {
+          "micro_mean_difference": -0.005657408817889968,
+          "micro_calendar_block95": [
+            -0.007088921306160341,
+            -0.004192446000966284
+          ],
+          "macro_mean_difference": -0.0056662999978090095,
+          "household_median_difference": -0.005516173622818326,
+          "household_p10_p90": [
+            -0.013141956995737976,
+            0.0006022551317863174
+          ],
+          "fraction_households_benefit": 0.8770491803278688,
+          "retail_component_difference": -0.00020241065009575239,
+          "wear_component_difference": -0.005454998167794215
+        },
+        "seasonal12_tou_seed11_expanded__minus__dfl_tou_seed11_expanded": {
+          "micro_mean_difference": 0.006012940590798844,
+          "micro_calendar_block95": [
+            0.004711941640369674,
+            0.007322211291631773
+          ],
+          "macro_mean_difference": 0.006000078959045246,
+          "household_median_difference": 0.006293181766357155,
+          "household_p10_p90": [
+            -0.0010091884148365022,
+            0.015826920890551814
+          ],
+          "fraction_households_benefit": 0.11885245901639344,
+          "retail_component_difference": 0.0050689101335737825,
+          "wear_component_difference": 0.0009440304572250617
+        },
+        "seasonal12_tou_seed11_expanded__minus__calibrated3_tou_seed11_expanded": {
+          "micro_mean_difference": 0.0003543765860687927,
+          "micro_calendar_block95": [
+            -0.0007202728491084647,
+            0.0014512328073354862
+          ],
+          "macro_mean_difference": 0.0003486615649075073,
+          "household_median_difference": 0.0009954377542234112,
+          "household_p10_p90": [
+            -0.0038252652295967665,
+            0.004121482423391556
+          ],
+          "fraction_households_benefit": 0.3770491803278688,
+          "retail_component_difference": -0.00035553907109566124,
+          "wear_component_difference": 0.000709915657164454
+        },
+        "seasonal12_tou_seed11_expanded__minus__stochastic20_tou_seed11_expanded": {
+          "micro_mean_difference": 0.03533156051304461,
+          "micro_calendar_block95": [
+            0.03307350572617865,
+            0.03763753973559512
+          ],
+          "macro_mean_difference": 0.035238564670398036,
+          "household_median_difference": 0.03101726502092618,
+          "household_p10_p90": [
+            0.005021941256266495,
+            0.06845123153448289
+          ],
+          "fraction_households_benefit": 0.06967213114754098,
+          "retail_component_difference": 0.01281305237309864,
+          "wear_component_difference": 0.022518508139945968
+        }
+      }
+    },
+    "heldout55": {
+      "n_households": 55,
+      "gcgg_household_days": 20032,
+      "fullcost_household_days": 19915,
+      "absolute": {
+        "msecont_tou_seed11_expanded": {
+          "mean_operating_excluding_cl": 3.1113735518419334,
+          "mean_full_operating_cost": 3.5450821134442374,
+          "mean_retail_only": 3.309276578719224,
+          "mean_throughput_kwh": 11.783149403897111
+        },
+        "dfl_tou_seed11_expanded": {
+          "mean_operating_excluding_cl": 3.1016591245837657,
+          "mean_full_operating_cost": 3.535391255731219,
+          "mean_retail_only": 3.3057653427566316,
+          "mean_throughput_kwh": 11.47278387012863
+        },
+        "calibrated3_tou_seed11_expanded": {
+          "mean_operating_excluding_cl": 3.1047827041159235,
+          "mean_full_operating_cost": 3.5385325281747297,
+          "mean_retail_only": 3.3091291405895924,
+          "mean_throughput_kwh": 11.461715033322543
+        },
+        "stochastic20_tou_seed11_expanded": {
+          "mean_operating_excluding_cl": 3.097796353014414,
+          "mean_full_operating_cost": 3.5317462697611117,
+          "mean_retail_only": 3.322949224228006,
+          "mean_throughput_kwh": 10.427145968938152
+        },
+        "seasonal12_tou_seed11_expanded": {
+          "mean_operating_excluding_cl": 3.105015668845223,
+          "mean_full_operating_cost": 3.5387705314399436,
+          "mean_retail_only": 3.30884771580705,
+          "mean_throughput_kwh": 11.48818182520663
+        }
+      },
+      "paired": {
+        "dfl_tou_seed11_expanded__minus__msecont_tou_seed11_expanded": {
+          "micro_mean_difference": -0.009714427258167416,
+          "micro_calendar_block95": [
+            -0.011500656180077007,
+            -0.00804867886751051
+          ],
+          "macro_mean_difference": -0.009715968392620669,
+          "household_median_difference": -0.011218512192163086,
+          "household_p10_p90": [
+            -0.01978229458713038,
+            -0.005350552682203682
+          ],
+          "fraction_households_benefit": 0.9454545454545454,
+          "retail_component_difference": -0.003507116582797788,
+          "wear_component_difference": -0.006207310675369627
+        },
+        "calibrated3_tou_seed11_expanded__minus__msecont_tou_seed11_expanded": {
+          "micro_mean_difference": -0.00659084772600984,
+          "micro_calendar_block95": [
+            -0.007463830724099133,
+            -0.005721763413108874
+          ],
+          "macro_mean_difference": -0.006599691710281859,
+          "household_median_difference": -0.006464377760059442,
+          "household_p10_p90": [
+            -0.014334546999982212,
+            -0.0013698720002023493
+          ],
+          "fraction_households_benefit": 0.9454545454545454,
+          "retail_component_difference": -0.00016216031451843536,
+          "wear_component_difference": -0.006428687411491405
+        },
+        "calibrated3_tou_seed11_expanded__minus__dfl_tou_seed11_expanded": {
+          "micro_mean_difference": 0.003123579532157576,
+          "micro_calendar_block95": [
+            0.0017374828448864863,
+            0.004636675762880471
+          ],
+          "macro_mean_difference": 0.0031162766823388107,
+          "household_median_difference": 0.0038861447151107027,
+          "household_p10_p90": [
+            -0.0021504569664295005,
+            0.013002048002154246
+          ],
+          "fraction_households_benefit": 0.18181818181818182,
+          "retail_component_difference": 0.003344956268279353,
+          "wear_component_difference": -0.00022137673612177797
+        },
+        "stochastic20_tou_seed11_expanded__minus__msecont_tou_seed11_expanded": {
+          "micro_mean_difference": -0.013577198827519527,
+          "micro_calendar_block95": [
+            -0.017525185866380442,
+            -0.009615606471493595
+          ],
+          "macro_mean_difference": -0.013608499129114169,
+          "household_median_difference": -0.017997848258867015,
+          "household_p10_p90": [
+            -0.0623899960205874,
+            0.02932062247026581
+          ],
+          "fraction_households_benefit": 0.7090909090909091,
+          "retail_component_difference": 0.013542869871659716,
+          "wear_component_difference": -0.027120068699179246
+        },
+        "stochastic20_tou_seed11_expanded__minus__dfl_tou_seed11_expanded": {
+          "micro_mean_difference": -0.003862771569352113,
+          "micro_calendar_block95": [
+            -0.006865387709720311,
+            -0.0008781555968939515
+          ],
+          "macro_mean_difference": -0.0038925307364935046,
+          "household_median_difference": -0.004463057441122673,
+          "household_p10_p90": [
+            -0.050240279697245004,
+            0.04169270298826065
+          ],
+          "fraction_households_benefit": 0.5818181818181818,
+          "retail_component_difference": 0.017049986454457506,
+          "wear_component_difference": -0.020912758023809618
+        },
+        "stochastic20_tou_seed11_expanded__minus__calibrated3_tou_seed11_expanded": {
+          "micro_mean_difference": -0.006986351101509688,
+          "micro_calendar_block95": [
+            -0.010297399119150894,
+            -0.003722543535827037
+          ],
+          "macro_mean_difference": -0.007008807418832313,
+          "household_median_difference": -0.01236427302310342,
+          "household_p10_p90": [
+            -0.05629929355373007,
+            0.03424311811124221
+          ],
+          "fraction_households_benefit": 0.6363636363636364,
+          "retail_component_difference": 0.01370503018617815,
+          "wear_component_difference": -0.02069138128768784
+        },
+        "seasonal12_tou_seed11_expanded__minus__msecont_tou_seed11_expanded": {
+          "micro_mean_difference": -0.0063578829967099945,
+          "micro_calendar_block95": [
+            -0.007997950292572732,
+            -0.00475411351124646
+          ],
+          "macro_mean_difference": -0.0063705712800733155,
+          "household_median_difference": -0.006866972689604978,
+          "household_p10_p90": [
+            -0.01380047211523656,
+            -0.000356644770635595
+          ],
+          "fraction_households_benefit": 0.9090909090909091,
+          "retail_component_difference": -0.0004585314229003174,
+          "wear_component_difference": -0.005899351573809677
+        },
+        "seasonal12_tou_seed11_expanded__minus__dfl_tou_seed11_expanded": {
+          "micro_mean_difference": 0.0033565442614574225,
+          "micro_calendar_block95": [
+            0.0019016875326546307,
+            0.0048161930383415225
+          ],
+          "macro_mean_difference": 0.003345397112547354,
+          "household_median_difference": 0.0047099054944359595,
+          "household_p10_p90": [
+            -0.0015698941201902044,
+            0.015724873417460164
+          ],
+          "fraction_households_benefit": 0.2,
+          "retail_component_difference": 0.0030485851598974715,
+          "wear_component_difference": 0.0003079591015599503
+        },
+        "seasonal12_tou_seed11_expanded__minus__calibrated3_tou_seed11_expanded": {
+          "micro_mean_difference": 0.00023296472929984616,
+          "micro_calendar_block95": [
+            -0.0008354686344484471,
+            0.00131722276246849
+          ],
+          "macro_mean_difference": 0.00022912043020854387,
+          "household_median_difference": 0.000995285656915262,
+          "household_p10_p90": [
+            -0.004793780413033138,
+            0.003792501065808963
+          ],
+          "fraction_households_benefit": 0.34545454545454546,
+          "retail_component_difference": -0.00029637110838188227,
+          "wear_component_difference": 0.0005293358376817284
+        },
+        "seasonal12_tou_seed11_expanded__minus__stochastic20_tou_seed11_expanded": {
+          "micro_mean_difference": 0.007219315830809535,
+          "micro_calendar_block95": [
+            0.0042642579961955866,
+            0.010163703695592616
+          ],
+          "macro_mean_difference": 0.0072379278490408575,
+          "household_median_difference": 0.014000980147510148,
+          "household_p10_p90": [
+            -0.03418829292405709,
+            0.0592214209884861
+          ],
+          "fraction_households_benefit": 0.38181818181818183,
+          "retail_component_difference": -0.014001401294560034,
+          "wear_component_difference": 0.02122071712536957
+        }
+      }
+    }
+  },
+  "resource_files": {
+    "msecont_tou_seed11_expanded": "D:\\MLWork\\pv_battery_dfl_grid_20261005\\revision_20261009\\dispatch\\msecont_tou_seed11_expanded.json",
+    "dfl_tou_seed11_expanded": "D:\\MLWork\\pv_battery_dfl_grid_20261005\\revision_20261009\\dispatch\\dfl_tou_seed11_expanded.json",
+    "calibrated3_tou_seed11_expanded": "D:\\MLWork\\pv_battery_dfl_grid_20261005\\revision_20261009\\dispatch\\calibrated3_tou_seed11_expanded.json",
+    "stochastic20_tou_seed11_expanded": "D:\\MLWork\\pv_battery_dfl_grid_20261005\\revision_20261009\\dispatch\\stochastic20_tou_seed11_expanded.json",
+    "seasonal12_tou_seed11_expanded": "D:\\MLWork\\pv_battery_dfl_grid_20261005\\revision_20261009\\dispatch\\seasonal12_tou_seed11_expanded.json"
+  },
+  "resources": {
+    "elapsed_seconds": 5.114615299971774,
+    "peak_process_rss_bytes": 904507392,
+    "logical_threads_per_process": 1,
+    "python": "3.12.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "resource_note": "Peak process RSS includes data and imports. Wall times are comparable only when run serially without competing workload."
+  }
+}

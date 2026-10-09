@@ -1,0 +1,1271 @@
+{
+  "n_scenarios": 79,
+  "all_passed": true,
+  "scope": "schema, coverage, paired household order, bills, convergence, solver tolerance and saved file integrity; no comparison-based selection",
+  "scenarios": [
+    {
+      "file": "results\\network_replay\\external_full_v1\\mlp_seed11_panel0_b55_all_tou_eulv_src1p025_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 7.75618157522473e-06
+    },
+    {
+      "file": "results\\network_replay\\external_full_v1\\mlp_seed11_panel0_b55_all_tou_eulv_src1p0_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 9.50356685081033e-06
+    },
+    {
+      "file": "results\\network_replay\\external_full_v1\\mlp_seed11_panel0_b55_all_tou_simbench_rural1_src1p025_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 2.950716218808047e-06
+    },
+    {
+      "file": "results\\network_replay\\external_full_v1\\mlp_seed11_panel0_b55_all_tou_simbench_semiurb4_src1p025_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 2.6816996450129693e-06
+    },
+    {
+      "file": "results\\network_replay\\external_prespecified_v1\\mlp_seed11_panel0_b55_all_tou_eulv_src1p025_fixed_seasonal_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 4.367836633267785e-06
+    },
+    {
+      "file": "results\\network_replay\\external_prespecified_v1\\mlp_seed11_panel0_b55_all_tou_eulv_src1p0_fixed_seasonal_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 5.21815598286679e-06
+    },
+    {
+      "file": "results\\network_replay\\external_prespecified_v1\\mlp_seed11_panel0_b55_all_tou_simbench_rural1_src1p025_fixed_seasonal_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 1.6785568410782048e-06
+    },
+    {
+      "file": "results\\network_replay\\external_prespecified_v1\\mlp_seed11_panel0_b55_all_tou_simbench_semiurb4_src1p025_fixed_seasonal_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 2.0818836299341115e-06
+    },
+    {
+      "file": "results\\network_replay\\heldout_v1\\mlp_seed11_panel3_b55_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 6.403490878881257e-06
+    },
+    {
+      "file": "results\\network_replay\\heldout_v1\\mlp_seed11_panel3_b55_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 4.4668773648837146e-06
+    },
+    {
+      "file": "results\\network_replay\\heldout_v1\\mlp_seed23_panel3_b55_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 6.613895418894344e-06
+    },
+    {
+      "file": "results\\network_replay\\heldout_v1\\mlp_seed23_panel3_b55_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 8.315630056099366e-06
+    },
+    {
+      "file": "results\\network_replay\\heldout_v1\\mlp_seed47_panel3_b55_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 6.41185167582492e-06
+    },
+    {
+      "file": "results\\network_replay\\heldout_v1\\mlp_seed47_panel3_b55_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 4.448625260167205e-06
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed11_panel0_b28_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": null
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed11_panel0_b28_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": null
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed11_panel0_b55_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": null
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed11_panel0_b55_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": null
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed11_panel1_b28_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": null
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed11_panel1_b28_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": null
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed11_panel1_b55_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": null
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed11_panel1_b55_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": null
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed11_panel2_b28_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": null
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed11_panel2_b28_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": null
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed11_panel2_b55_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": null
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed11_panel2_b55_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": null
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed23_panel0_b28_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": null
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed23_panel0_b28_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": null
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed23_panel0_b55_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": null
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed23_panel0_b55_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": null
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed23_panel1_b28_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": null
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed23_panel1_b28_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": null
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed23_panel1_b55_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": null
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed23_panel1_b55_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": null
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed23_panel2_b28_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": null
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed23_panel2_b28_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": null
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed23_panel2_b55_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": null
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed23_panel2_b55_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": null
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed47_panel0_b28_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": null
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed47_panel0_b28_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": null
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed47_panel0_b55_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": null
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed47_panel0_b55_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": null
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed47_panel1_b28_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": null
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed47_panel1_b28_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": null
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed47_panel1_b55_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": null
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed47_panel1_b55_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": null
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed47_panel2_b28_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": null
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed47_panel2_b28_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": null
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed47_panel2_b55_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": null
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed47_panel2_b55_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": null
+    },
+    {
+      "file": "results\\network_replay\\mapping_full_v1\\mlp_seed11_panel0_b55_all_tou_eulv_src1p05_map0_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 5.832997441945764e-06
+    },
+    {
+      "file": "results\\network_replay\\mapping_full_v1\\mlp_seed11_panel0_b55_all_tou_eulv_src1p05_map1_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 5.132091792425797e-06
+    },
+    {
+      "file": "results\\network_replay\\mapping_full_v1\\mlp_seed11_panel0_b55_all_tou_eulv_src1p05_map2_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 9.6310829960089e-06
+    },
+    {
+      "file": "results\\network_replay\\mapping_full_v1\\mlp_seed11_panel0_b55_all_tou_eulv_src1p05_map3_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 6.461269163704486e-06
+    },
+    {
+      "file": "results\\network_replay\\mapping_full_v1\\mlp_seed11_panel0_b55_all_tou_eulv_src1p05_map4_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 6.598142672231688e-06
+    },
+    {
+      "file": "results\\network_replay\\mapping_full_v1\\mlp_seed11_panel0_b55_all_tou_eulv_src1p05_map5_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 7.074230962800243e-06
+    },
+    {
+      "file": "results\\network_replay\\mapping_full_v1\\mlp_seed11_panel0_b55_all_tou_eulv_src1p05_map6_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 5.573321713470136e-06
+    },
+    {
+      "file": "results\\network_replay\\mapping_full_v1\\mlp_seed11_panel0_b55_all_tou_eulv_src1p05_map7_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 5.3817880503181925e-06
+    },
+    {
+      "file": "results\\network_replay\\mapping_full_v1\\mlp_seed11_panel0_b55_all_tou_eulv_src1p05_map8_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 5.878360026301266e-06
+    },
+    {
+      "file": "results\\network_replay\\mapping_full_v1\\mlp_seed11_panel0_b55_all_tou_eulv_src1p05_map9_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 6.055282298689235e-06
+    },
+    {
+      "file": "results\\network_replay\\mapping_prespecified_v1\\mlp_seed11_panel0_b55_all_tou_eulv_src1p05_map0_seasonal_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 4.1715652407958714e-06
+    },
+    {
+      "file": "results\\network_replay\\mapping_prespecified_v1\\mlp_seed11_panel0_b55_all_tou_eulv_src1p05_map1_seasonal_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 4.990277481020655e-06
+    },
+    {
+      "file": "results\\network_replay\\mapping_prespecified_v1\\mlp_seed11_panel0_b55_all_tou_eulv_src1p05_map2_seasonal_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 9.6310829960089e-06
+    },
+    {
+      "file": "results\\network_replay\\mapping_prespecified_v1\\mlp_seed11_panel0_b55_all_tou_eulv_src1p05_map3_seasonal_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 5.1730531733795715e-06
+    },
+    {
+      "file": "results\\network_replay\\mapping_prespecified_v1\\mlp_seed11_panel0_b55_all_tou_eulv_src1p05_map4_seasonal_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 4.246889202086379e-06
+    },
+    {
+      "file": "results\\network_replay\\mapping_prespecified_v1\\mlp_seed11_panel0_b55_all_tou_eulv_src1p05_map5_seasonal_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 5.241579174253275e-06
+    },
+    {
+      "file": "results\\network_replay\\mapping_prespecified_v1\\mlp_seed11_panel0_b55_all_tou_eulv_src1p05_map6_seasonal_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 3.25187065142174e-06
+    },
+    {
+      "file": "results\\network_replay\\mapping_prespecified_v1\\mlp_seed11_panel0_b55_all_tou_eulv_src1p05_map7_seasonal_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 5.228944327306806e-06
+    },
+    {
+      "file": "results\\network_replay\\mapping_prespecified_v1\\mlp_seed11_panel0_b55_all_tou_eulv_src1p05_map8_seasonal_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 3.568249779206667e-06
+    },
+    {
+      "file": "results\\network_replay\\mapping_prespecified_v1\\mlp_seed11_panel0_b55_all_tou_eulv_src1p05_map9_seasonal_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 4.167185654768701e-06
+    },
+    {
+      "file": "results\\network_replay\\none_v1\\none_seed11_panel0_b0_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 4.095485498734064e-06
+    },
+    {
+      "file": "results\\network_replay\\none_v1\\none_seed11_panel1_b0_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 6.477463655618632e-06
+    },
+    {
+      "file": "results\\network_replay\\none_v1\\none_seed11_panel2_b0_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 5.1811267294255e-06
+    },
+    {
+      "file": "results\\network_replay\\strong_baselines_v1\\calibrated_seed11_panel0_b55_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 6.77373179325258e-06
+    },
+    {
+      "file": "results\\network_replay\\strong_baselines_v1\\calibrated_seed11_panel0_b55_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 4.872177122638988e-06
+    },
+    {
+      "file": "results\\network_replay\\strong_baselines_v1\\hgb_seed11_panel0_b55_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 7.121081853078692e-06
+    },
+    {
+      "file": "results\\network_replay\\strong_baselines_v1\\hgb_seed11_panel0_b55_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 6.473023390185517e-06
+    },
+    {
+      "file": "results\\network_replay\\strong_baselines_v1\\stochastic_seed11_panel0_b55_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 6.6712742672336844e-06
+    },
+    {
+      "file": "results\\network_replay\\strong_baselines_v1\\stochastic_seed11_panel0_b55_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true,
+        "tight_tolerance": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 6.479427172578767e-06
+    }
+  ]
+}

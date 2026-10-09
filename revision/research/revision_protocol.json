@@ -1,0 +1,366 @@
+{
+  "created_utc": "2026-10-08T19:02:21.929607+00:00",
+  "route_card": {
+    "route": "SCI",
+    "reason": "Applied engineering empirical evaluation of residential storage control and AC feeder consequences.",
+    "primary_standard": "Meaningful engineering choice, matched comparisons, information timing, physical assumptions, operational validation and reproducibility.",
+    "do_not_use": "Do not require econometric causal identification or claim field deployment, measured degradation or a new DFL algorithm.",
+    "next_workflow": "sci-full-workflow",
+    "venue": "Electric Power Systems Research; original applied engineering research; hybrid OA. Public university transcription lists 2025 JCR Q2; SJR is explicitly not substituted for JCR."
+  },
+  "main_question": "When does cost-trained control signalling add practically relevant private and feeder value over matched statistical training, train-only calibration and scenario control?",
+  "interpretation": "Conditional computational evidence and selection boundaries, not a universal ranking or physical PV-information improvement.",
+  "status": [
+    {
+      "id": "R01",
+      "requirement": "Reframe contribution as method selection under operating conditions",
+      "owner": "root",
+      "evidence": "manuscript",
+      "state": "addressed",
+      "evidence_files": [
+        "manuscript/article_full.txt"
+      ],
+      "manuscript_response": "manuscript/response_full.txt#R01"
+    },
+    {
+      "id": "R02",
+      "requirement": "Separate matched objective attribution from practical control comparison",
+      "owner": "root,forecast_impl",
+      "evidence": "matched cost table",
+      "state": "addressed",
+      "evidence_files": [
+        "results/expanded_comparison_tou_support_matched_baselines.json",
+        "manuscript/article_full.txt"
+      ],
+      "manuscript_response": "manuscript/response_full.txt#R02"
+    },
+    {
+      "id": "R03",
+      "requirement": "Pair continued MSE, DFL, low dimensional calibration and SAA on identical seed and masks",
+      "owner": "forecast_impl",
+      "evidence": "expanded and feeder economics",
+      "state": "addressed",
+      "evidence_files": [
+        "results/expanded_comparison_tou_support_matched_baselines.json",
+        "research/independent_settlement_verification.json"
+      ],
+      "manuscript_response": "manuscript/response_full.txt#R03"
+    },
+    {
+      "id": "R04",
+      "requirement": "Report retail bill, throughput proxy, information-gap closure and practical effect size",
+      "owner": "forecast_impl,root",
+      "evidence": "cost decomposition",
+      "state": "addressed",
+      "evidence_files": [
+        "figures/figure1_source_data.json",
+        "manuscript/article_full.txt"
+      ],
+      "manuscript_response": "manuscript/response_full.txt#R04"
+    },
+    {
+      "id": "R05",
+      "requirement": "Measure comparable isolated-process single-thread runtime and peak RSS; explain maintenance",
+      "owner": "forecast_impl",
+      "evidence": "engineering resource table",
+      "state": "addressed",
+      "evidence_files": [
+        "results/resource_comparison_tou.json"
+      ],
+      "manuscript_response": "manuscript/response_full.txt#R05"
+    },
+    {
+      "id": "R06",
+      "requirement": "Use continued MSE primary in source voltage, topology and mapping analyses",
+      "owner": "network_impl",
+      "evidence": "paired.json",
+      "state": "addressed",
+      "evidence_files": [
+        "network_diagnostics/paired.json",
+        "research/network_manuscript_audit.txt"
+      ],
+      "manuscript_response": "manuscript/response_full.txt#R06"
+    },
+    {
+      "id": "R07",
+      "requirement": "Separate over/undervoltage, zero-inclusive and conditional severity; report quantiles, worst node, duration",
+      "owner": "network_impl",
+      "evidence": "network_diagnostics",
+      "state": "addressed",
+      "evidence_files": [
+        "manuscript/supplement_full.txt",
+        "figures/figure2_source_data.json"
+      ],
+      "manuscript_response": "manuscript/response_full.txt#R07"
+    },
+    {
+      "id": "R08",
+      "requirement": "Predefine complete voltage threshold curves and examine density near thresholds",
+      "owner": "network_impl,root",
+      "evidence": "voltage figure",
+      "state": "addressed",
+      "evidence_files": [
+        "figures/figure2_source_data.json"
+      ],
+      "manuscript_response": "manuscript/response_full.txt#R08"
+    },
+    {
+      "id": "R09",
+      "requirement": "Report relative peaks/losses, transformer loading and PV/battery/load system scale",
+      "owner": "network_impl",
+      "evidence": "system table",
+      "state": "addressed",
+      "evidence_files": [
+        "manuscript/article_full.txt",
+        "research/network_manuscript_audit.txt"
+      ],
+      "manuscript_response": "manuscript/response_full.txt#R09"
+    },
+    {
+      "id": "R10",
+      "requirement": "Assess limited, physically interpretable PF/impedance uncertainty",
+      "owner": "network_impl",
+      "evidence": "physical brackets",
+      "state": "addressed",
+      "evidence_files": [
+        "manuscript/supplement_full.txt",
+        "network_revision_audit.json"
+      ],
+      "manuscript_response": "manuscript/response_full.txt#R10"
+    },
+    {
+      "id": "R11",
+      "requirement": "Continuous SOC with terminal energy value: frozen transfer and matched retraining separately",
+      "owner": "forecast_impl",
+      "evidence": "control results",
+      "state": "addressed",
+      "evidence_files": [
+        "manuscript/supplement_full.txt",
+        "results/revision_dispatch_audit.json"
+      ],
+      "manuscript_response": "manuscript/response_full.txt#R11"
+    },
+    {
+      "id": "R12",
+      "requirement": "Officially sourced export rule equally applied and retail repricing; state protection-layer transfer",
+      "owner": "network_impl,literature_full",
+      "evidence": "export results",
+      "state": "addressed",
+      "evidence_files": [
+        "manuscript/supplement_full.txt",
+        "network_revision_audit.json"
+      ],
+      "manuscript_response": "manuscript/response_full.txt#R12"
+    },
+    {
+      "id": "R13",
+      "requirement": "Direct net-load baseline and training-only seasonal/time calibration test architectural necessity",
+      "owner": "forecast_impl",
+      "evidence": "baseline results",
+      "state": "addressed",
+      "evidence_files": [
+        "results/expanded_comparison_tou_support_matched_baselines.json"
+      ],
+      "manuscript_response": "manuscript/response_full.txt#R13"
+    },
+    {
+      "id": "R14",
+      "requirement": "Deployable load models: frozen PV-signal transfer versus newly matched training",
+      "owner": "forecast_impl",
+      "evidence": "input dependence",
+      "state": "addressed",
+      "evidence_files": [
+        "figures/figure4_source_data.json",
+        "manuscript/supplement_full.txt"
+      ],
+      "manuscript_response": "manuscript/response_full.txt#R14"
+    },
+    {
+      "id": "R15",
+      "requirement": "Describe outputs as controller task signals; retain physical PV diagnostics without claiming improved physics",
+      "owner": "root",
+      "evidence": "title, methods, discussion",
+      "state": "addressed",
+      "evidence_files": [
+        "manuscript/article_full.txt"
+      ],
+      "manuscript_response": "manuscript/response_full.txt#R15"
+    },
+    {
+      "id": "R16",
+      "requirement": "AC injection-to-voltage sensitivity with full AC error; temporal/node/phase transmission chain",
+      "owner": "network_impl,root",
+      "evidence": "mechanism figure",
+      "state": "addressed",
+      "evidence_files": [
+        "network_mechanism/summary.json",
+        "figures/figure3_source_data.json"
+      ],
+      "manuscript_response": "manuscript/response_full.txt#R16"
+    },
+    {
+      "id": "R17",
+      "requirement": "Household benefit/harm tails and owner/nonowner voltage exposure",
+      "owner": "network_impl,forecast_impl",
+      "evidence": "distribution results",
+      "state": "addressed",
+      "evidence_files": [
+        "figures/figure1_source_data.json",
+        "manuscript/supplement_full.txt"
+      ],
+      "manuscript_response": "manuscript/response_full.txt#R17"
+    },
+    {
+      "id": "R18",
+      "requirement": "Retain test-triggered redesign disclosure; freeze existing models before external evaluation",
+      "owner": "root",
+      "evidence": "external freeze manifest",
+      "state": "addressed",
+      "evidence_files": [
+        "results/storenet_external_postrun_audit.json",
+        "manuscript/article_full.txt"
+      ],
+      "manuscript_response": "manuscript/response_full.txt#R18"
+    },
+    {
+      "id": "R19",
+      "requirement": "Independent public dataset: verify units, quality, gross load, capacity and frozen-transfer limitations",
+      "owner": "literature_full,forecast_impl",
+      "evidence": "external results",
+      "state": "addressed",
+      "evidence_files": [
+        "results/storenet_frozen_external.json",
+        "results/storenet_external_postrun_audit.json"
+      ],
+      "manuscript_response": "manuscript/response_full.txt#R19"
+    },
+    {
+      "id": "R20",
+      "requirement": "Private economics on all paired valid household-days, separate from feeder complete dates",
+      "owner": "forecast_impl",
+      "evidence": "expanded sample results",
+      "state": "addressed",
+      "evidence_files": [
+        "research/independent_settlement_verification.json"
+      ],
+      "manuscript_response": "manuscript/response_full.txt#R20"
+    },
+    {
+      "id": "R21",
+      "requirement": "Monthly coverage and retained-day characteristics; bootstrap does not correct missingness",
+      "owner": "forecast_impl,network_impl",
+      "evidence": "coverage table",
+      "state": "addressed",
+      "evidence_files": [
+        "manuscript/supplement_full.txt"
+      ],
+      "manuscript_response": "manuscript/response_full.txt#R21"
+    },
+    {
+      "id": "R22",
+      "requirement": "Same 27 dispersed versus geographically grouped households, load/PV matching, same nodes/dates",
+      "owner": "network_impl",
+      "evidence": "geographic matched check",
+      "state": "addressed",
+      "evidence_files": [
+        "network_geography/cohort_plan.json",
+        "manuscript/supplement_full.txt"
+      ],
+      "manuscript_response": "manuscript/response_full.txt#R22"
+    },
+    {
+      "id": "R23",
+      "requirement": "Wear: frozen-action repricing separated from reoptimization and matched retraining at 0/.01/.04",
+      "owner": "forecast_impl,literature_full",
+      "evidence": "wear results",
+      "state": "addressed",
+      "evidence_files": [
+        "figures/figure4_source_data.json",
+        "manuscript/supplement_full.txt"
+      ],
+      "manuscript_response": "manuscript/response_full.txt#R23"
+    },
+    {
+      "id": "R24",
+      "requirement": "Consolidate evidence boundaries; relocate numerical implementation audits to supplement",
+      "owner": "root",
+      "evidence": "main and supplement",
+      "state": "addressed",
+      "evidence_files": [
+        "manuscript/article_full.txt",
+        "manuscript/supplement_full.txt"
+      ],
+      "manuscript_response": "manuscript/response_full.txt#R24"
+    },
+    {
+      "id": "R25",
+      "requirement": "Create minimal executable reproduction package with masks/checkpoints/dispatch/figure data",
+      "owner": "root",
+      "evidence": "local package",
+      "state": "addressed",
+      "evidence_files": [
+        "reproducibility/reproduction_audit.json",
+        "reproducibility/portable_figure_entry_audit.json"
+      ],
+      "manuscript_response": "manuscript/response_full.txt#R25"
+    },
+    {
+      "id": "R26",
+      "requirement": "Accurate AI disclosure and actual computational verification, without claiming human author signoff",
+      "owner": "root",
+      "evidence": "declarations",
+      "state": "addressed",
+      "evidence_files": [
+        "manuscript/article_full.txt"
+      ],
+      "manuscript_response": "manuscript/response_full.txt#R26"
+    },
+    {
+      "id": "R27",
+      "requirement": "Verify journal scope, indexing and nonmandatory OA; resolve JCR Q1/Q2 versus Electrical Engineering",
+      "owner": "literature_full,root",
+      "evidence": "venue decision",
+      "state": "addressed",
+      "evidence_files": [
+        "manuscript/response_full.txt"
+      ],
+      "manuscript_response": "manuscript/response_full.txt#R27"
+    },
+    {
+      "id": "R28",
+      "requirement": "Nature-style evidence architecture, editable vector and 1200 dpi raster; rendered alignment/collision and visual audits",
+      "owner": "root",
+      "evidence": "figures and QA",
+      "state": "addressed",
+      "evidence_files": [
+        "research/delivery_visual_audit.json"
+      ],
+      "manuscript_response": "manuscript/response_full.txt#R28"
+    },
+    {
+      "id": "R29",
+      "requirement": "Accessible editable tables, equations and source references, concise substantive prose",
+      "owner": "root",
+      "evidence": "revised article",
+      "state": "addressed",
+      "evidence_files": [
+        "research/delivery_visual_audit.json",
+        "manuscript/response_full.txt"
+      ],
+      "manuscript_response": "manuscript/response_full.txt#R29"
+    }
+  ],
+  "updated_utc": "2026-10-08T20:28:47.802418+00:00",
+  "status_semantics": "Addressed means the comment was implemented or its claim was narrowed with a stated evidence boundary; it does not mean every uncertainty was eliminated.",
+  "remaining_submission_administration": [
+    "Human author names, affiliations, funding, competing interests and responsibility confirmation.",
+    "Final journal-specific author-guide check; publisher guide was captcha-blocked.",
+    "Public data/code archiving and DOI only when separately authorized."
+  ],
+  "venue_sources": {
+    "scope": "https://shop.elsevier.com/journals/electric-power-systems-research/0378-7796",
+    "hybrid": "https://www.sba.unipi.it/en/electric-power-systems-research",
+    "public_JCR_transcription": "https://www.iit.comillas.edu/publicacion/info_revista/en/52/Electric_Power_Systems_Research",
+    "subscription_route": "https://www.elsevier.com/about/policies-and-standards/pricing"
+  }
+}

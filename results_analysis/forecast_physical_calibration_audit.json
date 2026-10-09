@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "tariff": "tou",
+      "method": "calibrated",
+      "clean_days": 79397,
+      "night_support_exact_zero": true,
+      "max_cost_error": 8.2520276833975e-07,
+      "no_solver_failures": true
+    },
+    {
+      "tariff": "flat",
+      "method": "calibrated",
+      "clean_days": 79397,
+      "night_support_exact_zero": true,
+      "max_cost_error": 8.047460831051012e-07,
+      "no_solver_failures": true
+    }
+  ]
+}

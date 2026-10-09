@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this code or these processed data, please cite the archived release."
+title: "Decision-focused learning for residential battery control: code and processed data"
+abstract: >-
+  Analysis code, trained checkpoints, processed Ausgrid household panel, network models and
+  result records for a study of when decision-focused learning adds value to residential
+  battery control, including its private-cost and AC feeder consequences.
+authors:
+  - family-names: Zhang
+    given-names: Junjie
+    orcid: "https://orcid.org/0009-0004-8821-4018"
+    affiliation: "Shanghai International Studies University"
+type: software
+license: MIT
+keywords:
+  - decision-focused learning
+  - residential battery
+  - scenario optimization
+  - voltage exposure
+  - AC power flow

@@ -1,0 +1,1465 @@
+
+PAGE 1
+  
+Delft University of Technology
+Document Version
+Final published version
+Licence
+CC BY
+Citation (APA)
+Diaz-Londono, C., Orfanoudakis, S., Vergara Barrios, P. P., Palensky, P., Ruiz, F., & Gruosso, G. (2026). Open source
+algorithms for maximizing V2G flexibility based on model predictive control. Electric Power Systems Research, 250,
+Article 112082. https://doi.org/10.1016/j.epsr.2025.112082
+Important note
+To cite this publication, please use the final published version (if applicable).
+Please check the document version above.
+Copyright
+In case the licence states “Dutch Copyright Act (Article 25fa)”, this publication was made available Green Open
+Access via the TU Delft Institutional Repository pursuant to Dutch Copyright Act (Article 25fa, the Taverne
+amendment). This provision does not affect copyright ownership.
+Unless copyright is transferred by contract or statute, it remains with the copyright holder.
+Sharing and reuse
+Other than for strictly personal use, it is not permitted to download, forward or distribute the text or part of it, without
+the consent of the author(s) and/or copyright holder(s), unless the work is under an open content license such as
+Creative Commons.
+Takedown policy
+Please contact us and provide details if you believe this document breaches copyrights.
+We will remove access to the work immediately and investigate your claim.
+This work is downloaded from Delft University of Technology.
+
+PAGE 2
+ 
+Contents lists available at ScienceDirect
+Electric Power Systems Research
+journal homepage: www.elsevier.com/locate/epsr  
+Open source algorithms for maximizing V2G flexibility based on model 
+predictive control
+Cesar Diaz-Londono a,b
+ , Stavros Orfanoudakis c
+ ,∗, Pedro P. Vergara c, Peter Palensky c
+ , 
+Fredy Ruiz b
+ , Giambattista Gruosso b
+a Center for Research on Microgrids (CROM), Huanjiang Laboratory, Wenzhong Road No. 7, Zhuji, Shaoxing, Zhejiang, 311800, China
+b Politecnico di Milano, Dipartimento di Elettronica, Informazione e Bioingegneria, Via G. Ponzio, Milan, 20133, Milano  (MI), Italy
+c Delft University of Technology, Intelligent Electrical Power Grids, Mekelweg 5, Delft, 2628  CD, The Netherlands
+A R T I C L E  I N F O
+Keywords:
+Electric vehicles (EVs)
+Smart charging
+Battery degradation
+Vehicle-to-Grid (V2G)
+Model predictive control (MPC)
+ A B S T R A C T
+Integrating electric vehicles (EVs) into the power grid can revolutionize energy management strategies, offering 
+both challenges and opportunities for creating a more sustainable and resilient grid. In this context, model 
+predictive control (MPC) emerges as a powerful tool for addressing the complexities of Grid-to-Vehicle (G2V) 
+and Vehicle-to-Grid (V2G) enabled demand response management. By leveraging advanced optimization 
+techniques, MPC algorithms can anticipate future grid conditions and dynamically adjust EV charging and 
+discharging schedules. However, no standard tools exist to evaluate novel energy management strategies based 
+on MPC approaches. This work focuses on harnessing the potential of MPC in G2V and V2G applications by 
+providing open-source algorithms that allow the maximization of EV flexibility and support demand response 
+initiatives while mitigating the impact on EV battery health. Through extensive simulation and analysis, we 
+demonstrate the efficacy of our approach in maximizing the benefits of G2V and V2G while assessing the impact 
+on the longevity and reliability of EV batteries. Specifically, the proposed methods enable the optimization 
+of EV charging and discharging schedules in real-time, taking into account fluctuating energy prices, grid 
+constraints, and EV user preferences.
+1. Introduction
+As the adoption of electric vehicles (EVs) continues to surge, the 
+efficient management of charging infrastructure becomes increasingly 
+important [1]. Grid-to-vehicle (G2V) technology facilitates energy flow 
+in a unidirectional manner, whereas vehicle-to-grid (V2G) technology 
+enables bidirectional energy flow between EVs and the grid, thereby 
+unlocking the potential for EV batteries to serve as flexible energy 
+storage resources [2,3]. However, the effective implementation of G2V 
+and V2G strategies faces numerous uncertainties, including fluctuat-
+ing energy demands, variable renewable energy generation, inflexible 
+loads, and dynamic EV schedules [4].
+1.1. Literature review
+Various strategies have been explored in the literature to address 
+the EV smart charging problem, aiming to balance user requirements, 
+grid stability, and energy cost optimization. Among them, rule-based 
+approaches have been widely adopted due to their practical simplicity 
+and effectiveness. One example is the strategy presented in [5], which 
+∗ Corresponding author.
+E-mail address: s.orfanoudakis@tudelft.nl (S. Orfanoudakis).
+incorporates V2G integration, allowing EVs to inject power back into 
+the grid during peak-load or high-tariff periods. A similar rule-based 
+framework is described in [6], where both charging and discharging 
+processes are managed in the context of renewable energy systems 
+to enhance grid flexibility. Literature review Table  1 provides a com-
+prehensive comparison of key algorithmic approaches for smart EV 
+charging, highlighting their capabilities in terms of real-time operation, 
+V2G support, battery degradation modeling, open-source availability, 
+and benchmarking against optimal solutions.
+To address the increasing complexity of smart charging scenar-
+ios, heuristic and metaheuristic methods have also been explored. A 
+fuzzy logic-based control system for managing EV battery charging 
+and discharging is proposed in [7], offering adaptive responses under 
+varying grid conditions. In [8], an improved honey badger algorithm, 
+combined with dynamic programming, is employed to optimize G2V 
+and V2G power flows in a system that integrates EV parking lots. 
+Additionally, the artificial bee colony optimization algorithm described 
+in [9] addresses the multi-objective optimization challenges inherent 
+in smart charging, drawing inspiration from the foraging behavior of 
+https://doi.org/10.1016/j.epsr.2025.112082
+Received 26 July 2024; Received in revised form 23 July 2025; Accepted 29 July 2025
+Electric Power Systems Research 250 (2026) 112082 
+Available online 20 August 2025 
+0378-7796/© 2025 The Authors. Published by Elsevier B.V. This is an open access article under the CC BY license ( http://creativecommons.org/licenses/by/4.0/ ). 
+
+PAGE 3
+C. Diaz-Londono et al.
+Notation
+Sets and Indices
+𝐼 Set of EV chargers, indexed by 𝑖
+𝐽 Set of EVs, indexed by 𝑗
+𝐺 Set of transformers, indexed by 𝑔
+𝐾 Set of time steps, indexed by 𝑘
+𝐻 MPC prediction horizon, indexed by ℎ
+𝛷𝑔 Chargers connected to transformer 𝑔
+Parameters
+𝛥𝑡 Time step duration
+𝐸𝑗 Battery capacity of EV 𝑗
+𝑎𝑗 , 𝑑𝑗 Arrival and departure time of EV 𝑗
+𝑃
+𝑐
+𝑖 , 𝑃
+𝑑
+𝑖 Max charging/discharging power at charger 
+𝑖
+𝜂𝑐 , 𝜂𝑑 Charging/discharging efficiency
+𝜋𝑐
+𝑘, 𝜋𝑑
+𝑘 Charge/discharge price at time 𝑘
+𝜋𝑐
+𝑘,𝐹 𝑙𝑒𝑥, 𝜋𝑑
+𝑘,𝐹 𝑙𝑒𝑥 Flexibility prices at time 𝑘
+𝑆 𝑜𝐶𝑗,𝑎𝑗 SoC at EV arrival
+𝑆 𝑜𝐶𝑗,𝑑𝑗
+, 𝑆 𝑜𝐶𝑗,𝑑𝑗 Min and max target SoC at EV departure
+𝑆 𝑜𝐶𝑗,min Minimum SoC allowed while discharging
+𝑥𝑖,𝑘, 𝑥𝑖,𝑘 Min and max battery capacity
+𝛹𝑔 Transformer power limit
+̃𝑙𝑔,𝑘, ̃𝑤𝑔,𝑘 Forecasted load/PV gen. at transformer 𝑔
+𝑃 𝐷𝑅
+𝑔,𝑘 Demand Response power at transformer 𝑔
+Decision Variables
+𝑃 𝑐
+𝑖,𝑘, 𝑃 𝑑
+𝑖,𝑘 Ch. & disch. power at charger 𝑖 and time 𝑘
+𝑧𝑖,𝑘 Binary: 1 for charging, 0 for discharging
+𝑥𝑖,𝑘 Battery capacity of the EV at charger 𝑖 and 
+time 𝑘
+𝐹 𝑐
+𝑖,𝑘, 𝐹 𝑑
+𝑖,𝑘 Offered charging/discharging flexibility
+Other Variables
+𝜉𝑖,𝑘 EV connection status at charger 𝑖 and time 
+𝑘
+𝑂𝐶𝑀
+𝑘 Operating cost at time 𝑘
+𝑂𝐹 𝑀
+𝑘 Flexibility reward at time 𝑘
+𝑄𝑙𝑜𝑠𝑡 Total battery capacity lost
+𝑑𝑐𝑎𝑙 , 𝑑𝑐𝑦𝑐 Calendar/cyclic battery degradation
+honeybees. Other metaheuristic techniques, such as particle swarm 
+optimization and genetic algorithms, have also demonstrated promis-
+ing results in reducing fluctuations during bidirectional charging, as 
+discussed in [10].
+Reinforcement Learning (RL) methods have further contributed to 
+the development of intelligent and adaptive charging strategies [11,
+12]. In particular, real-time energy management systems based on RL 
+have shown the potential to achieve significant energy savings in EV in-
+tegration scenarios [13]. Complementarily, consensus-based algorithms 
+combined with blockchain principles have been proposed to coordinate 
+EV charging with low computational complexity, as presented in [14].
+Other approaches rely on mathematical programming techniques 
+to address the smart charging problem from a formal optimization 
+perspective. For instance, in [15], a real-time approach is introduced to 
+manage EV charging schedules using satisfaction assignment and prior-
+itized charging strategies, all while considering operational constraints. 
+Additionally, in [16], a linear model is employed to maximize the 
+utilization of photovoltaic (PV) power generation during EV charging 
+peaks, while ensuring the EVs’ state of charge (SoC) constraints are met. 
+Furthermore, Linear Programming (LP) techniques have been utilized 
+to optimize load factor during daily operations of EV parking lots, 
+considering uncertainties in EV behavior such as arrival and departure 
+times [17]. Similarly, [18] proposes a mixed-integer programming 
+model to maximize revenues for a V2G EV aggregator in the UK 
+electricity market. In [19], the synchronization of forecast-based opti-
+mization with management operation is implemented for EV charging 
+and discharging patterns. Optimal dispatching methods can reduce 
+the curtailment of wind turbines and PV power [20] or reduce the 
+generation cost [21] in distribution systems. While these approaches 
+provide linear models for both small and large-scale problems, they are 
+limited due to the absence of real-time control to handle the inherent 
+uncertainties.
+Model Predictive Control (MPC) stands out as a powerful solu-
+tion for navigating the intricacies of G2V and V2G-enabled demand 
+response management [22]. In [23], a real-time MPC strategy was 
+proposed, effectively reducing operational costs by treating EVs as 
+flexible loads, thereby enabling adjustments in the power allocation 
+and charging duration for each EV. Similarly, in [24], an MPC method 
+was introduced to coordinate EVs on a large scale, enhancing grid 
+robustness and cutting operational expenses. Moreover, [25] proposed 
+a scenario-based MPC approach, combining robust and stochastic mod-
+els to minimize the total operational cost for energy management. 
+In [26], a real-time cost-minimization energy management strategy 
+was introduced, aiming to maximize the economic potential of EVs 
+while addressing battery degradation, thus mitigating a single vehicle’s 
+operating costs. Beyond economic optimization, MPC has also been 
+recognized for its ability to contribute to grid stability. For instance, 
+advancements in MPC have shown effectiveness in mitigating frequency 
+fluctuations and reducing harmonic distortions, making it a viable so-
+lution for maintaining power system stability in renewable-dominated 
+grids [27]. Additionally, MPC has demonstrated potential in delivering 
+ancillary services such as frequency containment reserve, further sup-
+porting its role in modern grid management [28]. Even though many 
+MPC methods have been developed, there remains a gap in achieving 
+a comprehensive real-time demand response solution while assessing 
+battery degradation.
+Furthermore, while there are many open-source simulation tools for 
+fleet charging management, they often lack baseline MPC implementa-
+tions. For instance, FleetRL [29] provides a customizable environment 
+for commercial vehicle fleets, utilizing RL for charging optimization, as-
+sessing factors like economic feasibility, battery health, and operational 
+efficiency. While FleetRL offers a useful simulation framework, it lacks 
+support for constraint-aware optimization and does not incorporate 
+MPC-based coordination for flexibility or battery health. Similarly, 
+Chargym [30] and SustainGym [31] offer simulation environments for 
+EV charging, focusing on RL algorithm development but with simpli-
+fied models. Other platforms also illustrate this limitation. OPEN [32] 
+addresses broader smart energy systems but lacks MPC integration. The 
+Open V2X Management Platform [33] emphasizes clustering EV users 
+into behavioral profiles and forecasting daily energy demand at charg-
+ing stations; it does not integrate any MPC-based control mechanism. 
+Likewise, the tool introduced in [34] enables advanced V2G analysis 
+within urban power and transportation networks. Still, coordination 
+is based on participation willingness rather than optimal dispatch, 
+limiting its applicability for optimization-based strategies. In [35], a 
+real-time charging heuristic is proposed to maximize driver satisfac-
+tion and ensure fair power allocation; however, it does not leverage 
+predictive control methods such as MPC. Considering the demonstrated 
+effectiveness of MPC in EV smart charging, the development of an open-
+source MPC-based framework is critically important. Such a platform 
+would enable standardized benchmarking, foster reproducible research, 
+and facilitate the practical evaluation of MPC strategies under realistic 
+operational constraints, ultimately bridging the gap between academic 
+research and real-world deployment.
+Electric Power Systems Research 250 (2026) 112082 
+2 
+
+PAGE 4
+C. Diaz-Londono et al.
+Table 1
+Literature review table for Smart EV Charging approaches.
+ References Algorithm Approach Real-time V2G Battery 
+degradation
+Open-source Compared with 
+optimal solution
+ 
+ [6] PSO, GA, etc. Metaheuristic Yes Yes No No No  
+ [7] Fuzzy logic Hybrid Yes Yes No No No  
+ [8] Honey badger Metaheuristic No Yes No No No  
+ [9] Bee colony Metaheuristic No No No No No  
+ [10] PSO, GA Metaheuristic No Yes No No No  
+ [11,12] Reinforcement learning Learning-based Yes Yes No Yes Yes  
+ [14] Consensus-based blockchain Distributed Yes Yes No No No  
+ [16,17] Linear optimization Mathematical Prog. No No No No Yes  
+ [18,19] Mixed-integer LP Mathematical Prog. No Yes No No Yes  
+ [15] Real-time satisfaction assignment Mathematical Prog. Yes No No No Yes  
+ [23–25] Real-Time MPC MPC Yes No No No Yes  
+ [26] Cost-minimization MPC MPC Yes Partial Yes No Yes  
+ [27,28] Frequency regulation MPC MPC Yes Partial No No No  
+ [29] FleetRL RL simulator Yes Yes Yes Yes No  
+ [30,31] Chargym, SustainGym RL simulator Yes Partial No Yes No  
+ [32] OPEN platform General simulation Yes No No Yes Yes  
+ [33–35] Open V2X Simulation framework Yes No No Yes No  
+ This work Proposed MPC framework MPC Yes Yes Yes Yes Yes  
+1.2. Article contributions
+To bridge the identified gaps, this work presents a fully open-
+source implementation of MPC algorithms for smart EV charging and 
+discharging.1 The framework is designed to maximize the profit of 
+CPOs, while incorporating user preferences and accounting for key 
+uncertainties such as inflexible loads, photovoltaic generation, and 
+demand response events. In addition to the software release, a complete 
+mathematical formulation of the underlying optimization problem is 
+provided, ensuring full transparency and reproducibility. To the best 
+of the authors’ knowledge (as shown in Table  1), this is the first 
+openly available open-source MPC framework specifically tailored to 
+the EV smart charging context.  Its performance is assessed through 
+comprehensive simulations and is benchmarked against representa-
+tive rule-based approaches and RL strategies. In summary, the main 
+contributions of this study are:
+• Development of flexible open-source MPC algorithms capable 
+of executing various EV CPO case studies to evaluate different 
+performance indicators.
+• Novel formulation of an economic MPC method tailored for G2V 
+and V2G real-time smart charging, strategically crafted to opti-
+mize profits while accommodating uncertainties intrinsic to de-
+mand response.
+• Capable of handling EVs and charging stations with heteroge-
+neous characteristics.
+• Innovative design of the Optimal control with maximum flexi-
+bility (OCMF) MPC method for G2V and V2G real-time smart 
+charging, geared towards enhancing flexibility and profitability 
+amidst the complexities of demand response uncertainties.
+• Evaluation of the impact of smart charging strategies on the 
+degradation of EV batteries.
+1.3. Article organization
+The structure of the article is as follows. Section 2 outlines the 
+background and fundamental aspects of the EV charging management 
+problem. This is followed by an in-depth presentation of smart charg-
+ing strategies and their mathematical formulations in Section 3. The 
+experimental setup used to evaluate the proposed methods is detailed 
+in Section 4. A comprehensive evaluation and comparison with baseline 
+strategies are presented in Section 5 to demonstrate the effectiveness of 
+the proposed approaches. In Section 6, conclusions and potential future 
+research directions are discussed.
+1 Access the open-source code at https://github.com/CesarDiazLondono/
+MPC-G2V-V2G and https://github.com/StavrosOrf/EV2Gym.
+Fig. 1. Overview of the EV charging management system, illustrating power and infor-
+mation flows between the distribution grid, inflexible household loads, PV, transformer, 
+charging infrastructure, and energy markets. The CPO in the middle processes signals 
+from the market, distribution grid, and EV users in order to efficiently control the 
+connected EVs.
+2. EV charging management
+In this section, an overview of the EV charging problem and the 
+simulation tool used is provided. Specifically, a comprehensive sim-
+ulator platform for conducting realistic V2G simulations is discussed. 
+This platform encompasses configurable simulation parameters, real-
+istic EV models, efficient charging station management, and detailed 
+transformer operations.
+2.1. Simulation models
+In a simulation, there are 𝐼 chargers, where 𝑖 = 1, 2, … , 𝐼, each one 
+having one Electric Vehicle Supply Equipment (EVSE). Each charger 𝑖
+is connected to one of the 𝐺 transformers, where 𝑔 = 1, 2, … , 𝐺. There 
+are also, 𝐽 EVs that connect to EVSEs during the simulation. Finally, 
+a simulation consists of 𝐾 discrete time steps, where 𝑘 = 1 , 2, … , 𝐾. 
+At each step, the user-selected algorithm defines the power output 𝑃𝑖,𝑘, 
+for each charger 𝑖. The algorithm can fully observe the current state of 
+the environment and can access future data, including electricity prices, 
+load and PV forecasts, and EV schedules. Fig.  1 illustrates the simulator 
+models.
+Each EV 𝑗 in the simulator features customizable parameters, in-
+cluding battery capacity (𝐸𝑗 ), charge (𝜂𝑐) and discharge (𝜂𝑑 ) efficiency, 
+Electric Power Systems Research 250 (2026) 112082 
+3 
+
+PAGE 5
+C. Diaz-Londono et al.
+Table 2
+Battery degradation model parameters.
+ 𝜖0 𝜖1 𝜖2 𝜃 𝜁0 𝜁1 𝐾 𝑡𝑜𝑡 𝑄𝑎𝑐𝑐  
+ 6.23 ⋅ 106 1.38 ⋅ 106 6976 28 4.02 ⋅ 10−4 2.04 ⋅ 10−3 730 11 160 
+minimum SoC at departure SoC𝑗,𝑑𝑗
+, and maximum charging (𝑃
+𝑐
+𝑖 ) and 
+discharging (𝑃
+𝑑
+𝑖 ) power limits that depend not only on the EV battery 
+management system but also on the EVSE rated power.  In our use 
+case, EV users communicate their expected arrival and departure times, 
+along with an estimate of their SoC upon arrival. This information en-
+ables the CPO to make more informed scheduling decisions, improving 
+the coordination and utilization of the available charging infrastructure 
+across the EV fleet.  At each time step 𝑘 EVs can arrive at a charging 
+station based on realistic EV behavior probability distributions obtained 
+from the ElaadNL repository [36], ensuring the simulation accurately 
+reflects real-world scenarios. Therefore, an EV’s arrival time 𝑎𝑗 , depar-
+ture time 𝑑𝑗 , and SoC at arrival SoC𝑎𝑗 are sampled from ElaadNL data. 
+By leveraging this data, the simulator can replicate various charging 
+patterns observed in different settings, such as public charging stations, 
+workplaces, and residential areas.
+Each transformer 𝑔 aggregates EV chargers in the set 𝛷𝑔, to simulate 
+the electricity distribution network and its constraints. Additionally, 
+transformers incorporate realistic data about inflexible loads, solar 
+photovoltaic (PV) generation, and demand response (DR) events. For 
+instance, datasets from Pecan Street [37] and Renewables.ninja [38] 
+are used to model inflexible loads and PV generation profiles, re-
+spectively, while information about demand response events can be 
+configured by users based on specific parameters such as start time 
+and duration. Transformers have operational constraints that must be 
+followed. Violations of these constraints are tracked throughout the 
+simulation, enabling the evaluation of charging strategies under realis-
+tic operating conditions. Furthermore, the platform generates forecasts 
+of inflexible loads and solar power generation to support the de-
+velopment of algorithms that can handle uncertainty, enhancing the 
+robustness and reliability of charging strategies in real-world scenarios.
+DR mechanisms are also supported within the simulation platform. 
+These can be implemented through various contractual arrangements 
+between EV owners, the CPO, and the system operator. For example, 
+the framework proposed in [39] introduces a three-stage process: (i) 
+quantifying the potential profit that EV owners can achieve based 
+on their flexibility, (ii) establishing DR contracts between the CPO 
+and EV owners accordingly, and (iii) defining the profit and penalty 
+sharing mechanisms among stakeholders. In the present work, we as-
+sume that such contractual agreements are predefined and established 
+before the simulation starts. Therefore, the negotiation and formation 
+of DR contracts are considered out of the scope of this study. Instead, 
+these agreements are treated as fixed inputs provided to the CPO. The 
+algorithm implemented by the CPO can identify EVs with available 
+flexibility for DR participation.
+2.2. Battery degradation model
+Users often hesitate to offer their EVs for V2G services due to 
+concerns about battery degradation. For this reason, it is important to 
+assess the impact of the proposed smart charging algorithms using a 
+validated battery degradation model [40]. This model comprises both 
+calendar (𝑑𝑐𝑎𝑙 ) and cyclic (𝑑𝑐𝑦𝑐 ) capacity loss components. For a single 
+EV, based on [40], the capacity degradation attributed to calendar 
+aging over a simulation with duration 𝐾 is related to the mean ̂SoC
+and is described as: 
+𝑑𝑐𝑎𝑙 = 0.75 ⋅ (𝜖0 ⋅ ̂SoC − 𝜖1) ⋅ exp
+(
+− 𝜖2
+𝜃
+)
+⋅ 𝐾
+(𝐾 𝑡𝑜𝑡)0.25 . (1)
+Here, 𝐾 𝑡𝑜𝑡 denotes the battery’s age in days, 𝜃 represents the battery 
+temperature (◦C), and 𝜖0, 𝜖1, 𝜖2 are constants, as shown in Table  2.
+The cyclic capacity loss depends on the total energy exchanged by 
+the battery and the SoC at each simulation step as: 
+𝑑𝑐𝑦𝑐 =
+(
+𝜁0 + 𝜁1
+∑| ̂SoC − SoC𝑘| 𝛥𝑡
+𝐾
+)
+⋅
+∑| 𝑃𝑘| 𝛥𝑡
+√
+𝑄𝑎𝑐𝑐
+, (2)
+where 𝑄𝑎𝑐𝑐 is the accumulated throughput during the battery’s lifetime, 
+and 𝜁0, 𝜁1 are constants defined in Table  2. Therefore, the total capacity 
+loss of an EV battery is the sum: 𝑄𝑙𝑜𝑠𝑡 = 𝑑𝑐𝑎𝑙 + 𝑑𝑐𝑦𝑐 . In this work, the 
+capacity loss is evaluated but not included in the vehicle model within 
+the charging strategies presented in the next section.
+3. Smart charging strategies
+The smart charging strategies adopted by the CPO rely on the MPC 
+algorithm. The proposed strategies are based on [41], in which only 
+unidirectional strategies are considered. In this paper, we are proposing 
+four distinct smart charging algorithms, each designed to achieve spe-
+cific objectives while adhering to the MPC framework. These strategies 
+include:
+• eMPC G2V: Unidirectional economic MPC (eMPC) aimed at min-
+imizing the operational costs of the CPO.
+• eMPC V2G: Bidirectional eMPC aimed at minimizing the opera-
+tional costs of the CPO.
+• OCMF G2V: Unidirectional Optimal Control with Maximum Flex-
+ibility (OCMF) aimed at minimizing the CPO’s operational costs 
+while maximizing charger flexibility.
+• OCMF V2G: Bidirectional OCMF aimed at minimizing the CPO’s 
+operational costs while maximizing charger flexibility.
+3.1. Solution formulation
+The proposed MPC algorithms are designed to maximize CPO prof-
+its, taking into consideration constrains on energy and power limits 
+imposed by the grid, chargers and vehicles, the preferences of EV 
+owners and the various uncertainties associated with the charging pool, 
+such as the inflexible loads and the PV generation. MPC algorithm 
+forms the basis of this approach, where at each time step 𝑘, an opti-
+mization program is solved to determine the optimal power exchange 
+between each charger in the pool 𝐼 with an EV connected, and the 
+grid for an horizon of 𝐻 steps. Then, the algorithm outputs are the 
+demanded and delivered charger power levels for the current time 
+step 𝑘, denoted as 𝑃 𝑐∗
+𝑖,𝑘 and 𝑃 𝑑∗
+𝑖,𝑘 , respectively. Notice that only one of 
+these power levels can be activated for every charger at each interval 
+𝑘, i.e., the charger can only charge or discharge the EV at 𝑘. On the 
+other hand, the plant under control is the set of EVs connected to the 
+chargers. Power commands 𝑃 𝑐∗
+𝑖,𝑘 and 𝑃 𝑑∗
+𝑖,𝑘  are the inputs to the actual EV 
+charging pool, where the SoC of the vehicles’ batteries, represented as 
+𝑥𝑖,𝑘, are the system state and model outputs.
+The MPC methodology involves four main steps:
+1. Given the SoC of the connected vehicles at time 𝑘, build a 
+prediction model to compute the evolution of the SoC of the EV 
+charging pool 𝑥𝑖,𝑘+ℎ over a prediction horizon 𝐻 for any power 
+profiles 𝑃 𝑐
+𝑖,𝑘+ℎ and 𝑃 𝑑
+𝑖,𝑘+ℎ, where ℎ = 1 , 2, … , 𝐻.
+2. Optimization process to determine the future inputs 𝑃 𝑐∗
+𝑖,𝑘+ℎ and 
+𝑃 𝑑∗
+𝑖,𝑘+ℎ, considering a cost function and operational constraints.
+3. Application of the first element of the optimal power profile 𝑃 𝑐∗
+𝑖,𝑘
+or 𝑃 𝑑∗
+𝑖,𝑘  (ℎ=0) to the chargers within the pool.
+4. Wait until the next time step to measure the new system state 
+𝑥𝑖,𝑘+1 and forecasted variables, such as the inflexible loads and 
+the PV generation.
+Electric Power Systems Research 250 (2026) 112082 
+4 
+
+PAGE 6
+C. Diaz-Londono et al.
+Fig. 2. Flowchart of the MPC algorithm methodology.
+These steps are iterated at each time step 𝑘, employing the concept 
+of receding horizon. This approach involves recalculating the power 
+signals 𝑃 𝑐∗
+𝑖,𝑘 and 𝑃 𝑑∗
+𝑖,𝑘  at each iteration, taking into account updated 
+information. This methodology is illustrated in the flowchart shown in 
+Fig.  2. The process begins at 𝑘 = 1 , upon receiving all EV charging 
+requests, which could, for instance, be submitted through an applica-
+tion by the EV owner. The four main steps of the control strategy are 
+then executed sequentially. It is important to note that the predicted 
+inflexible load and PV generation are updated at every time step 𝑘, and 
+these updated forecasts are incorporated when solving the optimization 
+problem. Although the prediction of inflexible load and PV generation 
+is not the focus of this paper, they are treated as exogenous inputs to 
+the control algorithm. While the accuracy of these forecasts impacts 
+the MPC’s performance, its iterative closed-loop nature helps miti-
+gate uncertainty through continuous feedback operation, as illustrated 
+in [42]. In practice, such forecasts can be obtained from a neural 
+network model running in parallel to the control loop, which updates 
+its predictions whenever a new measurement becomes available. The 
+equations referenced in the flowchart are presented later in the paper.
+The MPC algorithm relies on a system model to predict future 
+powers in the charging pool. Therefore, this model must strike a bal-
+ance between precision, to factor in charger responses, and simplicity, 
+to facilitate online optimization for the Real-Time (RT) operation of 
+the chargers. Hence, the EV charger model depends on a signal 𝜉𝑖,𝑘
+indicating whether an EV is plugged in at the 𝑘th time slot, along 
+with the SoC variation of the plugged-in EV. The signal 𝜉𝑖,𝑘 is a binary 
+variable, 𝜉𝑖,𝑘 = 1 if the charger 𝑖 has a plugged-in EV.
+The SoC evolution on the 𝑗th EV plugged-in the charger 𝑖 (i.e., 𝜉𝑖,𝑘 =
+1) is: 
+𝑥𝑖,𝑘+1 = 𝑥𝑖,𝑘 + 𝛥𝑡
+𝐸𝑗
+(
+𝜂𝑐𝑃 𝑐
+𝑖,𝑘 −
+𝑃 𝑑
+𝑖,𝑘
+𝜂𝑑
+)
+, (3)
+while the state space model for an EV charging pool considers three 
+possible conditions, as: 
+𝑥𝑖,𝑘+1 =
+⎧
+⎪
+⎨
+⎪⎩
+SoC𝑗,𝑎𝑗 if 𝑘 = 𝑎𝑗 ,
+Eq. (3) if 𝑎𝑗 < 𝑘 < 𝑑 𝑗 ,
+0 if 𝜉𝑖,𝑘=0 ∨ 𝑘=𝑑𝑗 .
+(4)
+The first condition corresponds to the arrival SoC, denoted as 
+SoC𝑗,𝑎𝑗 . The second condition represents the evolution of the energy 
+stored in the EV battery. The third condition applies when there is no 
+EV connected or when an EV is departing. Note that Eq. (4) applies to 
+the entire pool of 𝐼 EV chargers, rather than to an individual EV.
+Then, the EV charging pool model for the time slot 𝑘 is defined as: 
+̂x𝑘+1 = 𝐴𝑘 ̂x𝑘 + 𝐵𝑘 ̂P𝑘, (5)
+where, the charging pool outputs, i.e., the SoC in the chargers are 
+presented in the ̂x𝑘 ∈ R𝐼 , as:
+̂x𝑘 = [𝑥1,𝑘 𝑥2,𝑘 … 𝑥𝐼,𝑘 ]T,
+and the exchanged power pool inputs, i.e., the charging and discharging 
+powers are grouped in one vector denoted ̂P𝑘 ∈ R2𝐼 , as:
+̂P𝑘 = [𝑃 𝑐
+1,𝑘 𝑃 𝑑
+1,𝑘 𝑃 𝑐
+2,𝑘 𝑃 𝑑
+2,𝑘 … 𝑃 𝑐
+𝐼,𝑘 𝑃 𝑑
+𝐼,𝑘 ]T.
+Moreover, 𝐴𝑘 = diag(𝜉𝑖,𝑘) containing information about the plugged-
+in EVs in the chargers, then, 𝐴𝑘 ∈ R𝐼×𝐼 . Considering 𝑏𝑐
+𝑖,𝑘 and 𝑏𝑑
+𝑖,𝑘 as:
+𝑏𝑐
+𝑖,𝑘 =
+𝜉𝑖,𝑘𝛥𝑡𝜂𝑐
+𝐸𝑗
+∧ 𝑏𝑑
+𝑖,𝑘 =
+𝜉𝑖,𝑘𝛥𝑡
+𝐸𝑗 𝜂𝑑 , (6)
+the matrix 𝐵𝑘 ∈ R𝐼×2𝐼 is generated as: 
+𝐵𝑘=
+⎡
+⎢
+⎢
+⎢
+⎢⎣
+𝑏𝑐
+1,𝑘 −𝑏𝑑
+1,𝑘 0 0 ⋯ ⋯ 0 0
+0 0 𝑏𝑐
+2,𝑘 −𝑏𝑑
+2,𝑘 0 0 0 0
+⋮ ⋮ 0 0 ⋱ ⋱ 0 0
+0 0 0 0 ⋯ ⋯ 𝑏𝑐
+𝐼,𝑘 −𝑏𝑑
+𝐼,𝑘
+⎤
+⎥
+⎥
+⎥
+⎥⎦
+. (7)
+Note that the model in Eq. (5) accounts for all chargers during time 
+slot 𝑘. For the prediction horizon 𝐻, the MPC algorithm utilizes the 
+following prediction model. 
+X = Âx𝑘 + GP, (8)
+where, 
+X=
+⎡
+⎢
+⎢
+⎢
+⎢⎣
+̂x𝑘+1
+̂x𝑘+2
+⋮
+̂x𝑘+𝐻
+⎤
+⎥
+⎥
+⎥
+⎥⎦
+, P =
+⎡
+⎢
+⎢
+⎢
+⎢⎣
+̂P𝑘
+̂P𝑘+1
+⋮
+̂P𝑘+𝐻−1
+⎤
+⎥
+⎥
+⎥
+⎥⎦
+, A =
+⎡
+⎢
+⎢
+⎢
+⎢⎣
+𝐴𝑘
+𝐴𝑘𝐴𝑘+1
+⋮
+𝐴𝑘 ⋯ 𝐴𝑘+𝐻−1
+⎤
+⎥
+⎥
+⎥
+⎥⎦
+,
+G=
+⎡
+⎢
+⎢
+⎢
+⎢⎣
+𝐵𝑘 0 0 0
+𝐴𝑘+1𝐵𝑘 𝐵𝑘+1 0 0
+⋮ ⋮ ⋱ 0
+𝐴𝑘+1 ⋯ 𝐴𝑘+𝐻−1𝐵𝑘 𝐴𝑘+2 ⋯ 𝐴𝑘+𝐻−1𝐵𝑘+1 ⋯ 𝐵𝑘+𝐻−1
+⎤
+⎥
+⎥
+⎥
+⎥⎦
+(9)
+The algorithm considers the constraint that the SoC at the departure 
+time 𝑑𝑗 of each EV must be within predetermined bounds, i.e., the 
+minimum SoC𝑗,𝑑𝑗
+ and maximum SoC𝑗,𝑑𝑗 SoC levels specified by the EV 
+owner. 
+SoC𝑗,𝑑𝑗
+≤ 𝑥𝑖,𝑑𝑗 ≤ SoC𝑗,𝑑𝑗 (10)
+The SoC in the charger is always positive and depends on the 
+maximum capacity 𝑥𝑖 of the plugged-in EV battery, as: 
+𝑥𝑖,𝑘 ≤ 𝑥𝑖,𝑘 ≤ 𝑥𝑖,𝑘. (11)
+Electric Power Systems Research 250 (2026) 112082 
+5 
+
+PAGE 7
+C. Diaz-Londono et al.
+To avoid deep discharges in the EV battery, a minimum SoC level 
+is defined: 
+𝑥𝑖,𝑘=
+⎧
+⎪
+⎪
+⎨
+⎪
+⎪⎩
+𝑆𝑜𝐶 𝑗,𝑎𝑗 if 𝑘 = 𝑎𝑗 ,
+𝑥𝑖,𝑘−1 if 𝜉𝑖,𝑘=1 ∧ 𝑥𝑖,𝑘−1 < 𝑆𝑜𝐶 𝑗,𝑚𝑖𝑛 ,
+𝑆𝑜𝐶𝑗,𝑚𝑖𝑛 if 𝜉𝑖,𝑘=1 ∧ 𝑥𝑖,𝑘−1 > 𝑆𝑜𝐶 𝑗,𝑚𝑖𝑛 ,
+0 if 𝜉𝑖,𝑘=0.
+(12)
+The first condition for the minimum SoC assumes the arrival SoC 
+at the time of arrival. The second and third conditions depend on the 
+minimum state of charge, 𝑆𝑜𝐶𝑗,𝑚𝑖𝑛 , which represents the threshold at 
+which an EV is allowed to discharge. Consequently, if the actual SoC 
+of the EV is below this threshold, the minimum SoC remains at the 
+actual SoC level until the threshold is reached. Once the threshold is 
+exceeded, the EV battery can be discharged up to the threshold. The 
+final condition applies when no EV is plugged in.
+The algorithm is capable of reacting to RT market signals, including 
+fluctuations in price and demand response (DR) events. Specifically, DR 
+requests are represented by the variable 𝑃 𝐷𝑅
+𝑘 , allowing the algorithm 
+to promptly respond to market requests as they occur.
+The power limit imposed by the each transformer is specified as 𝛹𝑔, 
+then the balance equation for transformer 𝑔 is constrained as 
+∑
+𝜙𝑔,𝑘 + ̃𝑙𝑔,𝑘 − ̃𝑤𝑔,𝑘 ≤ 𝛹𝑔 − 𝑃 𝐷𝑅
+𝑔,𝑘 (13)
+where the net power consumed/supplied by the chargers connected to 
+transformer 𝑔 is 𝜙𝑔,𝑘 = 𝑃 𝑐
+𝑖,𝑘 − 𝑃 𝑑
+𝑖,𝑘, ∀𝑖 ∈ 𝛷𝑔, and 𝛷𝑔 denotes the set of 
+EV chargers connected to cluster 𝑔. ̃𝑙𝑔,𝑘 is the predicted inflexible load, 
+̃𝑤𝑔,𝑘 is the predicted PV generation and 𝑃 𝐷𝑅
+𝑔,𝑘  is the demand response 
+command is case of a market request.
+In the following subsections, the MPC algorithms followed by the 
+EV CPO are presented.
+3.2. eMPC: EV CPO cost minimization
+This strategy, known as eMPC, seeks to minimize the operational 
+costs of the CPO for the horizon 𝐻, by optimizing the EV charging 
+profiles of the pool the interval [𝑘, 𝑘 + 𝐻]. The algorithm’s decisions 
+rely on the RT energy prices 𝜋𝑐
+𝑘 and 𝜋𝑑
+𝑘 for charging and discharging, re-
+spectively. Therefore, the cost function for V2G in eMPC is formulated 
+as follows: 
+𝑂𝐶𝑀
+𝑘 = 𝜋𝑐
+𝑘
+𝐼∑
+𝑖=1
+𝑃 𝑐
+𝑖,𝑘 − 𝜋𝑑
+𝑘
+𝐼∑
+𝑖=1
+𝑃 𝑑
+𝑖,𝑘 (14)
+Then, the EV CPO deals with the following eMPC V2G problem: 
+min
+𝑃 𝑐
+𝑖,𝑘,𝑃 𝑑
+𝑖,𝑘,𝑧𝑖,𝑘
+𝛥𝑡
+𝐻−1∑
+𝑘=0
+𝑂𝐶𝑀
+𝑘 (15a)
+s.t. Eqs. (4), (10), (11), (13)
+0 ≤ 𝑃 𝑐
+𝑖,𝑘 ≤ 𝑃
+𝑐
+𝑖 𝑧𝑖,𝑘
+0 ≤ 𝑃 𝑑
+𝑖,𝑘 ≤ 𝑃
+𝑑
+𝑖 (1 − 𝑧𝑖,𝑘) (15b)
+∀ 𝑘 = 1, 2, … , 𝐻, 𝑖 = 1, 2, … , 𝐼,
+𝑗 = 1, 2, … , 𝐽 , 𝑔 = 1, 2, … , 𝐺.
+The decision variables of the problem include the charging (𝑃 𝑐
+𝑖,𝑘) and 
+discharging (𝑃 𝑑
+𝑖,𝑘) power profiles, and the binary variables 𝑧𝑖,𝑘, which 
+determines whether charging or discharging is performed during time 
+slot 𝑘. Both the charging and discharging powers are constrained to 
+be between zero and their respective maximum powers, denoted as 𝑃
+𝑐
+𝑖
+and 𝑃
+𝑑
+𝑖 , respectively. Note that problem (15a) is a Mixed-Integer Linear 
+Program (MILP), for which efficient solvers are available.
+Notice that this eMPC problem also applies to the G2V strategy, with 
+the only difference being the absence of the remuneration price 𝜋𝑑
+𝑘 since 
+𝑃 𝑑
+𝑖,𝑘 is always zero. Similarly, the binary variable 𝑧𝑖,𝑘 is not required, 
+resulting in a much simpler Linear Program (LP), with fewer decision 
+variables.
+3.3. OCMF: CPO flexibility maximization
+This strategy denoted as OCMF, aims to achieve two objectives 
+simultaneously. Firstly, it aims to minimize the operational cost of the 
+charging pools, as presented in Eq. (14). Secondly, it aims to maximize 
+the flexibility of the chargers’ power.
+The base definitions of the charger flexibility for G2V charging 
+strategies were proposed in [41] as follows:
+• Upward flexibility: This refers to the power increase a charger 
+can deviate from the nominal dispatched power, reducing the 
+charging time of the EV.
+• Downward flexibility: This refers to the power reduction a charger 
+can deviate from the nominal dispatched power. This flexibility 
+can be utilized up to a later time slot when the EV needs to be 
+charged to achieve the required SoC by its departure time.
+Then, the G2V upward 𝐹 𝑐𝑢
+𝑖,𝑘 and downward 𝐹 𝑐𝑑
+𝑖,𝑘 flexibilities that each 
+EV charger can provide are depicted in Fig.  3. Then, we propose to 
+define the charging flexibility 𝐹 𝑐
+𝑖,𝑘 as the minimum flexibility between 
+upward and downward, as, 
+𝐹 𝑐
+𝑖,𝑘 = min{𝐹 𝑐𝑢
+𝑖,𝑘, 𝐹 𝑐𝑑
+𝑖,𝑘 }, (16)
+In line with the charging flexibility discussed earlier, we introduce 
+a discharging V2G flexibility 𝐹 𝑑
+𝑖,𝑘, designed to adjust the discharging 
+power either upwards or downwards as needed by the CPO. Thus, 
+to maximize both the upward 𝐹 𝑑𝑢
+𝑖,𝑘 and downward 𝐹 𝑑𝑑
+𝑖,𝑘  discharging 
+flexibilities, we consider the minimum of both as, 
+𝐹 𝑑
+𝑖,𝑘 = min{𝐹 𝑑𝑢
+𝑖,𝑘 , 𝐹 𝑑𝑑
+𝑖,𝑘 }, (17)
+Note that only one of the charging or discharging flexibilities can 
+be offered at each sample time when the EV is either charging or dis-
+charging. However, when the charger power is zero, both the charging 
+and discharging flexibilities are available (refer to Fig.  3). Furthermore, 
+flexibility is not available after the time 𝑑𝑚 as the EV must be charged 
+to reach the EV owner’s requested SoC upon departure.
+Therefore, the second objective of the OCMF, which aims to maxi-
+mize the chargers’ flexibility, is formulated as follows: 
+𝑂𝐹 𝑀
+𝑘 = 𝜋𝑐
+𝑘,Flex
+𝐼∑
+𝑖=1
+𝐹 𝑐
+𝑖,𝑘 + 𝜋𝑑
+𝑘,Flex
+𝐼∑
+𝑖=1
+𝐹 𝑑
+𝑖,𝑘, (18)
+where, the 𝜋𝑐
+𝑘,Flex and 𝜋𝑑
+𝑘,Flex are the incentive prices for offering flexi-
+bility.
+The EV CPO addresses the following OCMF V2G problem: 
+min 𝛥𝑡
+𝐻−1∑
+𝑘=0
+(𝑂𝐶𝑀
+𝑘 − 𝑂𝐹 𝑀
+𝑘
+) (19a)
+s.t. Eqs. (4), (10), (11), (13)
+𝐹 𝑐
+𝑖,𝑘 ≤ 𝑃 𝑐
+𝑖,𝑘 ≤
+(
+𝑃
+𝑐
+𝑖 − 𝐹 𝑐
+𝑖,𝑘
+)
+𝑧𝑖,𝑘
+𝐹 𝑑
+𝑖,𝑘 ≤ 𝑃 𝑑
+𝑖,𝑘 ≤
+(
+𝑃
+𝑑
+𝑖 − 𝐹 𝑑
+𝑖,𝑘
+)
+(1 − 𝑧𝑖,𝑘)
+0 ≤ 𝐹 𝑐
+𝑖,𝑘 ≤ 𝑃
+𝑐
+𝑖 (19b)
+0 ≤ 𝐹 𝑑
+𝑖,𝑘 ≤ 𝑃
+𝑑
+𝑖
+∀ 𝑘=1, 2, … , 𝐻, 𝑖 =1, 2, … , 𝐼,
+𝑗=1, 2, … , 𝐽 , 𝑔 =1, 2, … , 𝐺.
+The decision variables of this problem are the charging 𝑃 𝑐
+𝑖,𝑘 and 
+discharging 𝑃 𝑑
+𝑖,𝑘 power, the binary variable 𝑧𝑖,𝑘, and the charging 𝐹 𝑐
+𝑖,𝑘
+and discharging 𝐹 𝑑
+𝑖,𝑘 flexibilities. The charging and discharging powers 
+are constrained by the charger flexibility, with the charging and dis-
+charging flexibilities restricted to positive values and bounded between 
+zero and the maximum power.
+Notice that as in the eMPC problem, this OCMF problem also applies 
+to the G2V strategy, with the difference being the absence of the 
+Electric Power Systems Research 250 (2026) 112082 
+6 
+
+PAGE 8
+C. Diaz-Londono et al.
+Fig. 3. Flexibility in an EV charger, considering G2V and V2G strategies.
+Algorithm 1 Simulation Example using eMPC V2G
+1: from EV2Gym.ev2gym_env import EV2Gym
+2: from ocmf_mpc import OCMF_V2G, OCMF_G2V
+3: from eMPC import eMPC_V2G, eMPC_G2V
+4: config_file = ‘‘config.yaml’’ ⊳ Configuration file path
+5: env = EV2Gym(config_file) ⊳ Initialize simulation
+6: 𝒔0 = env.reset()
+7: agent = eMPC_V2G(env, control_horizon=𝐻)
+8: for 𝑘 in 0, 1, . . . , 𝐾  do
+9:  𝒂1,…,𝐼 = agent.get_action(𝒔𝑘) ⊳ MPC optimization
+10:  𝒔𝑘+1, stats = env.step(𝒂1,…,𝐼 ) ⊳ Simulate
+11: end for
+12: profits, total energy charged, ... = stats
+remuneration price 𝜋𝑑
+𝑘 since 𝑃 𝑑
+𝑖,𝑘 is always zero, the lack of the price 
+𝜋𝑑
+𝑘,Flex, the flexibility 𝐹 𝑑
+𝑖,𝑘, and the binary variable 𝑧𝑖,𝑘.
+As a final remark, while the SoC dynamics are linear, the overall for-
+mulation is a MILP due to binary variables enforcing mutually exclusive 
+charging/discharging actions (see Eqs.  (15b) and (19b)). The resulting 
+combinatorial structure, efficiently solvable by modern MILP solvers, 
+is naturally integrated within the MPC framework, enabling adaptive, 
+real-time control based on updated forecasts and system states, key 
+features for V2G energy management.
+4. Experimental setup
+In this section, we describe how to integrate the execution of an 
+EV2Gym [43] simulation, introduced in Section 2, with the proposed 
+MPC algorithms. Alg. 1 outlines the Python code necessary to run a 
+simulation utilizing the eMPC_V2G strategy. Initially, the simulator 
+class EV2Gym (line 1) and the developed MPC classes OCMF_V2G,
+OCMF_G2V, eMPC_V2G, and eMPC_G2V (lines 2 and 3) are imported. 
+Lines 5 and 6 initialize the simulation environment using a user-defined 
+configuration file (config_file). Subsequently, the MPC algorithm’s 
+variables are set up in line 7, allowing users to customize the control 
+horizon 𝐻 as needed. The MPC algorithms are implemented using the 
+Gurobi solver.
+The main simulation loop, spanning 𝐾 steps, commences there-
+after. Firstly, charging and discharging actions 𝒂1,…,𝐼 for each charging 
+station 𝑖 ∈ 𝐼 are determined by executing the MPC algorithm’s opti-
+mization process (line 9), using the current state (𝒔𝑘) of the simulation 
+as input. The state 𝒔𝑘 includes essential information such as EVs’ SoC, 
+time of arrival and departure, load and PV forecasts, facilitating the 
+decision-making algorithm’s optimization. The actions vector 𝒂1, … , 𝐼
+is constrained within the [−1, 1]𝐼 interval, where −1 denotes maximum 
+power discharge, 1 signifies maximum power charging, and 0 indicates 
+Table 3
+General simulation parameters.
+ Name Symbol Value  
+ Sample time [min] 𝛥𝑡 15  
+ Operation time of the station [h] 𝑇 24  
+ Prediction horizon (2.5 h–10 h) 𝐻 {2.5 × 4 , 10 × 4} 
+ Number of EVSEs 𝐼 {5–50}  
+ Number of EVs 𝐽 {15–120}  
+ Number of transformers 𝐺 {1, 3}  
+ Discharge price multiplier 𝑚 {0.8–1.2}  
+ EV scenario ‘‘Residential’’  
+no action. Subsequently, a simulation step is taken (env.step()) 
+utilizing the action vector 𝐚1, … , 𝐼 as a parameter (line 10). Each step 
+yields the subsequent simulation state 𝒔𝑘+1, while the final step (𝑘 = 𝐾) 
+also provides simulation evaluation statistics (stats) such as total 
+profits (e), total energy charged and discharged (kWh), execution time 
+(s), and total battery degradation (line 12). These metrics are important 
+for evaluating the efficacy of smart charging algorithms.
+4.1. Experimental configuration
+The EV2Gym simulator allows for complete configuration of the 
+dynamics of the simulation by modifying the configuration file. Table 
+3 showcases the general simulation parameters and the values used 
+for the experiments, while Fig.  1 visualizes the experimental setup 
+comprised of EVs, EVSEs, and transformers, inflexible loads, PVs, etc. 
+Specifically, each simulation lasts 24 h, with discrete time steps set at 
+15 min. Each simulation contains the connection of 5 to 60 EVSEs to 
+either 1 or 3 transformers, accommodating a fleet size ranging from 15 
+to 120 EVs, as determined by the experimental setups. The EVs’ time 
+of arrival, time of departure, and arrival SoC are based on residential 
+EV transaction data from ElaadNL [36]. Also, the discharge price is 
+based on the charge price and multiplier 𝑚, thus 𝜋𝑑
+𝑘 = 𝑚 ⋅ 𝜋𝑐
+𝑘. The 
+charging prices used in these simulations are based on the historic 
+Dutch day-ahead prices [44].
+Furthermore, the default model parameters, such as transformer 
+power limit, EVSE, and EV characteristics, can be found in Table  4. 
+Specifically, the transformer power limit of 400 kW reflects typical 
+values found in low-voltage distribution networks in residential areas, 
+while the EV battery capacity of 50 kWh corresponds to the median 
+capacity of commercially available EV models in Europe [36]. The sim-
+ulator also provides forecasts of the loads using a Gaussian distribution 
+(̄𝑙𝑔,𝑘 =  (𝜇, 𝜎)) with mean the 𝜇 = 100%× 𝑙𝑔,𝑘 of the actual load at time 𝑘
+and standard deviation 𝜎 = 5% × 𝑙𝑔,𝑘 of it. Similarly, for PV generation 
+forecasts ̄𝑤𝑔,𝑘. Moreover, tool users have the flexibility to customize 
+demand response events by specifying parameters such as the number 
+of events, capacity reduction, duration, and notification time. The start 
+time of events follows a Gaussian distribution with a mean of 18:00 
+and a standard deviation of 1 h.
+5. Experimental results
+In this section, a thorough experimental assessment of the proposed 
+MPC strategies is presented. Initially, a detailed examination of a single 
+case study is visualized to understand the behavior of each baseline 
+charging algorithm. Subsequently, the scope is extended by conduct-
+ing multiple simulations to show average performance, facilitating 
+a comparative analysis across the main evaluation metrics including 
+profitability, flexibility, and battery degradation. Finally, an evaluation 
+of the computational costs associated with the proposed methods is 
+conducted, thereby providing a holistic perspective on their efficacy.
+Electric Power Systems Research 250 (2026) 112082 
+7 
+
+PAGE 9
+C. Diaz-Londono et al.
+Fig. 4. Comparison of baselines, including rule-based and RL algorithms, and the proposed MPC approaches for a case study with 30 EVSEs connected to a single transformer, 
+and around 75 EVs. The zoomed box highlights how MPC respects the demand response event power limit while rule-based algorithms fail.
+Table 4
+Default simulation model parameters.
+ Name Symbol Value 
+ Transformer power limit [kW] 𝛹 400  
+ Maximum EVSE output power [kW] 𝑃
+𝑐
+, 𝑃
+𝑑
+22  
+ EVSE voltage (V) 𝑉 230  
+ EVSE phases 𝜙 3  
+ EV battery capacity [kWh] 𝐸𝑗 50  
+ Maximum EV power [kW] 𝑃
+𝑐
+, 𝑃
+𝑑
+22  
+ Minimum EV SoC when discharging SoC𝑗 , 𝑚𝑖𝑛 10%  
+ Minimum EV SoC at departure SoC𝑗 , 𝑑𝑗 80%  
+ Minimum EV time of connection [h] 3  
+ Charging efficiency 𝜂𝑐 100% 
+ Discharging efficiency 𝜂𝑑 100% 
+ Load and PV forecast error – 5%  
+ DR capacity reduction – 20%  
+ DR event duration [h] – 1  
+ DR event start time [h] – 18 ± 1 
+5.1. Baseline charging algorithms
+In this study, multiple baselines are compared with the proposed 
+MPC algorithms. Initially, two simpler rule-based algorithms are used: 
+the charge as fast as possible strategy (AFAP), and charge as late as 
+possible strategy (ALAP). As their name suggests, AFAP fully charges the 
+EVs to their desired capacity as soon as they connect, while ALAP waits 
+to start charging right before the EV leaves (still charging up to desired 
+SoC). Moreover, two state-of-the-art RL algorithms are implemented, 
+the Soft Actor Critic (SAC) and Proximal Policy Optimization (PPO). 
+The RL algorithms are trained using default parameters as described 
+in [43]. 
+5.2. Single case study comparison
+To evaluate the proposed MPC methods, their performance was 
+compared against baseline strategies within a single case study. In 
+Fig.  4(d), a detailed comparison is provided between the rule-based 
+strategies (AFAP and ALAP), RL baselines (PPO and SAC), and the 
+Electric Power Systems Research 250 (2026) 112082 
+8 
+
+PAGE 10
+C. Diaz-Londono et al.
+Table 5
+Averages of 50 runs with 10 EVSEs, 25 EVs, 1 transformer, and varying EV behavior.
+ Algorithm Profits (e) User
+satisfaction (%)
+Charged
+energy (kWh)
+Discharged
+energy (kWh)
+∑𝑄lost
+(×10−4)
+∑𝑑𝑐𝑎𝑙
+(×10−4)
+∑𝑑𝑐𝑦𝑐
+(×10−4)
+ 
+ Rule based AFAP −47.6 ± 8.4 100.0 ± 0.0 227 ± 38 – 12.4 ± 1.6 3.5 ± 0.2 8.8 ± 1.5  
+ ALAP −46 ± 11 100.0 ± 0.0 227 ± 38 – 12.2 ± 2.2 2.8 ± 0.4 9.4 ± 2.0  
+ RL PPO 15 ± 3 59.0 ± 5.9 3 ± 1 61 ± 11 8.7 ± 1.3 2.7 ± 0.4 6.0 ± 1.1  
+ SAC −3 ± 12 62.3 ± 1.3 186 ± 42 138 ± 28 15.8 ± 2.3 2.8 ± 0.4 13.0 ± 2.0 
+ MPC OCMF G2V −48.0 ± 8.3 100.0 ± 0.0 227 ± 38 – 12.8 ± 1.6 3.3 ± 0.2 9.5 ± 1.5  
+ OCMF V2G 11.9 ± 8.8 100.0 ± 0.0 927 ± 73 706 ± 63 36.8 ± 2.7 3.1 ± 0.2 33.7 ± 2.5 
+ eMPC G2V −43.9 ± 7.6 100.0 ± 0.0 227 ± 38 – 13.3 ± 1.7 3.3 ± 0.2 10.0 ± 1.6 
+ eMPC V2G 50.8 ± 10.3 100.0 ± 0.0 1390 ± 119 1172 ± 107 57.1 ± 4.8 3.2 ± 0.2 53.9 ± 4.5 
+MPC variants with a prediction horizon of 10 h (𝐻 = 40 ). The eval-
+uation was conducted across four key dimensions: pricing dynamics, 
+EV SoC, power output at the charging station level, and aggregated 
+transformer-level power flow.
+Fig.  4(a) depicts the charging and discharging prices observed dur-
+ing the simulation day, with slightly elevated discharging prices to 
+encourage V2G operations. In Fig.  4(b), the SoC evolution of EVs con-
+nected to a single EVSE is illustrated, where distinct charging patterns 
+are observed, highlighting the profit-oriented behavior of eMPC and the 
+flexibility-driven behavior of OCMF. The corresponding power output 
+profile of the same EVSE is shown in Fig.  4(c), where the eMPC strategy 
+consistently reaches the maximum power capacity (22 kW), whereas 
+OCMF typically operates at around 11 kW, reflecting its objective to 
+enhance flexibility. As illustrated, the RL method fails to solve the 
+optimal EV-charging problem efficiently, as it prioritizes discharging 
+to maximize profit but misses the target SoC by departure. Finally, 
+the aggregated power output of approximately 75 EVs connected to 
+30 EVSEs over the course of a day is shown in Fig.  4(d). This analysis 
+includes inflexible loads, PV generation, and a demand response event. 
+It can be observed that both rule-based and RL baselines lead to 
+potential transformer overloads due to the lack of explicit constraint 
+enforcement. In contrast, the proposed MPC methods successfully main-
+tain transformer loading within safe operational limits by optimally 
+managing power limits. 
+5.3. Performance analysis
+In the previous section, the performance was shown for a single 
+case study. However, a comprehensive assessment is necessary across 
+various scenarios. Table  5 presents the mean and standard deviation 
+derived from 50 statistical runs across a configuration comprising 10
+bidirectional chargers linked to one transformer, around 25 EVs per 
+simulation, and discharge price multiplier 𝑚 = 1 .2. These case studies 
+included elements such as inflexible loads, PV generation, and demand 
+response events, thereby mirroring real-world optimization challenges. 
+Across all scenarios, the MPC methods employed a 10-step prediction 
+horizon (i.e., 2.5 h, 𝐻 = 10) to drive their decision-making processes.
+Table  5 illustrates that across all G2V approaches (AFAP, ALAP, 
+OCMF G2V, and eMPC G2V), the average energy consumption re-
+mains consistent at approximately 227 ± 38 kWh. Among these, OCMF 
+G2V stands out for its consistent ability to maximize flexibility, en-
+abling rapid responses to demand response events. In contrast, eMPC 
+G2V demonstrates superior cost efficiency, reducing average charg-
+ing expenses from e48 to e43.9. While the direct cost savings of 
+eMPC G2V over OCMF G2V are modest (around e4), the trade-off 
+highlights the strategic value of OCMF G2V in delivering system-
+level flexibility, which is often prioritized in grid-support scenarios. 
+When V2G capabilities are enabled, both OCMF V2G and eMPC V2G 
+achieve notable profitability, yielding average profits of approximately 
+e11.9 and e50.8, respectively. These results underscore the potential 
+of V2G strategies not only to support the grid but also to generate 
+meaningful economic returns. By contrast, RL methods achieve compar-
+atively lower charging costs; however, this is accompanied by reduced 
+Fig. 5. Histogram of average battery capacity loss per EV after one day for five 
+charging methods; the 𝑥-axis shows percent loss and the 𝑦-axis its chance, with colors 
+matching the legend.
+user satisfaction. Specifically, RL policies often fail to enforce hard 
+constraints such as ensuring full battery charge upon vehicle depar-
+ture. As highlighted in prior studies, RL requires meticulous reward 
+shaping, constraint handling, and extensive hyperparameter tuning to 
+perform reliably in practical settings. This sensitivity limits its out-
+of-the-box applicability in real-world deployments without additional 
+methodological safeguards. 
+Moreover, it is crucial to evaluate the impact of the methods on total 
+battery degradation. Table  5 provides insights into the total battery 
+capacity lost (𝑄𝑙𝑜𝑠𝑡) during the simulation for all EVs, split into calendar 
+aging (𝑑𝑐𝑎𝑙 ) and cyclic degradation (𝑑𝑐𝑦𝑐 ) components, while Fig.  5 
+presents histograms of the average percentage capacity loss per EV 
+(10−4 ×100%) for the best-performing algorithms. RL and the rule-based 
+ALAP methods are excluded from this analysis due to their suboptimal 
+performance in earlier evaluations. Remarkably, V2G methods tend to 
+mitigate calendar aging due to their maintenance of a lower average 
+SoC during the charging phase. However, this advantage is counter-
+balanced by substantially higher cyclic degradation values (up to 45 ×
+10−4 higher), stemming from their utilization of EV batteries for both 
+charging and discharging, totaling 2562 kWh—2335 kWh more than 
+G2V methods. Conversely, all G2V methods display comparable battery 
+degradation (≈13 × 10 −4), with OCMF G2V offering maximal flexibil-
+ity and eMPC G2V focusing on minimizing charging costs. Overall, 
+these findings underscore the capabilities of the proposed algorithms 
+and their intricate trade-offs among profits, flexibility, and battery 
+degradation.
+5.4. Cost sensitivity analysis
+In the previous experiments, it was observed that V2G methods can 
+yield profits when the discharge price multiplier is set to 𝑚 = 1 .2; 
+however, a sensitivity analysis under alternative pricing scenarios is 
+needed to assess the robustness of this result. In each scenario, the price 
+is defined as: 
+𝜋𝑑
+𝑘 = 𝑚 ⋅ 𝜋𝑐
+𝑘, (20)
+Electric Power Systems Research 250 (2026) 112082 
+9 
+
+PAGE 11
+C. Diaz-Londono et al.
+Fig. 6. Comparison of EV-user charging costs across different discharge price multipliers (𝑚). Note that these figures solely reflect EV-user payments. However, it is important to 
+acknowledge that potential profits from flexibility provision are not included here, which could significantly boost overall profits.
+for 𝑘 = 1, … , 𝑇 . Fig.  6 illustrates the probability density functions of the 
+total costs and profits for 50 statistical runs for each price scenario. In 
+every scenario, the G2V and AFAP methods have the same distribution 
+since they are not affected by the discharging prices. As observed in Fig. 
+6, the eMPC_V2G strategy always provides the highest cost reductions 
+(𝑚 = 0 .8, 0.9) and the highest profits (𝑚 = 1 , 1.1, 1.2). OCMF_V2G is 
+also profitable in all cases except 𝑚 = 0 .8, showcasing on average 
+around e 10 higher charging costs; this happens because the cost of 
+providing flexibility was less than discharging, hence leading to this 
+behavior. Notice that in this cost/profit analysis of the OCMF strategy, 
+the payments for flexibility have not been included. Additionally, the 
+costs or profits are considered from the side of the CPO; hence, the 
+costs of individual EV owners are not evaluated and are considered 
+out-of-scope in this study. Therefore, it can be inferred that this strategy 
+would significantly increase its profits when the flexibility offered and 
+provided is considered.
+5.5. Computational cost
+The proposed MPC methods are designed to efficiently address 
+real-time EV smart-charging challenges. However, it should be noted 
+that execution time increases as the number of decision variables and 
+constraints grows. To evaluate the computational performance of each 
+method, execution times were measured using a high-performance 
+hardware configuration. Specifically, an ‘‘AMD RYZEN 7 5700X 8-
+Core’’ processor with 32 GB of RAM was employed, along with the 
+Gurobi 11 solver. Fig.  7 presents a comparison of the average per-step 
+execution times across multiple case studies, involving scenarios with 
+5 to 60 EVSEs connected to three transformers. The reported execution 
+time includes all computational steps for the MPC algorithms: matrix 
+construction, model formulation with constraints, and solution of the 
+optimization problem, with the MIP gap parameter set to zero,2 while 
+it only includes the inference time of RL algorithms, as training the 
+RL models is performed offline only once. As shown in Fig.  7(a), a 
+gradual increase in per-step execution time is observed when a 10-
+step prediction horizon is used. In contrast, Fig.  7(b) reveals a more 
+pronounced growth in execution time for a 30-step prediction horizon. 
+As expected, the OCMF V2G method exhibits the largest increase in 
+computational time across both scenarios, due to its higher number of 
+2 Note that increasing the MIP gap can substantially reduce execution time, 
+albeit at the expense of solution quality.
+decision variables. Importantly, the G2V variants demonstrate slower 
+scaling behavior, requiring approximately half the execution time of 
+their V2G counterparts. Even in the worst-case scenario, the execution 
+time of the MPC algorithm remains below 1.5% of the control strategy’s 
+time step, indicating sufficient space for real-time deployment with 
+larger EVSE fleets. Additionally, note that for the tested scenarios rang-
+ing up to 60 EVSEs, only a few (2–3) gigabytes of memory are required, 
+indicating that memory is not a limiting factor at this scale. However, 
+we acknowledge that for significantly larger systems, memory usage 
+may become more critical, and this is highlighted as a consideration 
+for future scalability assessments. 
+6. Conclusions
+In this paper, four model predictive control variants were devel-
+oped and tested for real-time smart charging of EV in both G2V and 
+V2G modes. These controllers incorporated transformer capacity con-
+straints, demand response events, and dynamic electricity pricing. The 
+open-source implementation was evaluated extensively in scenarios 
+with up to thirty EVSE. The results showed that the proposed model 
+predictive control methods significantly reduced violations of trans-
+former power limits and provided improved economic performance 
+compared to rule-based and RL approaches. Furthermore, a compre-
+hensive analysis of battery degradation indicated that the V2G-enabled 
+controllers consistently maintained daily capacity loss below 0.005%, 
+while achieving a balance between operational flexibility and prof-
+itability. These findings demonstrated the practicality and scalability of 
+the proposed approach for real-world deployment in distributed electric 
+vehicle charging systems. 
+Future work could integrate battery degradation directly into the 
+MPC model to balance short-term profit and long-term battery health. 
+Evaluating the framework in other settings, such as DC fast chargers, 
+workplaces, or public infrastructure, would test its generalizability 
+and real-time performance under different conditions. Additionally, 
+analyzing the charging process from the user’s perspective, includ-
+ing costs, incentives, and behavior, would enable more personalized 
+and economically transparent strategies.  Moreover, while existing 
+open-source platforms for EV aggregation in V2X applications provide 
+valuable tools, they generally lack integration with region-specific mar-
+ket regulations and power system operator contracts. These regulatory 
+frameworks differ substantially across jurisdictions, such as the US, 
+Canada, the EU, and China, and their impact on aggregation poten-
+tial, operational constraints, and business models remains insufficiently 
+Electric Power Systems Research 250 (2026) 112082 
+10 
+
+PAGE 12
+C. Diaz-Londono et al.
+Fig. 7. Average step execution time for varying control horizons and EVSEs.
+studied. Exploring this regulatory dimension could uncover key lim-
+itations and opportunities, making it a promising avenue for future 
+research. 
+CRediT authorship contribution statement
+Cesar Diaz-Londono: Writing – review & editing, Writing – original 
+draft, Software, Methodology, Funding acquisition, Conceptualization. 
+Stavros Orfanoudakis: Writing – review & editing, Writing – original 
+draft, Visualization, Methodology, Conceptualization. Pedro P. Ver-
+gara: Writing – review & editing, Validation, Project administration, 
+Funding acquisition. Peter Palensky: Funding acquisition. Fredy Ruiz: 
+Writing – review & editing, Conceptualization. Giambattista Gruosso: 
+Writing – review & editing, Conceptualization.
+Declaration of competing interest
+The authors declare that they have no known competing finan-
+cial interests or personal relationships that could have appeared to 
+influence the work reported in this paper.
+Acknowledgments
+Cesar was granted by Politecnico di Milano within the IDEA League 
+Alliance through the IDEA League Fellowship Exchange Program 2023. 
+Cesar was funded by FSE-REACT EU, PON ‘‘RICERCA e INNOVAZIONE’’ 
+2014–2020, Azione IV.6 (Green). Stavros is funded by the HORIZON 
+Europe Drive2X Project 101056934.
+Data availability
+We made the code open source.
+References
+[1] K.M. Tan, V.K. Ramachandaramurthy, J.Y. Yong, Integration of electric vehicles 
+in smart grid: A review on vehicle to grid technologies and optimization 
+techniques, Renew. Sustain. Energy Rev. 53 (2016) 720–732.
+[2] A. Dubey, S. Santoso, Electric vehicle charging on residential distribution 
+systems: Impacts and mitigations, IEEE Access 3 (2015) 1871–1893.
+[3] L. Shi, T. Lv, Y. Wang, Vehicle-to-grid service development logic and manage-
+ment formulation, J. Mod. Power Syst. Clean Energy 7 (4) (2019) 935–947, 
+http://dx.doi.org/10.1007/s40565-018-0464-7.
+[4] A. Allehyani, A. Ajabnoor, M. Alharbi, Chapter 14 - demand response scheme 
+for electric vehicles charging in smart power systems with 100% of renewable 
+energy, in: S. Chenniappan, S. Padmanaban, S. Palanisamy (Eds.), Power Systems 
+Operation with 100% Renewable Energy Sources, Elsevier, 2024, pp. 247–268, 
+http://dx.doi.org/10.1016/B978-0-443-15578-9.00016-9.
+[5] W. Abdelfattah, A.S. Abdelhamid, H.M. Hasanien, B.A.-E. Rashad, Smart vehicle-
+to-grid integration strategy for enhancing distribution system performance and 
+electric vehicle profitability, Energy 302 (2024) 131807, http://dx.doi.org/10.
+1016/j.energy.2024.131807.
+[6] A.F. Güven, Integrating electric vehicles into hybrid microgrids: A stochastic 
+approach to future-ready renewable energy solutions and management, Energy 
+303 (2024) 131968, http://dx.doi.org/10.1016/j.energy.2024.131968.
+[7] A. Nouri, A. Lachheb, L. El Amraoui, Optimizing efficiency of vehicle-to-grid 
+system with intelligent management and ANN-PSO algorithm for battery electric 
+vehicles, Electr. Power Syst. Res. 226 (2024) 109936, http://dx.doi.org/10.1016/
+j.epsr.2023.109936.
+[8] G. Srihari, R.S.R. Krishnam Naidu, P. Falkowski-Gilski, P. Bidare Divakarachari, 
+R. Kiran Varma Penmatsa, Integration of electric vehicle into smart grid: a meta 
+heuristic algorithm for energy management between V2G and G2V, Front. Energy 
+Res. Volume 12 - 2024 (2024) http://dx.doi.org/10.3389/fenrg.2024.1357863.
+[9] S.A. Finecomess, G. Gebresenbet, W.Y. Zada, Y. Mulugeta, A. Addisie, Optimiza-
+tion of vehicle-to-grid, grid-to-vehicle, and vehicle-to-everything systems using 
+artificial bee colony optimization, Energies 18 (8) (2025) http://dx.doi.org/10.
+3390/en18082046.
+[10] Majed, N.K. Roy, A. Ahmed, Optimizing the load curve through V2G technology 
+for sustainable energy management, Energy Rep. 13 (2025) 5848–5863, http:
+//dx.doi.org/10.1016/j.egyr.2025.04.066.
+[11] S. Orfanoudakis, V. Robu, E.M. Salazar Duque, et al., Scalable reinforcement 
+learning for large-scale coordination of electric vehicles using graph neural 
+networks, 2024, Preprint (Version 1) available at Research Square. URL https:
+//doi.org/10.21203/rs.3.rs-5504138/v1. (Accessed 19 December 2024).
+[12] S. Orfanoudakis, N.K. Panda, P. Palensky, P.P. Vergara, GNN-DT: Graph neural 
+network enhanced decision transformer for efficient optimization in dynamic 
+environments, 2025, arXiv:2502.01778.
+[13] M.N. Boukoberine, M.F. Zia, T. Berghout, M. Benbouzid, Reinforcement learning-
+based energy management for hybrid electric vehicles: A comprehensive 
+up-to-date review on methods, challenges, and research gaps, Energy AI 21 
+(2025) 100514, http://dx.doi.org/10.1016/j.egyai.2025.100514.
+[14] PRAFT and RPBFT: A class of blockchain consensus algorithm and their appli-
+cations in electric vehicles charging scenarios for V2G networks, Internet Things 
+Cyber-Phys. Syst. 3 (2023) 61–70, http://dx.doi.org/10.1016/j.iotcps.2023.02.
+003.
+[15] S.H. Shamsdin, A. Seifi, M. Rostami-Shahrbabaki, B. Rahrovi, Plug-in electric 
+vehicle optimization and management charging in a smart parking lot, in: 
+2019 IEEE Texas Power and Energy Conference, TPEC 2019, Institute of 
+Electrical and Electronics Engineers Inc., 2019, http://dx.doi.org/10.1109/TPEC.
+2019.8662169.
+[16] K. Schulte, J. Haubrock, Linear programming to increase the directly used 
+photovoltaic power for charging several electric vehicles, in: 2021 IEEE Madrid 
+PowerTech, PowerTech 2021 - Conference Proceedings, Institute of Electrical and 
+Electronics Engineers Inc., 2021, http://dx.doi.org/10.1109/POWERTECH46648.
+2021.9494914.
+[17] I. Sengor, O. Erdinc, B. Yener, A. Tascikaraoglu, J.P. Catalao, Optimal energy 
+management of EV parking lots under peak load reduction based DR programs 
+considering uncertainty, IEEE Trans. Sustain. Energy 10 (3) (2019) 1034–1043, 
+http://dx.doi.org/10.1109/TSTE.2018.2859186.
+[18] P. Meenakumar, M. Aunedi, G. Strbac, Optimal business case for provision of 
+grid services through EVs with V2G capabilities, in: 2020 15th International 
+Conference on Ecological Vehicles and Renewable Energies, EVER 2020, Institute 
+of Electrical and Electronics Engineers Inc., 2020, http://dx.doi.org/10.1109/
+EVER48776.2020.9242538.
+[19] F. Giordano, C. Diaz-Londono, G. Gruosso, Comprehensive aggregator method-
+ology for EVs in V2G operations and electricity markets, IEEE Open J. Veh. 
+Technol. 4 (2023) 809–819, http://dx.doi.org/10.1109/OJVT.2023.3323087.
+Electric Power Systems Research 250 (2026) 112082 
+11 
+
+PAGE 13
+C. Diaz-Londono et al.
+[20] X. Jiang, S. Wang, Q. Zhao, X. Wang, Optimized dispatching method for 
+flexibility improvement of AC-MTDC distribution systems considering aggregated 
+electric vehicles, J. Mod. Power Syst. Clean Energy 11 (6) (2023) 1857–1867, 
+http://dx.doi.org/10.35833/MPCE.2022.000576.
+[21] H. Patil, V.N. Kalkhambkar, Grid integration of electric vehicles for economic 
+benefits: A review, J. Mod. Power Syst. Clean Energy 9 (1) (2021) 13–26, 
+http://dx.doi.org/10.35833/MPCE.2019.000326.
+[22] J.S. Giraldo, N.B. Arias, P.P. Vergara, M. Vlasiou, G. Hoogsteen, J.L. Hurink, 
+Estimating risk-aware flexibility areas for electric vehicle charging pools via AC 
+stochastic optimal power flow, J. Mod. Power Syst. Clean Energy 11 (4) (2023) 
+1247–1256, http://dx.doi.org/10.35833/MPCE.2022.000452.
+[23] C. Diaz-Londono, G. Fambri, P. Maffezzoni, G. Gruosso, Enhanced EV charging 
+algorithm considering data-driven workplace chargers categorization with multi-
+ple vehicle types, eTransportation 20 (2024) 100326, http://dx.doi.org/10.1016/
+j.etran.2024.100326.
+[24] M. Tahmasebi, A. Ghadiri, M. Haghifam, S. Miri-Larimi, MPC-based approach 
+for online coordination of EVs considering EV usage uncertainty, Int. J. Electr. 
+Power Energy Syst. 130 (2021) 106931.
+[25] Z. Ji, X. Huang, C. Xu, H. Sun, Accelerated model predictive control for electric 
+vehicle integrated microgrid energy management: A hybrid robust and stochastic 
+approach, Energies 9 (11) (2016) http://dx.doi.org/10.3390/en9110973.
+[26] Y. Zhou, A. Ravey, M.-C. Péra, Real-time cost-minimization power-allocating 
+strategy via model predictive control for fuel cell hybrid electric vehicles, Energy 
+Convers. Manage. 229 (2021) 113721, http://dx.doi.org/10.1016/j.enconman.
+2020.113721.
+[27] C. Minchala-Ávila, P. Arévalo, D. Ochoa-Correa, A systematic review of model 
+predictive control for robust and efficient energy management in electric vehicle 
+integration and V2G applications, Modelling 6 (1) (2025) http://dx.doi.org/10.
+3390/modelling6010020.
+[28] J.R.A. Klemets, E. Haugen, B.N. Torsæter, MPC-based control structure for high-
+power charging stations capable of providing ancillary services, Int. J. Electr. 
+Power Energy Syst. 159 (2024) 110039, http://dx.doi.org/10.1016/j.ijepes.2024.
+110039.
+[29] E. Cording, J. Thakur, FleetRL: Realistic reinforcement learning environments 
+for commercial vehicle fleets, SoftwareX 26 (2024) 101671, http://dx.doi.org/
+10.1016/j.softx.2024.101671.
+[30] G. Karatzinis, C. Korkas, M. Terzopoulos, C. Tsaknakis, A. Stefanopoulou, I. 
+Michailidis, E. Kosmatopoulos, Chargym: An EV charging station model for 
+controller benchmarking, in: Artificial Intelligence Applications and Innovations, 
+Springer International Publishing, 2022, pp. 241–252.
+[31] C. Yeh, V. Li, R. Datta, J. Arroyo, N. Christianson, C. Zhang, Y. Chen, 
+M.M. Hosseini, A. Golmohammadi, Y. Shi, Y. Yue, A. Wierman, SustainGym: 
+Reinforcement learning environments for sustainable energy systems, 2023.
+[32] T. Morstyn, K.A. Collett, A. Vijay, M. Deakin, S. Wheeler, S.M. Bhagavathy, F. 
+Fele, M.D. McCulloch, OPEN: An open-source platform for developing smart local 
+energy system applications, Appl. Energy 275 (2020) 115397, http://dx.doi.org/
+10.1016/j.apenergy.2020.115397, URL https://www.sciencedirect.com/science/
+article/pii/S0306261920309090.
+[33] C. Dalamagkas, V. Melissianos, G. Papadakis, A. Georgakis, V.-M. Nikiforidis, K. 
+Hrissagis-Chrysagis, The open V2X management platform: An intelligent charging 
+station management system, Inf. Syst. 129 (2025) 102494, http://dx.doi.org/10.
+1016/j.is.2024.102494.
+[34] T. Qian, M. Fang, Q. Hu, C. Shao, J. Zheng, V2sim: An open-source microscopic 
+V2G simulation platform in urban power and transportation network, IEEE Trans. 
+Smart Grid (2025) http://dx.doi.org/10.1109/TSG.2025.3560976, 1–1.
+[35] O. Frendo, N. Gaertner, H. Stuckenschmidt, Open source algorithm for smart 
+charging of electric vehicle fleets, IEEE Trans. Ind. Inform. 17 (9) (2021) 
+6014–6022, http://dx.doi.org/10.1109/TII.2020.3038144.
+[36] Elaadnl open datasets for electric mobility research | update april 2020, 
+2023, https://platform.elaad.io/analyses/ElaadNL_opendata.php. (Accessed 23 
+November 2023).
+[37] Pecan Street Data Portal. https://www.pecanstreet.org/dataport/.
+[38] S. Pfenninger, I. Staffell, Long-term patterns of European PV output using 30 
+years of validated hourly reanalysis and satellite data, Energy 114 (2016) 
+1251–1265.
+[39] A.A.E. Elsayed, S. Saxena, H.E.Z. Farag, Optimal design of a planning and 
+contracting framework to enable vehicle to building and grid services via demand 
+response, IEEE Trans. Transp. Electrification 11 (3) (2025) 7542–7556, http:
+//dx.doi.org/10.1109/TTE.2025.3529346.
+[40] C.F. Lee, K. Bjurek, V. Hagman, Y. Li, C. Zou, Vehicle-to-grid optimization 
+considering battery aging, 22nd IFAC World Congr. 56 (2) (2023) 6624–6629.
+[41] C. Diaz-Londono, P. Maffezzoni, L. Daniel, G. Gruosso, Comparison and analysis 
+of algorithms for coordinated EV charging to reduce power grid impact, IEEE 
+Open J. Veh. Technol. 5 (2024) 990–1003, http://dx.doi.org/10.1109/OJVT.
+2024.3435489.
+[42] C. Diaz, F. Ruiz, D. Patino, Smart charge of an electric vehicles station: A model 
+predictive control approach, in: 2018 IEEE Conference on Control Technology 
+and Applications, CCTA, 2018, pp. 54–59, http://dx.doi.org/10.1109/CCTA.
+2018.8511498.
+[43] S. Orfanoudakis, C. Diaz-Londono, Y. Emre Yılmaz, P. Palensky, P.P. Vergara, 
+EV2gym: A flexible V2G simulator for EV smart charging research and bench-
+marking, IEEE Trans. Intell. Transp. Syst. 26 (2) (2025) 2410–2421, http://dx.
+doi.org/10.1109/TITS.2024.3510945.
+[44] ENTSO-E transparency platform. https://transparency.entsoe.eu/.
+Electric Power Systems Research 250 (2026) 112082 
+12 

@@ -1,0 +1,37 @@
+Main manuscript final visual audit: PASS
+Reviewed: 2026-10-09T04:27:06.243672+08:00
+DOCX: D:\MLWork\pv_battery_dfl_grid_20261005\revision_20261009\EPSR_Revised_Manuscript.docx
+DOCX SHA256: ef4d37d09e6952811e25041d0faac997ce72e5c1b96d42c1611c8646a6935bc5
+Authoritative render: D:\MLWork\pv_battery_dfl_grid_20261005\revision_20261009\temp\docx_render_release2\EPSR_Revised_Manuscript
+PDF SHA256: 63a51efa3349353692ffa4ff736c685b1cc927a3bc0137c51db2aaa85d281c7d
+Actual page count: 18
+
+All 18 release2 page PNGs were actually viewed at original resolution (1414 x 2000), including all text, equations, tables, figures and references. XML structure and PyMuPDF physical-page bounding-box checks supplement this visual review. No source manuscript, exporter or numerical result was modified.
+
+Verified: 5 complete tables, all table text 9 pt; row counts including headers 5/5/5/5/6; 4 figures; 18 native OMML objects; 4 numbered equations over 6 display lines; 37 references; no paragraph borders; no physical-page text/image overflow or Unicode replacement characters.
+
+All prior observed issues are resolved: Table 1 has all four data rows on page 7; Table 2 is complete on page 8; Table 4 is complete on page 11; the boundary-correction expression on page 6 is one complete native math object with no isolated parenthesis. Blue borders and visible raw inline mathematical markup are absent.
+
+Remaining findings: None. The whitespace from keeping tables and figures together is acceptable.
+
+Page-by-page actual visual observations:
+1. Title, abstract and introduction fit; previous blue border absent.
+2. Introduction and methods prose readable with normal continuation.
+3. Equations (1)-(3), five display lines, and inline symbols readable without clipping.
+4. Equation (4), one display line, and inline mathematical symbols readable.
+5. Methods and uncertainty prose fit; continuous-SOC expression readable.
+6. Boundary correction V(e_start)-V(e_end) is complete as one native math object; no isolated closing parenthesis.
+7. Table 1 has all four data rows (Panel 1, Panel 2, Panel 3, Held-out), all columns and its complete note on one page.
+8. Table 2 has all four data rows and complete note; Figure 1 and its caption fit without collisions.
+9. Table 3 has four data rows and complete note; timing and memory columns remain distinct.
+10. Figure 2, all four panels and complete caption, readable without clipping or text-line collisions.
+11. Table 4 has all four data rows, all columns and its complete note on one page.
+12. Figure 3, all four panels and complete caption, readable without clipping or text-line collisions.
+13. Figure 4, all four panels and complete caption, readable without clipping or text-line collisions.
+14. Portability and discussion prose fits without overflow.
+15. Table 5 has all five data rows; three-column wrapping stays within cells and clear of table rules.
+16. Discussion, conclusion, declarations and references 1-6 readable.
+17. References 7-24, including diacritics and URLs, readable and within page.
+18. References 25-37 fit; long final brochure URL stays inside the text column; no extra blank page.
+
+Scope boundary: PASS applies to the recorded DOCX hash and release2 rendering; other word-processing/print environments may paginate differently. The prior 441-check scientific/numerical audit was not rerun, because this assignment is visual QA and no numerical content changed.

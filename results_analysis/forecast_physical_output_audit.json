@@ -1,0 +1,196 @@
+{
+  "status": "PASS",
+  "training_rows": 4096,
+  "validation_rows": 1024,
+  "independent_code_review": "network_impl read-only PASS for factory, masks, pairs, budget and epoch0",
+  "models": [
+    {
+      "family": "decision",
+      "tariff": "tou",
+      "seed": 11,
+      "night_zero_exact": true,
+      "max_reloaded_prediction_error_kw": 0.0,
+      "best_epoch": 3,
+      "selected_lr": 0.0001
+    },
+    {
+      "family": "decision",
+      "tariff": "tou",
+      "seed": 23,
+      "night_zero_exact": true,
+      "max_reloaded_prediction_error_kw": 0.0,
+      "best_epoch": 4,
+      "selected_lr": 0.0001
+    },
+    {
+      "family": "decision",
+      "tariff": "tou",
+      "seed": 47,
+      "night_zero_exact": true,
+      "max_reloaded_prediction_error_kw": 0.0,
+      "best_epoch": 3,
+      "selected_lr": 0.0001
+    },
+    {
+      "family": "decision",
+      "tariff": "flat",
+      "seed": 11,
+      "night_zero_exact": true,
+      "max_reloaded_prediction_error_kw": 0.0,
+      "best_epoch": 3,
+      "selected_lr": 0.0001
+    },
+    {
+      "family": "decision",
+      "tariff": "flat",
+      "seed": 23,
+      "night_zero_exact": true,
+      "max_reloaded_prediction_error_kw": 0.0,
+      "best_epoch": 4,
+      "selected_lr": 0.0001
+    },
+    {
+      "family": "decision",
+      "tariff": "flat",
+      "seed": 47,
+      "night_zero_exact": true,
+      "max_reloaded_prediction_error_kw": 0.0,
+      "best_epoch": 4,
+      "selected_lr": 0.0001
+    },
+    {
+      "family": "mse_continuation",
+      "tariff": "tou",
+      "seed": 11,
+      "night_zero_exact": true,
+      "max_reloaded_prediction_error_kw": 0.0,
+      "best_epoch": 3,
+      "selected_lr": 0.0001,
+      "strict_same_lr_equals_primary": true,
+      "primary_lr_equals_dfl_lr": true
+    },
+    {
+      "family": "mse_continuation",
+      "tariff": "tou",
+      "seed": 23,
+      "night_zero_exact": true,
+      "max_reloaded_prediction_error_kw": 0.0,
+      "best_epoch": 2,
+      "selected_lr": 0.0001,
+      "strict_same_lr_equals_primary": true,
+      "primary_lr_equals_dfl_lr": true
+    },
+    {
+      "family": "mse_continuation",
+      "tariff": "tou",
+      "seed": 47,
+      "night_zero_exact": true,
+      "max_reloaded_prediction_error_kw": 0.0,
+      "best_epoch": 0,
+      "selected_lr": 0.0001,
+      "strict_same_lr_equals_primary": true,
+      "primary_lr_equals_dfl_lr": true
+    },
+    {
+      "family": "mse_continuation",
+      "tariff": "flat",
+      "seed": 11,
+      "night_zero_exact": true,
+      "max_reloaded_prediction_error_kw": 0.0,
+      "best_epoch": 3,
+      "selected_lr": 0.0001,
+      "strict_same_lr_equals_primary": true,
+      "primary_lr_equals_dfl_lr": true
+    },
+    {
+      "family": "mse_continuation",
+      "tariff": "flat",
+      "seed": 23,
+      "night_zero_exact": true,
+      "max_reloaded_prediction_error_kw": 0.0,
+      "best_epoch": 2,
+      "selected_lr": 0.0001,
+      "strict_same_lr_equals_primary": true,
+      "primary_lr_equals_dfl_lr": true
+    },
+    {
+      "family": "mse_continuation",
+      "tariff": "flat",
+      "seed": 47,
+      "night_zero_exact": true,
+      "max_reloaded_prediction_error_kw": 0.0,
+      "best_epoch": 0,
+      "selected_lr": 0.0001,
+      "strict_same_lr_equals_primary": true,
+      "primary_lr_equals_dfl_lr": true
+    }
+  ],
+  "baselines": [
+    {
+      "method": "calibrated",
+      "tariff": "tou",
+      "clean_household_days": 79397,
+      "failed": 0,
+      "exact_night_support": true,
+      "max_energy_balance_residual": 2.247757535656092e-12
+    },
+    {
+      "method": "calibrated",
+      "tariff": "flat",
+      "clean_household_days": 79397,
+      "failed": 0,
+      "exact_night_support": true,
+      "max_energy_balance_residual": 7.16093850883226e-14
+    },
+    {
+      "method": "stochastic",
+      "tariff": "tou",
+      "clean_household_days": 79397,
+      "failed": 0,
+      "exact_night_support": true,
+      "max_energy_balance_residual": 3.1725733151688473e-12
+    },
+    {
+      "method": "stochastic",
+      "tariff": "flat",
+      "clean_household_days": 79397,
+      "failed": 0,
+      "exact_night_support": true,
+      "max_energy_balance_residual": 2.077671368283518e-12
+    }
+  ],
+  "scenario_replay": [
+    {
+      "tariff": "tou",
+      "household_id": 299,
+      "is_heldout": false,
+      "date": "2012-07-01",
+      "replay_max_action_difference_kw": 1.1479149852888781e-07,
+      "independent_household_scenario_permutation_difference_kw": 5.365280692198784e-10
+    },
+    {
+      "tariff": "tou",
+      "household_id": 70,
+      "is_heldout": true,
+      "date": "2012-07-01",
+      "replay_max_action_difference_kw": 1.0737145261785486e-07,
+      "independent_household_scenario_permutation_difference_kw": 2.170263968537256e-12
+    },
+    {
+      "tariff": "flat",
+      "household_id": 299,
+      "is_heldout": false,
+      "date": "2012-07-01",
+      "replay_max_action_difference_kw": 3.0471993838874367e-21,
+      "independent_household_scenario_permutation_difference_kw": 3.975550322567625e-14
+    },
+    {
+      "tariff": "flat",
+      "household_id": 70,
+      "is_heldout": true,
+      "date": "2012-07-01",
+      "replay_max_action_difference_kw": 2.2524249739669377e-10,
+      "independent_household_scenario_permutation_difference_kw": 2.233393157913266e-12
+    }
+  ]
+}

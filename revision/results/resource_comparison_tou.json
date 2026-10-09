@@ -1,0 +1,66 @@
+{
+  "status": "complete",
+  "fee": "tou",
+  "resource_hardware": "same Windows CPU, deterministic single-thread per process",
+  "benchmark_pairs": 1024,
+  "benchmark_repeats": 3,
+  "shared_cost": "All four methods consume the same pre-existing supervised MSE PV and HGB load models; their original fitting cost is shared and excluded from incremental training time. Continued MSE/DFL resource refits reproduce the frozen procedure but performance uses the original frozen checkpoints.",
+  "walltime_caution": "Method benchmark subprocesses were serial relative to one another; unrelated revision experiments ran concurrently. Report measured wall times with this caveat, not an isolated-machine speed claim. CPU-time means supplied but Windows clock granularity affects individual-call CPU times.",
+  "peak_memory_caution": "Process peak working set includes interpreter, libraries and loaded prediction/data arrays; it is not model size alone.",
+  "rows": {
+    "msecont": {
+      "mean_qp_ms": 1.4531721350673859,
+      "median_qp_ms": 1.4711000258103013,
+      "p95_qp_ms": 1.882625016150996,
+      "mean_process_cpu_qp_ms": 1.4292399088541667,
+      "inference_peak_rss_mb": 618.41408,
+      "training_seconds_including_validation_selection": 21.75968889996875,
+      "training_peak_rss_mb": 854.810624,
+      "selected_epoch": 3,
+      "learning_rate": 0.0001,
+      "training_days": 4096,
+      "validation_days": 1024,
+      "training_scope": "incremental from identical frozen original MSE warm-start; 2 learning rates x 4 epochs, validation cost checkpoint selection, epoch0 eligible",
+      "update_requirement": "refit neural signal when controller/input economics change"
+    },
+    "dfl": {
+      "mean_qp_ms": 1.4608983077929831,
+      "median_qp_ms": 1.4817999908700585,
+      "p95_qp_ms": 1.915134978480637,
+      "mean_process_cpu_qp_ms": 1.4190673828125,
+      "inference_peak_rss_mb": 619.175936,
+      "training_seconds_including_validation_selection": 385.5757987999823,
+      "training_peak_rss_mb": 938.799104,
+      "selected_epoch": 3,
+      "learning_rate": 0.0001,
+      "training_days": 4096,
+      "validation_days": 1024,
+      "training_scope": "incremental from identical frozen original MSE warm-start; 2 learning rates x 4 epochs, validation cost checkpoint selection, epoch0 eligible",
+      "update_requirement": "refit neural signal when controller/input economics change"
+    },
+    "calibrated3": {
+      "mean_qp_ms": 1.4761881180523535,
+      "median_qp_ms": 1.5016000252217054,
+      "p95_qp_ms": 1.8886599980760366,
+      "mean_process_cpu_qp_ms": 1.4597574869791667,
+      "inference_peak_rss_mb": 807.927808,
+      "training_seconds_including_validation_selection": 87.30953460000455,
+      "training_peak_rss_mb": 936.230912,
+      "training_days": 2048,
+      "validation_days": 2048,
+      "training_scope": "3 trainable offsets, 3 epochs, validation shrinkage among five fixed strengths",
+      "update_requirement": "refit 3 offsets when cost/input setting changes"
+    },
+    "stochastic20": {
+      "mean_qp_ms": 9.344016112625772,
+      "median_qp_ms": 9.396750014275312,
+      "p95_qp_ms": 11.753884976496918,
+      "mean_process_cpu_qp_ms": 9.145100911458334,
+      "inference_peak_rss_mb": 618.479616,
+      "training_seconds_including_validation_selection": 0.01200690004043281,
+      "training_scope": "frozen 20 residual paths: no iterative task-specific training; residual extraction excludes shared MSE/load pretraining",
+      "update_requirement": "refresh residual bank when distribution changes",
+      "training_peak_rss_mb": null
+    }
+  }
+}

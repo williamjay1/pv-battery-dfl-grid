@@ -1,0 +1,71 @@
+Independent forecasting/control manuscript audit, 2026-10-09
+Reviewer: forecast_impl. Read-only review of the current article_full.txt, supplement_full.txt, assembly scripts, executed forecasting/control methods and final numeric outputs. No manuscript, model, or experiment changed. S2's already-known pending switch to support-matched net rows is intentionally not counted as a newly found error.
+
+DECISION
+The substantive forecasting/control results are consistent with the saved experiments. No new computation or refitting is required. One delivery-blocking completeness issue (unexpanded formula tokens) and several precise wording/method-scope corrections remain. The requested perfect-information-gap claim is verified correct from original NPZ files, not merely an existing summary.
+
+P1: Formula definitions are absent from the current scientific text.
+Location: article_full.txt Methods 2.2/2.3, approximately lines 37, 41, 43 and 55; article_blocks.json retains equation tokens [[EQ_BATTERY]], [[EQ_OBJECTIVE]], [[EQ_SELECTION]], [[EQ_DFL]]. At audit time no revision script expanded those tokens. The old export_article_docx.py accepts explicit equation-string prefixes and targets the original manuscript directory, so that old exporter alone does not resolve the new tokens. If root is already adding a new renderer, treat this as a release check rather than a request to redesign anything.
+Required content (notation may be typeset normally):
+  e_t=e_(t-1)+Delta*(eta*c_t-d_t/eta), t=1,...,48; 0<=c_t,d_t<=3 kW; 1<=e_t<=9 kWh; e_0=e_48=5 kWh; Delta=0.5 h, eta=0.95.
+  J_hat=Delta*sum_t[p_buy,t*max(g_hat_t,0)+p_sell,t*min(g_hat_t,0)+kappa*(c_t+d_t)]+epsilon*R(c,d,e), with g_hat=n_hat+c-d.
+  R=sum_t[(c_t/3 kW)^2+(d_t/3 kW)^2+(e_t/10 kWh)^2]. The epsilon term is NOT additionally multiplied by Delta; epsilon=1e-4 AUD. No binary complementarity constraint was imposed. Numerical simultaneity was checked.
+  L_DFL(theta)=N^-1*sum_i C_i(A_epsilon(l_hat_i-f_theta(x_i))), where C_i uses actual GC-GG and wear as training targets. The training/selection implementation omits the action-independent CL settlement; it can be added to reported full cost when observed. Explicitly state that this omission is a constant in paired comparisons and does not turn missing CL into zero.
+These details agree with battery_model.py P diagonal 2*epsilon/power^2 for both actions and 2*epsilon/capacity^2 for state, and with actual training loss.
+
+P2-A: StoreNet aggregation is not a 30/30 completeness rule.
+Location: article_full.txt Methods 2.8, approximately line 99: 'We aggregate only complete half-hours'.
+Executed rule: reject invalid/negative/duplicate/off-minute records jointly; retain half-hour bins containing at least 27 distinct jointly valid GC/PV minutes; average the available power observations. All 48 retained bins are then required for a target day and each of its seven history days. This is a sampled-power mean, not interval-integrated revenue metering.
+Replace with: 'We retain a half-hour only when at least 27 of its 30 minute records have valid consumption and production measurements, and take their arithmetic means without interpolation. Target and history days require all 48 retained half-hours.'
+Evidence: research/storenet_external_protocol.json half_hour_aggregation; research/prepare_storenet_external.py lines 46-57. The 3,439 complete target days and 2,224 scored household-days are correct under this 90% coverage rule.
+
+P2-B: Identify the single-seed main economic evidence before stating three-seed inference.
+Location: article_full.txt Methods 2.6, approximately line 85, opening 'Primary contrasts average paired daily differences across three seeds...'.
+The Abstract, Table 2, Fig.1 and all299 headline 1.131 cents use seed11 only. The original nine deployment cells and the external three-seed summary use averaging across seeds. The later sentence distinguishes fixed-model extensions, but the unqualified first sentence can make the headline appear replicated across three seeds.
+Suggested replacement: 'The original nine deployment-cell contrasts and the StoreNet seed-mean transfer estimates average paired daily differences across three seeds before calendar-block resampling. The expanded private comparison, practical alternatives and new controller/input/wear comparisons use seed 11; their intervals describe temporal uncertainty for that fitted model.'
+Do not change any numbers or add experiments.
+
+P2-C: Resource memory and timing scope require explicit labels.
+Locations: Methods2.4 timing paragraph; article Table3 header 'Process memory (MB)' and note; Results3.2 'Deterministic schedules take about1.5ms'.
+The listed 618/808/619/618 MB are replay/solver-benchmark process peaks, not peak learning memory. Learning peaks are separately 854.8/936.2/938.8 MB for continuedMSE/calibration/DFL. TableS3 correctly separates them. Relabel the main column 'Replay RSS (MB)' and reference TableS3 for learning RSS.
+Timing code measures QP RHS update+solve, excluding feature construction, neural/HGB prediction and data import. Specify 'QP solves take...' and add that exclusion to the caption, so these are not advertised as end-to-end control latency. The 1,024 pairs/20warmups/3repetitions characterize the solve benchmark. Learning uses4096/1024 pairs for MSE/DFL and2048/2048 for calibration, which S2 already reports.
+Only the method benchmark subprocesses were serial relative to each other; multiple learning jobs did run concurrently. Narrow 'Training and scheduling times are measured in serial...' to 'Scheduling benchmarks run in serial single-thread method subprocesses; incremental learning also uses one numerical thread per process. Unrelated jobs run concurrently.' Existing concurrent-work caution is correct and should remain.
+
+P2-D: Predictive RMSE citation is an old signed, known-household diagnostic.
+Location: supplement_full.txt S2, approximately line60: 'Direct-net MSE has about0.6253kW testRMSE versus about0.6184kW for the separated MSE net input.'
+The values are exactly known244 results in revision_predictive_metrics.json: raw unrestricted signed net_MSE=0.6253346205; HGB minus ToU continuedMSE=0.6184262633. They are not all299 pooled or support-projected net errors. Label them explicitly: 'On88,609 known-household testdays, the original unrestricted signed direct-net diagnostic has... compared with the HGB minus ToU continued-MSE signal...' Retain as an exploratory diagnostic. There is no need to rerun or silently substitute a new error result.
+
+P2-E: Identify the forecasting backbone of practical calibration/scenario methods.
+Location: main Methods2.4 first calibration paragraph and scenario paragraph. SupplementS2 says 'original frozen forecast backbone', but the distinction should be explicit in the main comparison.
+Suggested sentence: 'Calibration and residual-scenario control both start from the frozen seed11 supervised PV model with the common HGB load predictor; continued MSE and DFL are separate matched continuations of that warm-start.' This prevents attributing SAA/calibration to the continued-MSE weights or implying all practical alternatives have identical training budgets. The manuscript otherwise correctly separates objective attribution from engineering-method comparison.
+
+VERIFIED: perfect-information gap (requested priority)
+Read results/dispatch/{msecont,dfl,oracle}_tou_seed11_test_physical.npz independently. Selected splits_v1 primary_panels[0] (55 households) and the common clean-day intersection (219 dates).
+  continued MSE mean operating cost =3.709053845340053 AUD/household-day
+  DFL mean operating cost           =3.6978191394355564
+  perfect information              =3.049505084440725
+  matched DFL improvement          =0.0112347059044966
+  available reference gap          =0.659548760899328
+  fraction=(MSE-DFL)/(MSE-oracle)   =0.017033927695016078 =1.7033927695%
+The text 'approximately1.7%' is accurate. Its common seed/mask and privileged-reference qualification are appropriate. Do not use the all299 numerator with this panel-specific denominator.
+
+VERIFIED: main Table2 from saved expanded NPZ, same107713 full-cost mask
+Method             full cost          retail               throughput
+continuedMSE       3.538147777877900  3.294254669044290    12.194655441680526
+3offsets           3.532018824191848  3.294333211200780    11.884280649553430
+DFL                3.526829600510614  3.289294393737876    11.876760338636920
+20scenarios        3.502174788762589  3.286163689977739    10.800554939242481
+All table rounding and full cost=retail+.02*throughput agree. The108641 GC/PV paired denominator is correctly identified separately. Currency conversion AUD->Australian cents is correct.
+
+OTHER PASSES
+- All299108641=known24488609+heldout5520032; fullCLcost107713; no missing CL filling; capacity information is fixed per-household in the Ausgrid arrays (0 observed finite adjacent changes), consistent with the declared information timing.
+- DFL−continuedMSE=-.0113097025763AUD/day; calibration share=.00611855703194/.0113097025763=54.1% rounded; SAA−DFL=-.0246248896160. Intervals and ToU/flat retail/wear decomposition in main Results agree with final support-matched summaries.
+- Household benefits and adverse tails independently recalculated from all299 NPZ: DFL96.6555184%, max adverse13.4181517c; calibration92.6421405%, max2.4138344c; SAA91.3043478%, max19.2447216c. Main rounded values correct.
+- Both new net-night methods are valid fixed-night projections; underlying net MLP unchanged; calibrator train/val/inference projection,2048/2048 samples and validation-only shrinkage are accurately described. Original signed results remain. Primary projection is a recorded post-diagnostic design revision, not independent confirmation.
+-20 paired residual paths chosen deterministically from147 jointly clean known-household validationdates is correct. Same action across scenarios, no scenario-specific recourse; heldout labels do not fit residuals; separable household optimization does not exploit cross-household coordination. The manuscript's qualification is appropriate.
+- Frozen persistence+.312c vs matched-1.475c; strong-input validationRMSE.5473->.5423; unsuccessful neural-alone option retained; wear repricing/reoptimization/matched hierarchy and displayed0/.01/.04 numbers agree with complete control_transfer_summary.
+- Continuous controller formula signs, daily24h planning,4088/1021 two-day training anchors,328 common clean segments,5kWh initialization, intra-segment SOC carry and full V(start)-V(end) adjustment agree with execution. Both linear and quadratic terminal terms are included. Raw-1.3125787c and inventory-adjusted-1.3128739c match the1.313c text. Mean daily end state~5.22 is correctly identified as daily, not falsely called final episode inventory. Local gradient audit description is accurate.
+- StoreNet ten households2224paired days,2.2 primary/2.0&2.4 fully retained normalization references, three-seed ToU-1.251537c and flat+.122443c, confidence intervals and one weak ToU seed all agree. Flat weights' post-run hash addendum is honestly disclosed.
+- Full standard dispatch audit PASS42 and external PASS36 already exist; all original unsuccessful alternatives and execution corrections are retained. No evidence that a missing unique run was silently omitted.
+
+Scope: detailed AC mechanism, geographic matching, export protection, network-table values and bibliographic claims are being reviewed by their owning independent agents; this audit does not duplicate their source verification. The known S2 row update is acknowledged without relisting it as a discovery. None of the above wording corrections requires new model selection or additional test use.

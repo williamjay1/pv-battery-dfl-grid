@@ -1,0 +1,246 @@
+{
+  "status": "complete",
+  "mode": "load",
+  "seed": 11,
+  "train_days": 132200,
+  "validation_days": 44373,
+  "selected": 1,
+  "candidates": [
+    {
+      "config": {
+        "lr": 0.001,
+        "weight_decay": 0.0001
+      },
+      "best_epoch": 12,
+      "best_validation_mse": 0.0030436382663797217,
+      "trace": [
+        {
+          "epoch": 1,
+          "validation_normalized_mse": 0.003450326004918385
+        },
+        {
+          "epoch": 2,
+          "validation_normalized_mse": 0.0032043022888388543
+        },
+        {
+          "epoch": 3,
+          "validation_normalized_mse": 0.00311139949911805
+        },
+        {
+          "epoch": 4,
+          "validation_normalized_mse": 0.00309179557045085
+        },
+        {
+          "epoch": 5,
+          "validation_normalized_mse": 0.003117225968553593
+        },
+        {
+          "epoch": 6,
+          "validation_normalized_mse": 0.0030889261010588315
+        },
+        {
+          "epoch": 7,
+          "validation_normalized_mse": 0.0030508590937923436
+        },
+        {
+          "epoch": 8,
+          "validation_normalized_mse": 0.0030814532272080614
+        },
+        {
+          "epoch": 9,
+          "validation_normalized_mse": 0.0030714233951847857
+        },
+        {
+          "epoch": 10,
+          "validation_normalized_mse": 0.003081213531632837
+        },
+        {
+          "epoch": 11,
+          "validation_normalized_mse": 0.003074737180422803
+        },
+        {
+          "epoch": 12,
+          "validation_normalized_mse": 0.0030436382663797217
+        },
+        {
+          "epoch": 13,
+          "validation_normalized_mse": 0.003089002369786605
+        },
+        {
+          "epoch": 14,
+          "validation_normalized_mse": 0.003075247821262389
+        },
+        {
+          "epoch": 15,
+          "validation_normalized_mse": 0.0030509020065933356
+        },
+        {
+          "epoch": 16,
+          "validation_normalized_mse": 0.003075245299508474
+        },
+        {
+          "epoch": 17,
+          "validation_normalized_mse": 0.003070575054242835
+        },
+        {
+          "epoch": 18,
+          "validation_normalized_mse": 0.003048895392556425
+        }
+      ],
+      "elapsed_seconds": 49.567084099981,
+      "peak_process_rss_bytes": 2146066432,
+      "logical_threads_per_process": 1,
+      "python": "3.12.14",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "resource_note": "Peak process RSS includes data and imports. Wall times are comparable only when run serially without competing workload."
+    },
+    {
+      "config": {
+        "lr": 0.0003,
+        "weight_decay": 0.001
+      },
+      "best_epoch": 18,
+      "best_validation_mse": 0.0030362486390644325,
+      "trace": [
+        {
+          "epoch": 1,
+          "validation_normalized_mse": 0.004026243304275686
+        },
+        {
+          "epoch": 2,
+          "validation_normalized_mse": 0.0033329677328895312
+        },
+        {
+          "epoch": 3,
+          "validation_normalized_mse": 0.0032226536222177958
+        },
+        {
+          "epoch": 4,
+          "validation_normalized_mse": 0.003180154947665408
+        },
+        {
+          "epoch": 5,
+          "validation_normalized_mse": 0.0031494832989731065
+        },
+        {
+          "epoch": 6,
+          "validation_normalized_mse": 0.00310867912842624
+        },
+        {
+          "epoch": 7,
+          "validation_normalized_mse": 0.0030894080569476372
+        },
+        {
+          "epoch": 8,
+          "validation_normalized_mse": 0.00307151576875006
+        },
+        {
+          "epoch": 9,
+          "validation_normalized_mse": 0.0030768559265400355
+        },
+        {
+          "epoch": 10,
+          "validation_normalized_mse": 0.0030657528589756863
+        },
+        {
+          "epoch": 11,
+          "validation_normalized_mse": 0.0030662186813706963
+        },
+        {
+          "epoch": 12,
+          "validation_normalized_mse": 0.003042209291598904
+        },
+        {
+          "epoch": 13,
+          "validation_normalized_mse": 0.003055060421783168
+        },
+        {
+          "epoch": 14,
+          "validation_normalized_mse": 0.0030415963907724467
+        },
+        {
+          "epoch": 15,
+          "validation_normalized_mse": 0.003056670604642165
+        },
+        {
+          "epoch": 16,
+          "validation_normalized_mse": 0.0030526744557198573
+        },
+        {
+          "epoch": 17,
+          "validation_normalized_mse": 0.003053051085398281
+        },
+        {
+          "epoch": 18,
+          "validation_normalized_mse": 0.0030362486390644325
+        },
+        {
+          "epoch": 19,
+          "validation_normalized_mse": 0.003052088749716867
+        },
+        {
+          "epoch": 20,
+          "validation_normalized_mse": 0.0030473735857096214
+        },
+        {
+          "epoch": 21,
+          "validation_normalized_mse": 0.003046736656580238
+        },
+        {
+          "epoch": 22,
+          "validation_normalized_mse": 0.003089432773001631
+        },
+        {
+          "epoch": 23,
+          "validation_normalized_mse": 0.003037457132315478
+        },
+        {
+          "epoch": 24,
+          "validation_normalized_mse": 0.003058822549076559
+        }
+      ],
+      "elapsed_seconds": 68.06993290001992,
+      "peak_process_rss_bytes": 2146066432,
+      "logical_threads_per_process": 1,
+      "python": "3.12.14",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "resource_note": "Peak process RSS includes data and imports. Wall times are comparable only when run serially without competing workload."
+    }
+  ],
+  "test_used_for_selection": false,
+  "elapsed_seconds": 128.46888959989883,
+  "peak_process_rss_bytes": 2146066432,
+  "logical_threads_per_process": 1,
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "resource_note": "Peak process RSS includes data and imports. Wall times are comparable only when run serially without competing workload.",
+  "deployment_ensemble_selection": {
+    "candidates": [
+      {
+        "mlp_weight": 0,
+        "validation_rmse_kw": 0.5473156571388245
+      },
+      {
+        "mlp_weight": 0.25,
+        "validation_rmse_kw": 0.5431115627288818
+      },
+      {
+        "mlp_weight": 0.5,
+        "validation_rmse_kw": 0.5423287749290466
+      },
+      {
+        "mlp_weight": 0.75,
+        "validation_rmse_kw": 0.5449820160865784
+      },
+      {
+        "mlp_weight": 1.0,
+        "validation_rmse_kw": 0.5510216355323792
+      }
+    ],
+    "selected": {
+      "mlp_weight": 0.5,
+      "validation_rmse_kw": 0.5423287749290466
+    },
+    "note": "If weight0 wins, report no stronger deployable load predictor was obtained; do not rename identical HGB as an improvement."
+  }
+}

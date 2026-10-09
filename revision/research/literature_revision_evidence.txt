@@ -1,0 +1,61 @@
+Revision literature, venue and external-data evidence
+核验日期：2026-10-09。研究路线：SCIE 技术实证/工程应用验证。主要标准是工程问题、公平比较、输入与控制边界、网络结果和可复现性；不要求额外的社会科学因果识别或算法首创。此文件合并必要记录，不代替最终作者判断。
+
+一、目标期刊判断
+
+优先目标：Electric Power Systems Research (EPSR)，原创研究文章。官方 Elsevier Shop 的 Description 当前明确涵盖电力系统运行、分配、优化以及系统环境中对既有知识的原创应用；同时排除没有更广技术系统影响的纯电价/市场经济或孤立部件研究。本文适配点应是预测/控制方案的工程选择及可重复的 AC 后果，不能让私人电费差异淹没配网主线。官方来源：https://shop.elsevier.com/journals/electric-power-systems-research/0378-7796 （Description, paragraphs 1–2; Research papers and short contributions）。
+
+非强制 OA：Pisa 大学图书馆当前期刊记录将 EPSR 列为 Hybrid OA；Elsevier 官方 Pricing 的 Fee waivers to support researchers 段明确 hybrid 可以 subscription 模式免费发表。EPSR 官方 Shop 也仍提供订阅渠道。因此可选择非 OA 订阅路线，不需为本稿预设 APC。来源：https://www.sba.unipi.it/en/electric-power-systems-research ; https://www.elsevier.com/about/policies-and-standards/pricing 。未使用历史 OA 价格冒充现价。
+
+公开分区依据：Comillas 大学 IIT 的期刊表将 JCR-JIF 与 SJR 分列，2025 年 JCR-JIF 4.300、Q2，2024 年 4.200、Q2；2025 年 SJR 列为 Q1，不能混用。该记录是公开大学机构对 JCR 的转录，不是本次直接登录 Clarivate 所得，也未独立取得类别排名页。来源：https://www.iit.comillas.edu/publicacion/info_revista/en/52/Electric_Power_Systems_Research 。依公开依据，EPSR 满足用户原 Q1/Q2 约束；投稿前若需正式类别证明应使用作者机构 JCR 权限核对。
+
+EPSR 专属 Guide for Authors / Insights 页面本轮经直连与 Jina 均返回访问检查页；本地 epsr_guide_page.txt、epsr_insights_page.txt、epsr_scope_page.txt 是失败记录，不能作为已读指南。当前范围以官方 Shop，AI 政策以 Elsevier 官方政策为据。不声称逐项核实了最新 EPSR 独有的格式、数据强制档案条款或 APC 数额，不提供接受率。
+
+Electrical Engineering 备选的官方主页当前显示 Hybrid 与 2025 JIF 2.7，官方 How to publish 页面提供订阅/OA 选择；范围包括电力系统与智能电网。公开可见分区资料指向 JCR Q3，故不以其 SJR Q2 冒充满足原用户 JCR Q1/Q2。已读其指南关于数据可用性及 LLM 非作者要求。来源：https://link.springer.com/journal/202 ; https://link.springer.com/journal/202/aims-and-scope ; https://link.springer.com/journal/202/how-to-publish-with-us ; https://link.springer.com/journal/202/submission-guidelines 。EE 文章与评审建议仍作为工程内容改进依据。
+
+二、真正近邻与可支持的差异
+
+[L35] López et al. 已阅读全文 HTML，重点 §2、§2.2.6、§2.3、§3、§4。其以西班牙配网、PVGIS 输入和集中/分布式储能比较 1280 个 24 小时场景，评价电压分位数、损耗和储能需求；局部无协调无功控制在所研究场景中可能恶化结果。不能声称本文首次比较 PV-BES 配网影响、首次报告电压分布或首次发现无协调控制问题。本文差异在于固定私人成本控制器和选解规则后检验预测方案及学习目标的增量后果。来源：https://link.springer.com/article/10.1007/s00202-024-02620-4 。该文局部控制结论不能推广为所有 Volt-VAR 都有害。
+
+[L36] Pinthurat & Hredzak：出版社摘要、Highlights、Introduction 与 section snippets 已读；先前预印本入口也核验，但没有成功获取完整发表版 PDF，不声称全文审计。摘要直接说明：分布式单相电池由 utility 补贴，以 MADDPG 协同降低中性线电流，使用当地量测执行、集中分享经验训练，真实 PV/负荷数据用于验证。与本稿不同的是学习/调度目标已经是协同电网服务，而本稿 pooled forecaster 服务于各住户分离式私人成本控制器。这里“分布式”不等于目标相同，也不要求把不同信息和目标的 MADRL 强行作为同条件基线。来源：https://www.sciencedirect.com/science/article/abs/pii/S0378779625001919 ; 预印本 DOI https://doi.org/10.36227/techrxiv.24499090.v2 。
+
+[L37] Pinheiro et al.：出版社摘要、引言及方法节摘录已读；SSRN PDF 403，未获完整正文。其日前阶段联合安排能量、使用成本与储备，实时按电压激活储备并反馈日前计划；PV、EV 与负荷通过随机场景进入，验证对象是缩减 EPRI CKT5 的 157 节点中压网。可以引用其“将随机日前计划与电压反馈结合”的正面事实，不根据未提及推断它缺乏特定预测约束/公平性检查。本稿保持 controller、输入信息与 private objective，通过外部 AC replay 评价工程后果，所回答问题不同。来源：https://www.sciencedirect.com/science/article/pii/S0378779625012611 ; 作者机构确认 https://sigarra.up.pt/spup/en/pub_geral.pub_view?pi_pub_base_id=769208 。
+
+[L38] Diaz-Londono et al.：已获取机构仓储发表版 PDF，读取模型、实验与讨论，重点 §4、§5.3–5.5、§6。比较四类成本/灵活性 MPC 与规则、RL，讨论收入、退化与计算成本；§5.4 明确经营者与个体 EV 车主目标的区别。它支持工程选择并非单一预测精度或成本排行榜。本文不用该文证明住宅 DFL 优越；本文针对住户 PV 预测和固定电池控制器，而不是 EV 运营商调度。其电池退化评估也不能替代本文磨损代理的校准。来源：https://pure.tudelft.nl/ws/portalfiles/portal/253350644/1-s2.0-S0378779625006704-main.pdf 。本地全文定位：epsr_v2g_112082_20261009_text.txt；PDF 含一页仓储封面。
+
+[L39] Ali et al.：CityU 作者机构存档的摘要和完整书目信息已核验。存档列有合法 postprint，但本轮直接与 Exa 下载失败，未读全文。摘要已明确 local objectives 与 network-wide impacts 的矛盾、三相不平衡网络、多目标 h-SAC 协同家电调度及 Pareto hypervolume 选择；验证为修改后的 21 节点实际网络。本文不能宣称首次发现 private-grid conflict 或首次比较经济和电压目标。精准差异是本文不向住户调度器加入电网状态/多目标协调，而考察原有私人成本控制器中预测方案变化的影响和选择边界。来源：https://scholars.cityu.edu.hk/en/publications/grid-aware-smart-homes-energy-management-in-unbalanced-low-voltag/ 。不虚构该文具体奖励权重或信息传输细节。
+
+与原 L01/L25 的位置继续保持：PV-battery DFL 的 household cost 逻辑、其他输入预测质量影响已有 L01；战略性预测与容量界已有 L25。本文的 nighttime-zero restriction、load oracle 与统一选解是界定比较的设计和诊断，不包装成这些原理的首创。原精确 locator 见 research/physical_support_literature.txt。增量应写为：under a shared separable household controller, compare practical forecasting options and isolate the incremental AC consequences of private-cost learning relative to continued MSE, then test how rankings depend on operating constraints and deployment conditions。公开真实负荷/PV 输入 + 模拟电池/馈线的证据类型必须保留；外部迁移仅检验冻结模型。
+
+建议嵌入主稿的一段（根据最终结果衔接即可）：
+Recent network-aware studies explicitly coordinate distributed batteries or household appliances to provide voltage and balancing services [L36,L37,L39]. These approaches establish that local economic objectives and network requirements need to be considered jointly; they address a different control problem from selecting a forecasting component for an existing household controller. We retain separable private-cost dispatch and evaluate its AC consequences after deployment, while holding the controller and solution-selection rule constant. The resulting comparison concerns when alternative forecasting and learning choices are useful within that architecture, rather than a claim that private-grid conflicts or grid-aware coordination have not previously been studied.
+
+三、外部数据选择、处理与边界
+
+[L40] StoreNet 论文全文 HTML 的 Methods、Data Records、Technical Validation、Usage Notes 已读；2020 年爱尔兰 Dingle 20 住宅、其中 10 有 PV，提供独立 consumption、production 及电池功率通道。使用释放的 H*_W 分钟功率记录；不使用累计 Wh 通道，也不把观测电池动作混入用电/PV。论文容量 2.0–2.2 kWp 与 README 2.4 kW 不一致，所以 2.2 为先冻结 reference normalization，2.0/2.4 全报告，不声称个体 nameplate 真值。来源：https://www.nature.com/articles/s41597-024-03454-2 ; collection https://doi.org/10.6084/m9.figshare.c.6829134 。H4 官方 Figshare 项目元数据明确 CC0，论文许可另为 CC BY；不能把两个许可混为一谈。官方样例：https://api.figshare.com/v2/articles/25927198 。
+
+处理细节及源码检查来自本项目：原发布 W 记录已按分钟采样/整理，不称“未经任何处理的表计原始流”；保存到 F 的文件未修改。本文均值聚合每半小时至少 27 个有效分钟，未插值；目标与此前 7 天都完整。PV 阳性识别返回论文对应的 10 住宅，外部 eligible 2224 户日。规则在任何外部预测/控制结果前写入 storenet_external_protocol.json，属于记录明确的冻结方案，不是公开预注册。它的 raw_files 字段中的 Original 是原发布目录相对 processed_data 的称呼，不代表未经过数据作者的整理。
+
+选择 StoreNet 前已核查 OPSD household_data 2020-04-15：住宅 3/4/6 有 PV 和进/出电计量，但所发布通道是累计表计，需要先差分，并根据 interpolation 标记排除受影响区间；不能把累计值当半小时能量。未找到清楚的 PV nameplate，因此转用字段更明确的 StoreNet 并公开容量矛盾。没有混入工业/学校建筑，未在 OPSD 上挑选结果。官方入口：https://data.open-power-system-data.org/household_data/2020-04-15 ; 元数据和源文件 SHA 已存 external_download_manifest.json。
+
+独立只读检查 scripts/revision_forecast_external.py：PhysicalPVMLP 类加载正确；GC/PV 顺序、W→kW、前一日参考容量、tree_features 的负荷预测缩放、external_test_mask 及七天历史用法与缓存相容；CL=0 仅表示无分列通道。原始电池观测未加入反事实净负荷。Australian tariff、原季节时钟与固定夜间规则保持不变，不能称爱尔兰实际账单或独立复制 Ausgrid 网络效果。日历 7 天 block CI 对固定 10 户的时间重复抽样，不代表爱尔兰住宅总体不确定性。
+
+已报告并透明补记的记录缺口：最初 19 项 external_model_freeze.json 含 ToU 主组及共用数据/模型代码，但未列外部 flat 所加载的另外 6 项旧 checkpoint。root 已写 external_flat_freeze_addendum.json，明确 post-run，保留当前哈希及早于外部分析的旧修改时间，不回填伪装为事前哈希；本代理已只读核对其内容。ToU 主组的冻结核验不受这一缺项影响。文件字段 bill_aud 沿用旧名，但包含 wear proxy，正文应称 modeled operating cost。
+
+四、工程假设来源
+
+[L41] 官方 Ausgrid 页面将 3 kW/site 固定 export option 放在 late-2026 新增/升级连接变化中。因此只支持前瞻工程情景，不能写成 Ausgrid 2010–2013 住宅当年限制。所有方法采用同一 PCC cap、PV curtailment、SOC 保持与损失售电收入重算的设计已交 network_impl。来源见参考文献 L41 与 engineering_sources.json。
+
+[L42] Ausgrid Power Factor Correction 开头列出 0.9 或以上的要求，语境偏商业客户。0.90/0.95/1.00 是有工程语境的固定情景，不是住宅实测 PF 分布。线缆 R/X ×0.90/1.00/1.10 同样是 analyst-defined stress range，不能用文献伪装成经验置信区间。变压器保持原值。现有 0.95–1.05 p.u. 仍是 screening band，不是法规合规限。不同 DNSP 的 Volt-Watt 曲线未纳入已运行主设计，勿无故追加。
+
+[L43] 已通过 Exa 读取作者机构 PDF 文本，重点 §3.2 Eqs. (9)–(12)：replacement cost、lifetime throughput 与逐时 throughput 共同构造线性退化成本。这支持使用 throughput penalty 的经济建模动机，不支持本文 .02 AUD/kWh 的经验校准。零/半/双系数是敏感性选择；必须按本文 charge+discharge throughput 定义解释，不能直接挪用另一论文的数值或推断寿命延长。全文来源：https://www.egr.msu.edu/~mitraj/research/pubs/jour/bera-mitra-etal_battery_roi.pdf 。
+
+五、AI 研究协作声明与作者责任
+
+Elsevier 当前官方政策允许 AI agents/deep research 用于文献、研究想法和文本组织，但要求作者核验、监督与披露；研究过程使用必须在 Methods 描述，稿件准备另有 AI statement。当前图表政策允许从真实底层数据经可复现代码生成图，不允许伪造数据图。来源：https://www.elsevier.com/about/policies-and-standards/generative-ai-policies-for-journals （For authors / Disclosure / Data visualizations / Use in research methods）。不要沿用旧的“只可语言润色”说法，也不能隐瞒本项目实际设计、编程、分析和写作协作。
+
+可供 Methods 采用的事实性草稿：OpenAI Codex was used to assist literature retrieval, study design, code development, data processing, analysis, and manuscript drafting. Source metadata and supported claims were checked against accessible primary records, and reported numerical results were generated by executable analysis scripts with recorded data and model provenance. Automated checks and separate code/source reviews were performed within the AI-assisted workflow. These checks do not constitute independent human validation.
+
+当前交付状态注明：the manuscript and underlying analyses await final review and approval by the human author(s)。这句可放交付说明而非最终期刊正文。最终投稿声明中只有人类作者实际完成核验与批准后，才可采用“reviewed and edited ... take full responsibility”的责任句；现阶段不能替用户完成该事实认定。工具版本应据真实会话/运行记录填写，不能捏造不可见版本。
+
+阶段判断：针对 EPSR 的研究与改稿方向为 CONDITIONAL / 可继续。已有近邻支持聚焦工程问题，数据和运行边界已具体化；余项是主代理完成所有正式结果一致性与作者最终内容批准，不要求无限扩充近邻或复现异信息的复杂多目标控制算法。

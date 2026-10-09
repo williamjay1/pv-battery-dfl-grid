@@ -1,0 +1,2678 @@
+{
+  "created_utc": "2026-10-08T20:08:16.324068+00:00",
+  "status": "PASS",
+  "manuscript_sha256": {
+    "revision_20261009\\manuscript\\article_full.txt": "460c0fdc2024da2dbd66c8755d8cb94c0129ab7a1e816489e497fc53f1e80023",
+    "revision_20261009\\manuscript\\supplement_full.txt": "15d27d875bf4e19fceccf3a356b165df51e5aac765fd0431a730721937ca7caa"
+  },
+  "numeric_checks": 441,
+  "passed": 441,
+  "failed": [],
+  "issues": [],
+  "manual_checks": [
+    "Table 5 boundaries are consistent with actual evidence; no field-compliance, dynamics, lifetime or primary thermal-congestion claim.",
+    "Sections 3.3 and 3.5 correctly retain increased conditional severity at source1.05/1.00, nonzero wide-band undervoltage, rural transformer overload, nonuniform SAA voltage ordering, and adverse matched-persistence network changes.",
+    "Continued MSE is the primary comparator in five source/topology conditions, four PF/Z brackets and ten mappings; frozen MSE is secondary. Full tariff/adoption cells encode nine independent physical deployments rather than 12.",
+    "Geography uses 27/27 households and160 common clean dates. Cost and voltage denominators are27. Its gap-of-gaps confidence intervals are descriptive and not causal geography estimates.",
+    "Mechanism day date2012-08-24,22:00 demand delta-2.41705157kW,mean voltage+0.00073359988pu,maxabs0.00206410885pu; full19case error and nearzero-case caveat match saved arrays.",
+    "All overnight-support-matched direct-net additions completed. DFL versus net24_night reduces cost but increases import peaks in all four panels; signed diagnostic results must remain separately labeled.",
+    "No manuscript/source files were changed by this read-only audit. No new experimental setting was run."
+  ],
+  "evidence": {
+    "diagnostic_scenarios": 296,
+    "new_ac": 130,
+    "reused_geo": 3,
+    "audit": {
+      "status": "PASS",
+      "maximum_balance_residual_kw": 1.0782348431881417e-05
+    }
+  },
+  "all_checks": [
+    {
+      "label": "T1 row1 col2",
+      "printed": "219",
+      "expected": 219,
+      "pass_check": true
+    },
+    {
+      "label": "T1 row1 col3",
+      "printed": "1.50",
+      "expected": 1.5,
+      "pass_check": true
+    },
+    {
+      "label": "T1 row1 col4",
+      "printed": "16.47",
+      "expected": 16.470617294311523,
+      "pass_check": true
+    },
+    {
+      "label": "T1 row1 col5",
+      "printed": "0.61",
+      "expected": 0.6071417927742004,
+      "pass_check": true
+    },
+    {
+      "label": "T1 row1 col6",
+      "printed": "11.12",
+      "expected": 11.117501556873322,
+      "pass_check": true
+    },
+    {
+      "label": "T1 row1 col7",
+      "printed": "25.29",
+      "expected": 25.286020324239296,
+      "pass_check": true
+    },
+    {
+      "label": "T1 row2 col2",
+      "printed": "129",
+      "expected": 129,
+      "pass_check": true
+    },
+    {
+      "label": "T1 row2 col3",
+      "printed": "1.50",
+      "expected": 1.5,
+      "pass_check": true
+    },
+    {
+      "label": "T1 row2 col4",
+      "printed": "17.71",
+      "expected": 17.71131706237793,
+      "pass_check": true
+    },
+    {
+      "label": "T1 row2 col5",
+      "printed": "0.56",
+      "expected": 0.5646107196807861,
+      "pass_check": true
+    },
+    {
+      "label": "T1 row2 col6",
+      "printed": "12.98",
+      "expected": 12.980000674724579,
+      "pass_check": true
+    },
+    {
+      "label": "T1 row2 col7",
+      "printed": "27.50",
+      "expected": 27.495343501690233,
+      "pass_check": true
+    },
+    {
+      "label": "T1 row3 col2",
+      "printed": "276",
+      "expected": 276,
+      "pass_check": true
+    },
+    {
+      "label": "T1 row3 col3",
+      "printed": "1.48",
+      "expected": 1.4800000190734863,
+      "pass_check": true
+    },
+    {
+      "label": "T1 row3 col4",
+      "printed": "16.69",
+      "expected": 16.692720413208008,
+      "pass_check": true
+    },
+    {
+      "label": "T1 row3 col5",
+      "printed": "0.60",
+      "expected": 0.599063515663147,
+      "pass_check": true
+    },
+    {
+      "label": "T1 row3 col6",
+      "printed": "11.01",
+      "expected": 11.007500439882278,
+      "pass_check": true
+    },
+    {
+      "label": "T1 row3 col7",
+      "printed": "28.74",
+      "expected": 28.742437782794706,
+      "pass_check": true
+    },
+    {
+      "label": "T1 row4 col2",
+      "printed": "274",
+      "expected": 274,
+      "pass_check": true
+    },
+    {
+      "label": "T1 row4 col3",
+      "printed": "1.50",
+      "expected": 1.5,
+      "pass_check": true
+    },
+    {
+      "label": "T1 row4 col4",
+      "printed": "15.06",
+      "expected": 15.055710792541504,
+      "pass_check": true
+    },
+    {
+      "label": "T1 row4 col5",
+      "printed": "0.66",
+      "expected": 0.6641997694969177,
+      "pass_check": true
+    },
+    {
+      "label": "T1 row4 col6",
+      "printed": "11.62",
+      "expected": 11.621249467134476,
+      "pass_check": true
+    },
+    {
+      "label": "T1 row4 col7",
+      "printed": "28.70",
+      "expected": 28.69515983346096,
+      "pass_check": true
+    },
+    {
+      "label": "T4 msecont col2",
+      "printed": "3.70905",
+      "expected": 3.7090538453400526,
+      "pass_check": true
+    },
+    {
+      "label": "T4 msecont col3",
+      "printed": "18.751",
+      "expected": 18.751210737512107,
+      "pass_check": true
+    },
+    {
+      "label": "T4 msecont col4",
+      "printed": "0.0258",
+      "expected": 0.025771412757714128,
+      "pass_check": true
+    },
+    {
+      "label": "T4 msecont col5",
+      "printed": "144.00",
+      "expected": 144.00219057955354,
+      "pass_check": true
+    },
+    {
+      "label": "T4 msecont col6",
+      "printed": "8.98",
+      "expected": 8.978057600436578,
+      "pass_check": true
+    },
+    {
+      "label": "T4 msecont col7",
+      "printed": "17.073",
+      "expected": 17.07301434199774,
+      "pass_check": true
+    },
+    {
+      "label": "T4 calibrated col2",
+      "printed": "3.70345",
+      "expected": 3.703445089666738,
+      "pass_check": true
+    },
+    {
+      "label": "T4 calibrated col3",
+      "printed": "18.376",
+      "expected": 18.37553618375536,
+      "pass_check": true
+    },
+    {
+      "label": "T4 calibrated col4",
+      "printed": "0.0240",
+      "expected": 0.02404178774041788,
+      "pass_check": true
+    },
+    {
+      "label": "T4 calibrated col5",
+      "printed": "142.48",
+      "expected": 142.48165117431193,
+      "pass_check": true
+    },
+    {
+      "label": "T4 calibrated col6",
+      "printed": "9.36",
+      "expected": 9.35939259509887,
+      "pass_check": true
+    },
+    {
+      "label": "T4 calibrated col7",
+      "printed": "16.840",
+      "expected": 16.840062351324214,
+      "pass_check": true
+    },
+    {
+      "label": "T4 dfl col2",
+      "printed": "3.69782",
+      "expected": 3.697819139435557,
+      "pass_check": true
+    },
+    {
+      "label": "T4 dfl col3",
+      "printed": "17.901",
+      "expected": 17.901100041511,
+      "pass_check": true
+    },
+    {
+      "label": "T4 dfl col4",
+      "printed": "0.0232",
+      "expected": 0.02317697523176975,
+      "pass_check": true
+    },
+    {
+      "label": "T4 dfl col5",
+      "printed": "142.23",
+      "expected": 142.22806449489235,
+      "pass_check": true
+    },
+    {
+      "label": "T4 dfl col6",
+      "printed": "9.36",
+      "expected": 9.364988070884737,
+      "pass_check": true
+    },
+    {
+      "label": "T4 dfl col7",
+      "printed": "16.654",
+      "expected": 16.6541045048985,
+      "pass_check": true
+    },
+    {
+      "label": "T4 stochastic col2",
+      "printed": "3.66710",
+      "expected": 3.667097556552826,
+      "pass_check": true
+    },
+    {
+      "label": "T4 stochastic col3",
+      "printed": "18.244",
+      "expected": 18.243911719939117,
+      "pass_check": true
+    },
+    {
+      "label": "T4 stochastic col4",
+      "printed": "0.0192",
+      "expected": 0.019198837691988376,
+      "pass_check": true
+    },
+    {
+      "label": "T4 stochastic col5",
+      "printed": "137.35",
+      "expected": 137.34581123128464,
+      "pass_check": true
+    },
+    {
+      "label": "T4 stochastic col6",
+      "printed": "9.75",
+      "expected": 9.752784826348682,
+      "pass_check": true
+    },
+    {
+      "label": "T4 stochastic col7",
+      "printed": "16.256",
+      "expected": 16.255510006655733,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2012-07 panel0",
+      "printed": "0",
+      "expected": 0,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2012-07 panel1",
+      "printed": "12",
+      "expected": 12,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2012-07 panel2",
+      "printed": "31",
+      "expected": 31,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2012-07 panel3",
+      "printed": "31",
+      "expected": 31,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2012-08 panel0",
+      "printed": "8",
+      "expected": 8,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2012-08 panel1",
+      "printed": "0",
+      "expected": 0,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2012-08 panel2",
+      "printed": "31",
+      "expected": 31,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2012-08 panel3",
+      "printed": "23",
+      "expected": 23,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2012-09 panel0",
+      "printed": "20",
+      "expected": 20,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2012-09 panel1",
+      "printed": "0",
+      "expected": 0,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2012-09 panel2",
+      "printed": "30",
+      "expected": 30,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2012-09 panel3",
+      "printed": "30",
+      "expected": 30,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2012-10 panel0",
+      "printed": "31",
+      "expected": 31,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2012-10 panel1",
+      "printed": "0",
+      "expected": 0,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2012-10 panel2",
+      "printed": "31",
+      "expected": 31,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2012-10 panel3",
+      "printed": "31",
+      "expected": 31,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2012-11 panel0",
+      "printed": "30",
+      "expected": 30,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2012-11 panel1",
+      "printed": "1",
+      "expected": 1,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2012-11 panel2",
+      "printed": "30",
+      "expected": 30,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2012-11 panel3",
+      "printed": "30",
+      "expected": 30,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2012-12 panel0",
+      "printed": "31",
+      "expected": 31,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2012-12 panel1",
+      "printed": "31",
+      "expected": 31,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2012-12 panel2",
+      "printed": "31",
+      "expected": 31,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2012-12 panel3",
+      "printed": "31",
+      "expected": 31,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2013-01 panel0",
+      "printed": "31",
+      "expected": 31,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2013-01 panel1",
+      "printed": "25",
+      "expected": 25,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2013-01 panel2",
+      "printed": "25",
+      "expected": 25,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2013-01 panel3",
+      "printed": "25",
+      "expected": 25,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2013-02 panel0",
+      "printed": "7",
+      "expected": 7,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2013-02 panel1",
+      "printed": "0",
+      "expected": 0,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2013-02 panel2",
+      "printed": "0",
+      "expected": 0,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2013-02 panel3",
+      "printed": "0",
+      "expected": 0,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2013-03 panel0",
+      "printed": "0",
+      "expected": 0,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2013-03 panel1",
+      "printed": "0",
+      "expected": 0,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2013-03 panel2",
+      "printed": "0",
+      "expected": 0,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2013-03 panel3",
+      "printed": "0",
+      "expected": 0,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2013-04 panel0",
+      "printed": "17",
+      "expected": 17,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2013-04 panel1",
+      "printed": "10",
+      "expected": 10,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2013-04 panel2",
+      "printed": "18",
+      "expected": 18,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2013-04 panel3",
+      "printed": "21",
+      "expected": 21,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2013-05 panel0",
+      "printed": "23",
+      "expected": 23,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2013-05 panel1",
+      "printed": "20",
+      "expected": 20,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2013-05 panel2",
+      "printed": "22",
+      "expected": 22,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2013-05 panel3",
+      "printed": "22",
+      "expected": 22,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2013-06 panel0",
+      "printed": "21",
+      "expected": 21,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2013-06 panel1",
+      "printed": "30",
+      "expected": 30,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2013-06 panel2",
+      "printed": "27",
+      "expected": 27,
+      "pass_check": true
+    },
+    {
+      "label": "S1a 2013-06 panel3",
+      "printed": "30",
+      "expected": 30,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.050', 'dfl'] col4",
+      "printed": "17.901",
+      "expected": 17.901100041511,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.050', 'dfl'] col5",
+      "printed": "0.023",
+      "expected": 0.02317697523176975,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.050', 'dfl'] col6",
+      "printed": "0.003159",
+      "expected": 0.00315941361925688,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.050', 'dfl'] col7",
+      "printed": "0.006814",
+      "expected": 0.006813946855601935,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.050', 'dfl'] col8",
+      "printed": "1.058259",
+      "expected": 1.058259379863739,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.050', 'dfl'] col9",
+      "printed": "1.071583",
+      "expected": 1.0715827941894531,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.050', 'dfl'] longest node_longest_over_hours",
+      "printed": "14.0",
+      "expected": 14.0,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.050', 'dfl'] longest node_longest_under_hours",
+      "printed": "0.5",
+      "expected": 0.5,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.050', 'dfl'] worst over",
+      "printed": "53",
+      "expected": 53,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.050', 'dfl'] worst under",
+      "printed": "29",
+      "expected": 29,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.050', 'msecont'] col4",
+      "printed": "18.751",
+      "expected": 18.751210737512107,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.050', 'msecont'] col5",
+      "printed": "0.026",
+      "expected": 0.025771412757714128,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.050', 'msecont'] col6",
+      "printed": "0.003144",
+      "expected": 0.0031444023745229215,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.050', 'msecont'] col7",
+      "printed": "0.007081",
+      "expected": 0.007080980115288811,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.050', 'msecont'] col8",
+      "printed": "1.058341",
+      "expected": 1.0583413684368135,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.050', 'msecont'] col9",
+      "printed": "1.071964",
+      "expected": 1.071964144706726,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.050', 'msecont'] longest node_longest_over_hours",
+      "printed": "14.5",
+      "expected": 14.5,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.050', 'msecont'] longest node_longest_under_hours",
+      "printed": "0.5",
+      "expected": 0.5,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.050', 'msecont'] worst over",
+      "printed": "50",
+      "expected": 50,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.050', 'msecont'] worst under",
+      "printed": "29",
+      "expected": 29,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.025', 'dfl'] col4",
+      "printed": "0.000",
+      "expected": 0.0,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.025', 'dfl'] col5",
+      "printed": "0.198",
+      "expected": 0.19821502698215027,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.025', 'dfl'] col6",
+      "printed": "Undefined",
+      "expected": null,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.025', 'dfl'] col7",
+      "printed": "0.013400",
+      "expected": 0.013400393017091424,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.025', 'dfl'] col8",
+      "printed": "1.033462",
+      "expected": 1.0334616255760194,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.025', 'dfl'] col9",
+      "printed": "1.047158",
+      "expected": 1.0471582412719727,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.025', 'dfl'] longest node_longest_over_hours",
+      "printed": "0.0",
+      "expected": 0.0,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.025', 'dfl'] longest node_longest_under_hours",
+      "printed": "2.0",
+      "expected": 2.0,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.025', 'dfl'] worst over",
+      "printed": "Undefined",
+      "expected": null,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.025', 'dfl'] worst under",
+      "printed": "29",
+      "expected": 29,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.000', 'dfl'] col4",
+      "printed": "0.000",
+      "expected": 0.0,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.000', 'dfl'] col5",
+      "printed": "1.359",
+      "expected": 1.358793413587934,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.000', 'dfl'] col6",
+      "printed": "Undefined",
+      "expected": null,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.000', 'dfl'] col7",
+      "printed": "0.013459",
+      "expected": 0.013459439988413027,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.000', 'dfl'] col8",
+      "printed": "1.008671",
+      "expected": 1.0086712622642517,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.000', 'dfl'] col9",
+      "printed": "1.022767",
+      "expected": 1.022767186164856,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.000', 'dfl'] longest node_longest_over_hours",
+      "printed": "0.0",
+      "expected": 0.0,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.000', 'dfl'] longest node_longest_under_hours",
+      "printed": "7.0",
+      "expected": 7.0,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.000', 'dfl'] worst over",
+      "printed": "Undefined",
+      "expected": null,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.000', 'dfl'] worst under",
+      "printed": "29",
+      "expected": 29,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['rural1', '1.025', 'dfl'] col4",
+      "printed": "0.000",
+      "expected": 0.0,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['rural1', '1.025', 'dfl'] col5",
+      "printed": "0.000",
+      "expected": 0.0,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['rural1', '1.025', 'dfl'] col6",
+      "printed": "Undefined",
+      "expected": null,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['rural1', '1.025', 'dfl'] col7",
+      "printed": "Undefined",
+      "expected": null,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['rural1', '1.025', 'dfl'] col8",
+      "printed": "1.024385",
+      "expected": 1.0243853330612183,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['rural1', '1.025', 'dfl'] col9",
+      "printed": "1.029856",
+      "expected": 1.029855728149414,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['rural1', '1.025', 'dfl'] longest node_longest_over_hours",
+      "printed": "0.0",
+      "expected": 0.0,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['rural1', '1.025', 'dfl'] longest node_longest_under_hours",
+      "printed": "0.0",
+      "expected": 0.0,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['rural1', '1.025', 'dfl'] worst over",
+      "printed": "Undefined",
+      "expected": null,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['rural1', '1.025', 'dfl'] worst under",
+      "printed": "Undefined",
+      "expected": null,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['semiurb4', '1.025', 'dfl'] col4",
+      "printed": "0.000",
+      "expected": 0.0,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['semiurb4', '1.025', 'dfl'] col5",
+      "printed": "0.000",
+      "expected": 0.0,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['semiurb4', '1.025', 'dfl'] col6",
+      "printed": "Undefined",
+      "expected": null,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['semiurb4', '1.025', 'dfl'] col7",
+      "printed": "Undefined",
+      "expected": null,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['semiurb4', '1.025', 'dfl'] col8",
+      "printed": "1.024468",
+      "expected": 1.0244675874710083,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['semiurb4', '1.025', 'dfl'] col9",
+      "printed": "1.028303",
+      "expected": 1.028302788734436,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['semiurb4', '1.025', 'dfl'] longest node_longest_over_hours",
+      "printed": "0.0",
+      "expected": 0.0,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['semiurb4', '1.025', 'dfl'] longest node_longest_under_hours",
+      "printed": "0.0",
+      "expected": 0.0,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['semiurb4', '1.025', 'dfl'] worst over",
+      "printed": "Undefined",
+      "expected": null,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['semiurb4', '1.025', 'dfl'] worst under",
+      "printed": "Undefined",
+      "expected": null,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.025', 'msecont'] col4",
+      "printed": "0.000",
+      "expected": 0.0,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.025', 'msecont'] col5",
+      "printed": "0.207",
+      "expected": 0.20669018956690188,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.025', 'msecont'] col6",
+      "printed": "Undefined",
+      "expected": null,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.025', 'msecont'] col7",
+      "printed": "0.013702",
+      "expected": 0.013702186580482343,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.025', 'msecont'] col8",
+      "printed": "1.033545",
+      "expected": 1.033545093536377,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.025', 'msecont'] col9",
+      "printed": "1.047548",
+      "expected": 1.0475479364395142,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.025', 'msecont'] longest node_longest_over_hours",
+      "printed": "0.0",
+      "expected": 0.0,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.025', 'msecont'] longest node_longest_under_hours",
+      "printed": "2.0",
+      "expected": 2.0,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.025', 'msecont'] worst over",
+      "printed": "Undefined",
+      "expected": null,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.025', 'msecont'] worst under",
+      "printed": "29",
+      "expected": 29,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.000', 'msecont'] col4",
+      "printed": "0.000",
+      "expected": 0.0,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.000', 'msecont'] col5",
+      "printed": "1.460",
+      "expected": 1.4598035145980353,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.000', 'msecont'] col6",
+      "printed": "Undefined",
+      "expected": null,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.000', 'msecont'] col7",
+      "printed": "0.013346",
+      "expected": 0.013345514576864422,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.000', 'msecont'] col8",
+      "printed": "1.008758",
+      "expected": 1.0087578785419464,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.000', 'msecont'] col9",
+      "printed": "1.023165",
+      "expected": 1.0231654644012451,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.000', 'msecont'] longest node_longest_over_hours",
+      "printed": "0.0",
+      "expected": 0.0,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.000', 'msecont'] longest node_longest_under_hours",
+      "printed": "7.0",
+      "expected": 7.0,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.000', 'msecont'] worst over",
+      "printed": "Undefined",
+      "expected": null,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['eulv', '1.000', 'msecont'] worst under",
+      "printed": "29",
+      "expected": 29,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['rural1', '1.025', 'msecont'] col4",
+      "printed": "0.000",
+      "expected": 0.0,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['rural1', '1.025', 'msecont'] col5",
+      "printed": "0.000",
+      "expected": 0.0,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['rural1', '1.025', 'msecont'] col6",
+      "printed": "Undefined",
+      "expected": null,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['rural1', '1.025', 'msecont'] col7",
+      "printed": "Undefined",
+      "expected": null,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['rural1', '1.025', 'msecont'] col8",
+      "printed": "1.024355",
+      "expected": 1.0243552923202515,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['rural1', '1.025', 'msecont'] col9",
+      "printed": "1.028839",
+      "expected": 1.0288386344909668,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['rural1', '1.025', 'msecont'] longest node_longest_over_hours",
+      "printed": "0.0",
+      "expected": 0.0,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['rural1', '1.025', 'msecont'] longest node_longest_under_hours",
+      "printed": "0.0",
+      "expected": 0.0,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['rural1', '1.025', 'msecont'] worst over",
+      "printed": "Undefined",
+      "expected": null,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['rural1', '1.025', 'msecont'] worst under",
+      "printed": "Undefined",
+      "expected": null,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['semiurb4', '1.025', 'msecont'] col4",
+      "printed": "0.000",
+      "expected": 0.0,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['semiurb4', '1.025', 'msecont'] col5",
+      "printed": "0.000",
+      "expected": 0.0,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['semiurb4', '1.025', 'msecont'] col6",
+      "printed": "Undefined",
+      "expected": null,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['semiurb4', '1.025', 'msecont'] col7",
+      "printed": "Undefined",
+      "expected": null,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['semiurb4', '1.025', 'msecont'] col8",
+      "printed": "1.024454",
+      "expected": 1.0244544744491577,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['semiurb4', '1.025', 'msecont'] col9",
+      "printed": "1.027830",
+      "expected": 1.0278301239013672,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['semiurb4', '1.025', 'msecont'] longest node_longest_over_hours",
+      "printed": "0.0",
+      "expected": 0.0,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['semiurb4', '1.025', 'msecont'] longest node_longest_under_hours",
+      "printed": "0.0",
+      "expected": 0.0,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['semiurb4', '1.025', 'msecont'] worst over",
+      "printed": "Undefined",
+      "expected": null,
+      "pass_check": true
+    },
+    {
+      "label": "S4 ['semiurb4', '1.025', 'msecont'] worst under",
+      "printed": "Undefined",
+      "expected": null,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['physical_brackets', 'PF 0.95; Z 0.9'] daily_voltage_pct",
+      "printed": "-0.847",
+      "expected": -0.846824408468244,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['physical_brackets', 'PF 0.95; Z 0.9'] daily_import_peak_kw",
+      "printed": "-1.758",
+      "expected": -1.7582309980665303,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['physical_brackets', 'PF 0.95; Z 0.9'] daily_export_peak_kw",
+      "printed": "0.387",
+      "expected": 0.38714478514871387,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['physical_brackets', 'PF 0.95; Z 0.9'] daily_loss_kwh",
+      "printed": "-0.374",
+      "expected": -0.3739540413080371,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['physical_brackets', 'PF 0.9; Z 1.0'] daily_voltage_pct",
+      "printed": "-0.734",
+      "expected": -0.7342258198422583,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['physical_brackets', 'PF 0.9; Z 1.0'] daily_import_peak_kw",
+      "printed": "-1.776",
+      "expected": -1.7758983336796121,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['physical_brackets', 'PF 0.9; Z 1.0'] daily_export_peak_kw",
+      "printed": "0.387",
+      "expected": 0.38663912086575747,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['physical_brackets', 'PF 0.9; Z 1.0'] daily_loss_kwh",
+      "printed": "-0.422",
+      "expected": -0.4217834104893008,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['physical_brackets', 'PF 1.0; Z 1.0'] daily_voltage_pct",
+      "printed": "-1.083",
+      "expected": -1.0834371108343714,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['physical_brackets', 'PF 1.0; Z 1.0'] daily_import_peak_kw",
+      "printed": "-1.771",
+      "expected": -1.7709719324400774,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['physical_brackets', 'PF 1.0; Z 1.0'] daily_export_peak_kw",
+      "printed": "0.387",
+      "expected": 0.3870374342885165,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['physical_brackets', 'PF 1.0; Z 1.0'] daily_loss_kwh",
+      "printed": "-0.413",
+      "expected": -0.4133382944770639,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['physical_brackets', 'PF 0.95; Z 1.1'] daily_voltage_pct",
+      "printed": "-0.876",
+      "expected": -0.8755361837553616,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['physical_brackets', 'PF 0.95; Z 1.1'] daily_import_peak_kw",
+      "printed": "-1.791",
+      "expected": -1.7906851579012142,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['physical_brackets', 'PF 0.95; Z 1.1'] daily_export_peak_kw",
+      "printed": "0.387",
+      "expected": 0.38670014586842033,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['physical_brackets', 'PF 0.95; Z 1.1'] daily_loss_kwh",
+      "printed": "-0.465",
+      "expected": -0.46486709324775227,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '0'] daily_voltage_pct",
+      "printed": "-0.965",
+      "expected": -0.9651307596513077,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '0'] daily_import_peak_kw",
+      "printed": "-1.765",
+      "expected": -1.765238347104186,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '0'] daily_export_peak_kw",
+      "printed": "0.386",
+      "expected": 0.38563170705438404,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '0'] daily_loss_kwh",
+      "printed": "-0.445",
+      "expected": -0.44523796249509595,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '1'] daily_voltage_pct",
+      "printed": "-0.667",
+      "expected": -0.6665974816659747,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '1'] daily_import_peak_kw",
+      "printed": "-1.752",
+      "expected": -1.7517712810315373,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '1'] daily_export_peak_kw",
+      "printed": "0.386",
+      "expected": 0.3859119678491459,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '1'] daily_loss_kwh",
+      "printed": "-0.382",
+      "expected": -0.3818058285485778,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '2'] daily_voltage_pct",
+      "printed": "-0.953",
+      "expected": -0.9528504220285041,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '2'] daily_import_peak_kw",
+      "printed": "-1.755",
+      "expected": -1.7554219128719717,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '2'] daily_export_peak_kw",
+      "printed": "0.385",
+      "expected": 0.3854947961491977,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '2'] daily_loss_kwh",
+      "printed": "-0.468",
+      "expected": -0.4677257926661775,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '3'] daily_voltage_pct",
+      "printed": "-0.735",
+      "expected": -0.7347447073474469,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '3'] daily_import_peak_kw",
+      "printed": "-1.779",
+      "expected": -1.7787633801221905,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '3'] daily_export_peak_kw",
+      "printed": "0.386",
+      "expected": 0.38632401407988926,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '3'] daily_loss_kwh",
+      "printed": "-0.446",
+      "expected": -0.4462947183838079,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '4'] daily_voltage_pct",
+      "printed": "-0.886",
+      "expected": -0.8857409713574097,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '4'] daily_import_peak_kw",
+      "printed": "-1.754",
+      "expected": -1.7537628783239645,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '4'] daily_export_peak_kw",
+      "printed": "0.386",
+      "expected": 0.3856484598009952,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '4'] daily_loss_kwh",
+      "printed": "-0.431",
+      "expected": -0.4305357751044303,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '5'] daily_voltage_pct",
+      "printed": "-0.823",
+      "expected": -0.8229555832295556,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '5'] daily_import_peak_kw",
+      "printed": "-1.776",
+      "expected": -1.7757255095401587,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '5'] daily_export_peak_kw",
+      "printed": "0.388",
+      "expected": 0.38804419559122655,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '5'] daily_loss_kwh",
+      "printed": "-0.455",
+      "expected": -0.4546521104554776,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '6'] daily_voltage_pct",
+      "printed": "-0.716",
+      "expected": -0.7160647571606475,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '6'] daily_import_peak_kw",
+      "printed": "-1.751",
+      "expected": -1.7513293913058,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '6'] daily_export_peak_kw",
+      "printed": "0.385",
+      "expected": 0.3845399561668426,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '6'] daily_loss_kwh",
+      "printed": "-0.395",
+      "expected": -0.394951184761786,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '7'] daily_voltage_pct",
+      "printed": "-0.795",
+      "expected": -0.794762695447627,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '7'] daily_import_peak_kw",
+      "printed": "-1.750",
+      "expected": -1.749857969738,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '7'] daily_export_peak_kw",
+      "printed": "0.387",
+      "expected": 0.38724391202300373,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '7'] daily_loss_kwh",
+      "printed": "-0.427",
+      "expected": -0.4266014698855035,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '8'] daily_voltage_pct",
+      "printed": "-0.837",
+      "expected": -0.837138508371385,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '8'] daily_import_peak_kw",
+      "printed": "-1.746",
+      "expected": -1.7463551755691291,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '8'] daily_export_peak_kw",
+      "printed": "0.389",
+      "expected": 0.3886704192341461,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '8'] daily_loss_kwh",
+      "printed": "-0.425",
+      "expected": -0.4250045603574188,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '9'] daily_voltage_pct",
+      "printed": "-0.812",
+      "expected": -0.8117130206171301,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '9'] daily_import_peak_kw",
+      "printed": "-1.745",
+      "expected": -1.7450086711348372,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '9'] daily_export_peak_kw",
+      "printed": "0.386",
+      "expected": 0.38553945168311055,
+      "pass_check": true
+    },
+    {
+      "label": "S5 ['mapping', '9'] daily_loss_kwh",
+      "printed": "-0.381",
+      "expected": -0.381292233178596,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['continuous_frozen_transfer', '1'] daily_operating_cost_aud",
+      "printed": "-1.153",
+      "expected": -1.1526279852824763,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['continuous_frozen_transfer', '1'] daily_over_pct",
+      "printed": "-0.831",
+      "expected": -0.8309118583091187,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['continuous_frozen_transfer', '1'] daily_import_peak_kw",
+      "printed": "-1.637",
+      "expected": -1.6365373157524186,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['continuous_frozen_transfer', '1'] daily_loss_kwh",
+      "printed": "-0.400",
+      "expected": -0.40027157827410365,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['continuous_frozen_transfer', '1'] CI",
+      "printed": "-0.975",
+      "expected": -0.9754175848743256,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['continuous_frozen_transfer', '1'] CI",
+      "printed": "-0.700",
+      "expected": -0.6997444153796062,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['continuous_frozen_transfer', 'Held-out'] daily_operating_cost_aud",
+      "printed": "-1.030",
+      "expected": -1.030409641858391,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['continuous_frozen_transfer', 'Held-out'] daily_over_pct",
+      "printed": "-0.724",
+      "expected": -0.7241207697412072,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['continuous_frozen_transfer', 'Held-out'] daily_import_peak_kw",
+      "printed": "-1.118",
+      "expected": -1.117500159135999,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['continuous_frozen_transfer', 'Held-out'] daily_loss_kwh",
+      "printed": "-0.406",
+      "expected": -0.4061298891561798,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['continuous_frozen_transfer', 'Held-out'] CI",
+      "printed": "-0.922",
+      "expected": -0.9215802891404493,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['continuous_frozen_transfer', 'Held-out'] CI",
+      "printed": "-0.537",
+      "expected": -0.5365198069716727,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['continuous_matched_retraining', '1'] daily_operating_cost_aud",
+      "printed": "-1.377",
+      "expected": -1.377123592979385,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['continuous_matched_retraining', '1'] daily_over_pct",
+      "printed": "-1.136",
+      "expected": -1.135671786356718,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['continuous_matched_retraining', '1'] daily_import_peak_kw",
+      "printed": "-2.638",
+      "expected": -2.6377761838347733,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['continuous_matched_retraining', '1'] daily_loss_kwh",
+      "printed": "-0.564",
+      "expected": -0.5637233254468299,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['continuous_matched_retraining', '1'] CI",
+      "printed": "-1.310",
+      "expected": -1.3098113151441961,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['continuous_matched_retraining', '1'] CI",
+      "printed": "-0.972",
+      "expected": -0.9721307821946832,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['continuous_matched_retraining', 'Held-out'] daily_operating_cost_aud",
+      "printed": "-1.099",
+      "expected": -1.0990995702804187,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['continuous_matched_retraining', 'Held-out'] daily_over_pct",
+      "printed": "-1.040",
+      "expected": -1.0398694978986949,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['continuous_matched_retraining', 'Held-out'] daily_import_peak_kw",
+      "printed": "-2.082",
+      "expected": -2.081747152528486,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['continuous_matched_retraining', 'Held-out'] daily_loss_kwh",
+      "printed": "-0.601",
+      "expected": -0.6005683785494642,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['continuous_matched_retraining', 'Held-out'] CI",
+      "printed": "-1.273",
+      "expected": -1.2734324737461356,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['continuous_matched_retraining', 'Held-out'] CI",
+      "printed": "-0.824",
+      "expected": -0.823720699689769,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_persistence_frozen_transfer', '1'] daily_operating_cost_aud",
+      "printed": "0.303",
+      "expected": 0.30345233924658177,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_persistence_frozen_transfer', '1'] daily_over_pct",
+      "printed": "-0.709",
+      "expected": -0.7088003320880032,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_persistence_frozen_transfer', '1'] daily_import_peak_kw",
+      "printed": "-2.183",
+      "expected": -2.1826104798358927,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_persistence_frozen_transfer', '1'] daily_loss_kwh",
+      "printed": "-0.409",
+      "expected": -0.40905078068813266,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_persistence_frozen_transfer', '1'] CI",
+      "printed": "-0.845",
+      "expected": -0.8449327957262645,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_persistence_frozen_transfer', '1'] CI",
+      "printed": "-0.572",
+      "expected": -0.5719835060726577,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_persistence_frozen_transfer', 'Held-out'] daily_operating_cost_aud",
+      "printed": "0.479",
+      "expected": 0.478913527153219,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_persistence_frozen_transfer', 'Held-out'] daily_over_pct",
+      "printed": "-0.678",
+      "expected": -0.677809113028091,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_persistence_frozen_transfer', 'Held-out'] daily_import_peak_kw",
+      "printed": "-1.954",
+      "expected": -1.9540098132427932,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_persistence_frozen_transfer', 'Held-out'] daily_loss_kwh",
+      "printed": "-0.447",
+      "expected": -0.4465867620977061,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_persistence_frozen_transfer', 'Held-out'] CI",
+      "printed": "-0.831",
+      "expected": -0.8311554709327316,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_persistence_frozen_transfer', 'Held-out'] CI",
+      "printed": "-0.534",
+      "expected": -0.5344324092554955,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_persistence_matched_retraining', '1'] daily_operating_cost_aud",
+      "printed": "-1.625",
+      "expected": -1.6249805635367542,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_persistence_matched_retraining', '1'] daily_over_pct",
+      "printed": "0.373",
+      "expected": 0.3725612287256123,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_persistence_matched_retraining', '1'] daily_import_peak_kw",
+      "printed": "2.508",
+      "expected": 2.508185269976344,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_persistence_matched_retraining', '1'] daily_loss_kwh",
+      "printed": "0.337",
+      "expected": 0.3374953391578422,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_persistence_matched_retraining', '1'] CI",
+      "printed": "0.177",
+      "expected": 0.17664762669844802,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_persistence_matched_retraining', '1'] CI",
+      "printed": "0.576",
+      "expected": 0.5757750827603768,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_persistence_matched_retraining', 'Held-out'] daily_operating_cost_aud",
+      "printed": "-1.580",
+      "expected": -1.5804796097601843,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_persistence_matched_retraining', 'Held-out'] daily_over_pct",
+      "printed": "0.606",
+      "expected": 0.6057841185578412,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_persistence_matched_retraining', 'Held-out'] daily_import_peak_kw",
+      "printed": "2.513",
+      "expected": 2.5133456172832718,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_persistence_matched_retraining', 'Held-out'] daily_loss_kwh",
+      "printed": "0.426",
+      "expected": 0.42557437680548166,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_persistence_matched_retraining', 'Held-out'] CI",
+      "printed": "0.465",
+      "expected": 0.46453328837085234,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_persistence_matched_retraining', 'Held-out'] CI",
+      "printed": "0.750",
+      "expected": 0.7497928773769721,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_strong_frozen_transfer', '1'] daily_operating_cost_aud",
+      "printed": "-1.220",
+      "expected": -1.2202123015035733,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_strong_frozen_transfer', '1'] daily_over_pct",
+      "printed": "-0.893",
+      "expected": -0.8931783589317834,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_strong_frozen_transfer', '1'] daily_import_peak_kw",
+      "printed": "-2.000",
+      "expected": -1.9995375048466641,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_strong_frozen_transfer', '1'] daily_loss_kwh",
+      "printed": "-0.435",
+      "expected": -0.43493871908826715,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_strong_frozen_transfer', '1'] CI",
+      "printed": "-1.049",
+      "expected": -1.0490991251026272,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_strong_frozen_transfer', '1'] CI",
+      "printed": "-0.743",
+      "expected": -0.7433693427219323,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_strong_frozen_transfer', 'Held-out'] daily_operating_cost_aud",
+      "printed": "-1.105",
+      "expected": -1.1050838258902878,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_strong_frozen_transfer', 'Held-out'] daily_over_pct",
+      "printed": "-0.772",
+      "expected": -0.7722295952222956,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_strong_frozen_transfer', 'Held-out'] daily_import_peak_kw",
+      "printed": "-1.293",
+      "expected": -1.292552037330073,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_strong_frozen_transfer', 'Held-out'] daily_loss_kwh",
+      "printed": "-0.430",
+      "expected": -0.43004386592904753,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_strong_frozen_transfer', 'Held-out'] CI",
+      "printed": "-0.969",
+      "expected": -0.9685819892473115,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_strong_frozen_transfer', 'Held-out'] CI",
+      "printed": "-0.591",
+      "expected": -0.5913928183672633,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_strong_matched_retraining', '1'] daily_operating_cost_aud",
+      "printed": "-1.286",
+      "expected": -1.2855958067568822,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_strong_matched_retraining', '1'] daily_over_pct",
+      "printed": "-0.759",
+      "expected": -0.7594783450947834,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_strong_matched_retraining', '1'] daily_import_peak_kw",
+      "printed": "-1.185",
+      "expected": -1.1848185833921971,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_strong_matched_retraining', '1'] daily_loss_kwh",
+      "printed": "-0.364",
+      "expected": -0.364198501696756,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_strong_matched_retraining', '1'] CI",
+      "printed": "-0.973",
+      "expected": -0.9731382085013507,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_strong_matched_retraining', '1'] CI",
+      "printed": "-0.563",
+      "expected": -0.5634694742926449,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_strong_matched_retraining', 'Held-out'] daily_operating_cost_aud",
+      "printed": "-1.123",
+      "expected": -1.1229152823759665,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_strong_matched_retraining', 'Held-out'] daily_over_pct",
+      "printed": "-0.703",
+      "expected": -0.703384207033842,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_strong_matched_retraining', 'Held-out'] daily_import_peak_kw",
+      "printed": "-0.464",
+      "expected": -0.4640845891339887,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_strong_matched_retraining', 'Held-out'] daily_loss_kwh",
+      "printed": "-0.382",
+      "expected": -0.38222484593138095,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_strong_matched_retraining', 'Held-out'] CI",
+      "printed": "-0.946",
+      "expected": -0.9464575280947829,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['load_strong_matched_retraining', 'Held-out'] CI",
+      "printed": "-0.473",
+      "expected": -0.472847301188315,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.01_frozen_transfer', '1'] daily_operating_cost_aud",
+      "printed": "-0.818",
+      "expected": -0.8176066621552944,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.01_frozen_transfer', '1'] daily_over_pct",
+      "printed": "-0.850",
+      "expected": -0.8501106960011068,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.01_frozen_transfer', '1'] daily_import_peak_kw",
+      "printed": "-1.774",
+      "expected": -1.7741260822363583,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.01_frozen_transfer', '1'] daily_loss_kwh",
+      "printed": "-0.419",
+      "expected": -0.418909836997133,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.01_frozen_transfer', '1'] CI",
+      "printed": "-0.994",
+      "expected": -0.9940986203215226,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.01_frozen_transfer', '1'] CI",
+      "printed": "-0.714",
+      "expected": -0.7138999296404238,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.01_frozen_transfer', 'Held-out'] daily_operating_cost_aud",
+      "printed": "-0.718",
+      "expected": -0.7180073094643499,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.01_frozen_transfer', 'Held-out'] daily_over_pct",
+      "printed": "-0.746",
+      "expected": -0.7458250387082501,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.01_frozen_transfer', 'Held-out'] daily_import_peak_kw",
+      "printed": "-1.228",
+      "expected": -1.2277676397739625,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.01_frozen_transfer', 'Held-out'] daily_loss_kwh",
+      "printed": "-0.419",
+      "expected": -0.4192281451897115,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.01_frozen_transfer', 'Held-out'] CI",
+      "printed": "-0.938",
+      "expected": -0.9377689777475816,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.01_frozen_transfer', 'Held-out'] CI",
+      "printed": "-0.570",
+      "expected": -0.5697822844767872,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.01_matched_retraining', '1'] daily_operating_cost_aud",
+      "printed": "-0.825",
+      "expected": -0.8247834695784769,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.01_matched_retraining', '1'] daily_over_pct",
+      "printed": "-0.797",
+      "expected": -0.7968382454683826,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.01_matched_retraining', '1'] daily_import_peak_kw",
+      "printed": "-0.938",
+      "expected": -0.9383838539122125,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.01_matched_retraining', '1'] daily_loss_kwh",
+      "printed": "-0.328",
+      "expected": -0.32780460602699585,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.01_matched_retraining', '1'] CI",
+      "printed": "-0.960",
+      "expected": -0.9596006708879844,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.01_matched_retraining', '1'] CI",
+      "printed": "-0.627",
+      "expected": -0.6270616116180147,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.01_matched_retraining', 'Held-out'] daily_operating_cost_aud",
+      "printed": "-0.771",
+      "expected": -0.7706447826816832,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.01_matched_retraining', 'Held-out'] daily_over_pct",
+      "printed": "-0.632",
+      "expected": -0.632326918823269,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.01_matched_retraining', 'Held-out'] daily_import_peak_kw",
+      "printed": "-0.437",
+      "expected": -0.4365694023488858,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.01_matched_retraining', 'Held-out'] daily_loss_kwh",
+      "printed": "-0.332",
+      "expected": -0.33210395384201985,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.01_matched_retraining', 'Held-out'] CI",
+      "printed": "-0.838",
+      "expected": -0.837767691821343,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.01_matched_retraining', 'Held-out'] CI",
+      "printed": "-0.445",
+      "expected": -0.4454360885349529,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.04_frozen_transfer', '1'] daily_operating_cost_aud",
+      "printed": "-1.735",
+      "expected": -1.7351983111678781,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.04_frozen_transfer', '1'] daily_over_pct",
+      "printed": "-0.850",
+      "expected": -0.8501106960011068,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.04_frozen_transfer', '1'] daily_import_peak_kw",
+      "printed": "-1.774",
+      "expected": -1.7741260816631177,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.04_frozen_transfer', '1'] daily_loss_kwh",
+      "printed": "-0.419",
+      "expected": -0.4189098396152688,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.04_frozen_transfer', '1'] CI",
+      "printed": "-0.994",
+      "expected": -0.9940986203215226,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.04_frozen_transfer', '1'] CI",
+      "printed": "-0.714",
+      "expected": -0.7138999296404238,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.04_frozen_transfer', 'Held-out'] daily_operating_cost_aud",
+      "printed": "-1.641",
+      "expected": -1.6412662699307783,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.04_frozen_transfer', 'Held-out'] daily_over_pct",
+      "printed": "-0.746",
+      "expected": -0.7458250387082501,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.04_frozen_transfer', 'Held-out'] daily_import_peak_kw",
+      "printed": "-1.228",
+      "expected": -1.2277676530382178,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.04_frozen_transfer', 'Held-out'] daily_loss_kwh",
+      "printed": "-0.419",
+      "expected": -0.4192281434378365,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.04_frozen_transfer', 'Held-out'] CI",
+      "printed": "-0.938",
+      "expected": -0.9377689777475816,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.04_frozen_transfer', 'Held-out'] CI",
+      "printed": "-0.570",
+      "expected": -0.5697822844767872,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.04_matched_retraining', '1'] daily_operating_cost_aud",
+      "printed": "-2.385",
+      "expected": -2.3851893200212375,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.04_matched_retraining', '1'] daily_over_pct",
+      "printed": "-1.382",
+      "expected": -1.3824892763248926,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.04_matched_retraining', '1'] daily_import_peak_kw",
+      "printed": "-4.796",
+      "expected": -4.796193704975905,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.04_matched_retraining', '1'] daily_loss_kwh",
+      "printed": "-0.830",
+      "expected": -0.8295605587547386,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.04_matched_retraining', '1'] CI",
+      "printed": "-1.561",
+      "expected": -1.5608819639261675,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.04_matched_retraining', '1'] CI",
+      "printed": "-1.228",
+      "expected": -1.2276489018424415,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.04_matched_retraining', 'Held-out'] daily_operating_cost_aud",
+      "printed": "-2.179",
+      "expected": -2.1794990359979347,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.04_matched_retraining', 'Held-out'] daily_over_pct",
+      "printed": "-1.363",
+      "expected": -1.3629451448794514,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.04_matched_retraining', 'Held-out'] daily_import_peak_kw",
+      "printed": "-4.255",
+      "expected": -4.254736600102036,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.04_matched_retraining', 'Held-out'] daily_loss_kwh",
+      "printed": "-0.886",
+      "expected": -0.8864487408967634,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.04_matched_retraining', 'Held-out'] CI",
+      "printed": "-1.597",
+      "expected": -1.5968404637248923,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0.04_matched_retraining', 'Held-out'] CI",
+      "printed": "-1.155",
+      "expected": -1.1545952520388072,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0_frozen_transfer', '1'] daily_operating_cost_aud",
+      "printed": "-0.512",
+      "expected": -0.5117427635532549,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0_frozen_transfer', '1'] daily_over_pct",
+      "printed": "-0.850",
+      "expected": -0.8501106960011068,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0_frozen_transfer', '1'] daily_import_peak_kw",
+      "printed": "-1.774",
+      "expected": -1.7741260793689408,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0_frozen_transfer', '1'] daily_loss_kwh",
+      "printed": "-0.419",
+      "expected": -0.4189098369084504,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0_frozen_transfer', '1'] CI",
+      "printed": "-0.994",
+      "expected": -0.9940986203215226,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0_frozen_transfer', '1'] CI",
+      "printed": "-0.714",
+      "expected": -0.7138999296404238,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0_frozen_transfer', 'Held-out'] daily_operating_cost_aud",
+      "printed": "-0.410",
+      "expected": -0.4102542697561071,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0_frozen_transfer', 'Held-out'] daily_over_pct",
+      "printed": "-0.746",
+      "expected": -0.7458250387082501,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0_frozen_transfer', 'Held-out'] daily_import_peak_kw",
+      "printed": "-1.228",
+      "expected": -1.2277676447832344,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0_frozen_transfer', 'Held-out'] daily_loss_kwh",
+      "printed": "-0.419",
+      "expected": -0.41922814988264084,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0_frozen_transfer', 'Held-out'] CI",
+      "printed": "-0.938",
+      "expected": -0.9377689777475816,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0_frozen_transfer', 'Held-out'] CI",
+      "printed": "-0.570",
+      "expected": -0.5697822844767872,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0_matched_retraining', '1'] daily_operating_cost_aud",
+      "printed": "-0.743",
+      "expected": -0.7431962350247597,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0_matched_retraining', '1'] daily_over_pct",
+      "printed": "-0.459",
+      "expected": -0.45886951708869506,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0_matched_retraining', '1'] daily_import_peak_kw",
+      "printed": "0.606",
+      "expected": 0.6062576071043474,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0_matched_retraining', '1'] daily_loss_kwh",
+      "printed": "-0.112",
+      "expected": -0.11238801589339645,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0_matched_retraining', '1'] CI",
+      "printed": "-0.667",
+      "expected": -0.6667301118428605,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0_matched_retraining', '1'] CI",
+      "printed": "-0.254",
+      "expected": -0.25441640671420085,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0_matched_retraining', 'Held-out'] daily_operating_cost_aud",
+      "printed": "-0.672",
+      "expected": -0.6715244786939129,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0_matched_retraining', 'Held-out'] daily_over_pct",
+      "printed": "-0.365",
+      "expected": -0.3652399911523997,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0_matched_retraining', 'Held-out'] daily_import_peak_kw",
+      "printed": "1.016",
+      "expected": 1.015630265148687,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0_matched_retraining', 'Held-out'] daily_loss_kwh",
+      "printed": "-0.149",
+      "expected": -0.14907397578537712,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0_matched_retraining', 'Held-out'] CI",
+      "printed": "-0.601",
+      "expected": -0.6011660637412309,
+      "pass_check": true
+    },
+    {
+      "label": "S7 ['wear0_matched_retraining', 'Held-out'] CI",
+      "printed": "-0.130",
+      "expected": -0.12992742444607347,
+      "pass_check": true
+    },
+    {
+      "label": "S8 1 daily_operating_cost_aud",
+      "printed": "-1.123",
+      "expected": -1.1234642410827322,
+      "pass_check": true
+    },
+    {
+      "label": "S8 1 daily_over_pct",
+      "printed": "-0.850",
+      "expected": -0.8501106960011068,
+      "pass_check": true
+    },
+    {
+      "label": "S8 1 daily_under_pct",
+      "printed": "-0.003",
+      "expected": -0.0025944375259443755,
+      "pass_check": true
+    },
+    {
+      "label": "S8 1 daily_import_peak_kw",
+      "printed": "-1.774",
+      "expected": -1.7741260846606806,
+      "pass_check": true
+    },
+    {
+      "label": "S8 1 daily_export_peak_kw",
+      "printed": "0.387",
+      "expected": 0.38693047044870466,
+      "pass_check": true
+    },
+    {
+      "label": "S8 2 daily_operating_cost_aud",
+      "printed": "-1.267",
+      "expected": -1.267031849432628,
+      "pass_check": true
+    },
+    {
+      "label": "S8 2 daily_over_pct",
+      "printed": "-1.254",
+      "expected": -1.2538172421893354,
+      "pass_check": true
+    },
+    {
+      "label": "S8 2 daily_under_pct",
+      "printed": "-0.001",
+      "expected": -0.0005872680291284944,
+      "pass_check": true
+    },
+    {
+      "label": "S8 2 daily_import_peak_kw",
+      "printed": "-1.415",
+      "expected": -1.4149843648149174,
+      "pass_check": true
+    },
+    {
+      "label": "S8 2 daily_export_peak_kw",
+      "printed": "0.155",
+      "expected": 0.15471732351088022,
+      "pass_check": true
+    },
+    {
+      "label": "S8 3 daily_operating_cost_aud",
+      "printed": "-1.125",
+      "expected": -1.1254381638102215,
+      "pass_check": true
+    },
+    {
+      "label": "S8 3 daily_over_pct",
+      "printed": "-1.044",
+      "expected": -1.0444115063680282,
+      "pass_check": true
+    },
+    {
+      "label": "S8 3 daily_under_pct",
+      "printed": "-0.003",
+      "expected": -0.0031565656565656565,
+      "pass_check": true
+    },
+    {
+      "label": "S8 3 daily_import_peak_kw",
+      "printed": "-1.452",
+      "expected": -1.4515617210724618,
+      "pass_check": true
+    },
+    {
+      "label": "S8 3 daily_export_peak_kw",
+      "printed": "0.135",
+      "expected": 0.13478320954766007,
+      "pass_check": true
+    },
+    {
+      "label": "S9 daily_operating_cost_aud narrow_method_gap",
+      "printed": "-0.012901",
+      "expected": -0.012901245546114232,
+      "pass_check": true
+    },
+    {
+      "label": "S9 daily_operating_cost_aud matched_dispersed_method_gap",
+      "printed": "-0.012200",
+      "expected": -0.01219983091997745,
+      "pass_check": true
+    },
+    {
+      "label": "S9 daily_operating_cost_aud difference",
+      "printed": "-0.000701",
+      "expected": -0.0007014146261367801,
+      "pass_check": true
+    },
+    {
+      "label": "S9 daily_operating_cost_aud CI",
+      "printed": "-0.002856",
+      "expected": -0.002855589645708343,
+      "pass_check": true
+    },
+    {
+      "label": "S9 daily_operating_cost_aud CI",
+      "printed": "0.001178",
+      "expected": 0.0011784876284705794,
+      "pass_check": true
+    },
+    {
+      "label": "S9 daily_over_pct narrow_method_gap",
+      "printed": "-0.482735",
+      "expected": -0.4827353395061727,
+      "pass_check": true
+    },
+    {
+      "label": "S9 daily_over_pct matched_dispersed_method_gap",
+      "printed": "-0.629823",
+      "expected": -0.6298225308641974,
+      "pass_check": true
+    },
+    {
+      "label": "S9 daily_over_pct difference",
+      "printed": "0.147087",
+      "expected": 0.14708719135802484,
+      "pass_check": true
+    },
+    {
+      "label": "S9 daily_over_pct CI",
+      "printed": "-0.024193",
+      "expected": -0.024193212561182034,
+      "pass_check": true
+    },
+    {
+      "label": "S9 daily_over_pct CI",
+      "printed": "0.309537",
+      "expected": 0.3095367891075506,
+      "pass_check": true
+    },
+    {
+      "label": "S9 daily_under_pct narrow_method_gap",
+      "printed": "0.000000",
+      "expected": 0.0,
+      "pass_check": true
+    },
+    {
+      "label": "S9 daily_under_pct matched_dispersed_method_gap",
+      "printed": "0.000000",
+      "expected": 0.0,
+      "pass_check": true
+    },
+    {
+      "label": "S9 daily_under_pct difference",
+      "printed": "0.000000",
+      "expected": 0.0,
+      "pass_check": true
+    },
+    {
+      "label": "S9 daily_under_pct CI",
+      "printed": "0.000000",
+      "expected": 0.0,
+      "pass_check": true
+    },
+    {
+      "label": "S9 daily_under_pct CI",
+      "printed": "0.000000",
+      "expected": 0.0,
+      "pass_check": true
+    },
+    {
+      "label": "S9 daily_import_peak_kw narrow_method_gap",
+      "printed": "-0.373586",
+      "expected": -0.3735856699402528,
+      "pass_check": true
+    },
+    {
+      "label": "S9 daily_import_peak_kw matched_dispersed_method_gap",
+      "printed": "-0.591451",
+      "expected": -0.5914512280998625,
+      "pass_check": true
+    },
+    {
+      "label": "S9 daily_import_peak_kw difference",
+      "printed": "0.217866",
+      "expected": 0.2178655581596097,
+      "pass_check": true
+    },
+    {
+      "label": "S9 daily_import_peak_kw CI",
+      "printed": "0.075067",
+      "expected": 0.07506657881651858,
+      "pass_check": true
+    },
+    {
+      "label": "S9 daily_import_peak_kw CI",
+      "printed": "0.366068",
+      "expected": 0.3660675108697592,
+      "pass_check": true
+    },
+    {
+      "label": "S9 daily_export_peak_kw narrow_method_gap",
+      "printed": "0.081268",
+      "expected": 0.08126842473367929,
+      "pass_check": true
+    },
+    {
+      "label": "S9 daily_export_peak_kw matched_dispersed_method_gap",
+      "printed": "0.003852",
+      "expected": 0.0038523130125143355,
+      "pass_check": true
+    },
+    {
+      "label": "S9 daily_export_peak_kw difference",
+      "printed": "0.077416",
+      "expected": 0.07741611172116497,
+      "pass_check": true
+    },
+    {
+      "label": "S9 daily_export_peak_kw CI",
+      "printed": "-0.026673",
+      "expected": -0.02667253559136909,
+      "pass_check": true
+    },
+    {
+      "label": "S9 daily_export_peak_kw CI",
+      "printed": "0.178800",
+      "expected": 0.17879961342649553,
+      "pass_check": true
+    },
+    {
+      "label": "S9 daily_loss_kwh narrow_method_gap",
+      "printed": "-0.058477",
+      "expected": -0.05847700247328687,
+      "pass_check": true
+    },
+    {
+      "label": "S9 daily_loss_kwh matched_dispersed_method_gap",
+      "printed": "-0.055584",
+      "expected": -0.05558406035703015,
+      "pass_check": true
+    },
+    {
+      "label": "S9 daily_loss_kwh difference",
+      "printed": "-0.002893",
+      "expected": -0.002892942116256716,
+      "pass_check": true
+    },
+    {
+      "label": "S9 daily_loss_kwh CI",
+      "printed": "-0.010446",
+      "expected": -0.010446443335584145,
+      "pass_check": true
+    },
+    {
+      "label": "S9 daily_loss_kwh CI",
+      "printed": "0.004785",
+      "expected": 0.004785429635600417,
+      "pass_check": true
+    }
+  ]
+}

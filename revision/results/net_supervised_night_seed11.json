@@ -1,0 +1,13 @@
+{
+  "method": "net_mse_night",
+  "foundation_model": "net_supervised_seed11, unchanged weights",
+  "projection": "max(net,0) at slots0:8 and42:48; daytime signed net unchanged",
+  "fitting": "No additional fitting or test-based model selection",
+  "chronology": "Physical-support correction introduced after inspecting signed-net support during revision; all original results retained",
+  "elapsed_seconds": 2.3309216999914497,
+  "peak_process_rss_bytes": 178528256,
+  "logical_threads_per_process": 1,
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "resource_note": "Peak process RSS includes data and imports. Wall times are comparable only when run serially without competing workload."
+}

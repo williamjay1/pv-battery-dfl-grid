@@ -1,0 +1,42 @@
+{
+  "verified_date": "2026-10-09",
+  "export_limit": {
+    "source": "https://www.ausgrid.com.au/connections/connection-application-help/solar-support/choosing-a-solar-system",
+    "publisher": "Ausgrid",
+    "locator": "Changes from late 2026; fixed export limit / flexible exports options",
+    "verified_fact": "The public guidance describes a fixed export option of 3 kW per site for new/upgraded solar/battery connections from late 2026; another static option for unreliable internet is 1.5 kW/site; flexible exports up to 10 kW/phase with lower limit 1.5 kW/site.",
+    "adopted_design": "3 kW/site PCC cap as a forward-looking engineering scenario, consistently applied to all methods.",
+    "boundary": "Not a historical requirement for 2010-2013 Ausgrid data and not proof of eligibility of the simulated installations."
+  },
+  "power_factor": {
+    "source": "https://www.ausgrid.com.au/-/media/Documents/Demand-Mgmt/PFC-Brochure?rev=5a92be294ea744e1b6af6dd7da35ed58",
+    "publisher": "Ausgrid",
+    "document": "Power Factor Correction",
+    "locator": "Opening bullet list",
+    "verified_fact": "The brochure states a customer obligation to maintain power factor 0.9 or above, in a business/customer power-factor-correction context.",
+    "adopted_design": [
+      0.9,
+      0.95,
+      1.0
+    ],
+    "boundary": "These are engineering scenarios, not an empirically measured household distribution or calibrated probabilistic uncertainty interval."
+  },
+  "impedance": {
+    "basis": "Original named benchmark line parameters; network implementation retains transformer parameters.",
+    "adopted_design": "Scale line R and X together by 0.90,1.00,1.10 one factor at a time relative to base setup.",
+    "boundary": "A prespecified deterministic engineering stress range, not claimed to be supported as a measured 90/95% uncertainty interval by an external source. No citation can convert an analyst choice into empirical calibration."
+  },
+  "volt_watt_not_adopted": {
+    "source": "https://nprd.evoenergy.com.au/Connections/Solar-and-batteries/Power-quality",
+    "publisher": "Evoenergy",
+    "verified_fact": "Representative official inverter power-quality guidance specifies Volt-Watt output reducing from 100% at 253 V to 20% at 260 V.",
+    "boundary": "Different DNSP; not automatically the Ausgrid Australia-A curve. Sufficient official provenance if an additional clearly labeled curve were needed; no additional curve is necessary once export-limit case is implemented."
+  },
+  "connection_standard": {
+    "source": "https://www.ausgrid.com.au/-/media/Documents/Technical-Documentation/NS/NS194.pdf",
+    "publisher": "Ausgrid",
+    "locator": "NS194, Section 5.2 / Section 5.3 Table 1",
+    "verified_fact": "Australia-A regional setting and inverter/network connection constraints are specified separately from simulated screening bands.",
+    "boundary": "The manuscript 0.95-1.05 p.u. band remains an analytical screening band; do not call it a statutory compliance criterion."
+  }
+}

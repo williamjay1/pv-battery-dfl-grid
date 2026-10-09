@@ -1,0 +1,42 @@
+{
+  "tou": {
+    "1e-08": {
+      "max_action_difference_kw": 0.012675983488564382,
+      "p95_action_difference_kw": 0.007711715067556189,
+      "max_realized_bill_difference_aud": 0.0004833411755233996,
+      "mean_absolute_realized_bill_difference_aud": 2.9560602343027542e-05
+    },
+    "1e-10": {
+      "max_action_difference_kw": 0.00021958325040739876,
+      "p95_action_difference_kw": 8.221459968034908e-05,
+      "max_realized_bill_difference_aud": 4.1038170408569385e-06,
+      "mean_absolute_realized_bill_difference_aud": 2.1562255985430045e-07
+    },
+    "1e-13": {
+      "max_action_difference_kw": 2.60849574420242e-07,
+      "p95_action_difference_kw": 9.937100189248865e-08,
+      "max_realized_bill_difference_aud": 1.3316023839138325e-09,
+      "mean_absolute_realized_bill_difference_aud": 8.098280518398226e-11
+    }
+  },
+  "flat": {
+    "1e-08": {
+      "max_action_difference_kw": 0.006186207921432778,
+      "p95_action_difference_kw": 0.005041825255296075,
+      "max_realized_bill_difference_aud": 0.0004277097009366404,
+      "mean_absolute_realized_bill_difference_aud": 4.581143313126812e-05
+    },
+    "1e-10": {
+      "max_action_difference_kw": 0.0005072496814297889,
+      "p95_action_difference_kw": 0.00010097234622248461,
+      "max_realized_bill_difference_aud": 6.3422559020143154e-06,
+      "mean_absolute_realized_bill_difference_aud": 6.588345310254429e-07
+    },
+    "1e-13": {
+      "max_action_difference_kw": 7.6944525390088e-08,
+      "p95_action_difference_kw": 1.9575908966756846e-08,
+      "max_realized_bill_difference_aud": 8.476961133041527e-09,
+      "mean_absolute_realized_bill_difference_aud": 3.0155441477219826e-10
+    }
+  }
+}

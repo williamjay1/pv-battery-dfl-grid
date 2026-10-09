@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "masked_output_exact_zero": true,
+  "masked_loss_input_and_parameter_gradients_exact_zero": true,
+  "checkpoint_state_keys_unchanged": true
+}

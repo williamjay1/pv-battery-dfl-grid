@@ -1,0 +1,22 @@
+{
+  "status": "complete",
+  "control": "epsilon_low",
+  "model": "msecont",
+  "battery": {
+    "capacity": 10.0,
+    "power": 3.0,
+    "efficiency": 0.95,
+    "dt": 0.5,
+    "throughput": 0.02,
+    "epsilon": 1e-05,
+    "initial_fraction": 0.5,
+    "minimum_fraction": 0.1,
+    "maximum_fraction": 0.9
+  },
+  "night_zero": true,
+  "tariff": "tou",
+  "regime": "physical",
+  "n_clean_days": 219,
+  "elapsed_seconds": 36.45263439998962,
+  "test_used_for_fitting": false
+}

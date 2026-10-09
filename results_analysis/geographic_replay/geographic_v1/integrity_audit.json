@@ -1,0 +1,84 @@
+{
+  "n_scenarios": 3,
+  "all_passed": true,
+  "scenarios": [
+    {
+      "scenario": "dfl_seed11_postcode2259_protocol_eligible_b27_all_tou_test_tight",
+      "checks": {
+        "27_actual_ids": true,
+        "27_customer_voltages": true,
+        "55_load_points": true,
+        "occupancy": true,
+        "voltage_extrema_occupied_only": true,
+        "exceedance_denominator_27": true,
+        "bill_denominator_27": true,
+        "clean340": true,
+        "full_physical_convergence": true,
+        "file_hash": true,
+        "independent_dispatch_overlap": true,
+        "original_transformer": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 5.561844966528451e-06,
+      "formal_overlap_audit": {
+        "status": "passed",
+        "n_overlapping_households": 22,
+        "max_action_difference_kw": 0.0,
+        "file": "D:\\MLWork\\pv_battery_dfl_grid_20261005\\results\\dispatch\\dfl_tou_seed11_test_tight.npz",
+        "sha256": "769604a885b479ca86ec0c31a6eb68a841ab045963b3b69d3cc67dca6f009ff3"
+      }
+    },
+    {
+      "scenario": "mlp_seed11_postcode2259_protocol_eligible_b27_all_tou_test_tight",
+      "checks": {
+        "27_actual_ids": true,
+        "27_customer_voltages": true,
+        "55_load_points": true,
+        "occupancy": true,
+        "voltage_extrema_occupied_only": true,
+        "exceedance_denominator_27": true,
+        "bill_denominator_27": true,
+        "clean340": true,
+        "full_physical_convergence": true,
+        "file_hash": true,
+        "independent_dispatch_overlap": true,
+        "original_transformer": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 3.470038889008542e-06,
+      "formal_overlap_audit": {
+        "status": "passed",
+        "n_overlapping_households": 22,
+        "max_action_difference_kw": 0.0,
+        "file": "D:\\MLWork\\pv_battery_dfl_grid_20261005\\results\\dispatch\\mlp_tou_seed11_test_tight.npz",
+        "sha256": "0397559ad58ba5629a6ba6139c0db7e5f000aa5705271f6ce32d2e91452566d0"
+      }
+    },
+    {
+      "scenario": "msecont_seed11_postcode2259_protocol_eligible_b27_all_tou_test_tight",
+      "checks": {
+        "27_actual_ids": true,
+        "27_customer_voltages": true,
+        "55_load_points": true,
+        "occupancy": true,
+        "voltage_extrema_occupied_only": true,
+        "exceedance_denominator_27": true,
+        "bill_denominator_27": true,
+        "clean340": true,
+        "full_physical_convergence": true,
+        "file_hash": true,
+        "independent_dispatch_overlap": true,
+        "original_transformer": true
+      },
+      "passed": true,
+      "max_power_balance_residual_kw": 3.576055447901405e-06,
+      "formal_overlap_audit": {
+        "status": "passed",
+        "n_overlapping_households": 22,
+        "max_action_difference_kw": 0.0,
+        "file": "D:\\MLWork\\pv_battery_dfl_grid_20261005\\results\\dispatch\\msecont_tou_seed11_test_tight.npz",
+        "sha256": "6d4748dbf48b8de69e841b7159a311b18626326e4a009df5736c5e300e6af8ec"
+      }
+    }
+  ]
+}

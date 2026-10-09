@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "base_projection_exact_error_kw": 0.0,
+  "chronology": "Support correction was introduced after this revision diagnosed negative night net values. Original signed results are retained as exploratory comparisons. The correction is not an independent confirmation.",
+  "scope": "The already-fitted supervised direct-net MLP weights remain unchanged. Its fixed night projection is applied at deployment and to the base signal used during calibration. The 24 offsets are fitted and validation-selected with projection inside the calibration training, validation and inference paths. This does not claim that foundational supervised training used the projection.",
+  "projection": "max(net,0), fixed slots0:8 and42:48; daytime remains signed",
+  "records": [
+    {
+      "method": "net_mse_night",
+      "tariff": "tou",
+      "test_household_days": 108641,
+      "test_night_values": 1520974,
+      "test_negative_night_fraction": 0.0,
+      "test_minimum_night_net_kw": 0.0
+    },
+    {
+      "method": "net_calibrated24_night",
+      "tariff": "tou",
+      "test_household_days": 108641,
+      "test_night_values": 1520974,
+      "test_negative_night_fraction": 0.0,
+      "test_minimum_night_net_kw": 0.0,
+      "training_pairs": 2048,
+      "validation_pairs": 2048,
+      "same_pairs_as_signed_calibrator": true,
+      "selected_alpha": 1.0,
+      "validation_cost": 3.2854303453483604,
+      "formula_reconstruction_max_error_kw": 0.0,
+      "training_resources": {
+        "elapsed_seconds": 74.09688789991196,
+        "peak_process_rss_bytes": 1023373312,
+        "logical_threads_per_process": 1,
+        "python": "3.12.14",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "resource_note": "Peak process RSS includes data and imports. Wall times are comparable only when run serially without competing workload."
+      }
+    },
+    {
+      "method": "net_mse_night",
+      "tariff": "flat",
+      "test_household_days": 108641,
+      "test_night_values": 1520974,
+      "test_negative_night_fraction": 0.0,
+      "test_minimum_night_net_kw": 0.0
+    },
+    {
+      "method": "net_calibrated24_night",
+      "tariff": "flat",
+      "test_household_days": 108641,
+      "test_night_values": 1520974,
+      "test_negative_night_fraction": 0.0,
+      "test_minimum_night_net_kw": 0.0,
+      "training_pairs": 2048,
+      "validation_pairs": 2048,
+      "same_pairs_as_signed_calibrator": true,
+      "selected_alpha": 1.0,
+      "validation_cost": 3.464651969026691,
+      "formula_reconstruction_max_error_kw": 0.0,
+      "training_resources": {
+        "elapsed_seconds": 69.17518350004684,
+        "peak_process_rss_bytes": 1024491520,
+        "logical_threads_per_process": 1,
+        "python": "3.12.14",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "resource_note": "Peak process RSS includes data and imports. Wall times are comparable only when run serially without competing workload."
+      }
+    }
+  ],
+  "elapsed_seconds": 2.7219756999984384,
+  "peak_process_rss_bytes": 1254813696,
+  "logical_threads_per_process": 1,
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "resource_note": "Peak process RSS includes data and imports. Wall times are comparable only when run serially without competing workload."
+}

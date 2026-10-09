@@ -1,0 +1,156 @@
+{
+  "status": "PASS",
+  "recorded_utc": "2026-10-08T20:28:47.800846+00:00",
+  "documents": [
+    {
+      "file": "EPSR_Revised_Manuscript.docx",
+      "sha256": "ef4d37d09e6952811e25041d0faac997ce72e5c1b96d42c1611c8646a6935bc5",
+      "pages": 18,
+      "status": "PASS",
+      "review": "Independent agent actually viewed final rendered pages; numeric and extraction checks are auxiliary."
+    },
+    {
+      "file": "EPSR_Supplementary_Material.docx",
+      "sha256": "ef8c82f5289e668ef177f235514ac6f89a2149db8919b10d512191e5c0da1ffc",
+      "pages": 10,
+      "status": "PASS",
+      "review": "All ten pages actually viewed. Final pages 1–7 are byte-identical to the viewed prior render; changed final pages 8–10 were directly viewed again.",
+      "findings": []
+    },
+    {
+      "file": "逐条修改说明.docx",
+      "sha256": "e25ad4fd8f76dc1dd7d5c44af12539fee7e7660b7cf74ed0f5b4a79fdaec0186",
+      "pages": 12,
+      "status": "PASS",
+      "review": "All twelve actual final page PNGs directly viewed by root.",
+      "findings": []
+    }
+  ],
+  "figures": [
+    {
+      "figure": "figure1_economics",
+      "status": "PASS",
+      "collision_failures": 0,
+      "collision_warnings": 0,
+      "minimum_pdf_font_pt": 6.0,
+      "editable_svg_text": true,
+      "raster": {
+        "png": {
+          "pixels": [
+            8503,
+            5858
+          ],
+          "dpi": [
+            1199.9976,
+            1199.9976
+          ]
+        },
+        "tiff": {
+          "pixels": [
+            8503,
+            5858
+          ],
+          "dpi": [
+            1200.0,
+            1200.0
+          ]
+        }
+      },
+      "visual": "Final rendered preview actually viewed; no text/text, text/data or label/line collision observed."
+    },
+    {
+      "figure": "figure2_voltage",
+      "status": "PASS",
+      "collision_failures": 0,
+      "collision_warnings": 0,
+      "minimum_pdf_font_pt": 6.0,
+      "editable_svg_text": true,
+      "raster": {
+        "png": {
+          "pixels": [
+            8503,
+            6566
+          ],
+          "dpi": [
+            1199.9976,
+            1199.9976
+          ]
+        },
+        "tiff": {
+          "pixels": [
+            8503,
+            6566
+          ],
+          "dpi": [
+            1200.0,
+            1200.0
+          ]
+        }
+      },
+      "visual": "Final rendered preview actually viewed; no text/text, text/data or label/line collision observed."
+    },
+    {
+      "figure": "figure3_mechanism",
+      "status": "PASS",
+      "collision_failures": 0,
+      "collision_warnings": 0,
+      "minimum_pdf_font_pt": 6.0,
+      "editable_svg_text": true,
+      "raster": {
+        "png": {
+          "pixels": [
+            8503,
+            6566
+          ],
+          "dpi": [
+            1199.9976,
+            1199.9976
+          ]
+        },
+        "tiff": {
+          "pixels": [
+            8503,
+            6566
+          ],
+          "dpi": [
+            1200.0,
+            1200.0
+          ]
+        }
+      },
+      "visual": "Final rendered preview actually viewed; no text/text, text/data or label/line collision observed."
+    },
+    {
+      "figure": "figure4_boundaries",
+      "status": "PASS",
+      "collision_failures": 0,
+      "collision_warnings": 0,
+      "minimum_pdf_font_pt": 6.0,
+      "editable_svg_text": true,
+      "raster": {
+        "png": {
+          "pixels": [
+            8503,
+            6566
+          ],
+          "dpi": [
+            1199.9976,
+            1199.9976
+          ]
+        },
+        "tiff": {
+          "pixels": [
+            8503,
+            6566
+          ],
+          "dpi": [
+            1200.0,
+            1200.0
+          ]
+        }
+      },
+      "visual": "Final rendered preview actually viewed; no text/text, text/data or label/line collision observed."
+    }
+  ],
+  "scope": "Delivery visual and structural quality only; does not certify a publisher endorsement."
+}

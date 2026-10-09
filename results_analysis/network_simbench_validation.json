@@ -1,0 +1,54 @@
+[
+  {
+    "network": "simbench_rural1",
+    "code": "1-LV-rural1--0-sw",
+    "native_case": {
+      "converged": true,
+      "vmin_pu": 1.0192699687492943,
+      "vmax_pu": 1.0265320175699155,
+      "balance_abs_kw": 9.378348791999613e-12
+    },
+    "buses": 15,
+    "lines": 13,
+    "native_loads": 13,
+    "transformer_kva": [
+      160.0
+    ],
+    "source_pu": [
+      1.025
+    ],
+    "replayed_samples": 1000,
+    "converged_samples": 1000,
+    "seconds_per_1000": 8.153878099983558,
+    "max_balance_abs_kw": 1.5918399040915077e-05,
+    "recycled_vs_cold_voltage_max_error_pu": 3.742117726801553e-12,
+    "replay_vmin_pu": 1.008101176723988,
+    "replay_vmax_pu": 1.030904441469828
+  },
+  {
+    "network": "simbench_semiurb4",
+    "code": "1-LV-semiurb4--0-sw",
+    "native_case": {
+      "converged": true,
+      "vmin_pu": 0.980068175949621,
+      "vmax_pu": 1.025,
+      "balance_abs_kw": 3.8680687125536295e-08
+    },
+    "buses": 44,
+    "lines": 42,
+    "native_loads": 41,
+    "transformer_kva": [
+      400.0
+    ],
+    "source_pu": [
+      1.025
+    ],
+    "replayed_samples": 1000,
+    "converged_samples": 1000,
+    "seconds_per_1000": 9.753625400015153,
+    "max_balance_abs_kw": 1.5921520566619662e-05,
+    "recycled_vs_cold_voltage_max_error_pu": 8.258282946371764e-12,
+    "replay_vmin_pu": 1.0119910742945044,
+    "replay_vmax_pu": 1.0291899888687674
+  }
+]

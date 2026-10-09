@@ -1,0 +1,218 @@
+{
+  "status": "PASS",
+  "same_training_pairs": 4096,
+  "same_validation_pairs": 1024,
+  "selection_has_no_test_or_heldout_labels": true,
+  "rows": [
+    {
+      "tariff": "tou",
+      "seed": 11,
+      "best_epoch": 3,
+      "selected_lr": 0.0001,
+      "strict_same_lr_parameters_and_arrays_identical": true,
+      "max_reloaded_prediction_difference_kw": 0.0,
+      "epoch_zero_prediction_difference_kw": null,
+      "metrics": {
+        "validation": {
+          "household_days": 44373,
+          "mae_kw": 0.0992155447602272,
+          "rmse_kw": 0.22919657826423645,
+          "capacity_normalized_mae": 0.05919130519032478,
+          "capacity_normalized_rmse": 0.11504794657230377,
+          "bias_kw": 0.007979821413755417
+        },
+        "test": {
+          "household_days": 88609,
+          "mae_kw": 0.09551671892404556,
+          "rmse_kw": 0.22437776625156403,
+          "capacity_normalized_mae": 0.05716909095644951,
+          "capacity_normalized_rmse": 0.11340484023094177,
+          "bias_kw": 0.005932222120463848
+        },
+        "heldout_test": {
+          "household_days": 20032,
+          "mae_kw": 0.09313662350177765,
+          "rmse_kw": 0.21254943311214447,
+          "capacity_normalized_mae": 0.056791651993989944,
+          "capacity_normalized_rmse": 0.1126122921705246,
+          "bias_kw": 0.008688702248036861
+        }
+      }
+    },
+    {
+      "tariff": "tou",
+      "seed": 23,
+      "best_epoch": 2,
+      "selected_lr": 0.0001,
+      "strict_same_lr_parameters_and_arrays_identical": true,
+      "max_reloaded_prediction_difference_kw": 0.0,
+      "epoch_zero_prediction_difference_kw": null,
+      "metrics": {
+        "validation": {
+          "household_days": 44373,
+          "mae_kw": 0.099174864590168,
+          "rmse_kw": 0.22985650599002838,
+          "capacity_normalized_mae": 0.0590936578810215,
+          "capacity_normalized_rmse": 0.11506737768650055,
+          "bias_kw": 0.008219019509851933
+        },
+        "test": {
+          "household_days": 88609,
+          "mae_kw": 0.0959179624915123,
+          "rmse_kw": 0.22582049667835236,
+          "capacity_normalized_mae": 0.05737058073282242,
+          "capacity_normalized_rmse": 0.11394785344600677,
+          "bias_kw": 0.004109160974621773
+        },
+        "heldout_test": {
+          "household_days": 20032,
+          "mae_kw": 0.0934026911854744,
+          "rmse_kw": 0.2136492282152176,
+          "capacity_normalized_mae": 0.05699624493718147,
+          "capacity_normalized_rmse": 0.11318063735961914,
+          "bias_kw": 0.00599970668554306
+        }
+      }
+    },
+    {
+      "tariff": "tou",
+      "seed": 47,
+      "best_epoch": 0,
+      "selected_lr": 0.0001,
+      "strict_same_lr_parameters_and_arrays_identical": true,
+      "max_reloaded_prediction_difference_kw": 0.0,
+      "epoch_zero_prediction_difference_kw": 1.1920928955078125e-07,
+      "metrics": {
+        "validation": {
+          "household_days": 44373,
+          "mae_kw": 0.10339387506246567,
+          "rmse_kw": 0.2309444099664688,
+          "capacity_normalized_mae": 0.061794597655534744,
+          "capacity_normalized_rmse": 0.11593865603208542,
+          "bias_kw": 0.005759957246482372
+        },
+        "test": {
+          "household_days": 88609,
+          "mae_kw": 0.10080178081989288,
+          "rmse_kw": 0.2277921885251999,
+          "capacity_normalized_mae": 0.06025093048810959,
+          "capacity_normalized_rmse": 0.11475808918476105,
+          "bias_kw": 0.0025328395422548056
+        },
+        "heldout_test": {
+          "household_days": 20032,
+          "mae_kw": 0.09927856177091599,
+          "rmse_kw": 0.215737447142601,
+          "capacity_normalized_mae": 0.060448065400123596,
+          "capacity_normalized_rmse": 0.11448615044355392,
+          "bias_kw": 0.00667555071413517
+        }
+      }
+    },
+    {
+      "tariff": "flat",
+      "seed": 11,
+      "best_epoch": 3,
+      "selected_lr": 0.0001,
+      "strict_same_lr_parameters_and_arrays_identical": true,
+      "max_reloaded_prediction_difference_kw": 0.0,
+      "epoch_zero_prediction_difference_kw": null,
+      "metrics": {
+        "validation": {
+          "household_days": 44373,
+          "mae_kw": 0.0992155447602272,
+          "rmse_kw": 0.22919657826423645,
+          "capacity_normalized_mae": 0.05919130519032478,
+          "capacity_normalized_rmse": 0.11504794657230377,
+          "bias_kw": 0.007979821413755417
+        },
+        "test": {
+          "household_days": 88609,
+          "mae_kw": 0.09551671892404556,
+          "rmse_kw": 0.22437776625156403,
+          "capacity_normalized_mae": 0.05716909095644951,
+          "capacity_normalized_rmse": 0.11340484023094177,
+          "bias_kw": 0.005932222120463848
+        },
+        "heldout_test": {
+          "household_days": 20032,
+          "mae_kw": 0.09313662350177765,
+          "rmse_kw": 0.21254943311214447,
+          "capacity_normalized_mae": 0.056791651993989944,
+          "capacity_normalized_rmse": 0.1126122921705246,
+          "bias_kw": 0.008688702248036861
+        }
+      }
+    },
+    {
+      "tariff": "flat",
+      "seed": 23,
+      "best_epoch": 2,
+      "selected_lr": 0.0001,
+      "strict_same_lr_parameters_and_arrays_identical": true,
+      "max_reloaded_prediction_difference_kw": 0.0,
+      "epoch_zero_prediction_difference_kw": null,
+      "metrics": {
+        "validation": {
+          "household_days": 44373,
+          "mae_kw": 0.099174864590168,
+          "rmse_kw": 0.22985650599002838,
+          "capacity_normalized_mae": 0.0590936578810215,
+          "capacity_normalized_rmse": 0.11506737768650055,
+          "bias_kw": 0.008219019509851933
+        },
+        "test": {
+          "household_days": 88609,
+          "mae_kw": 0.0959179624915123,
+          "rmse_kw": 0.22582049667835236,
+          "capacity_normalized_mae": 0.05737058073282242,
+          "capacity_normalized_rmse": 0.11394785344600677,
+          "bias_kw": 0.004109160974621773
+        },
+        "heldout_test": {
+          "household_days": 20032,
+          "mae_kw": 0.0934026911854744,
+          "rmse_kw": 0.2136492282152176,
+          "capacity_normalized_mae": 0.05699624493718147,
+          "capacity_normalized_rmse": 0.11318063735961914,
+          "bias_kw": 0.00599970668554306
+        }
+      }
+    },
+    {
+      "tariff": "flat",
+      "seed": 47,
+      "best_epoch": 0,
+      "selected_lr": 0.0001,
+      "strict_same_lr_parameters_and_arrays_identical": true,
+      "max_reloaded_prediction_difference_kw": 0.0,
+      "epoch_zero_prediction_difference_kw": 1.1920928955078125e-07,
+      "metrics": {
+        "validation": {
+          "household_days": 44373,
+          "mae_kw": 0.10339387506246567,
+          "rmse_kw": 0.2309444099664688,
+          "capacity_normalized_mae": 0.061794597655534744,
+          "capacity_normalized_rmse": 0.11593865603208542,
+          "bias_kw": 0.005759957246482372
+        },
+        "test": {
+          "household_days": 88609,
+          "mae_kw": 0.10080178081989288,
+          "rmse_kw": 0.2277921885251999,
+          "capacity_normalized_mae": 0.06025093048810959,
+          "capacity_normalized_rmse": 0.11475808918476105,
+          "bias_kw": 0.0025328395422548056
+        },
+        "heldout_test": {
+          "household_days": 20032,
+          "mae_kw": 0.09927856177091599,
+          "rmse_kw": 0.215737447142601,
+          "capacity_normalized_mae": 0.060448065400123596,
+          "capacity_normalized_rmse": 0.11448615044355392,
+          "bias_kw": 0.00667555071413517
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "model": "hgb",
+  "tariff": "flat",
+  "seed": 11,
+  "period": "test",
+  "battery": {
+    "capacity": 10,
+    "power": 3,
+    "efficiency": 0.95,
+    "dt": 0.5,
+    "throughput": 0.02,
+    "epsilon": 0.0001,
+    "initial_fraction": 0.5,
+    "minimum_fraction": 0.1,
+    "maximum_fraction": 0.9
+  },
+  "n_households": 220,
+  "n_dates": 365,
+  "clean_household_days": 79397,
+  "n_failed": 0,
+  "failures": [],
+  "max_energy_balance_residual": 8.881784197001252e-14,
+  "max_simultaneous_charge_discharge_kw": 1.2542722355921167e-09,
+  "elapsed_seconds": 72.47676579997642,
+  "mean_clean_bill_aud": 3.7884568069348536,
+  "test_used_for_fitting": false,
+  "night_zero": false,
+  "output": "D:\\MLWork\\pv_battery_dfl_grid_20261005\\results\\dispatch\\hgb_flat_seed11_test_base.npz"
+}

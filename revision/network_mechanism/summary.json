@@ -1,0 +1,768 @@
+{
+  "status": "completed",
+  "plan": {
+    "created_utc": "2026-10-08T19:01:47.946406+00:00",
+    "selection": "First common clean date within each season at 02:00,12:00,18:00,22:00; nearest observed p05,p50,p95 exogenous gross-load-minus-PV sample. No ranking on method effect.",
+    "cases": [
+      {
+        "date": "2012-08-24",
+        "slot": 4,
+        "label": "winter_first_clean_02h"
+      },
+      {
+        "date": "2012-08-24",
+        "slot": 24,
+        "label": "winter_first_clean_12h"
+      },
+      {
+        "date": "2012-08-24",
+        "slot": 36,
+        "label": "winter_first_clean_18h"
+      },
+      {
+        "date": "2012-08-24",
+        "slot": 44,
+        "label": "winter_first_clean_22h"
+      },
+      {
+        "date": "2012-09-01",
+        "slot": 4,
+        "label": "spring_first_clean_02h"
+      },
+      {
+        "date": "2012-09-01",
+        "slot": 24,
+        "label": "spring_first_clean_12h"
+      },
+      {
+        "date": "2012-09-01",
+        "slot": 36,
+        "label": "spring_first_clean_18h"
+      },
+      {
+        "date": "2012-09-01",
+        "slot": 44,
+        "label": "spring_first_clean_22h"
+      },
+      {
+        "date": "2012-12-01",
+        "slot": 4,
+        "label": "summer_first_clean_02h"
+      },
+      {
+        "date": "2012-12-01",
+        "slot": 24,
+        "label": "summer_first_clean_12h"
+      },
+      {
+        "date": "2012-12-01",
+        "slot": 36,
+        "label": "summer_first_clean_18h"
+      },
+      {
+        "date": "2012-12-01",
+        "slot": 44,
+        "label": "summer_first_clean_22h"
+      },
+      {
+        "date": "2013-04-14",
+        "slot": 4,
+        "label": "autumn_first_clean_02h"
+      },
+      {
+        "date": "2013-04-14",
+        "slot": 24,
+        "label": "autumn_first_clean_12h"
+      },
+      {
+        "date": "2013-04-14",
+        "slot": 36,
+        "label": "autumn_first_clean_18h"
+      },
+      {
+        "date": "2013-04-14",
+        "slot": 44,
+        "label": "autumn_first_clean_22h"
+      },
+      {
+        "date": "2012-10-17",
+        "slot": 24,
+        "label": "exogenous_net_q0.05"
+      },
+      {
+        "date": "2012-12-25",
+        "slot": 12,
+        "label": "exogenous_net_q0.5"
+      },
+      {
+        "date": "2013-05-17",
+        "slot": 38,
+        "label": "exogenous_net_q0.95"
+      }
+    ],
+    "finite_difference_kw_kvar": [
+      0.1,
+      0.05
+    ],
+    "reference": "msecont",
+    "target": "dfl",
+    "sign_convention": "P is net demand-positive kW; Q is gross-demand-positive kvar. Battery/PV unity PF implies deltaQ=0.",
+    "sensitivity_role": "Continuous voltage local Jacobian, not derivative of an exceedance indicator; full AC target verifies finite intervention error."
+  },
+  "cases": [
+    {
+      "label": "winter_first_clean_02h",
+      "date": "2012-08-24",
+      "slot": 4,
+      "exogenous_net_kw": 41.47800004854798,
+      "battery_delta_aggregate_kw": -0.4586519388988591,
+      "actual_voltage_delta_mean_pu": 9.616752059871316e-05,
+      "actual_voltage_delta_max_abs_pu": 0.0004181659545416938,
+      "approximation_rmse_pu": 7.968797186357199e-08,
+      "approximation_max_abs_error_pu": 1.7976408260274388e-07,
+      "relative_l2_error": 0.0004518712699776615,
+      "step_halving_max_jacobian_change_pu_per_kw": 4.439647760534626e-08,
+      "step_halving_max_predicted_delta_change_pu": 1.7035087382711442e-11,
+      "reactive_step_halving_max_change_pu_per_kvar": 7.178574290556128e-08,
+      "dominant_sender_node": 14,
+      "dominant_receiver_node": 14,
+      "phase_receiver_sender_mean_voltage_contribution_pu": [
+        [
+          5.8605115805642486e-05,
+          -7.127669519357825e-05,
+          -1.857531185672492e-05
+        ],
+        [
+          -1.1892743517056185e-05,
+          0.00032421645151286437,
+          -2.32915814932498e-05
+        ],
+        [
+          -1.1881249365932705e-05,
+          -6.76136503436449e-05,
+          0.00010984704282032016
+        ]
+      ]
+    },
+    {
+      "label": "winter_first_clean_12h",
+      "date": "2012-08-24",
+      "slot": 24,
+      "exogenous_net_kw": -25.085999501869082,
+      "battery_delta_aggregate_kw": 0.8658438771997116,
+      "actual_voltage_delta_mean_pu": -0.00021101351726915207,
+      "actual_voltage_delta_max_abs_pu": 0.0007417876606126139,
+      "approximation_rmse_pu": 2.488019185148959e-07,
+      "approximation_max_abs_error_pu": 5.533605160407736e-07,
+      "relative_l2_error": 0.0007692722957683629,
+      "step_halving_max_jacobian_change_pu_per_kw": 6.693149035008616e-08,
+      "step_halving_max_predicted_delta_change_pu": 1.9758796201808887e-09,
+      "reactive_step_halving_max_change_pu_per_kvar": 8.590354427795432e-08,
+      "dominant_sender_node": 37,
+      "dominant_receiver_node": 37,
+      "phase_receiver_sender_mean_voltage_contribution_pu": [
+        [
+          -0.00019933002579041844,
+          0.0001316752008751546,
+          5.093751391356542e-05
+        ],
+        [
+          4.061486193779619e-05,
+          -0.0006088581331343193,
+          5.73444317208341e-05
+        ],
+        [
+          4.6915488981324595e-05,
+          0.000135020991145559,
+          -0.00028478495699557605
+        ]
+      ]
+    },
+    {
+      "label": "winter_first_clean_18h",
+      "date": "2012-08-24",
+      "slot": 36,
+      "exogenous_net_kw": 57.16000015474856,
+      "battery_delta_aggregate_kw": 0.4242504090070668,
+      "actual_voltage_delta_mean_pu": -0.00010592533621316605,
+      "actual_voltage_delta_max_abs_pu": 0.00021413354809407537,
+      "approximation_rmse_pu": 2.135768495606825e-08,
+      "approximation_max_abs_error_pu": 4.564473754864527e-08,
+      "relative_l2_error": 0.00017848780058700886,
+      "step_halving_max_jacobian_change_pu_per_kw": 6.855803924565862e-08,
+      "step_halving_max_predicted_delta_change_pu": 1.913112332498154e-09,
+      "reactive_step_halving_max_change_pu_per_kvar": 7.974053750636756e-08,
+      "dominant_sender_node": 37,
+      "dominant_receiver_node": 37,
+      "phase_receiver_sender_mean_voltage_contribution_pu": [
+        [
+          -0.0001443888006790325,
+          4.7951035152310996e-05,
+          3.486854343972147e-05
+        ],
+        [
+          2.993667585389831e-05,
+          -0.00022747493723548136,
+          3.7652543895167665e-05
+        ],
+        [
+          3.542700621612701e-05,
+          4.9590192711343476e-05,
+          -0.00018463425092515244
+        ]
+      ]
+    },
+    {
+      "label": "winter_first_clean_22h",
+      "date": "2012-08-24",
+      "slot": 44,
+      "exogenous_net_kw": 55.00400002510287,
+      "battery_delta_aggregate_kw": -2.4170515686559355,
+      "actual_voltage_delta_mean_pu": 0.0007336061504301115,
+      "actual_voltage_delta_max_abs_pu": 0.0020641183471044044,
+      "approximation_rmse_pu": 1.7545025587284528e-06,
+      "approximation_max_abs_error_pu": 3.963520593033582e-06,
+      "relative_l2_error": 0.0016399936154993678,
+      "step_halving_max_jacobian_change_pu_per_kw": 1.5396791674948673e-07,
+      "step_halving_max_predicted_delta_change_pu": 6.007663526831152e-08,
+      "reactive_step_halving_max_change_pu_per_kvar": 1.7450656197848247e-07,
+      "dominant_sender_node": 54,
+      "dominant_receiver_node": 44,
+      "phase_receiver_sender_mean_voltage_contribution_pu": [
+        [
+          0.001342448583654678,
+          -0.00040793135102179046,
+          -6.869210857866118e-05
+        ],
+        [
+          -0.00027203643376047255,
+          0.0017822403491960135,
+          -8.101031756041557e-05
+        ],
+        [
+          -0.00033343389817665887,
+          -0.0003627879429197357,
+          0.0003673501339905953
+        ]
+      ]
+    },
+    {
+      "label": "spring_first_clean_02h",
+      "date": "2012-09-01",
+      "slot": 4,
+      "exogenous_net_kw": 46.84199997223914,
+      "battery_delta_aggregate_kw": -1.4994105962643054,
+      "actual_voltage_delta_mean_pu": 0.0003748373147794506,
+      "actual_voltage_delta_max_abs_pu": 0.0023433356262270166,
+      "approximation_rmse_pu": 2.3175686291878106e-06,
+      "approximation_max_abs_error_pu": 5.005621958654484e-06,
+      "relative_l2_error": 0.002156479602521639,
+      "step_halving_max_jacobian_change_pu_per_kw": 8.19697854037571e-08,
+      "step_halving_max_predicted_delta_change_pu": 2.6578538486027884e-10,
+      "reactive_step_halving_max_change_pu_per_kvar": 3.5849793134090646e-08,
+      "dominant_sender_node": 37,
+      "dominant_receiver_node": 44,
+      "phase_receiver_sender_mean_voltage_contribution_pu": [
+        [
+          8.921179625410905e-14,
+          -0.0003873001038358523,
+          -3.1823714458800976e-05
+        ],
+        [
+          -4.870094086987295e-15,
+          0.0017287576943431312,
+          -3.786820879101029e-05
+        ],
+        [
+          -2.0132385527100952e-14,
+          -0.00036169119623409297,
+          0.00018329502907971621
+        ]
+      ]
+    },
+    {
+      "label": "spring_first_clean_12h",
+      "date": "2012-09-01",
+      "slot": 24,
+      "exogenous_net_kw": -23.396000312641263,
+      "battery_delta_aggregate_kw": 0.5783975049810679,
+      "actual_voltage_delta_mean_pu": -0.00013463377298139422,
+      "actual_voltage_delta_max_abs_pu": 0.0005792035559559761,
+      "approximation_rmse_pu": 1.5513994501187946e-07,
+      "approximation_max_abs_error_pu": 3.3825594857961414e-07,
+      "relative_l2_error": 0.0005843097941129489,
+      "step_halving_max_jacobian_change_pu_per_kw": 5.6318434360491665e-08,
+      "step_halving_max_predicted_delta_change_pu": 4.267714472472894e-10,
+      "reactive_step_halving_max_change_pu_per_kvar": 6.098647586938455e-08,
+      "dominant_sender_node": 37,
+      "dominant_receiver_node": 37,
+      "phase_receiver_sender_mean_voltage_contribution_pu": [
+        [
+          -5.598261746325119e-05,
+          9.679851468261164e-05,
+          3.566502089038754e-05
+        ],
+        [
+          1.1418206246346964e-05,
+          -0.0004569602248949919,
+          4.285100261973032e-05
+        ],
+        [
+          1.5265547784812617e-05,
+          0.00010383420765764777,
+          -0.0002095466006103347
+        ]
+      ]
+    },
+    {
+      "label": "spring_first_clean_18h",
+      "date": "2012-09-01",
+      "slot": 36,
+      "exogenous_net_kw": 79.49400040321052,
+      "battery_delta_aggregate_kw": 0.4340181499719939,
+      "actual_voltage_delta_mean_pu": -0.00011295306141713853,
+      "actual_voltage_delta_max_abs_pu": 0.00026167040773206196,
+      "approximation_rmse_pu": 3.303980037375819e-08,
+      "approximation_max_abs_error_pu": 7.416007883232368e-08,
+      "relative_l2_error": 0.0002509885158301168,
+      "step_halving_max_jacobian_change_pu_per_kw": 5.255128665559994e-08,
+      "step_halving_max_predicted_delta_change_pu": 1.233694880364528e-09,
+      "reactive_step_halving_max_change_pu_per_kvar": 8.094091841215345e-08,
+      "dominant_sender_node": 37,
+      "dominant_receiver_node": 37,
+      "phase_receiver_sender_mean_voltage_contribution_pu": [
+        [
+          -0.00016894597101484981,
+          5.540166434405984e-05,
+          2.799972389003859e-05
+        ],
+        [
+          3.5041724947648094e-05,
+          -0.00025377325304855227,
+          3.151397583036392e-05
+        ],
+        [
+          3.920565040251204e-05,
+          5.4736558619100046e-05,
+          -0.0001511343904322718
+        ]
+      ]
+    },
+    {
+      "label": "spring_first_clean_22h",
+      "date": "2012-09-01",
+      "slot": 44,
+      "exogenous_net_kw": 64.43199963122606,
+      "battery_delta_aggregate_kw": -1.875661085809254,
+      "actual_voltage_delta_mean_pu": 0.0005774884984049625,
+      "actual_voltage_delta_max_abs_pu": 0.001827211554219943,
+      "approximation_rmse_pu": 1.2553581284994854e-06,
+      "approximation_max_abs_error_pu": 3.4478550837932238e-06,
+      "relative_l2_error": 0.0017103828521889798,
+      "step_halving_max_jacobian_change_pu_per_kw": 1.8160231429753537e-07,
+      "step_halving_max_predicted_delta_change_pu": 3.8630306032042106e-08,
+      "reactive_step_halving_max_change_pu_per_kvar": 1.850959630012028e-07,
+      "dominant_sender_node": 53,
+      "dominant_receiver_node": 54,
+      "phase_receiver_sender_mean_voltage_contribution_pu": [
+        [
+          0.0012274555955634411,
+          -0.00024564518737949957,
+          -9.767477319646954e-05
+        ],
+        [
+          -0.00027149758763689156,
+          0.0010461347583813638,
+          -0.00012779060768683103
+        ],
+        [
+          -0.0002902657889832228,
+          -0.00020541293733355754,
+          0.0005585294694060531
+        ]
+      ]
+    },
+    {
+      "label": "summer_first_clean_02h",
+      "date": "2012-12-01",
+      "slot": 4,
+      "exogenous_net_kw": 39.90400052070618,
+      "battery_delta_aggregate_kw": -5.370451734135475e-09,
+      "actual_voltage_delta_mean_pu": -3.818674669405068e-11,
+      "actual_voltage_delta_max_abs_pu": 1.0383465198771091e-09,
+      "approximation_rmse_pu": 6.414990554552815e-10,
+      "approximation_max_abs_error_pu": 1.0408576584072174e-09,
+      "relative_l2_error": 1.00079853966023,
+      "step_halving_max_jacobian_change_pu_per_kw": 5.5341478066850414e-08,
+      "step_halving_max_predicted_delta_change_pu": 2.245603831261485e-17,
+      "reactive_step_halving_max_change_pu_per_kvar": 8.242501792210533e-08,
+      "dominant_sender_node": 19,
+      "dominant_receiver_node": 28,
+      "phase_receiver_sender_mean_voltage_contribution_pu": [
+        [
+          2.432668414547855e-12,
+          -3.7194648143783143e-13,
+          -4.247935700449929e-13
+        ],
+        [
+          -4.906845692171817e-13,
+          1.7604825590635866e-12,
+          -4.966377393257406e-13
+        ],
+        [
+          -5.527928982079657e-13,
+          -3.598959597460592e-13,
+          2.3980403384934596e-12
+        ]
+      ]
+    },
+    {
+      "label": "summer_first_clean_12h",
+      "date": "2012-12-01",
+      "slot": 24,
+      "exogenous_net_kw": 18.113999851047993,
+      "battery_delta_aggregate_kw": -0.007896201681750752,
+      "actual_voltage_delta_mean_pu": 1.8508466183493738e-05,
+      "actual_voltage_delta_max_abs_pu": 0.0004914189172624539,
+      "approximation_rmse_pu": 1.1044287314518247e-07,
+      "approximation_max_abs_error_pu": 2.0727943565496034e-07,
+      "relative_l2_error": 0.00036354411814123745,
+      "step_halving_max_jacobian_change_pu_per_kw": 4.7677480852215126e-08,
+      "step_halving_max_predicted_delta_change_pu": 8.081003534881312e-10,
+      "reactive_step_halving_max_change_pu_per_kvar": 6.39647967926038e-08,
+      "dominant_sender_node": 37,
+      "dominant_receiver_node": 37,
+      "phase_receiver_sender_mean_voltage_contribution_pu": [
+        [
+          0.0002853646004042582,
+          5.951599971549511e-05,
+          -5.257520880721033e-07
+        ],
+        [
+          -5.971968821584508e-05,
+          -0.00026729463913895666,
+          -1.2147966653612814e-06
+        ],
+        [
+          -6.248369928420051e-05,
+          5.961269901006535e-05,
+          4.581849762395418e-06
+        ]
+      ]
+    },
+    {
+      "label": "summer_first_clean_18h",
+      "date": "2012-12-01",
+      "slot": 36,
+      "exogenous_net_kw": 91.5920012127608,
+      "battery_delta_aggregate_kw": 0.6628147661686199,
+      "actual_voltage_delta_mean_pu": -0.00019365127458406532,
+      "actual_voltage_delta_max_abs_pu": 0.00041337097741478424,
+      "approximation_rmse_pu": 8.37462635227363e-08,
+      "approximation_max_abs_error_pu": 1.6923576908183403e-07,
+      "relative_l2_error": 0.0003465815806839304,
+      "step_halving_max_jacobian_change_pu_per_kw": 1.2209526056849995e-07,
+      "step_halving_max_predicted_delta_change_pu": 1.4043374683239187e-09,
+      "reactive_step_halving_max_change_pu_per_kvar": 5.5865764236884274e-08,
+      "dominant_sender_node": 37,
+      "dominant_receiver_node": 52,
+      "phase_receiver_sender_mean_voltage_contribution_pu": [
+        [
+          -0.0003525421825518417,
+          8.592147723623159e-05,
+          3.414838742280781e-05
+        ],
+        [
+          6.91138834676633e-05,
+          -0.0004071310189705392,
+          3.700020652917915e-05
+        ],
+        [
+          8.178581773108717e-05,
+          9.029847627373457e-05,
+          -0.0001751875834383897
+        ]
+      ]
+    },
+    {
+      "label": "summer_first_clean_22h",
+      "date": "2012-12-01",
+      "slot": 44,
+      "exogenous_net_kw": 69.94599949219264,
+      "battery_delta_aggregate_kw": -0.6049826741108497,
+      "actual_voltage_delta_mean_pu": 0.00023255829090406638,
+      "actual_voltage_delta_max_abs_pu": 0.0016879567855395683,
+      "approximation_rmse_pu": 1.249445452478157e-06,
+      "approximation_max_abs_error_pu": 2.8748102276785013e-06,
+      "relative_l2_error": 0.001686304120957646,
+      "step_halving_max_jacobian_change_pu_per_kw": 1.6788525569744195e-07,
+      "step_halving_max_predicted_delta_change_pu": 2.6749043021270315e-08,
+      "reactive_step_halving_max_change_pu_per_kvar": 1.9091472736043613e-07,
+      "dominant_sender_node": 53,
+      "dominant_receiver_node": 53,
+      "phase_receiver_sender_mean_voltage_contribution_pu": [
+        [
+          0.0010320050112467363,
+          1.1171115825946963e-05,
+          1.5125947724217895e-05
+        ],
+        [
+          -0.0002150395797815603,
+          -2.9054882762097507e-05,
+          1.7823685675173573e-05
+        ],
+        [
+          -0.0002582412081985244,
+          1.6435162574830566e-06,
+          -8.415972964059193e-05
+        ]
+      ]
+    },
+    {
+      "label": "autumn_first_clean_02h",
+      "date": "2013-04-14",
+      "slot": 4,
+      "exogenous_net_kw": 26.924000170081854,
+      "battery_delta_aggregate_kw": -0.8929747280538916,
+      "actual_voltage_delta_mean_pu": 0.00023770118802216478,
+      "actual_voltage_delta_max_abs_pu": 0.0016845250859374161,
+      "approximation_rmse_pu": 1.2113071769793835e-06,
+      "approximation_max_abs_error_pu": 2.6630957117564167e-06,
+      "relative_l2_error": 0.0016072214783188193,
+      "step_halving_max_jacobian_change_pu_per_kw": 5.140693204452873e-08,
+      "step_halving_max_predicted_delta_change_pu": 1.4431001401073333e-10,
+      "reactive_step_halving_max_change_pu_per_kvar": 5.0194858269847487e-08,
+      "dominant_sender_node": 37,
+      "dominant_receiver_node": 37,
+      "phase_receiver_sender_mean_voltage_contribution_pu": [
+        [
+          -2.186596407476663e-13,
+          -0.00025883641597929634,
+          6.328405443551724e-14
+        ],
+        [
+          3.587753703734221e-14,
+          0.0011787580199202358,
+          6.865744606142948e-14
+        ],
+        [
+          4.854219299949974e-14,
+          -0.00025803033502774754,
+          -3.2587022657138243e-13
+        ]
+      ]
+    },
+    {
+      "label": "autumn_first_clean_12h",
+      "date": "2013-04-14",
+      "slot": 24,
+      "exogenous_net_kw": -14.383999768644571,
+      "battery_delta_aggregate_kw": 0.6005568206275895,
+      "actual_voltage_delta_mean_pu": -0.00014124130854870984,
+      "actual_voltage_delta_max_abs_pu": 0.0006260308943693005,
+      "approximation_rmse_pu": 1.7863947523250379e-07,
+      "approximation_max_abs_error_pu": 3.621959831748463e-07,
+      "relative_l2_error": 0.0005870076403590526,
+      "step_halving_max_jacobian_change_pu_per_kw": 7.038350124943804e-08,
+      "step_halving_max_predicted_delta_change_pu": 2.0147130670509433e-09,
+      "reactive_step_halving_max_change_pu_per_kvar": 7.88932497108874e-08,
+      "dominant_sender_node": 37,
+      "dominant_receiver_node": 37,
+      "phase_receiver_sender_mean_voltage_contribution_pu": [
+        [
+          -4.061197191495754e-05,
+          0.00011121438183382921,
+          2.9870187171204653e-05
+        ],
+        [
+          8.618758312527137e-06,
+          -0.000528204545243252,
+          3.436200015672845e-05
+        ],
+        [
+          1.0489304045755836e-05,
+          0.00011766546606071397,
+          -0.00017188114534885465
+        ]
+      ]
+    },
+    {
+      "label": "autumn_first_clean_18h",
+      "date": "2013-04-14",
+      "slot": 36,
+      "exogenous_net_kw": 64.11400010436773,
+      "battery_delta_aggregate_kw": 0.5845661461353479,
+      "actual_voltage_delta_mean_pu": -0.0001465249805552697,
+      "actual_voltage_delta_max_abs_pu": 0.0002642408262916174,
+      "approximation_rmse_pu": 3.341488484719216e-08,
+      "approximation_max_abs_error_pu": 6.880766792932225e-08,
+      "relative_l2_error": 0.00021170945568358874,
+      "step_halving_max_jacobian_change_pu_per_kw": 6.533021901233838e-08,
+      "step_halving_max_predicted_delta_change_pu": 8.107890747117871e-10,
+      "reactive_step_halving_max_change_pu_per_kvar": 9.839517645104934e-08,
+      "dominant_sender_node": 37,
+      "dominant_receiver_node": 37,
+      "phase_receiver_sender_mean_voltage_contribution_pu": [
+        [
+          -0.00022500865279164014,
+          6.222956652024749e-05,
+          4.394476493194231e-05
+        ],
+        [
+          4.481595125774066e-05,
+          -0.0002947740566514983,
+          4.7606252029409825e-05
+        ],
+        [
+          5.278760038246102e-05,
+          6.414151671794998e-05,
+          -0.00023141308837635287
+        ]
+      ]
+    },
+    {
+      "label": "autumn_first_clean_22h",
+      "date": "2013-04-14",
+      "slot": 44,
+      "exogenous_net_kw": 39.31999992020428,
+      "battery_delta_aggregate_kw": -2.756388217916663,
+      "actual_voltage_delta_mean_pu": 0.000804855216916144,
+      "actual_voltage_delta_max_abs_pu": 0.0019613904151920547,
+      "approximation_rmse_pu": 1.7921917784831434e-06,
+      "approximation_max_abs_error_pu": 3.807641921179175e-06,
+      "relative_l2_error": 0.0016451031154598376,
+      "step_halving_max_jacobian_change_pu_per_kw": 1.4258030645031283e-07,
+      "step_halving_max_predicted_delta_change_pu": 6.624188595915455e-08,
+      "reactive_step_halving_max_change_pu_per_kvar": 8.097853831934287e-08,
+      "dominant_sender_node": 44,
+      "dominant_receiver_node": 44,
+      "phase_receiver_sender_mean_voltage_contribution_pu": [
+        [
+          0.001498679649196077,
+          -0.0004091412850155667,
+          -0.00010048204993691318
+        ],
+        [
+          -0.0003081860176094695,
+          0.0018271494850927183,
+          -0.00011898419432189223
+        ],
+        [
+          -0.00037052302941667015,
+          -0.00038111571817836943,
+          0.0005487276119276816
+        ]
+      ]
+    },
+    {
+      "label": "exogenous_net_q0.05",
+      "date": "2012-10-17",
+      "slot": 24,
+      "exogenous_net_kw": -20.403999753296375,
+      "battery_delta_aggregate_kw": 0.904657036066707,
+      "actual_voltage_delta_mean_pu": -0.00018172026840526504,
+      "actual_voltage_delta_max_abs_pu": 0.000556432549422059,
+      "approximation_rmse_pu": 1.0237565802583684e-07,
+      "approximation_max_abs_error_pu": 2.8009755320343444e-07,
+      "relative_l2_error": 0.000403785915038158,
+      "step_halving_max_jacobian_change_pu_per_kw": 7.136113366890129e-08,
+      "step_halving_max_predicted_delta_change_pu": 3.2863255521633552e-09,
+      "reactive_step_halving_max_change_pu_per_kvar": 7.519274647371788e-08,
+      "dominant_sender_node": 15,
+      "dominant_receiver_node": 54,
+      "phase_receiver_sender_mean_voltage_contribution_pu": [
+        [
+          -0.0004120078805741402,
+          2.793272767943183e-05,
+          7.280818021676309e-05
+        ],
+        [
+          8.634231507374754e-05,
+          -0.00013702073178208584,
+          7.972505432694973e-05
+        ],
+        [
+          0.00010172301791111064,
+          2.9669903485539174e-05,
+          -0.0003984631221328981
+        ]
+      ]
+    },
+    {
+      "label": "exogenous_net_q0.5",
+      "date": "2012-12-25",
+      "slot": 12,
+      "exogenous_net_kw": 29.829999913927168,
+      "battery_delta_aggregate_kw": -0.5820465386112283,
+      "actual_voltage_delta_mean_pu": 7.977214755485337e-05,
+      "actual_voltage_delta_max_abs_pu": 0.0010639505830623008,
+      "approximation_rmse_pu": 5.370468433902551e-07,
+      "approximation_max_abs_error_pu": 9.438066135606608e-07,
+      "relative_l2_error": 0.001038326543317622,
+      "step_halving_max_jacobian_change_pu_per_kw": 1.3522796882270427e-07,
+      "step_halving_max_predicted_delta_change_pu": 8.4000447622716e-09,
+      "reactive_step_halving_max_change_pu_per_kvar": 4.191851199486507e-08,
+      "dominant_sender_node": 22,
+      "dominant_receiver_node": 22,
+      "phase_receiver_sender_mean_voltage_contribution_pu": [
+        [
+          -0.00021695067816709072,
+          -0.00015639766170184242,
+          -9.04719369519458e-06
+        ],
+        [
+          3.77769272862708e-05,
+          0.0006693444323559039,
+          -1.0158962793468281e-05
+        ],
+        [
+          3.719554893426912e-05,
+          -0.00013889053143260782,
+          4.782141157951848e-05
+        ]
+      ]
+    },
+    {
+      "label": "exogenous_net_q0.95",
+      "date": "2013-05-17",
+      "slot": 38,
+      "exogenous_net_kw": 65.30599998147227,
+      "battery_delta_aggregate_kw": 0.037595674395580675,
+      "actual_voltage_delta_mean_pu": -2.258631149436383e-05,
+      "actual_voltage_delta_max_abs_pu": 4.050491017659752e-05,
+      "approximation_rmse_pu": 2.4949997986754085e-09,
+      "approximation_max_abs_error_pu": 5.239699802782761e-09,
+      "relative_l2_error": 9.477953492624126e-05,
+      "step_halving_max_jacobian_change_pu_per_kw": 5.409605319250943e-08,
+      "step_halving_max_predicted_delta_change_pu": 1.2595415823647625e-09,
+      "reactive_step_halving_max_change_pu_per_kvar": 7.237884847022258e-08,
+      "dominant_sender_node": 25,
+      "dominant_receiver_node": 27,
+      "phase_receiver_sender_mean_voltage_contribution_pu": [
+        [
+          -3.1596396575080704e-05,
+          8.87958457296892e-06,
+          9.140205887345842e-06
+        ],
+        [
+          7.99752326425991e-06,
+          -4.213367818373026e-05,
+          1.0652541967202803e-05
+        ],
+        [
+          7.144236788553923e-06,
+          8.981352563736182e-06,
+          -5.018689450957887e-05
+        ]
+      ]
+    }
+  ],
+  "max_approximation_error_pu": 5.005621958654484e-06,
+  "max_step_halving_predicted_delta_change_pu": 6.624188595915455e-08,
+  "source_sha256": [
+    "92066cc7388951841dc9a5e96d2ac8e383968a66cdc0889690650b008014ec64",
+    "12fa5a3494c9842f54fb8c4820f589e72cc92900e57f5910a7511d1991bd6327"
+  ],
+  "code_sha256": "61cc053c6807e4f0f250cd68363d1b84e863faa71e04def31e12fbda8e95a841",
+  "boundary": "Quasi-static half-hourly constructed-feeder attribution, not dynamic events or a causal weather mechanism."
+}

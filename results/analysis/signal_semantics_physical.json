@@ -1,0 +1,89 @@
+{
+  "regime": "physical",
+  "status": "exploratory oracle intervention on fixed trained signals; never a deployment benchmark",
+  "definition": "A(loadhat-PVhat) is exactly invariant to representing a PV signal correction as the opposite correction to predicted load. Improved operational cost alone cannot identify more accurate PV information.",
+  "equivalent_net_identity_max_error_kw": 0.0,
+  "negative_implied_corrected_load_fraction": 0.0021170610211706103,
+  "records": {
+    "shared_forecast__mlp": {
+      "mean_operating_cost_aud": 3.7102492827276503,
+      "n_clean_days": 219
+    },
+    "shared_forecast__msecont": {
+      "mean_operating_cost_aud": 3.7090538453400526,
+      "n_clean_days": 219
+    },
+    "shared_forecast__dfl": {
+      "mean_operating_cost_aud": 3.697819139435557,
+      "n_clean_days": 219
+    },
+    "shared_forecast__perfect_pv": {
+      "mean_operating_cost_aud": 3.6385982719493772,
+      "n_clean_days": 219
+    },
+    "perfect_gc__mlp": {
+      "mean_operating_cost_aud": 3.2529583469232883,
+      "n_clean_days": 219
+    },
+    "perfect_gc__msecont": {
+      "mean_operating_cost_aud": 3.250354299938062,
+      "n_clean_days": 219
+    },
+    "perfect_gc__dfl": {
+      "mean_operating_cost_aud": 3.261354226531266,
+      "n_clean_days": 219
+    },
+    "perfect_gc__perfect_pv": {
+      "mean_operating_cost_aud": 3.0495050844407254,
+      "n_clean_days": 219
+    },
+    "shared_forecast__dfl_minus_mlp": {
+      "mean": -0.012430143292092839,
+      "ci95": [
+        -0.014945841591132185,
+        -0.010015224230719452
+      ],
+      "n_clean_days": 219
+    },
+    "shared_forecast__dfl_minus_msecont": {
+      "mean": -0.011234705904495787,
+      "ci95": [
+        -0.012808847604274918,
+        -0.00964891434917995
+      ],
+      "n_clean_days": 219
+    },
+    "shared_forecast__dfl_minus_perfect_pv": {
+      "mean": 0.059220867486179884,
+      "ci95": [
+        0.04995535672264187,
+        0.0697505842032922
+      ],
+      "n_clean_days": 219
+    },
+    "perfect_gc__dfl_minus_mlp": {
+      "mean": 0.00839587960797779,
+      "ci95": [
+        0.005547141480542339,
+        0.01129274340529234
+      ],
+      "n_clean_days": 219
+    },
+    "perfect_gc__dfl_minus_msecont": {
+      "mean": 0.010999926593203117,
+      "ci95": [
+        0.008433447299789305,
+        0.013596345666394625
+      ],
+      "n_clean_days": 219
+    },
+    "perfect_gc__dfl_minus_perfect_pv": {
+      "mean": 0.21184914209054037,
+      "ci95": [
+        0.19429494435113184,
+        0.23057573772719742
+      ],
+      "n_clean_days": 219
+    }
+  }
+}

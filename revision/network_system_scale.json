@@ -1,0 +1,312 @@
+{
+  "reference": "continued MSE seed11, full55 ToU adoption",
+  "primary_transformer": "Original800kVA unchanged",
+  "quantile_group_cutpoints_from_known_pretest": {
+    "capacity_kwp": [
+      1.100000023841858,
+      1.5700000524520874
+    ],
+    "pretest_daily_demand_kwh": [
+      13.954044342041016,
+      21.417285919189453
+    ]
+  },
+  "panels": [
+    {
+      "panel": 0,
+      "n_households": 55,
+      "n_clean_days": 219,
+      "transformer_kva": 800,
+      "total_pv_kwp": 88.94001007080078,
+      "total_pv_kwp_to_transformer_kva": 0.11117501556873322,
+      "pv_capacity_kwp_distribution": {
+        "n": 55,
+        "mean": 1.6170910596847534,
+        "min": 1.0,
+        "q10": 1.0,
+        "median": 1.5,
+        "q90": 2.508000135421753,
+        "max": 4.199999809265137
+      },
+      "household_mean_daily_gross_demand_kwh": {
+        "n": 55,
+        "mean": 18.24201011657715,
+        "min": 5.861416339874268,
+        "q10": 9.025566101074219,
+        "median": 16.470617294311523,
+        "q90": 29.006546020507812,
+        "max": 34.290122985839844
+      },
+      "household_mean_daily_pv_energy_kwh": {
+        "n": 55,
+        "mean": 5.90704345703125,
+        "min": 1.621269702911377,
+        "q10": 3.443950653076172,
+        "median": 5.577553749084473,
+        "q90": 8.920271873474121,
+        "max": 12.291426658630371
+      },
+      "full_adoption_battery_capacity_kwh": 550,
+      "full_adoption_battery_power_kw": 165,
+      "battery_capacity_to_household_daily_demand_ratio": {
+        "n": 55,
+        "mean": 0.662358283996582,
+        "min": 0.2916291654109955,
+        "q10": 0.34489116072654724,
+        "median": 0.6071417927742004,
+        "q90": 1.1080201864242554,
+        "max": 1.7060723304748535
+      },
+      "full_adoption_battery_power_to_transformer_kva": 0.20625,
+      "reference_mean_daily_import_peak_kw": 144.00219057955354,
+      "reference_observed_max_import_kw": 201.0197022395802,
+      "reference_mean_daily_peak_transformer_loading_pct": 18.117141220873894,
+      "reference_observed_max_transformer_loading_pct": 25.286020324239296,
+      "reference_observed_max_phase_transformer_loading_pct": 36.43642082477336,
+      "no_battery_max_transformer_loading_pct": 22.370854033179327,
+      "no_battery_mean_daily_peak_transformer_loading_pct": 8.819584950331096
+    },
+    {
+      "panel": 1,
+      "n_households": 55,
+      "n_clean_days": 129,
+      "transformer_kva": 800,
+      "total_pv_kwp": 103.84000396728516,
+      "total_pv_kwp_to_transformer_kva": 0.1298000067472458,
+      "pv_capacity_kwp_distribution": {
+        "n": 55,
+        "mean": 1.8880001306533813,
+        "min": 1.0,
+        "q10": 1.0199999809265137,
+        "median": 1.5,
+        "q90": 2.799999952316284,
+        "max": 9.989999771118164
+      },
+      "household_mean_daily_gross_demand_kwh": {
+        "n": 55,
+        "mean": 18.408483505249023,
+        "min": 7.735132694244385,
+        "q10": 9.617220878601074,
+        "median": 17.71131706237793,
+        "q90": 29.056827545166016,
+        "max": 34.205833435058594
+      },
+      "household_mean_daily_pv_energy_kwh": {
+        "n": 55,
+        "mean": 6.050487041473389,
+        "min": 2.3618690967559814,
+        "q10": 2.9217660427093506,
+        "median": 4.603836536407471,
+        "q90": 8.634106636047363,
+        "max": 36.062808990478516
+      },
+      "full_adoption_battery_capacity_kwh": 550,
+      "full_adoption_battery_power_kw": 165,
+      "battery_capacity_to_household_daily_demand_ratio": {
+        "n": 55,
+        "mean": 0.6252231001853943,
+        "min": 0.29234778881073,
+        "q10": 0.3442031741142273,
+        "median": 0.5646107196807861,
+        "q90": 1.040245771408081,
+        "max": 1.2928026914596558
+      },
+      "full_adoption_battery_power_to_transformer_kva": 0.20625,
+      "reference_mean_daily_import_peak_kw": 162.1493108088618,
+      "reference_observed_max_import_kw": 218.12238491354302,
+      "reference_mean_daily_peak_transformer_loading_pct": 20.414132126769147,
+      "reference_observed_max_transformer_loading_pct": 27.495343501690233,
+      "reference_observed_max_phase_transformer_loading_pct": 34.71627646631479,
+      "no_battery_max_transformer_loading_pct": 22.40896650536147,
+      "no_battery_mean_daily_peak_transformer_loading_pct": 9.192668300644335
+    },
+    {
+      "panel": 2,
+      "n_households": 55,
+      "n_clean_days": 276,
+      "transformer_kva": 800,
+      "total_pv_kwp": 88.06000518798828,
+      "total_pv_kwp_to_transformer_kva": 0.11007500439882278,
+      "pv_capacity_kwp_distribution": {
+        "n": 55,
+        "mean": 1.6010910272598267,
+        "min": 1.0,
+        "q10": 1.0,
+        "median": 1.4800000190734863,
+        "q90": 2.0999999046325684,
+        "max": 5.610000133514404
+      },
+      "household_mean_daily_gross_demand_kwh": {
+        "n": 55,
+        "mean": 17.849143981933594,
+        "min": 7.66239070892334,
+        "q10": 9.583220481872559,
+        "median": 16.692720413208008,
+        "q90": 27.956235885620117,
+        "max": 37.61698913574219
+      },
+      "household_mean_daily_pv_energy_kwh": {
+        "n": 55,
+        "mean": 5.859966278076172,
+        "min": 2.965763568878174,
+        "q10": 3.474165916442871,
+        "median": 4.670535087585449,
+        "q90": 8.196606636047363,
+        "max": 20.498458862304688
+      },
+      "full_adoption_battery_capacity_kwh": 550,
+      "full_adoption_battery_power_kw": 165,
+      "battery_capacity_to_household_daily_demand_ratio": {
+        "n": 55,
+        "mean": 0.6540646553039551,
+        "min": 0.26583734154701233,
+        "q10": 0.35778334736824036,
+        "median": 0.599063515663147,
+        "q90": 1.0434982776641846,
+        "max": 1.305075764656067
+      },
+      "full_adoption_battery_power_to_transformer_kva": 0.20625,
+      "reference_mean_daily_import_peak_kw": 157.86243093225303,
+      "reference_observed_max_import_kw": 227.593483088293,
+      "reference_mean_daily_peak_transformer_loading_pct": 19.872968731998018,
+      "reference_observed_max_transformer_loading_pct": 28.742437782794706,
+      "reference_observed_max_phase_transformer_loading_pct": 36.448779068547324,
+      "no_battery_max_transformer_loading_pct": 20.360578386132808,
+      "no_battery_mean_daily_peak_transformer_loading_pct": 9.787955967660702
+    },
+    {
+      "panel": 3,
+      "n_households": 55,
+      "n_clean_days": 274,
+      "transformer_kva": 800,
+      "total_pv_kwp": 92.9699935913086,
+      "total_pv_kwp_to_transformer_kva": 0.11621249467134476,
+      "pv_capacity_kwp_distribution": {
+        "n": 55,
+        "mean": 1.6903635263442993,
+        "min": 1.0,
+        "q10": 1.0,
+        "median": 1.5,
+        "q90": 2.759999990463257,
+        "max": 6.199999809265137
+      },
+      "household_mean_daily_gross_demand_kwh": {
+        "n": 55,
+        "mean": 18.22371482849121,
+        "min": 7.489185810089111,
+        "q10": 10.102593421936035,
+        "median": 15.055710792541504,
+        "q90": 28.85740089416504,
+        "max": 44.58818435668945
+      },
+      "household_mean_daily_pv_energy_kwh": {
+        "n": 55,
+        "mean": 5.6500420570373535,
+        "min": 2.382570743560791,
+        "q10": 3.0413875579833984,
+        "median": 4.178691864013672,
+        "q90": 8.952495574951172,
+        "max": 16.643898010253906
+      },
+      "full_adoption_battery_capacity_kwh": 550,
+      "full_adoption_battery_power_kw": 165,
+      "battery_capacity_to_household_daily_demand_ratio": {
+        "n": 55,
+        "mean": 0.6564247012138367,
+        "min": 0.2242746651172638,
+        "q10": 0.34657931327819824,
+        "median": 0.6641997694969177,
+        "q90": 0.9907960891723633,
+        "max": 1.3352586030960083
+      },
+      "full_adoption_battery_power_to_transformer_kva": 0.20625,
+      "reference_mean_daily_import_peak_kw": 153.61198016504633,
+      "reference_observed_max_import_kw": 226.54952982134506,
+      "reference_mean_daily_peak_transformer_loading_pct": 19.35789746080318,
+      "reference_observed_max_transformer_loading_pct": 28.69515983346096,
+      "reference_observed_max_phase_transformer_loading_pct": 34.089228407501885
+    }
+  ],
+  "engineering_conditions": [
+    {
+      "network": "eulv",
+      "source_pu": 1.05,
+      "original_transformer_kva": 800.0,
+      "n_customers": 55,
+      "n_load_locations": 55,
+      "balanced_only": false,
+      "total_pv_kwp": 88.94001007080078,
+      "pv_kwp_to_transformer_kva": 0.11117501258850097,
+      "mean_gross_energy_kwh_per_feeder_day": 1003.3105564117432,
+      "mean_pv_energy_kwh_per_feeder_day": 324.88739013671875,
+      "max_transformer_loading_pct": 25.286020324239296,
+      "mean_daily_peak_transformer_loading_pct": 18.117141220873894,
+      "fraction_halfhours_transformer_above_rating": 0.0
+    },
+    {
+      "network": "eulv",
+      "source_pu": 1.025,
+      "original_transformer_kva": 800.0,
+      "n_customers": 55,
+      "n_load_locations": 55,
+      "balanced_only": false,
+      "total_pv_kwp": 88.94001007080078,
+      "pv_kwp_to_transformer_kva": 0.11117501258850097,
+      "mean_gross_energy_kwh_per_feeder_day": 1003.3105564117432,
+      "mean_pv_energy_kwh_per_feeder_day": 324.88739013671875,
+      "max_transformer_loading_pct": 25.376550696589444,
+      "mean_daily_peak_transformer_loading_pct": 18.155117486765988,
+      "fraction_halfhours_transformer_above_rating": 0.0
+    },
+    {
+      "network": "eulv",
+      "source_pu": 1.0,
+      "original_transformer_kva": 800.0,
+      "n_customers": 55,
+      "n_load_locations": 55,
+      "balanced_only": false,
+      "total_pv_kwp": 88.94001007080078,
+      "pv_kwp_to_transformer_kva": 0.11117501258850097,
+      "mean_gross_energy_kwh_per_feeder_day": 1003.3105564117432,
+      "mean_pv_energy_kwh_per_feeder_day": 324.88739013671875,
+      "max_transformer_loading_pct": 25.476545392759224,
+      "mean_daily_peak_transformer_loading_pct": 18.19652991036637,
+      "fraction_halfhours_transformer_above_rating": 0.0
+    },
+    {
+      "network": "simbench_rural1",
+      "source_pu": 1.025,
+      "original_transformer_kva": 160.0,
+      "n_customers": 55,
+      "n_load_locations": 13,
+      "balanced_only": true,
+      "total_pv_kwp": 88.94001007080078,
+      "pv_kwp_to_transformer_kva": 0.5558750629425049,
+      "mean_gross_energy_kwh_per_feeder_day": 1003.3105564117432,
+      "mean_pv_energy_kwh_per_feeder_day": 324.88739013671875,
+      "max_transformer_loading_pct": 119.82867131049673,
+      "mean_daily_peak_transformer_loading_pct": 87.18696734946816,
+      "fraction_halfhours_transformer_above_rating": 0.0076103500761035,
+      "max_line_loading_pct": 41.388447094316376,
+      "fraction_halfhours_any_line_above_rating": 0.0
+    },
+    {
+      "network": "simbench_semiurb4",
+      "source_pu": 1.025,
+      "original_transformer_kva": 400.0,
+      "n_customers": 55,
+      "n_load_locations": 41,
+      "balanced_only": true,
+      "total_pv_kwp": 88.94001007080078,
+      "pv_kwp_to_transformer_kva": 0.22235002517700195,
+      "mean_gross_energy_kwh_per_feeder_day": 1003.3105564117432,
+      "mean_pv_energy_kwh_per_feeder_day": 324.88739013671875,
+      "max_transformer_loading_pct": 47.55415047682867,
+      "mean_daily_peak_transformer_loading_pct": 34.7816939155525,
+      "fraction_halfhours_transformer_above_rating": 0.0,
+      "max_line_loading_pct": 77.17429172481309,
+      "fraction_halfhours_any_line_above_rating": 0.0
+    }
+  ],
+  "temporal_boundary": "Observed clean half-hourly quasi-static samples, not subinterval thermal or voltage extrema. Historical nameplate PV power is median reported capacity on common clean test dates."
+}

@@ -1,0 +1,132 @@
+{
+  "status": "PASS",
+  "scope": "synthetic numerical audit; no empirical effect claim",
+  "checks": [
+    {
+      "tariff": "tou",
+      "diagnostics": {
+        "status": "Solved",
+        "iterations": 14,
+        "primal_residual": 9.724527900977275e-17,
+        "dual_residual": 2.0581652022458564e-16,
+        "energy_balance_max": 1.7763568394002505e-15,
+        "max_simultaneous_kw": 2.2385212841907282e-15,
+        "constraint_violation": 0.0
+      },
+      "derivatives": [
+        {
+          "finite_difference": -0.04020991304143351,
+          "adjoint": -0.04020991307698643,
+          "absolute_error": 3.555292171775193e-11
+        },
+        {
+          "finite_difference": 0.006776953705989186,
+          "adjoint": 0.006776953849311155,
+          "absolute_error": 1.4332196887623105e-10
+        },
+        {
+          "finite_difference": 0.06091298536237133,
+          "adjoint": 0.060912985470645435,
+          "absolute_error": 1.0827410495961587e-10
+        },
+        {
+          "finite_difference": -0.1977346831982807,
+          "adjoint": -0.1977346833919657,
+          "absolute_error": 1.9368501247285508e-10
+        },
+        {
+          "finite_difference": 0.060670808831320144,
+          "adjoint": 0.06067080871877227,
+          "absolute_error": 1.1254787379844089e-10
+        }
+      ],
+      "backward_seconds": 0.0024998000008054078
+    },
+    {
+      "tariff": "flat",
+      "diagnostics": {
+        "status": "Solved",
+        "iterations": 14,
+        "primal_residual": 8.947670409290052e-17,
+        "dual_residual": 8.702222361232697e-17,
+        "energy_balance_max": 1.7763568394002505e-15,
+        "max_simultaneous_kw": 4.255087107127964e-16,
+        "constraint_violation": 2.220446049250313e-16
+      },
+      "derivatives": [
+        {
+          "finite_difference": 0.07179864520923118,
+          "adjoint": 0.0717986452079462,
+          "absolute_error": 1.284986006488964e-12
+        },
+        {
+          "finite_difference": 0.016781549461164502,
+          "adjoint": 0.01678154945760831,
+          "absolute_error": 3.5561935340933104e-12
+        },
+        {
+          "finite_difference": 0.040700049637187874,
+          "adjoint": 0.04070004964048682,
+          "absolute_error": 3.2989444509468058e-12
+        },
+        {
+          "finite_difference": -0.0639119670942101,
+          "adjoint": -0.06391196709371204,
+          "absolute_error": 4.98059926634653e-13
+        },
+        {
+          "finite_difference": 0.03385914688736058,
+          "adjoint": 0.033859146893208535,
+          "absolute_error": 5.84795406544103e-12
+        }
+      ],
+      "backward_seconds": 0.002603899978566915
+    },
+    {
+      "tariff": "equal",
+      "diagnostics": {
+        "status": "Solved",
+        "iterations": 14,
+        "primal_residual": 1.4655507927801925e-15,
+        "dual_residual": 9.762269950759472e-16,
+        "energy_balance_max": 7.638334409421077e-14,
+        "max_simultaneous_kw": 3.5586999844396297e-14,
+        "constraint_violation": 6.320322595649456e-15
+      },
+      "derivatives": [
+        {
+          "finite_difference": 0.0,
+          "adjoint": 0.0,
+          "absolute_error": 0.0
+        },
+        {
+          "finite_difference": 0.0,
+          "adjoint": 0.0,
+          "absolute_error": 0.0
+        },
+        {
+          "finite_difference": 0.0,
+          "adjoint": 0.0,
+          "absolute_error": 0.0
+        },
+        {
+          "finite_difference": 0.0,
+          "adjoint": 0.0,
+          "absolute_error": 0.0
+        },
+        {
+          "finite_difference": 0.0,
+          "adjoint": 0.0,
+          "absolute_error": 0.0
+        }
+      ],
+      "backward_seconds": 0.000332399969920516
+    }
+  ],
+  "qp_timing": {
+    "n": 1000,
+    "median_seconds": 0.0007114000036381185,
+    "p95_seconds": 0.0010600999841699377
+  },
+  "derivative_backend": "Clarabel forward, rank-revealing active-set KKT adjoint, central differences. CVXPYlayers/diffcp unavailable on Windows; OSQP adjoint rejected after failed numerical gradient check."
+}

@@ -1,0 +1,29 @@
+{
+  "mse": {
+    "elapsed_seconds": 16.422183700022288,
+    "clean_days": 219,
+    "input_valid_slots": 15216,
+    "ac_failures": 0
+  },
+  "common_only": {
+    "elapsed_seconds": 36.35561220004456,
+    "clean_days": 219,
+    "input_valid_slots": 15216,
+    "ac_failures": 0
+  },
+  "idiosyncratic_only": {
+    "elapsed_seconds": 30.739419299992733,
+    "clean_days": 219,
+    "input_valid_slots": 15216,
+    "ac_failures": 0
+  },
+  "dfl": {
+    "elapsed_seconds": 13.4815316000022,
+    "clean_days": 219,
+    "input_valid_slots": 15216,
+    "ac_failures": 0
+  },
+  "definition": "Exact two-component counterfactual signal decomposition; clips negative constructed PV signals; no causal attribution to real household behavior",
+  "baseline": "msecont",
+  "regime": "physical"
+}

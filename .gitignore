@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+*.zip
+*.tiff
+*.preview.png
+*_files/
+.DS_Store
+Thumbs.db
+*.aux
+*.log
+*.out

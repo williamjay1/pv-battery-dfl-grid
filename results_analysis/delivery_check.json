@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-05",
+  "docx": "住宅光储决策学习研究方案.docx",
+  "render_pages": 12,
+  "all_pages_visually_reviewed": true,
+  "layout_findings": "No clipping, overlapping text or broken tables in final 12-page render.",
+  "research_status": "Design and data/LP preflight only. No DFL training or AC power-flow experiment completed.",
+  "core_literature_access": {
+    "full_text": 7,
+    "partial_text": 1,
+    "abstract_introduction_only": 3
+  },
+  "docx_sha256": "970a41ee0c5ee597e7541b8c228fb06107c4df89051413c8323f3e7ed605f0fe",
+  "package_files_sha256": {
+    "START_HERE.txt": "5c3c832c059d65554ecc5a69aefff91c4cc317a894ee07590ffbc76f562b0c75",
+    "configs/protocol.json": "294ada7d746d52dee49cbbe4ea0fc0fa4fa0f6588b7e78feab9a7c4650d869f4",
+    "scripts/prepare_ausgrid.py": "7de4ed0103b82c9358f05eb79c9bd46e8f4f80f1e4b082e9db7860c7f7d154a4",
+    "scripts/smoke_dispatch.py": "0ed12a08e61d1e6716ff11e02ef031cc3c7cc6d010ef5605f786941355970825",
+    "research/literature_decisions.json": "24ab48076b9682a392deaf6d7d0d9c94ec39786efd7095daad85d797cd44bb80",
+    "research/literature_analysis.txt": "1d63f7cd3239bda7d4851fd71f029f48cc598a071eac2f249684a1da1ae17ada",
+    "research/data_sources.json": "6cacdc2c669db1a2baadc1487c140ea73e00430c57f16e07614fa48f9ab3eed6",
+    "research/data_feasibility.txt": "1dd6d91ebd0f7ba930b82baba441c8fd9b7a64d8346b11350242157e2b1271f2",
+    "research/design_review.txt": "7d02db1cc6e823b116ba6ba872ae63e7edebc86975a6ee4fea754bedb959c801",
+    "research/ausgrid_download_log.json": "7fa53c965784fb39eacc223b89c0db32fe0e8a75da9a7b482912c061e06d01c7",
+    "datasets/panel_manifest.json": "db1e363d0d9a2db09b599773e29a1b968f04ee07a4f0940f865dc33b8e558222",
+    "results/smoke_dispatch_synthetic.json": "0890af7601115c7489fa6b1a2be8b6f0841918e6ac3666bb485d832f4b8ea477",
+    "results/smoke_dispatch_real_sample.json": "b9379b58122223179fca11e4d03947343d4064046aefeaf7db0b46e7dc80eaca"
+  }
+}

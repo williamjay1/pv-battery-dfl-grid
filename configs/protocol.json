@@ -1,0 +1,113 @@
+{
+  "project": "pv_battery_dfl_grid_20261005",
+  "status": "prospective_design_not_experimental_results",
+  "as_of": "2026-10-05",
+  "paths": {
+    "raw": "F:/AcademicData/pv_battery_dfl_grid_20261005/raw",
+    "work": "D:/MLWork/pv_battery_dfl_grid_20261005"
+  },
+  "data": {
+    "primary": "Ausgrid Solar Home Electricity Data via verified provenance mirror if official links remain unavailable",
+    "interval_minutes": 30,
+    "energy_unit": "kWh per half-hour; multiply by 2 for kW",
+    "battery_eligible_load_channel": "GC",
+    "controlled_load_channel": "CL: add to feeder demand and separate fixed-price bill; not offset by battery in primary design",
+    "pv_channel": "GG",
+    "timezone": "retain source clock convention; must confirm README before UTC conversion",
+    "train_start": "2010-07-01",
+    "train_end": "2011-12-31",
+    "validation_start": "2012-01-01",
+    "validation_end": "2012-06-30",
+    "test_start": "2012-07-01",
+    "test_end": "2013-06-30",
+    "heldout_households_target": 55,
+    "heldout_policy": "fixed ID hash before fitting; require enough jointly observed households; otherwise report smaller transfer study without duplication",
+    "missing_policy": "no future interpolation; short gaps <= 2 slots use trailing same-slot seasonal median with missing flag; long gaps exclude whole paired feeder-day",
+    "evaluation_mask": "identical across all controllers; main scoring on strict common clean days; report coverage and AUD/household/day, not incomplete annual bills; full calendar replay including source-estimated values is separately labeled sensitivity",
+    "raw_is_readonly": true
+  },
+  "forecast": {
+    "primary_model": "pooled MLP 128-64-48 with nonnegative PV output, capacity normalization and identical warm-start",
+    "inputs": ["past 48 and 336 half-hour PV/load values", "calendar known at issue time", "static installed PV capacity"],
+    "target": "48 next-day PV power values",
+    "load_forecast": "one fixed statistical forecast shared by every objective-comparison arm",
+    "no_future_realized_weather": true,
+    "objectives": ["MSE", "household_DFL_warm_start"],
+    "optional_architecture_replication": "small LSTM only after main preflight",
+    "statistical_baselines": ["previous-day persistence", "previous-week same-slot", "gradient_boosted_trees"],
+    "tuning_budget": "same 6 validation configurations per learning objective; fixed final seed set",
+    "pilot_seeds": [11, 23, 47],
+    "final_seeds": [11, 23, 47],
+    "reference_only_extra_seeds": [71, 97],
+    "tariff_conditioning": "train a DFL model per declared tariff or condition the model/loss on tariff; do not silently transfer objectives"
+  },
+  "battery": {
+    "capacity_kwh": 10.0,
+    "power_kw": 3.0,
+    "eta_charge": 0.95,
+    "eta_discharge": 0.95,
+    "soc_min": 0.1,
+    "soc_max": 0.9,
+    "initial_soc": 0.5,
+    "degradation_per_kwh_throughput_aud": 0.02,
+    "terminal_policy": "day-ahead energy end equals starting energy; no silent daily state reset",
+    "grid_charging": true,
+    "sensitivity": "capacity 5/10/15 kWh, power 3/5 kW and degradation 0/0.01/0.02/0.04 examined in limited factorial subsets"
+  },
+  "tariffs": {
+    "meaning": "explicit synthetic fixed retail tariff scenarios; not historical customer contracts",
+    "currency": "AUD",
+    "tou_buy_aud_per_kwh": {"00-07": 0.18, "07-16": 0.30, "16-21": 0.50, "21-22": 0.30, "22-24": 0.18},
+    "sell_aud_per_kwh": 0.08,
+    "flat_buy_aud_per_kwh": 0.30,
+    "heterogeneous_arm": "randomly assign fixed ToU and flat tariff at 50/50 using the frozen seed; bill comparison uses each household's own contract",
+    "no_spot_price_national_claim": true
+  },
+  "dispatch": {
+    "primary": "daily 48-slot battery schedule, settled on realized net load with continuous energy state",
+    "secondary": "rolling 48-slot horizon updated every 6 hours on prespecified four seasonal weeks; hourly updating on a small timing check",
+    "shared_tie_break": "strictly convex epsilon quadratic regularization on BATTERY actions/states only, identical in every learned arm; no forecast-dependent grid-flow penalty",
+    "null_effect_control": "equal buy and sell prices each slot, unlimited bidirectional connection and forecast-independent battery constraints: PV/load forecast is only a cost constant, so unique battery actions must not change",
+    "epsilon_scale": "dimensionless after per-unit normalization; validate 1e-6/1e-5/1e-4 and deterministic randomized tie-break diagnostic",
+    "no_perfect_foresight_deployable_baseline": true,
+    "perfect_foresight": "separate same-constraints lower bound only"
+  },
+  "network": {
+    "primary": "IEEE European low-voltage feeder, 55 single-phase loads; benchmark transfer not reconstructed Ausgrid feeder",
+    "solver": "OpenDSS or equivalent unbalanced AC solver, validated against supplied feeder reference",
+    "data_license": "verify source terms before redistribution; old IEEE repository LICENSE is TBD",
+    "secondary": "two SimBench LV topologies with ODbL/DBCL data attribution; balanced-model robustness only",
+    "pv_power_factor": 1.0,
+    "load_power_factor": 0.95,
+    "load_power_factor_sensitivity": [0.9, 1.0],
+    "study_voltage_band_pu": [0.95, 1.05],
+    "voltage_band_is_legal_standard": false,
+    "voltage_sensitivity_band_pu": [0.9, 1.1],
+    "thermal_limit_pu": 1.0,
+    "mapping_seeds": [101, 103, 107, 109, 113, 127, 131, 137, 139, 149],
+    "primary_household_panels": 3,
+    "primary_panel_size": 55,
+    "primary_mapping_per_panel": 1,
+    "battery_penetration": [0.5090909091, 1.0],
+    "primary_battery_counts": [28,55],
+    "secondary_low_penetration": 0.25,
+    "mapping_seeds_scope": "four seasonal weeks in frozen reference scenario, not ten full-year mappings per main cell",
+    "penetration_assignment": "nested deterministic household selection shared across controllers",
+    "no_test_calibrated_stress": true
+  },
+  "evaluation": {
+    "primary": ["common-clean-day electricity cost AUD per household per day", "observed-period feeder import and export peak kW with coverage", "voltage exceedance integral pu-hours with coverage", "transformer overload duration hours with coverage"],
+    "annual_metrics": "report only for a complete 365-day scenario replay; distinguish original estimated values from actual metered values",
+    "stochastic_baseline": "20 joint block-residual paths with shared first-stage battery actions across all scenarios; grid settlements may differ; no path-specific clairvoyant actions",
+    "secondary": ["95th percentile daily import peak", "voltage violation household-slot fraction", "battery throughput kWh", "curtailment kWh", "forecast MAE normalized by installed capacity", "solver failure count", "CPU time seconds"],
+    "comparison": "DFL minus identical architecture MSE controller, paired on dates, households, mappings and seeds",
+    "uncertainty": "paired seasonal moving-block bootstrap of daily paired outcomes with 7-day blocks, 2000 resamples; 14/28-day sensitivity; network mappings and seeds reported separately",
+    "not_independent_units": ["households on same feeder", "half-hour slots", "random mappings as independent real networks"],
+    "practical_thresholds": "design thresholds, not established empirical laws: 1% annual bill, 2% peak relative to baseline, and 0.1 percentage-point violation incidence; report absolute values and uncertainty"
+  },
+  "decision_gate": {
+    "stage": "conditional_research_start",
+    "stop_if": ["novelty fully covered by closest paper", "increment disappears after matching optimizer and tie-breaking", "data channels cannot distinguish gross PV and consumption", "DFL does not improve any decision criterion over fair statistical and robust baselines and provides no informative boundary result"],
+    "do_not": ["pick only adverse days", "change battery bounds by method", "claim field grid validation", "claim nationwide wholesale-price effect", "invent results"]
+  }
+}

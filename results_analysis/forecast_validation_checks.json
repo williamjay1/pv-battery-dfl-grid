@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "forecast_feature_causality": "Perturbing all current-target and later observations leaves both MLP and tree features exactly unchanged",
+  "entity_disjointness": "244 training-known and 55 heldout IDs disjoint; three network panels disjoint",
+  "temporal_separation": "All training target dates precede validation dates",
+  "predeclared_network_eligibility": "training+validation channel coverage at least 95 percent; customer27 excluded from network only",
+  "feature_dimensions": {
+    "mlp": 774,
+    "tree": 23
+  },
+  "sample_counts": {
+    "train": 132200,
+    "validation": 44373,
+    "test": 88609,
+    "heldout_test": 20032
+  },
+  "reload_prediction_max_absolute_discrepancy_kw": 0.0,
+  "all_main_scored_arrays_finite": {
+    "pv_persistence": true,
+    "pv_weekly": true,
+    "pv_hgb": true,
+    "pv_mlp_seed11": true,
+    "pv_mlp_seed23": true,
+    "pv_mlp_seed47": true,
+    "gc_shared": true
+  },
+  "array_bytes": 316914540
+}

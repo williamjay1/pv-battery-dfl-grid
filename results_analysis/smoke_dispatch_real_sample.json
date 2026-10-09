@@ -1,0 +1,10 @@
+{
+  "objective_aud": 6.068692026315791,
+  "max_balance_residual": 2.220446049250313e-16,
+  "terminal_energy_kwh": 5.0,
+  "max_simultaneous_charge_discharge_kw": 0.0,
+  "status": "PASS",
+  "input": "real downloaded Ausgrid preview: customer=1, date=1-Jul-10; GC and GG only; kWh/0.5h converted to kW",
+  "scope": "LP energy balance and feasible battery trajectory only; no DFL, AC power flow, or differentiable QP verified",
+  "wall_seconds": 0.005843100021593273
+}

@@ -1,0 +1,206 @@
+{
+  "status": "PASS",
+  "reviewed_at_local": "2026-10-09T04:27:06.243672+08:00",
+  "scope": "Final main manuscript DOCX visual QA only; no source manuscript, exporter or numerical results were modified.",
+  "docx": "D:\\MLWork\\pv_battery_dfl_grid_20261005\\revision_20261009\\EPSR_Revised_Manuscript.docx",
+  "docx_sha256": "ef4d37d09e6952811e25041d0faac997ce72e5c1b96d42c1611c8646a6935bc5",
+  "pdf": "D:\\MLWork\\pv_battery_dfl_grid_20261005\\revision_20261009\\temp\\docx_render_release2\\EPSR_Revised_Manuscript\\EPSR_Revised_Manuscript.pdf",
+  "pdf_sha256": "63a51efa3349353692ffa4ff736c685b1cc927a3bc0137c51db2aaa85d281c7d",
+  "page_count": 18,
+  "render_directory": "D:\\MLWork\\pv_battery_dfl_grid_20261005\\revision_20261009\\temp\\docx_render_release2\\EPSR_Revised_Manuscript",
+  "method": [
+    "All 18 authoritative release2 PNG pages were actually inspected using view_image at original resolution (1414 x 2000).",
+    "DOCX XML inspected for native OMML, table row counts and font sizes, drawing count and paragraph borders.",
+    "PyMuPDF checked all PDF text-span and image bounding boxes against physical page bounds and checked for Unicode replacement characters. Automated geometry supplements the actual visual inspection and is not claimed to be a complete collision detector."
+  ],
+  "structure": {
+    "omml_objects": 18,
+    "display_equation_lines_verified_visually": 6,
+    "numbered_equations_verified_visually": 4,
+    "tables": 5,
+    "table_rows_including_headers": [
+      5,
+      5,
+      5,
+      5,
+      6
+    ],
+    "table_font_sizes_pt": [
+      [
+        9.0
+      ],
+      [
+        9.0
+      ],
+      [
+        9.0
+      ],
+      [
+        9.0
+      ],
+      [
+        9.0
+      ]
+    ],
+    "drawings": 4,
+    "paragraph_borders": 0
+  },
+  "physical_page_boundary_violations": [],
+  "pages": [
+    {
+      "page": 1,
+      "png_sha256": "96fc32731ae1e06ed0b8a45e77b6167627a936505d79a71029456855c6316ee6",
+      "actual_visual_read": "release2_direct_original_resolution",
+      "replacement_char_count": 0,
+      "observations": "Title, abstract and introduction fit; previous blue border absent."
+    },
+    {
+      "page": 2,
+      "png_sha256": "b29bd23da05f672ccd094cf4e98332e2df88f98ef6219baab2f468b5b474bb3f",
+      "actual_visual_read": "release2_direct_original_resolution",
+      "replacement_char_count": 0,
+      "observations": "Introduction and methods prose readable with normal continuation."
+    },
+    {
+      "page": 3,
+      "png_sha256": "c2be7c100a8059cb4a8063b813c2cfebb83372cac1720cc656c7939df8c7b9c7",
+      "actual_visual_read": "release2_direct_original_resolution",
+      "replacement_char_count": 0,
+      "observations": "Equations (1)-(3), five display lines, and inline symbols readable without clipping."
+    },
+    {
+      "page": 4,
+      "png_sha256": "c55bf1190abf956aab1f67a159c1c0a0928158b48ab727cdc8779eb3caa07cf8",
+      "actual_visual_read": "release2_direct_original_resolution",
+      "replacement_char_count": 0,
+      "observations": "Equation (4), one display line, and inline mathematical symbols readable."
+    },
+    {
+      "page": 5,
+      "png_sha256": "34a2831231e2c9b9d02a3bae5186d7c29a5b8c0e2eb2a191abb4851c6f0d1080",
+      "actual_visual_read": "release2_direct_original_resolution",
+      "replacement_char_count": 0,
+      "observations": "Methods and uncertainty prose fit; continuous-SOC expression readable."
+    },
+    {
+      "page": 6,
+      "png_sha256": "1628734d471ffbba615afc06779f95f02cbe967febe63f2c6189cf87e382f4e4",
+      "actual_visual_read": "release2_direct_original_resolution",
+      "replacement_char_count": 0,
+      "observations": "Boundary correction V(e_start)-V(e_end) is complete as one native math object; no isolated closing parenthesis."
+    },
+    {
+      "page": 7,
+      "png_sha256": "4efbcdd5fef682e3b26b8374841b7e9a10c3c611aeb2bc92d91439564818e492",
+      "actual_visual_read": "release2_direct_original_resolution",
+      "replacement_char_count": 0,
+      "observations": "Table 1 has all four data rows (Panel 1, Panel 2, Panel 3, Held-out), all columns and its complete note on one page."
+    },
+    {
+      "page": 8,
+      "png_sha256": "89669f3021d1e3e8facf1f8ec717cfb4f66c2aa07dbfe4fa5e4b535668f31528",
+      "actual_visual_read": "release2_direct_original_resolution",
+      "replacement_char_count": 0,
+      "observations": "Table 2 has all four data rows and complete note; Figure 1 and its caption fit without collisions."
+    },
+    {
+      "page": 9,
+      "png_sha256": "4e9b0d600b59419a0412f490827b64634b82fff36b02bac6592853f4d04474ab",
+      "actual_visual_read": "release2_direct_original_resolution",
+      "replacement_char_count": 0,
+      "observations": "Table 3 has four data rows and complete note; timing and memory columns remain distinct."
+    },
+    {
+      "page": 10,
+      "png_sha256": "a6def743b7bc286178112b467b12c8add2627af178b21e0db8838af1b4354667",
+      "actual_visual_read": "release2_direct_original_resolution",
+      "replacement_char_count": 0,
+      "observations": "Figure 2, all four panels and complete caption, readable without clipping or text-line collisions."
+    },
+    {
+      "page": 11,
+      "png_sha256": "8a60246eb087e21cc92e870b08be47f967b7b3545c648e79a0a5a0ad192fe4d9",
+      "actual_visual_read": "release2_direct_original_resolution",
+      "replacement_char_count": 0,
+      "observations": "Table 4 has all four data rows, all columns and its complete note on one page."
+    },
+    {
+      "page": 12,
+      "png_sha256": "ac1cc6d41b73456218404cb53ddebf78af3fb4052c22a76462bc90a2b6b1af23",
+      "actual_visual_read": "release2_direct_original_resolution",
+      "replacement_char_count": 0,
+      "observations": "Figure 3, all four panels and complete caption, readable without clipping or text-line collisions."
+    },
+    {
+      "page": 13,
+      "png_sha256": "dbacef9f5d308c0f0700e2e14c11fde71fd6efb2038057e7c0a3b28e53f362fd",
+      "actual_visual_read": "release2_direct_original_resolution",
+      "replacement_char_count": 0,
+      "observations": "Figure 4, all four panels and complete caption, readable without clipping or text-line collisions."
+    },
+    {
+      "page": 14,
+      "png_sha256": "fa7079d3ee9c3ba95e21d0cabd3de79b2557c43c00e7091fe7d099de153022a4",
+      "actual_visual_read": "release2_direct_original_resolution",
+      "replacement_char_count": 0,
+      "observations": "Portability and discussion prose fits without overflow."
+    },
+    {
+      "page": 15,
+      "png_sha256": "b5fd3cbddca070137678d90a6894c432922ebd1248c9e2a6241274e3f6045255",
+      "actual_visual_read": "release2_direct_original_resolution",
+      "replacement_char_count": 0,
+      "observations": "Table 5 has all five data rows; three-column wrapping stays within cells and clear of table rules."
+    },
+    {
+      "page": 16,
+      "png_sha256": "4e6d015dc5c8a6dc9e169cad99178e9fe56c32a9d4c19c44238596fdd11a5ebc",
+      "actual_visual_read": "release2_direct_original_resolution",
+      "replacement_char_count": 0,
+      "observations": "Discussion, conclusion, declarations and references 1-6 readable."
+    },
+    {
+      "page": 17,
+      "png_sha256": "4ebe74a9fee6c6f483048bb6da917c76ad9239a8408eb162b8c95f7af421a41b",
+      "actual_visual_read": "release2_direct_original_resolution",
+      "replacement_char_count": 0,
+      "observations": "References 7-24, including diacritics and URLs, readable and within page."
+    },
+    {
+      "page": 18,
+      "png_sha256": "e66081be15c590696f3d58ca636813c6d717087105cfd2691ec13905fe086f60",
+      "actual_visual_read": "release2_direct_original_resolution",
+      "replacement_char_count": 0,
+      "observations": "References 25-37 fit; long final brochure URL stays inside the text column; no extra blank page."
+    }
+  ],
+  "findings": [],
+  "resolved_findings": [
+    {
+      "issue": "Earlier rendered Table 1 omitted Panel 2, Panel 3 and Held-out rows despite their presence in DOCX XML.",
+      "resolution": "release2 page 7 actually displays all four data rows, caption and note. Verified visually."
+    },
+    {
+      "issue": "Boundary-correction expression previously left a closing parenthesis alone at the next line.",
+      "resolution": "release2 page 6 displays the complete expression as one native OMML object; verified visually."
+    },
+    {
+      "issue": "Earlier blue paragraph border and raw inline mathematical markup.",
+      "resolution": "No paragraph borders remain in document or styles XML; all pages visually show the corrected appearance and mathematical notation."
+    },
+    {
+      "issue": "Short-table pagination required repair.",
+      "resolution": "All five tables now appear completely on single pages: 7, 8, 9, 11 and 15. Tables 1, 2 and 4 retain all four data rows."
+    }
+  ],
+  "other_observations": [
+    "Four figures occupy pages 8, 10, 12 and 13. No observed clipping, text-line collisions or unreadable labels at the reviewed page scale.",
+    "Four numbered display equations occupy six display lines; 18 native OMML objects are present in total, including inline mathematics.",
+    "All 37 references are present and visually readable on pages 16-18.",
+    "Whitespace associated with keeping tables and figures together is acceptable and does not require another revision."
+  ],
+  "limitations": [
+    "This PASS applies to the exact DOCX hash and the release2 PDF/PNG rendering recorded here; another Word version or print driver may paginate differently.",
+    "Scientific numerical agreement is covered by the prior independent 441-check manuscript audit and was not rerun during this visual-only task."
+  ]
+}

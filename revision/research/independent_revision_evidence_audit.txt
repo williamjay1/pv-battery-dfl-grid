@@ -1,0 +1,70 @@
+独立修订证据审查（只读；2026-10-09）
+
+阶段判定：内容整合阶段 CONDITIONAL。现有结果足以继续写成聚焦的工程比较论文；必须把“DFL 优越性”改成受费用、输入和网络评价标准约束的方法选择问题，并完成下面的口径与论断修正。以下不要求新增实验，也不把成熟方法或小幅增量本身判为不可发表。尚在执行的既定控制实验，应在汇总刷新后再落笔。
+
+审查范围与核验层级
+审阅 expanded_comparison_tou_all_baselines.json、expanded_comparison_flat_all_baselines.json、control_transfer_summary.json、storenet_frozen_external.json、network_revision_summary.json、resource_comparison_tou.json，以及生成这些结果的比较、外部迁移和连续控制相关代码。独立重算了七种方法的共同评价掩码与顺序、两种费率的主要逐户日配对成本差、相同完整费用掩码下的 throughput、StoreNet 主参考尺度的掩码和三种子差值，并重算了原外部冻结清单 19 项与 flat 补录清单 6 项文件哈希；均与相应记录一致。未重新运行模型训练或整个 AC 仿真，网络数值核对基于保存的输出及定义。
+
+快照边界：当前 control_transfer_summary.json 仍标记 partial；network_revision_summary.json 的 created_utc 为 2026-10-08T19:30:16.103980+00:00，仍列 9 个 pending controller groups。这些不是永久缺失结论，只说明不能把这一版快照写成全部控制条件均已完成。最终稿使用已完成汇总的新版本，且保留探索性修订的时间顺序。
+
+1. P1：工程选择贡献不能以 DFL 的默认优越性成立；应以指标与成本构成决定的方法排序成立。
+证据：all299、seed11、ToU 共同样本中 DFL 相对 continued MSE 的 modeled operating cost 差为 −0.01130970 AUD/户日，95% 日历区块区间 [−0.01281702, −0.00997284]；SAA20 相对 DFL 另低 −0.02462489 [−0.02728739, −0.02202457]。在 heldout55 中，SAA 相对 DFL 的成本差仍为 −0.00386277 [−0.00686539, −0.00087816]，但其纯零售电费反而高 +0.01704999，成本优势来自 throughput 代理费用减少 −0.02091276。这是工程代价定义改变排序的实质证据。
+网络 panel0、55 owner、ToU、seed11 中，DFL 相对 SAA 的成本高 +0.03072158，进口峰高 +4.88225 kW，损耗高 +0.39859 kWh/日；DFL 的零值计入平均电压超出量低 8.08202e−5 pu，区间不跨零。然而 DFL 的 screening 频率低 0.33883 个百分点，其区间 [−0.68498, +0.00666] 跨零。不同样本使这里的成本差不同于 all299，不可互换。
+必须修法：摘要和结论同时交代 SAA 的更低成本以及网络指标不一致；不能说 DFL 比 SAA“更有利于电网”或 screening 频率显著降低。将贡献表述为固定决策模型中的学习目标增量，以及这项增量在不同工程评价标准下是否值得采用。净负荷基线在本次实现中较差只支持这一实现的比较，不能推广成净负荷学习方法普遍不如 PV DFL。简单校准的接近表现也应保留。
+
+2. P1：统一费用构成和表格分母；“费用改善”不是“电费改善”或“寿命延长”。
+证据：七种方法的 household_id/date 顺序一致，all299 共同 GC/PV 可评估样本为 108641 户日，完整零售费用样本为 107713 户日。当前 JSON 的 mean_full_operating_cost、mean_retail_only 使用后者，而 mean_throughput_kwh 使用前者。逐户日配对成本差使用前者且排除 CL；CL 在相同户日、方法之间是共同项，所以差值本身正确，但不能以不同分母的绝对均值反推此差值。
+同一完整费用掩码上，ToU MSE/DFL throughput 为 12.19465544/11.87676034 kWh/日，flat 为 3.31844281/3.87125311；这与当前 JSON 中 GC/PV 掩码的绝对 throughput 均值略有不同。all299 ToU 的 DFL 成本改善由纯电费 −0.00494602 与 throughput 代理 −0.00636368 组成；flat 则是纯电费 −0.02321529 与代理费用 +0.01105390，合计 −0.01216139。flat 下 DFL 实际增加 throughput。
+必须修法：主表按一个共同掩码重聚合各费用分量和 throughput，或清楚列每列分母；只在相同费用定义与样本上验证 component sum。研究对象称 modeled operating cost，磨损项始终称 throughput wear proxy；不得把小幅节省包装成实证寿命收益，也不能将 ToU 的低 throughput 推广到 flat。0、0.01、0.04 是预定代理敏感性，不是已估计的真实寿命参数区间。无需新实验。
+
+3. P1：输入替换、优化器费用替换、匹配重训和连续运行回答不同问题，不能混成一个“稳健性通过”标签。
+证据：把负荷输入改成 persistence 后，冻结模型的 DFL−MSE 差为 +0.00312043 [−0.00063966, +0.00673365] AUD/户日；在 persistence 下重新匹配训练后为 −0.01475289 [−0.01847056, −0.01137698]。前者表示原任务信号的迁移不确定性，后者表示适配后可重新获得增量，不能互相替代。L01 已研究负荷预测质量，不能写成首次发现其影响。strong load 当前验证 RMSE 的改善较小，不能称其消除了负荷预测误差。
+当前汇总的 wear 0.01/0.04 包含 frozen repricing，不能仅据此声称已完成更改费用后的重新优化和重新训练。wear0 的 repricing 与 reoptimization 接近，不构成两者理论等价。
+连续控制代码审阅未发现初末 SOC 链或终端价值符号错误；保存的梯度审计通过。但它是每日 24 小时控制、训练时双日截断反传，测试按可评分的连续片段携带 SOC，缺测边界重新置 5 kWh；不是全年无中断运行，也不是 48 小时前视控制。V(e) 是工程近似终端价值；按片段边界调整后的目标和原始电费/代理费用必须分开。目标日 QC 用于离线评价分段，不向动作提供未来观测数值，但会影响可评分段与重置点。
+必须修法：结果分别命名 frozen transfer、matched retraining、fixed-action repricing、reoptimization；待既定输出完成后刷新汇总。连续方法段明确片段重置、双日训练和终端价值，提供原始与边界调整费用的对应含义。不要把训练代码已写成当成整套实验已完成；不要由迁移变化直接断言网络发现是负荷误差补偿的因果机制。
+
+4. P1：电压频率、零值计入平均超出量、条件超出幅度须分别解释，且欠压与过压不可混写。
+证据：panel0、EULV source 1.05、seed11 下，DFL screening 频率为 17.92428%，MSE 为 18.77698%，零值计入平均超出量亦较低；但 DFL 在发生过压的事件内平均超出量 0.00315941 pu，高于 MSE 的 0.00314440 pu。source 1.0 的条件欠压幅度也略高（0.01345944 对 0.01334551），其事件频率却较低。这些条件均值没有同级置信区间，不能称显著恶化；频率降低后事件组成变化足以使条件均值上升。
+source 1.025/1.0 的非零 narrow screening 主要是欠压，不能统称抑制 PV 过压。两个 SimBench 网络的 narrow screening 与平均超出量均为零，只能说明在这些设定下没有可改善的此类超出。source 1.0 wide-band 频率为 MSE 0.04393248%、DFL 0.04151100%；source 1.025 也存在极少 wide 欠压，故不能说所有设定 wide 全零。
+必须修法：以“screening frequency”和“unconditional mean excursion”精确命名主要结局；正文补一句剩余事件条件严重程度未一致降低。0.95–1.05 pu 仅为分析筛查带，不能称国家标准违规率。源电压改变了问题方向与基线暴露；以此解释异质性，不将其写成所有拓扑共同改善电压。
+
+5. P2：工程压力与并网约束是可复核情景，不是实际馈线合规、拥塞消除或精确容量规划。
+证据：主 EULV 使用 800 kVA 变压器；panel0 的 MSE 日峰负载平均约额定 18.12%，观测最大约 25.29%，最大相约 36.44%。没有显示热过载；DFL 的峰值减少不能转译成避免扩容或拥塞收益。无电池方法负载峰更低，也说明费用套利与系统峰值并非始终一致。
+3 kW/site 出口约束在 panel0 几乎不绑定，DFL 削减约 0.000658 kWh/馈线日；panel1 则约 10.887903 kWh/馈线日、损失售电收入 0.01583695 AUD/户日。不能只展示 panel0 的不变结果宣布对并网限制普遍稳健。该敏感性在既有电池动作下通过 PV 削减执行 PCC 上限，并重算损失收入；不是把限额纳入调度后重新最优控制，也不是 Volt–Watt 曲线。
+应写边界：3 kW 是依据 Ausgrid late-2026 规则构造的前瞻情景，不能冒称历史原样本连接规则；PF 0.90/0.95/1.00 与线缆 R/X ±10% 是单因素压力范围，不是测得参数的概率区间。报告绑定程度；不推断线路热约束已满足，因为缺少对应额定值。
+
+6. P1：外部验证应限定为冻结两模型的费用增量迁移；flat 的空结果和哈希补录时间需透明。
+证据：StoreNet 为 10 户有真实 gross load/PV 配对的住宅，主缓存形状 (10,366,48,3)，合格评价 2224 户日，只有 52 天十户共同齐全；不能把它说成十户全年完整馈线。主 2.2 参考尺度，三种子平均 ToU DFL−MSE 为 −0.01251537 [−0.01741350, −0.00766914] AUD/户日；flat 为 +0.00122443 [−0.00194006, +0.00458020]，不能称跨费率均获得外部确认。2.0/2.4 敏感性保留同一方向模式。
+已独立核验 19 项原冻结文件及 6 项 flat 补录文件当前哈希均匹配。flat addendum 明确为运行后的追记，旧 mtime 不能代替事前哈希清单；不能说全部 36 个分支在同一次运行前均已完成同等级加密冻结。未发现外部结果驱动的模型替换证据；ToU 主组有原清单。
+必须修法：说明外部数据以源 W 转 kW，直接 gross load/PV，CL 通道置零表示不加入此费用通道，不代表现实没有热水负荷；原数据实际电池通道不作为预测住宅净负荷，以研究电池反事实回放。2.2 为预定归一化 reference scale，因来源容量元数据冲突，不是逐户实测 nameplate；报告 2.0/2.4。原时钟与澳大利亚固定夜间掩码保持冻结，使用模型澳大利亚费率，不能写为爱尔兰实际账单、当地太阳几何或当地最优部署。仅比较旧 MSE/DFL，不能外推 SAA/校准排序，更没有独立确认 Ausgrid 的 AC 网络效应。公开承认 flat 哈希是 post-run 补录。
+
+7. P2：样本、时间区块和情景的推断层级必须保留，不能把规模数字当独立重复证据。
+证据：all299 包含 known244 与 heldout55；前者 88609、后者 20032 个共同 GC/PV 户日，二者相加等于 all299，不能作为三组独立复制。网络 panel0 仅 219 个 clean days，其中 2012-07 与 2013-03 为零，2013-02 为 7 天；其他 panel clean n 为 129、276、274。区块 bootstrap 保留共同日与时间依赖，不能校正缺测造成的季节构成差异。不能无条件乘 365 得到完整年节省。
+主要网络比较先平均三种子再对日历区块抽样；该区间不是随机初始化总体的不确定性。大量工程敏感性只有 seed11。244 个诊断情景不是 244 次独立验证。跨 postcode 的合成映射不等于紧凑馈线真实云层相关性；单 postcode 27 户与其他 27 户匹配比较也不识别地理聚集的因果效应。现有精细 AC 局部灵敏度分解是选定运行点的准静态解释，不是完整天气机制或动态稳定性验证。
+应写边界：表头附 cohort、fee、seed aggregation、clean n、网络条件；逐日区块区间称 conditional on observed households/days/settings。报告 paired effect 的区间，不用“绝大多数户受益”替代推广不确定性；fraction_households_benefit 是每户平均差小于零的样本比例。披露模型/规则修订由先前诊断触发，不写事前预注册。无需追加正式因果识别或无限多拓扑。
+
+8. P2：计算开销可以解释选择，但当前计时不足以证明 SAA 无法部署或 DFL 是效率最优方案。
+证据：1024 个测试问题、3 次计时中，DFL 和 continued MSE 每次决策约 1.46/1.45 ms，SAA20 约 9.34 ms；DFL 增量训练约 385.58 s，MSE 约 21.76 s，校准约 87.31 s。共享预测器预训练未计入；残差提取的 SAA 准备时间不能和全部 DFL 训练成本混作同一边界。程序虽然逐方法串行，机器上其他修订工作并发，记录已明确警告。RSS 还包括 Python、库与输入数据，不是模型参数内存。
+应写边界：如采用该表，名称为“measured computational footprint under the recorded shared-machine conditions”；同时列训练边界与平均解时，给出绝对毫秒数，避免只报倍数制造不可部署印象。保留 CPU 时间和并发警告，不作硬实时 SLA、能耗或通用硬件速度主张。两类方法在这一规模均是毫秒级，工程选择更应依据目标与所需不确定性处理，而非臆断 SAA 过慢。
+
+建议保留的一句话贡献
+Using measured household demand and PV traces with counterfactual battery dispatch and AC feeder simulation, the study isolates the incremental effect of private-cost learning under matched decision rules and shows how its value depends on the cost accounting, controller inputs, transfer conditions, and network metric used for engineering selection.
+
+证据层级与投稿定位
+真实测量只提供负荷和 PV 输入；电池策略、费用反事实和网络结果均来自规定模型。与 L01/L25 的区别不能是首次私人成本学习、首次物理支持或首次负荷质量敏感性；与 network-aware scheduling 的区别是这里不让每个住宅获得网态反馈后重新协调优化。EPSR 型应用工程增量可成立于公平比较、可靠的 AC 后果与有边界的方法选择，不必捏造新算法。当前最关键的剩余动作是把 1–6 的具体口径写进主文并刷新已计划的控制实验结果；这些完成后，不因 7–8 的透明边界继续无限扩充实验。
+
+内部定位文件（路径相对于 revision_20261009）
+results/expanded_comparison_tou_all_baselines.json
+results/expanded_comparison_flat_all_baselines.json
+results/control_transfer_summary.json
+results/storenet_frozen_external.json
+results/storenet_external_postrun_audit.json
+results/resource_comparison_tou.json
+results/continuous_gradient_audit.json
+network_revision_summary.json
+research/external_model_freeze.json
+research/external_flat_freeze_addendum.json
+research/storenet_external_protocol.json
+research/references_revision.txt
+research/literature_revision_evidence.txt
+相关代码位于项目 scripts/revision_forecast_compare.py、scripts/revision_forecast_external.py、scripts/revision_control_continuous.py。

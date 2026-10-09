@@ -1,0 +1,29 @@
+{
+  "recorded_utc": "2026-10-08T19:06:17.012230+00:00",
+  "status": "Frozen before external model predictions or controller outcomes; not preregistered",
+  "source": "https://doi.org/10.1038/s41597-024-03454-2",
+  "dataset": "https://doi.org/10.6084/m9.figshare.c.6829134",
+  "raw_files": "Original H*_W.csv minute-sampled power, not processed/interpolated files",
+  "reference_capacity_kwp": 2.2,
+  "reference_capacity_sensitivities_kwp": [
+    2.0,
+    2.4
+  ],
+  "capacity_caveat": "Paper reports 2.0-2.2 kWp, repository README reports 2.4 kW. These are predeclared reference normalization scales, not verified house-specific nameplates. No full-year peak fitting. All three scales reported.",
+  "calendar": "2020-01-01 through 2020-12-31 in source naive clock exactly as recorded; no timezone or hemisphere conversion",
+  "external_training": "None. Original Oct6 checkpoints and load forecaster frozen in external_model_freeze.json; no external adaptation, tuning, model/scale selection.",
+  "time_split": "2020-01-01 to 2020-01-07 only provides initial history; eligible targets 2020-01-08 onward require seven previous valid days. Later observations can enter subsequent history, as day-ahead deployment; no fitting.",
+  "household_selection": "All original residential files inspected. PV-equipped houses identified by positive production above 10 W in at least 10 minute observations, independent of any prediction/dispatch result; compare count against source ten PV households.",
+  "power_channels": {
+    "GC": "direct Consumption(W)/1000, total household electrical demand, not net grid import",
+    "CL": "zero because no separate controlled-load channel is supplied, not a claim that such appliances are absent",
+    "GG": "direct Production(W)/1000"
+  },
+  "battery_boundary": "Original households have batteries. Use measured gross load and PV; do not replay observed battery charge/discharge. Simulated fixed study battery is a counterfactual dispatch, not original Irish controller validation.",
+  "half_hour_aggregation": "Arithmetic mean of nonnegative finite minute power samples in each source-clock half hour; sampled-power approximation, not revenue-meter integrated energy. Retain bin only if >=27 distinct valid minutes (90% coverage) for both GC and GG. Do not interpolate, extrapolate, clip peaks, or impute missing bins.",
+  "minute_quality": "Ignore non-power extra columns. Parse timestamps; drop all rows at duplicated timestamps so ambiguous minutes contribute no coverage. Reject timestamps not exactly at a minute. Reject nonfinite or negative GC or GG jointly. No sample-based upper cutoff.",
+  "day_quality": "All 48 half-hour bins must pass for target and each of prior seven days; same pairs for every reference scale and frozen model.",
+  "invalid_reporting": "Report household coverage, negative/nonfinite/duplicate counts, half-hour coverage, eligible days and season distribution; preserve missing arrays as NaN.",
+  "cost_boundary": "Retain modeled Australian study tariff and battery parameters for comparability; modeled costs are not actual Irish bills.",
+  "claim_boundary": "Frozen-model external transfer test across country, calendar, metering and capacity-reference domain shifts. Does not independently validate Ausgrid network effects."
+}

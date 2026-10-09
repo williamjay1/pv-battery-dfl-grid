@@ -1,0 +1,38 @@
+{
+  "net_supervised_seed11": {
+    "validation": {
+      "negative_night_fraction": 0.003760366290936506,
+      "mean_negative_night_kw": -0.00015473399253096431,
+      "minimum_night_kw": -0.5273624658584595
+    },
+    "test": {
+      "negative_night_fraction": 0.004932365707763578,
+      "mean_negative_night_kw": -0.00019971786241512746,
+      "minimum_night_kw": -0.4647368788719177
+    }
+  },
+  "net_calibrated24_tou_seed11": {
+    "validation": {
+      "negative_night_fraction": 0.1963678250293553,
+      "mean_negative_night_kw": -0.024297885596752167,
+      "minimum_night_kw": -1.8681470155715942
+    },
+    "test": {
+      "negative_night_fraction": 0.20679774933693804,
+      "mean_negative_night_kw": -0.02551947720348835,
+      "minimum_night_kw": -1.8184455633163452
+    }
+  },
+  "net_calibrated24_flat_seed11": {
+    "validation": {
+      "negative_night_fraction": 0.02196721139221553,
+      "mean_negative_night_kw": -0.0011221821187064052,
+      "minimum_night_kw": -0.7129136919975281
+    },
+    "test": {
+      "negative_night_fraction": 0.022027332485630918,
+      "mean_negative_night_kw": -0.001098185544833541,
+      "minimum_night_kw": -0.5840240120887756
+    }
+  }
+}

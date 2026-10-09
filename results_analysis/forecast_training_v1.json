@@ -1,0 +1,564 @@
+{
+  "status": "complete",
+  "selection": "validation only; test metrics computed after frozen fitting",
+  "threads": 3,
+  "n_train": 132200,
+  "n_validation": 44373,
+  "tuning": [
+    {
+      "seed": 11,
+      "config": {
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "batch_size": 512,
+        "max_epochs": 30,
+        "patience": 6
+      },
+      "best_epoch": 2,
+      "validation_normalized_mse": 0.01319107831561892,
+      "runtime_seconds": 6.073465399967972,
+      "trace": [
+        {
+          "epoch": 1,
+          "train_mse": 0.016317152363866702,
+          "validation_mse": 0.013372599664409757,
+          "elapsed_seconds": 0.6999029999715276
+        },
+        {
+          "epoch": 2,
+          "train_mse": 0.012971059441476293,
+          "validation_mse": 0.01319107831561892,
+          "elapsed_seconds": 1.3601808999665082
+        },
+        {
+          "epoch": 3,
+          "train_mse": 0.012206723938573506,
+          "validation_mse": 0.013664554233760359,
+          "elapsed_seconds": 2.1376202999963425
+        },
+        {
+          "epoch": 4,
+          "train_mse": 0.011304248732073675,
+          "validation_mse": 0.0142917020528346,
+          "elapsed_seconds": 2.962861799984239
+        },
+        {
+          "epoch": 5,
+          "train_mse": 0.010551011117059687,
+          "validation_mse": 0.014558244449485752,
+          "elapsed_seconds": 3.8483542999601923
+        },
+        {
+          "epoch": 6,
+          "train_mse": 0.009975556370530294,
+          "validation_mse": 0.014959057747951903,
+          "elapsed_seconds": 4.599035099963658
+        },
+        {
+          "epoch": 7,
+          "train_mse": 0.009476400418277497,
+          "validation_mse": 0.015349395222155553,
+          "elapsed_seconds": 5.3368194999638945
+        },
+        {
+          "epoch": 8,
+          "train_mse": 0.009106030782710045,
+          "validation_mse": 0.015159117656021704,
+          "elapsed_seconds": 6.069573099957779
+        }
+      ],
+      "checkpoint": "D:\\MLWork\\pv_battery_dfl_grid_20261005\\checkpoints\\forecast_mlp_tune0_seed11.pt"
+    },
+    {
+      "seed": 11,
+      "config": {
+        "learning_rate": 0.0005,
+        "weight_decay": 0.001,
+        "batch_size": 512,
+        "max_epochs": 30,
+        "patience": 6
+      },
+      "best_epoch": 2,
+      "validation_normalized_mse": 0.013293840704645609,
+      "runtime_seconds": 5.627758799993899,
+      "trace": [
+        {
+          "epoch": 1,
+          "train_mse": 0.018062451976251403,
+          "validation_mse": 0.013650664871698736,
+          "elapsed_seconds": 0.725323099992238
+        },
+        {
+          "epoch": 2,
+          "train_mse": 0.013284961725564029,
+          "validation_mse": 0.013293840704645609,
+          "elapsed_seconds": 1.402893699996639
+        },
+        {
+          "epoch": 3,
+          "train_mse": 0.012387643574529894,
+          "validation_mse": 0.013544709942215998,
+          "elapsed_seconds": 2.1445073999930173
+        },
+        {
+          "epoch": 4,
+          "train_mse": 0.011515473512743858,
+          "validation_mse": 0.01430008344584574,
+          "elapsed_seconds": 2.848420599999372
+        },
+        {
+          "epoch": 5,
+          "train_mse": 0.010922997509398456,
+          "validation_mse": 0.01419044320226698,
+          "elapsed_seconds": 3.5479083000100218
+        },
+        {
+          "epoch": 6,
+          "train_mse": 0.010432831736425228,
+          "validation_mse": 0.014358778070587337,
+          "elapsed_seconds": 4.247407199989539
+        },
+        {
+          "epoch": 7,
+          "train_mse": 0.010096971295807798,
+          "validation_mse": 0.015128289329039302,
+          "elapsed_seconds": 4.939270000031684
+        },
+        {
+          "epoch": 8,
+          "train_mse": 0.009760758376676087,
+          "validation_mse": 0.014791217831149901,
+          "elapsed_seconds": 5.626604499993846
+        }
+      ],
+      "checkpoint": "D:\\MLWork\\pv_battery_dfl_grid_20261005\\checkpoints\\forecast_mlp_tune1_seed11.pt"
+    }
+  ],
+  "seeds": [
+    11,
+    23,
+    47
+  ],
+  "hardware": "CPU only",
+  "failures": [],
+  "selected_configuration_index": 0,
+  "final_training": [
+    {
+      "seed": 11,
+      "config": {
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "batch_size": 512,
+        "max_epochs": 30,
+        "patience": 6
+      },
+      "best_epoch": 2,
+      "validation_normalized_mse": 0.01319107831561892,
+      "runtime_seconds": 6.073465399967972,
+      "trace": [
+        {
+          "epoch": 1,
+          "train_mse": 0.016317152363866702,
+          "validation_mse": 0.013372599664409757,
+          "elapsed_seconds": 0.6999029999715276
+        },
+        {
+          "epoch": 2,
+          "train_mse": 0.012971059441476293,
+          "validation_mse": 0.01319107831561892,
+          "elapsed_seconds": 1.3601808999665082
+        },
+        {
+          "epoch": 3,
+          "train_mse": 0.012206723938573506,
+          "validation_mse": 0.013664554233760359,
+          "elapsed_seconds": 2.1376202999963425
+        },
+        {
+          "epoch": 4,
+          "train_mse": 0.011304248732073675,
+          "validation_mse": 0.0142917020528346,
+          "elapsed_seconds": 2.962861799984239
+        },
+        {
+          "epoch": 5,
+          "train_mse": 0.010551011117059687,
+          "validation_mse": 0.014558244449485752,
+          "elapsed_seconds": 3.8483542999601923
+        },
+        {
+          "epoch": 6,
+          "train_mse": 0.009975556370530294,
+          "validation_mse": 0.014959057747951903,
+          "elapsed_seconds": 4.599035099963658
+        },
+        {
+          "epoch": 7,
+          "train_mse": 0.009476400418277497,
+          "validation_mse": 0.015349395222155553,
+          "elapsed_seconds": 5.3368194999638945
+        },
+        {
+          "epoch": 8,
+          "train_mse": 0.009106030782710045,
+          "validation_mse": 0.015159117656021704,
+          "elapsed_seconds": 6.069573099957779
+        }
+      ],
+      "checkpoint": "D:\\MLWork\\pv_battery_dfl_grid_20261005\\checkpoints\\forecast_mlp_seed11.pt"
+    },
+    {
+      "seed": 23,
+      "config": {
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "batch_size": 512,
+        "max_epochs": 30,
+        "patience": 6
+      },
+      "best_epoch": 2,
+      "validation_normalized_mse": 0.013236056776942763,
+      "runtime_seconds": 5.994139799964614,
+      "trace": [
+        {
+          "epoch": 1,
+          "train_mse": 0.016959076517750474,
+          "validation_mse": 0.013405559331950818,
+          "elapsed_seconds": 0.67058909998741
+        },
+        {
+          "epoch": 2,
+          "train_mse": 0.012856228306280863,
+          "validation_mse": 0.013236056776942763,
+          "elapsed_seconds": 1.428687900013756
+        },
+        {
+          "epoch": 3,
+          "train_mse": 0.01184836501590964,
+          "validation_mse": 0.013961882660703253,
+          "elapsed_seconds": 2.228956000006292
+        },
+        {
+          "epoch": 4,
+          "train_mse": 0.010977602271749194,
+          "validation_mse": 0.014684389916311956,
+          "elapsed_seconds": 2.964615100005176
+        },
+        {
+          "epoch": 5,
+          "train_mse": 0.01025819447855275,
+          "validation_mse": 0.015360369551316925,
+          "elapsed_seconds": 3.7177484999992885
+        },
+        {
+          "epoch": 6,
+          "train_mse": 0.00963984004561416,
+          "validation_mse": 0.016175684916249454,
+          "elapsed_seconds": 4.413861399982125
+        },
+        {
+          "epoch": 7,
+          "train_mse": 0.009111263071117802,
+          "validation_mse": 0.016088150252862043,
+          "elapsed_seconds": 5.170983699965291
+        },
+        {
+          "epoch": 8,
+          "train_mse": 0.00871002772758164,
+          "validation_mse": 0.016288536384188267,
+          "elapsed_seconds": 5.992940799973439
+        }
+      ],
+      "checkpoint": "D:\\MLWork\\pv_battery_dfl_grid_20261005\\checkpoints\\forecast_mlp_seed23.pt"
+    },
+    {
+      "seed": 47,
+      "config": {
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "batch_size": 512,
+        "max_epochs": 30,
+        "patience": 6
+      },
+      "best_epoch": 1,
+      "validation_normalized_mse": 0.013441771488915991,
+      "runtime_seconds": 5.195712899963837,
+      "trace": [
+        {
+          "epoch": 1,
+          "train_mse": 0.016840424956232534,
+          "validation_mse": 0.013441771488915991,
+          "elapsed_seconds": 0.7271492999861948
+        },
+        {
+          "epoch": 2,
+          "train_mse": 0.012817855746726226,
+          "validation_mse": 0.013661472306601025,
+          "elapsed_seconds": 1.5366524999844842
+        },
+        {
+          "epoch": 3,
+          "train_mse": 0.011771232580227858,
+          "validation_mse": 0.01403873884251356,
+          "elapsed_seconds": 2.3473967000027187
+        },
+        {
+          "epoch": 4,
+          "train_mse": 0.010919164921778413,
+          "validation_mse": 0.014630482841377475,
+          "elapsed_seconds": 3.0353395999991335
+        },
+        {
+          "epoch": 5,
+          "train_mse": 0.010196382598091993,
+          "validation_mse": 0.014380036226838158,
+          "elapsed_seconds": 3.76733860000968
+        },
+        {
+          "epoch": 6,
+          "train_mse": 0.00960359547839538,
+          "validation_mse": 0.014617123620763835,
+          "elapsed_seconds": 4.476462899998296
+        },
+        {
+          "epoch": 7,
+          "train_mse": 0.009087250198007938,
+          "validation_mse": 0.014997925311789288,
+          "elapsed_seconds": 5.194515299983323
+        }
+      ],
+      "checkpoint": "D:\\MLWork\\pv_battery_dfl_grid_20261005\\checkpoints\\forecast_mlp_seed47.pt"
+    }
+  ],
+  "tree_training": {
+    "pv_hgb": {
+      "sampled_training_household_days": 12500,
+      "training_half_hours": 600000,
+      "validation_household_days": 2500,
+      "tuning": [
+        {
+          "max_leaf_nodes": 15,
+          "validation_mse": 0.012667628301430329,
+          "runtime_seconds": 2.8384814000455663
+        },
+        {
+          "max_leaf_nodes": 31,
+          "validation_mse": 0.01311099394910139,
+          "runtime_seconds": 3.1065365000395104
+        }
+      ],
+      "selected_index": 0
+    },
+    "gc_shared": {
+      "sampled_training_household_days": 12500,
+      "training_half_hours": 600000,
+      "validation_household_days": 2500,
+      "tuning": [
+        {
+          "max_leaf_nodes": 15,
+          "validation_mse": 0.0031610465958744343,
+          "runtime_seconds": 3.228355399973225
+        },
+        {
+          "max_leaf_nodes": 31,
+          "validation_mse": 0.0031740301387881333,
+          "runtime_seconds": 3.6915710999746807
+        }
+      ],
+      "selected_index": 0
+    }
+  },
+  "metrics": {
+    "pv_persistence": {
+      "validation": {
+        "household_days": 44373,
+        "mae_kw": 0.10454408079385757,
+        "rmse_kw": 0.28137823939323425,
+        "capacity_normalized_mae": 0.06221339851617813,
+        "capacity_normalized_rmse": 0.14154601097106934,
+        "bias_kw": 0.0007238194812089205
+      },
+      "test": {
+        "household_days": 88609,
+        "mae_kw": 0.10376492142677307,
+        "rmse_kw": 0.28219372034072876,
+        "capacity_normalized_mae": 0.0620255209505558,
+        "capacity_normalized_rmse": 0.14283065497875214,
+        "bias_kw": 0.0003507732762955129
+      },
+      "heldout_test": {
+        "household_days": 20032,
+        "mae_kw": 0.09930064529180527,
+        "rmse_kw": 0.2616982161998749,
+        "capacity_normalized_mae": 0.06049931049346924,
+        "capacity_normalized_rmse": 0.14033082127571106,
+        "bias_kw": 0.00032646310864947736
+      }
+    },
+    "pv_weekly": {
+      "validation": {
+        "household_days": 44373,
+        "mae_kw": 0.12697763741016388,
+        "rmse_kw": 0.3243992328643799,
+        "capacity_normalized_mae": 0.07548363506793976,
+        "capacity_normalized_rmse": 0.16305987536907196,
+        "bias_kw": 0.006687130779027939
+      },
+      "test": {
+        "household_days": 88609,
+        "mae_kw": 0.11972042173147202,
+        "rmse_kw": 0.3110445737838745,
+        "capacity_normalized_mae": 0.07139681279659271,
+        "capacity_normalized_rmse": 0.156735360622406,
+        "bias_kw": 0.0013812207616865635
+      },
+      "heldout_test": {
+        "household_days": 20032,
+        "mae_kw": 0.11529231816530228,
+        "rmse_kw": 0.2910868525505066,
+        "capacity_normalized_mae": 0.06996215134859085,
+        "capacity_normalized_rmse": 0.15467137098312378,
+        "bias_kw": 0.001122135785408318
+      }
+    },
+    "pv_hgb": {
+      "validation": {
+        "household_days": 44373,
+        "mae_kw": 0.0976743996143341,
+        "rmse_kw": 0.22682654857635498,
+        "capacity_normalized_mae": 0.058073557913303375,
+        "capacity_normalized_rmse": 0.11398237943649292,
+        "bias_kw": -0.0016650838078930974
+      },
+      "test": {
+        "household_days": 88609,
+        "mae_kw": 0.09747736901044846,
+        "rmse_kw": 0.22544443607330322,
+        "capacity_normalized_mae": 0.058102983981370926,
+        "capacity_normalized_rmse": 0.11369049549102783,
+        "bias_kw": -0.0106465183198452
+      },
+      "heldout_test": {
+        "household_days": 20032,
+        "mae_kw": 0.09376673400402069,
+        "rmse_kw": 0.21001948416233063,
+        "capacity_normalized_mae": 0.056942328810691833,
+        "capacity_normalized_rmse": 0.11196472495794296,
+        "bias_kw": -0.009082376025617123
+      }
+    },
+    "pv_mlp_seed11": {
+      "validation": {
+        "household_days": 44373,
+        "mae_kw": 0.10223498940467834,
+        "rmse_kw": 0.22870813310146332,
+        "capacity_normalized_mae": 0.06103168800473213,
+        "capacity_normalized_rmse": 0.1148524209856987,
+        "bias_kw": -0.0008674007258377969
+      },
+      "test": {
+        "household_days": 88609,
+        "mae_kw": 0.0994061604142189,
+        "rmse_kw": 0.22456960380077362,
+        "capacity_normalized_mae": 0.05949540436267853,
+        "capacity_normalized_rmse": 0.1135212630033493,
+        "bias_kw": -0.006367822643369436
+      },
+      "heldout_test": {
+        "household_days": 20032,
+        "mae_kw": 0.09640447795391083,
+        "rmse_kw": 0.2105530947446823,
+        "capacity_normalized_mae": 0.05894174426794052,
+        "capacity_normalized_rmse": 0.1125459298491478,
+        "bias_kw": -0.0021672570146620274
+      }
+    },
+    "pv_mlp_seed23": {
+      "validation": {
+        "household_days": 44373,
+        "mae_kw": 0.10178624093532562,
+        "rmse_kw": 0.22962163388729095,
+        "capacity_normalized_mae": 0.06067800521850586,
+        "capacity_normalized_rmse": 0.11504806578159332,
+        "bias_kw": -0.001308338949456811
+      },
+      "test": {
+        "household_days": 88609,
+        "mae_kw": 0.0989019051194191,
+        "rmse_kw": 0.22520020604133606,
+        "capacity_normalized_mae": 0.05918329209089279,
+        "capacity_normalized_rmse": 0.11375882476568222,
+        "bias_kw": -0.006598311010748148
+      },
+      "heldout_test": {
+        "household_days": 20032,
+        "mae_kw": 0.09604251384735107,
+        "rmse_kw": 0.2119351625442505,
+        "capacity_normalized_mae": 0.058730706572532654,
+        "capacity_normalized_rmse": 0.1129513680934906,
+        "bias_kw": -0.003566233441233635
+      }
+    },
+    "pv_mlp_seed47": {
+      "validation": {
+        "household_days": 44373,
+        "mae_kw": 0.10339387506246567,
+        "rmse_kw": 0.2309444099664688,
+        "capacity_normalized_mae": 0.061794597655534744,
+        "capacity_normalized_rmse": 0.11593865603208542,
+        "bias_kw": 0.005759957246482372
+      },
+      "test": {
+        "household_days": 88609,
+        "mae_kw": 0.10080178081989288,
+        "rmse_kw": 0.2277921885251999,
+        "capacity_normalized_mae": 0.06025093048810959,
+        "capacity_normalized_rmse": 0.11475808918476105,
+        "bias_kw": 0.0025328395422548056
+      },
+      "heldout_test": {
+        "household_days": 20032,
+        "mae_kw": 0.09927856177091599,
+        "rmse_kw": 0.215737447142601,
+        "capacity_normalized_mae": 0.060448065400123596,
+        "capacity_normalized_rmse": 0.11448615044355392,
+        "bias_kw": 0.00667555071413517
+      }
+    }
+  },
+  "load_metrics": {
+    "validation": {
+      "household_days": 44373,
+      "mae_kw": 0.2976604104042053,
+      "rmse_kw": 0.5473156571388245,
+      "capacity_normalized_mae": 0.20538462698459625,
+      "capacity_normalized_rmse": 0.3954525887966156,
+      "bias_kw": 0.0003510013048071414
+    },
+    "test": {
+      "household_days": 88609,
+      "mae_kw": 0.30749550461769104,
+      "rmse_kw": 0.5744395852088928,
+      "capacity_normalized_mae": 0.21235515177249908,
+      "capacity_normalized_rmse": 0.4144459366798401,
+      "bias_kw": -0.0003739028761629015
+    },
+    "heldout_test": {
+      "household_days": 20032,
+      "mae_kw": 0.3121662139892578,
+      "rmse_kw": 0.5838956236839294,
+      "capacity_normalized_mae": 0.22449681162834167,
+      "capacity_normalized_rmse": 0.4388512074947357,
+      "bias_kw": 0.00032804059446789324
+    }
+  },
+  "load_metric_note": "Load normalized metrics use PV capacity only for a common scale; interpret primary load MAE/RMSE in kW.",
+  "software_versions": {
+    "numpy": "2.4.6",
+    "torch": "2.14.1+cpu",
+    "sklearn": "1.9.1"
+  },
+  "runtime_seconds": 87.41850699996576,
+  "array_file": "D:\\MLWork\\pv_battery_dfl_grid_20261005\\datasets\\forecast_arrays_v1.npz",
+  "array_bytes": 316914540
+}

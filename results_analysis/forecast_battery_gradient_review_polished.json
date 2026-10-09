@@ -1,0 +1,5774 @@
+{
+  "status": "PASS",
+  "scope": "24 real clean training household-days per tariff, three deterministic random directions, three finite-difference steps, no skipped samples",
+  "actual_settlement": "metered GC minus metered PV; predicted input shared GC minus seed11 PV",
+  "runtime_seconds": 9.147778199985623,
+  "failures": [],
+  "max_absolute_error_step1e4": 4.016977445120418e-09,
+  "max_scaled_relative_error_step1e4": 1.3482039498678172e-07,
+  "max_absolute_error_step1e5": 4.5403633165685964e-08,
+  "max_scaled_relative_error_step1e5": 2.70862577713773e-06,
+  "max_batch_single_gradient_gap": 0.0,
+  "records": [
+    {
+      "tariff": "tou",
+      "household_id": 1,
+      "date": "2010-07-08",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.1934709040398747,
+      "actual_grid_min_abs_kw": 0.16245200484991074,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.014010870007185547,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.014010870140523934,
+              "absolute_error": 1.3333838720652746e-10,
+              "scaled_relative_error": 9.516781318304425e-09
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.014010870001968101,
+              "absolute_error": 5.217446266692072e-12,
+              "scaled_relative_error": 3.7238560232278777e-10
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.014010867932512381,
+              "absolute_error": 2.0746731659027073e-09,
+              "scaled_relative_error": 1.480759699318244e-07
+            }
+          ]
+        },
+        {
+          "adjoint": -0.00511803356367447,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.005118033454820647,
+              "absolute_error": 1.0885382265707344e-10,
+              "scaled_relative_error": 2.1268680891362172e-08
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.005118033445938863,
+              "absolute_error": 1.177356068540747e-10,
+              "scaled_relative_error": 2.300407087786797e-08
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.005118031687345592,
+              "absolute_error": 1.8763288778603227e-09,
+              "scaled_relative_error": 3.6661128820601566e-07
+            }
+          ]
+        },
+        {
+          "adjoint": -0.02838564361050172,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.028385643636497093,
+              "absolute_error": 2.599537252123696e-11,
+              "scaled_relative_error": 9.157929569655126e-10
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.02838564339135985,
+              "absolute_error": 2.191418713159976e-10,
+              "scaled_relative_error": 7.720165669765634e-09
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.028385642547590347,
+              "absolute_error": 1.0629113735005635e-09,
+              "scaled_relative_error": 3.744538570572776e-08
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "tou",
+      "household_id": 13,
+      "date": "2011-06-08",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.2554503278525983,
+      "actual_grid_min_abs_kw": 0.06000000238418579,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": -0.002654518835691337,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.002654518834077635,
+              "absolute_error": 1.6137022273987611e-12,
+              "scaled_relative_error": 6.079076199052444e-10
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.0026545188269722075,
+              "absolute_error": 8.719129584999763e-12,
+              "scaled_relative_error": 3.2846365479749825e-09
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.002654518826972207,
+              "absolute_error": 8.719130018680632e-12,
+              "scaled_relative_error": 3.284636711349551e-09
+            }
+          ]
+        },
+        {
+          "adjoint": 0.00678552041405326,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0067855204139988246,
+              "absolute_error": 5.4435622676152207e-14,
+              "scaled_relative_error": 8.022320965008438e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0067855204033406835,
+              "absolute_error": 1.0712576659077655e-11,
+              "scaled_relative_error": 1.578740613157865e-09
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.006785520501040309,
+              "absolute_error": 8.698704864057438e-11,
+              "scaled_relative_error": 1.2819510106444765e-08
+            }
+          ]
+        },
+        {
+          "adjoint": 0.025215984778517837,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.025215984780224687,
+              "absolute_error": 1.7068499391648118e-12,
+              "scaled_relative_error": 6.768920405216087e-11
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.025215984793547364,
+              "absolute_error": 1.502952623466669e-11,
+              "scaled_relative_error": 5.960316980565703e-10
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.025215984766902007,
+              "absolute_error": 1.1615829825784019e-11,
+              "scaled_relative_error": 4.606534278875299e-10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "tou",
+      "household_id": 28,
+      "date": "2010-11-06",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.42923999760623477,
+      "actual_grid_min_abs_kw": 0.0011986494064331055,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.01858857991856183,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.018588579918876746,
+              "absolute_error": 3.1491476093492565e-13,
+              "scaled_relative_error": 1.6941302795009585e-11
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.018588579919764925,
+              "absolute_error": 1.2030931806350509e-12,
+              "scaled_relative_error": 6.472216736448071e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.018588579875356004,
+              "absolute_error": 4.320582780437121e-11,
+              "scaled_relative_error": 2.324321061299984e-09
+            }
+          ]
+        },
+        {
+          "adjoint": -0.0791584782982521,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.07915847829842448,
+              "absolute_error": 1.7238988014867118e-13,
+              "scaled_relative_error": 2.1777816331785437e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.07915847829664813,
+              "absolute_error": 1.6039669592515793e-12,
+              "scaled_relative_error": 2.0262731090006268e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.07915847823891653,
+              "absolute_error": 5.933556423975972e-11,
+              "scaled_relative_error": 7.495793945936669e-10
+            }
+          ]
+        },
+        {
+          "adjoint": -0.01158889162353007,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.011588891623670605,
+              "absolute_error": 1.4053515295930907e-13,
+              "scaled_relative_error": 1.2126712158759209e-11
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.01158889162633514,
+              "absolute_error": 2.8050704120596848e-12,
+              "scaled_relative_error": 2.4204820465188504e-10
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.011588891579705772,
+              "absolute_error": 4.3824298356920366e-11,
+              "scaled_relative_error": 3.781578064630406e-09
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "tou",
+      "household_id": 43,
+      "date": "2011-10-25",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.39896251011344985,
+      "actual_grid_min_abs_kw": 0.010166741907596588,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": -0.023654909937810855,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.023654909937942392,
+              "absolute_error": 1.3153714228941737e-13,
+              "scaled_relative_error": 5.560669756701642e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.023654909935277857,
+              "absolute_error": 2.5329981168109583e-12,
+              "scaled_relative_error": 1.0708128348280555e-10
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.02365490993083696,
+              "absolute_error": 6.9738936847585364e-12,
+              "scaled_relative_error": 2.94818018884579e-10
+            }
+          ]
+        },
+        {
+          "adjoint": -0.08359840116608741,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.08359840116600736,
+              "absolute_error": 8.004708007547379e-14,
+              "scaled_relative_error": 9.5751927021238e-13
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.08359840116711759,
+              "absolute_error": 1.0301759445496828e-12,
+              "scaled_relative_error": 1.232291443577141e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.08359840116822781,
+              "absolute_error": 2.1403989691748393e-12,
+              "scaled_relative_error": 2.5603348141403377e-11
+            }
+          ]
+        },
+        {
+          "adjoint": -0.039140435446407135,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.03914043544661627,
+              "absolute_error": 2.0913826226376386e-13,
+              "scaled_relative_error": 5.3432788847995316e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.03914043544828161,
+              "absolute_error": 1.8744727992014987e-12,
+              "scaled_relative_error": 4.789095414327574e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.03914043543717938,
+              "absolute_error": 9.227757447050067e-12,
+              "scaled_relative_error": 2.3576021425937205e-10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "tou",
+      "household_id": 56,
+      "date": "2011-03-25",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.35830548586872957,
+      "actual_grid_min_abs_kw": 0.027184441685676575,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.016037535068254144,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.01603753507595229,
+              "absolute_error": 7.698147674872757e-12,
+              "scaled_relative_error": 4.800081582621667e-10
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.016037535330859498,
+              "absolute_error": 2.626053541288087e-10,
+              "scaled_relative_error": 1.6374420926356577e-08
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.016037530348178564,
+              "absolute_error": 4.720075580388894e-09,
+              "scaled_relative_error": 2.9431427961346457e-07
+            }
+          ]
+        },
+        {
+          "adjoint": 0.024678757368592298,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.02467875739942116,
+              "absolute_error": 3.082886029792675e-11,
+              "scaled_relative_error": 1.249206343697428e-09
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.024678758026031034,
+              "absolute_error": 6.574387353963651e-10,
+              "scaled_relative_error": 2.663986310424949e-08
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.02467875446221512,
+              "absolute_error": 2.9063771771198343e-09,
+              "scaled_relative_error": 1.1776837600497132e-07
+            }
+          ]
+        },
+        {
+          "adjoint": 0.012690300442195672,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.012690300345452599,
+              "absolute_error": 9.674307362150802e-11,
+              "scaled_relative_error": 7.623387173705838e-09
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.01269029979100722,
+              "absolute_error": 6.511884521193112e-10,
+              "scaled_relative_error": 5.131387196745066e-08
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.01269030822648176,
+              "absolute_error": 7.784286087247905e-09,
+              "scaled_relative_error": 6.134040204794937e-07
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "tou",
+      "household_id": 69,
+      "date": "2010-08-22",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.4762407216943968,
+      "actual_grid_min_abs_kw": 0.00313490629196167,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": -0.01927201612313359,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.01927201612339502,
+              "absolute_error": 2.6142976672360874e-13,
+              "scaled_relative_error": 1.356525259473239e-11
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.019272016125171376,
+              "absolute_error": 2.037786606123859e-12,
+              "scaled_relative_error": 1.0573811234322731e-10
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.019272016116289592,
+              "absolute_error": 6.843997590877393e-12,
+              "scaled_relative_error": 3.551261864430494e-10
+            }
+          ]
+        },
+        {
+          "adjoint": -0.05883860893959682,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.05883860893973747,
+              "absolute_error": 1.4065137943219952e-13,
+              "scaled_relative_error": 2.390460651037055e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.05883860894062565,
+              "absolute_error": 1.0288297991323248e-12,
+              "scaled_relative_error": 1.748562411070123e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.0588386089628301,
+              "absolute_error": 2.3233283352741552e-11,
+              "scaled_relative_error": 3.9486459252322956e-10
+            }
+          ]
+        },
+        {
+          "adjoint": -0.11016680331838197,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.11016680331810136,
+              "absolute_error": 2.806088694740083e-13,
+              "scaled_relative_error": 2.5471272744753146e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.11016680331543682,
+              "absolute_error": 2.945144128574384e-12,
+              "scaled_relative_error": 2.6733499020234978e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.1101668033243186,
+              "absolute_error": 5.9366261906390605e-12,
+              "scaled_relative_error": 5.388761415870718e-11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "tou",
+      "household_id": 82,
+      "date": "2011-07-16",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.14638516469737808,
+      "actual_grid_min_abs_kw": 0.07370737446675424,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.01676260838574204,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.016762608150866498,
+              "absolute_error": 2.34875542626245e-10,
+              "scaled_relative_error": 1.4011873165636066e-08
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.01676260867888857,
+              "absolute_error": 2.9314652788547946e-10,
+              "scaled_relative_error": 1.7488120942337497e-08
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.016762562982108875,
+              "absolute_error": 4.5403633165685964e-08,
+              "scaled_relative_error": 2.70862577713773e-06
+            }
+          ]
+        },
+        {
+          "adjoint": 0.015093315729615893,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.015093315713254896,
+              "absolute_error": 1.6360997626141405e-11,
+              "scaled_relative_error": 1.0839896229055942e-09
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.015093317764502956,
+              "absolute_error": 2.034887062671298e-09,
+              "scaled_relative_error": 1.3482039498678172e-07
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.015093317307091068,
+              "absolute_error": 1.5774751747910098e-09,
+              "scaled_relative_error": 1.045148089512362e-07
+            }
+          ]
+        },
+        {
+          "adjoint": -0.020962281660445045,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.02096228183301463,
+              "absolute_error": 1.7256958362299457e-10,
+              "scaled_relative_error": 8.232385433879885e-09
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.020962284272840748,
+              "absolute_error": 2.6123957025392386e-09,
+              "scaled_relative_error": 1.2462361775734159e-07
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.020962264457580204,
+              "absolute_error": 1.7202864840970555e-08,
+              "scaled_relative_error": 8.206580333013866e-07
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "tou",
+      "household_id": 93,
+      "date": "2010-12-29",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.36250307667371345,
+      "actual_grid_min_abs_kw": 0.08800001442432404,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.010615523135722907,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.010615523135970584,
+              "absolute_error": 2.476768790060646e-13,
+              "scaled_relative_error": 2.3331575451690575e-11
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.010615523136220384,
+              "absolute_error": 4.974770595467248e-13,
+              "scaled_relative_error": 4.68631694512843e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.010615523124424263,
+              "absolute_error": 1.129864431181904e-11,
+              "scaled_relative_error": 1.0643511551302942e-09
+            }
+          ]
+        },
+        {
+          "adjoint": 0.07507385617521932,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.07507385617484819,
+              "absolute_error": 3.71133679344382e-13,
+              "scaled_relative_error": 4.943580871590919e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.07507385617569473,
+              "absolute_error": 4.754113769322998e-13,
+              "scaled_relative_error": 6.33258235489727e-12
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.07507385619137663,
+              "absolute_error": 1.6157311599762636e-11,
+              "scaled_relative_error": 2.1521888470168324e-10
+            }
+          ]
+        },
+        {
+          "adjoint": 0.08048700558515834,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.08048700558523081,
+              "absolute_error": 7.246980793240709e-14,
+              "scaled_relative_error": 9.003914036243528e-13
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0804870055857998,
+              "absolute_error": 6.414591080527998e-13,
+              "scaled_relative_error": 7.969722607818963e-12
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.08048700558815902,
+              "absolute_error": 3.0006830353812575e-12,
+              "scaled_relative_error": 3.728158369731558e-11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "tou",
+      "household_id": 106,
+      "date": "2011-11-22",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.38540786497119855,
+      "actual_grid_min_abs_kw": 0.009389016777276993,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.08286318836151771,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.08286318836137063,
+              "absolute_error": 1.4707679518721761e-13,
+              "scaled_relative_error": 1.7749352649278601e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.08286318836203677,
+              "absolute_error": 5.190570195878763e-13,
+              "scaled_relative_error": 6.264024228950366e-12
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.08286318833317097,
+              "absolute_error": 2.8346741620666194e-11,
+              "scaled_relative_error": 3.4209088717410054e-10
+            }
+          ]
+        },
+        {
+          "adjoint": -0.007775192737848921,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.007775192737646819,
+              "absolute_error": 2.0210222384520193e-13,
+              "scaled_relative_error": 2.5993210799957017e-11
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.007775192736314551,
+              "absolute_error": 1.5343698533953898e-12,
+              "scaled_relative_error": 1.973417129489561e-10
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.007775192756298565,
+              "absolute_error": 1.844964372249569e-11,
+              "scaled_relative_error": 2.372885702100429e-09
+            }
+          ]
+        },
+        {
+          "adjoint": -0.026094107761518038,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.026094107761442942,
+              "absolute_error": 7.509617927503598e-14,
+              "scaled_relative_error": 2.87789795157446e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.026094107763441343,
+              "absolute_error": 1.9233052650502458e-12,
+              "scaled_relative_error": 7.370649659632571e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.02609410780785026,
+              "absolute_error": 4.6332222780609555e-11,
+              "scaled_relative_error": 1.7755817950085566e-09
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "tou",
+      "household_id": 119,
+      "date": "2011-04-22",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.4167927947568804,
+      "actual_grid_min_abs_kw": 0.013811889570206404,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": -0.051102075453609036,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.051102075453668405,
+              "absolute_error": 5.936917624183025e-14,
+              "scaled_relative_error": 1.1617762236615456e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.05110207545566681,
+              "absolute_error": 2.057770620567112e-12,
+              "scaled_relative_error": 4.0267848266795234e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.05110207546010769,
+              "absolute_error": 6.498655780173834e-12,
+              "scaled_relative_error": 1.2717009478894732e-10
+            }
+          ]
+        },
+        {
+          "adjoint": 0.01245778424412063,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.012457784243968817,
+              "absolute_error": 1.518125902766343e-13,
+              "scaled_relative_error": 1.2186163068948739e-11
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.012457784241970415,
+              "absolute_error": 2.150214034601916e-12,
+              "scaled_relative_error": 1.726000380538534e-10
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.012457784248631752,
+              "absolute_error": 4.511122378425547e-12,
+              "scaled_relative_error": 3.6211273918321447e-10
+            }
+          ]
+        },
+        {
+          "adjoint": 0.023053672187459393,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.023053672187467456,
+              "absolute_error": 8.0629947163402e-15,
+              "scaled_relative_error": 3.4974882312777233e-13
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.02305367218680132,
+              "absolute_error": 6.580708200587537e-13,
+              "scaled_relative_error": 2.8545162554047568e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.023053672171258196,
+              "absolute_error": 1.6201196634257897e-11,
+              "scaled_relative_error": 7.027599118491385e-10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "tou",
+      "household_id": 136,
+      "date": "2010-09-19",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.4304139997741378,
+      "actual_grid_min_abs_kw": 0.0036712452420033514,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.007758346981634676,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.007758346981967534,
+              "absolute_error": 3.3285874057042975e-13,
+              "scaled_relative_error": 4.290330676677418e-11
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.007758346978192776,
+              "absolute_error": 3.4418995431551025e-12,
+              "scaled_relative_error": 4.4363825842059693e-10
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.007758346987074559,
+              "absolute_error": 5.439883786484412e-12,
+              "scaled_relative_error": 7.011653120886811e-10
+            }
+          ]
+        },
+        {
+          "adjoint": -0.09468629093296636,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.09468629093278835,
+              "absolute_error": 1.7801038421083604e-13,
+              "scaled_relative_error": 1.880001660819721e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.09468629093234426,
+              "absolute_error": 6.220995940608987e-13,
+              "scaled_relative_error": 6.570112610085416e-12
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.0946862909634305,
+              "absolute_error": 3.0464131217655677e-11,
+              "scaled_relative_error": 3.21737507169031e-10
+            }
+          ]
+        },
+        {
+          "adjoint": -0.12296186654176583,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.12296186654170427,
+              "absolute_error": 6.156186671546493e-14,
+              "scaled_relative_error": 5.006581995447712e-13
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.12296186654214836,
+              "absolute_error": 3.825273431345977e-13,
+              "scaled_relative_error": 3.1109428792175707e-12
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.12296186657767548,
+              "absolute_error": 3.59096502533518e-11,
+              "scaled_relative_error": 2.920389162331684e-10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "tou",
+      "household_id": 148,
+      "date": "2011-08-13",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.30687828205984213,
+      "actual_grid_min_abs_kw": 0.008089049952104688,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.0004899151820455545,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0004899151820891845,
+              "absolute_error": 4.3630030144292675e-14,
+              "scaled_relative_error": 4.3630030144292675e-11
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0004899151823112291,
+              "absolute_error": 2.65674635069324e-13,
+              "scaled_relative_error": 2.65674635069324e-10
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0004899151723192219,
+              "absolute_error": 9.726332586557085e-12,
+              "scaled_relative_error": 9.726332586557085e-09
+            }
+          ]
+        },
+        {
+          "adjoint": -0.05398386423730962,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.05398386423743906,
+              "absolute_error": 1.2943812688348544e-13,
+              "scaled_relative_error": 2.3977188130544587e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.053983864236606394,
+              "absolute_error": 7.03229141585382e-13,
+              "scaled_relative_error": 1.3026654381280145e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.05398386423438594,
+              "absolute_error": 2.923682129729599e-12,
+              "scaled_relative_error": 5.415844476929771e-11
+            }
+          ]
+        },
+        {
+          "adjoint": 0.00749780560061759,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.00749780560072022,
+              "absolute_error": 1.0262971028573986e-13,
+              "scaled_relative_error": 1.3687966286546763e-11
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.007497805601663909,
+              "absolute_error": 1.046319281217123e-12,
+              "scaled_relative_error": 1.3955006795387229e-10
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.007497805601386353,
+              "absolute_error": 7.687626576990958e-13,
+              "scaled_relative_error": 1.0253168707881019e-10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "tou",
+      "household_id": 163,
+      "date": "2011-01-11",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.42333927219066064,
+      "actual_grid_min_abs_kw": 0.002341427025385201,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": -0.0068125909677625995,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.006812590967797405,
+              "absolute_error": 3.480549182199866e-14,
+              "scaled_relative_error": 5.1089947989717196e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.006812590969129673,
+              "absolute_error": 1.3670731213721865e-12,
+              "scaled_relative_error": 2.0066860428974703e-10
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.006812590980231902,
+              "absolute_error": 1.2469302500262014e-11,
+              "scaled_relative_error": 1.8303318864209218e-09
+            }
+          ]
+        },
+        {
+          "adjoint": 0.039793996102087364,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.03979399610209988,
+              "absolute_error": 1.251776460264864e-14,
+              "scaled_relative_error": 3.1456415109786103e-13
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.03979399610498646,
+              "absolute_error": 2.8990976286280556e-12,
+              "scaled_relative_error": 7.285263890008721e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.039793996098325124,
+              "absolute_error": 3.762240519122884e-12,
+              "scaled_relative_error": 9.45429182199055e-11
+            }
+          ]
+        },
+        {
+          "adjoint": -0.01400255285826305,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.014002552858549677,
+              "absolute_error": 2.8662662521217186e-13,
+              "scaled_relative_error": 2.0469597801743944e-11
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.014002552859437856,
+              "absolute_error": 1.174805044912297e-12,
+              "scaled_relative_error": 8.389934726227204e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.01400255285055607,
+              "absolute_error": 7.706980886812431e-12,
+              "scaled_relative_error": 5.503982712884003e-10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "tou",
+      "household_id": 174,
+      "date": "2011-12-05",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.4826522090513274,
+      "actual_grid_min_abs_kw": 0.02514687180519104,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": -0.01933495625769843,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.01933495625783266,
+              "absolute_error": 1.3422943312413338e-13,
+              "scaled_relative_error": 6.942318944722545e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.0193349562560563,
+              "absolute_error": 1.642127406276117e-12,
+              "scaled_relative_error": 8.493049502619308e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.019334956280481208,
+              "absolute_error": 2.2782779135477327e-11,
+              "scaled_relative_error": 1.1783206956861197e-09
+            }
+          ]
+        },
+        {
+          "adjoint": 0.13372075717293624,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.13372075717277276,
+              "absolute_error": 1.634803403760543e-13,
+              "scaled_relative_error": 1.2225502145835973e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.133720757173883,
+              "absolute_error": 9.467426842491022e-13,
+              "scaled_relative_error": 7.079997931944186e-12
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.13372075720052834,
+              "absolute_error": 2.759209527525286e-11,
+              "scaled_relative_error": 2.0634115340728747e-10
+            }
+          ]
+        },
+        {
+          "adjoint": -0.1950755216723947,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.19507552167263853,
+              "absolute_error": 2.438327317833e-13,
+              "scaled_relative_error": 1.2499401754387322e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.1950755216739708,
+              "absolute_error": 1.5761003613334879e-12,
+              "scaled_relative_error": 8.079436865316297e-12
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.19507552166952988,
+              "absolute_error": 2.864819492742754e-12,
+              "scaled_relative_error": 1.4685694382270397e-11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "tou",
+      "household_id": 187,
+      "date": "2011-05-04",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.41458361554934275,
+      "actual_grid_min_abs_kw": 0.03339880704879761,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": -0.03900977674505475,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.039009776744924896,
+              "absolute_error": 1.2985446051771987e-13,
+              "scaled_relative_error": 3.328767077196397e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.03900977674664574,
+              "absolute_error": 1.5909912276512728e-12,
+              "scaled_relative_error": 4.078442278673318e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.03900977677551154,
+              "absolute_error": 3.045678986790534e-11,
+              "scaled_relative_error": 7.807476070210341e-10
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0016746551363565846,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.001674655136396641,
+              "absolute_error": 4.005649978378045e-14,
+              "scaled_relative_error": 2.391925293345477e-11
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0016746551406709997,
+              "absolute_error": 4.314415144590633e-12,
+              "scaled_relative_error": 2.5763006602433598e-09
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0016746551478874492,
+              "absolute_error": 1.1530864587813716e-11,
+              "scaled_relative_error": 6.885515864182377e-09
+            }
+          ]
+        },
+        {
+          "adjoint": -0.004985760493308962,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.004985760493347868,
+              "absolute_error": 3.890637811920783e-14,
+              "scaled_relative_error": 7.803499219651191e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.004985760492792757,
+              "absolute_error": 5.162051341933704e-13,
+              "scaled_relative_error": 1.0353588682932785e-10
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.004985760465592293,
+              "absolute_error": 2.7716669237509706e-11,
+              "scaled_relative_error": 5.559165803232285e-09
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "tou",
+      "household_id": 198,
+      "date": "2010-10-02",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.41426678650822213,
+      "actual_grid_min_abs_kw": 0.0022540129721164703,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.07155803932140813,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.07155803932157312,
+              "absolute_error": 1.6499301924710608e-13,
+              "scaled_relative_error": 2.3057230300238876e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.07155803932179516,
+              "absolute_error": 3.870376241721374e-13,
+              "scaled_relative_error": 5.40872315452407e-12
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.07155803930514182,
+              "absolute_error": 1.626630774520521e-11,
+              "scaled_relative_error": 2.2731628618475569e-10
+            }
+          ]
+        },
+        {
+          "adjoint": -0.08582666228641213,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.08582666228640345,
+              "absolute_error": 8.673617379884035e-15,
+              "scaled_relative_error": 1.0105970742447504e-13
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.08582666228273972,
+              "absolute_error": 3.672409598642901e-12,
+              "scaled_relative_error": 4.278868012352273e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.08582666228829082,
+              "absolute_error": 1.8786916466950743e-12,
+              "scaled_relative_error": 2.188937093213027e-11
+            }
+          ]
+        },
+        {
+          "adjoint": 0.01690543398292535,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.016905433982916662,
+              "absolute_error": 8.68749516769185e-15,
+              "scaled_relative_error": 5.138877343501683e-13
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.016905433984915064,
+              "absolute_error": 1.98971394915759e-12,
+              "scaled_relative_error": 1.1769670929081367e-10
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.016905433986025287,
+              "absolute_error": 3.0999369737827465e-12,
+              "scaled_relative_error": 1.8336926318160655e-10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "tou",
+      "household_id": 209,
+      "date": "2011-08-26",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.5366780133376063,
+      "actual_grid_min_abs_kw": 0.024488374590873718,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": -0.102425687054184,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.10242568705387534,
+              "absolute_error": 3.0866975642140915e-13,
+              "scaled_relative_error": 3.013597128795635e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.10242568705187693,
+              "absolute_error": 2.307071200746691e-12,
+              "scaled_relative_error": 2.252434196049114e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.1024256870651996,
+              "absolute_error": 1.101559121696738e-11,
+              "scaled_relative_error": 1.0754715474796228e-10
+            }
+          ]
+        },
+        {
+          "adjoint": -0.1074007619380745,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.10740076193815895,
+              "absolute_error": 8.444633881055097e-14,
+              "scaled_relative_error": 7.862731817412517e-13
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.10740076193949122,
+              "absolute_error": 1.4167139683607388e-12,
+              "scaled_relative_error": 1.319091171028102e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.10740076192838897,
+              "absolute_error": 9.685530155678634e-12,
+              "scaled_relative_error": 9.018120524380591e-11
+            }
+          ]
+        },
+        {
+          "adjoint": 0.03902975667510462,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.039029756675024174,
+              "absolute_error": 8.04425970279965e-14,
+              "scaled_relative_error": 2.061058122847774e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.03902975667324782,
+              "absolute_error": 1.856799436428247e-12,
+              "scaled_relative_error": 4.7573943437177987e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.03902975669323183,
+              "absolute_error": 1.812721500682457e-11,
+              "scaled_relative_error": 4.644460161333268e-10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "tou",
+      "household_id": 220,
+      "date": "2011-01-24",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.4404601610007891,
+      "actual_grid_min_abs_kw": 0.06599999964237213,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": -0.040689523088481956,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.04068952308844409,
+              "absolute_error": 3.7865544033621745e-14,
+              "scaled_relative_error": 9.305968996314041e-13
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.04068952308644569,
+              "absolute_error": 2.0362669883589035e-12,
+              "scaled_relative_error": 5.004401216330089e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.040689523106429704,
+              "absolute_error": 1.7947747454893914e-11,
+              "scaled_relative_error": 4.4109014027883346e-10
+            }
+          ]
+        },
+        {
+          "adjoint": 0.09765295380981123,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.09765295380970151,
+              "absolute_error": 1.097177904085811e-13,
+              "scaled_relative_error": 1.1235480968887773e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.097652953812144,
+              "absolute_error": 2.3327728637667633e-12,
+              "scaled_relative_error": 2.3888400429282893e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.09765295378993953,
+              "absolute_error": 1.9871701506524175e-11,
+              "scaled_relative_error": 2.034930919266024e-10
+            }
+          ]
+        },
+        {
+          "adjoint": -0.1281790042020468,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.12817900420203365,
+              "absolute_error": 1.3156142841808105e-14,
+              "scaled_relative_error": 1.0263882859528427e-13
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.1281790042018116,
+              "absolute_error": 2.352007477668394e-13,
+              "scaled_relative_error": 1.8349397331570442e-12
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.12817900423289785,
+              "absolute_error": 3.0851043941737544e-11,
+              "scaled_relative_error": 2.40687186847559e-10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "tou",
+      "household_id": 233,
+      "date": "2011-12-18",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.3957212093279876,
+      "actual_grid_min_abs_kw": 0.013797950930893421,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": -0.0029547179097337284,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.002954717909675608,
+              "absolute_error": 5.812017533912694e-14,
+              "scaled_relative_error": 1.9670295816619795e-11
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.002954717908121296,
+              "absolute_error": 1.6124324098143461e-12,
+              "scaled_relative_error": 5.457145010366335e-10
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.0029547179147826337,
+              "absolute_error": 5.048905304255724e-12,
+              "scaled_relative_error": 1.708760514496407e-09
+            }
+          ]
+        },
+        {
+          "adjoint": -0.031929826315613086,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.03192982631561314,
+              "absolute_error": 5.551115123125783e-17,
+              "scaled_relative_error": 1.7385359595305353e-15
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.03192982631405883,
+              "absolute_error": 1.5542567233239879e-12,
+              "scaled_relative_error": 4.867726833089554e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.031929826271870354,
+              "absolute_error": 4.3742731659079936e-11,
+              "scaled_relative_error": 1.3699645975741046e-09
+            }
+          ]
+        },
+        {
+          "adjoint": -0.002993653390296235,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.0029936533900709605,
+              "absolute_error": 2.2527466003730012e-13,
+              "scaled_relative_error": 7.525074905716062e-11
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.0029936533896268713,
+              "absolute_error": 6.693638698873627e-13,
+              "scaled_relative_error": 2.2359431190566996e-10
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.002993653391847317,
+              "absolute_error": 1.5510817456820813e-12,
+              "scaled_relative_error": 5.181233572016643e-10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "tou",
+      "household_id": 248,
+      "date": "2011-05-17",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.2964579166195454,
+      "actual_grid_min_abs_kw": 0.017523229122161865,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.06198260881108509,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.061982608908550674,
+              "absolute_error": 9.746558421452889e-11,
+              "scaled_relative_error": 1.5724666310566227e-09
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.06198260603440531,
+              "absolute_error": 2.7766797819350764e-09,
+              "scaled_relative_error": 4.479772367113547e-08
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.06198258939438261,
+              "absolute_error": 1.9416702481955816e-08,
+              "scaled_relative_error": 3.1326049119899734e-07
+            }
+          ]
+        },
+        {
+          "adjoint": -0.05335475803264456,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.053354757924228835,
+              "absolute_error": 1.0841572778419462e-10,
+              "scaled_relative_error": 2.0319786234971127e-09
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.05335475818712965,
+              "absolute_error": 1.5448508444704245e-10,
+              "scaled_relative_error": 2.895432191918502e-09
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.053354714357745074,
+              "absolute_error": 4.367489948864378e-08,
+              "scaled_relative_error": 8.185755328872777e-07
+            }
+          ]
+        },
+        {
+          "adjoint": 0.03372843229395753,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.033728432344837245,
+              "absolute_error": 5.087971710615591e-11,
+              "scaled_relative_error": 1.5085111749625678e-09
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.03372842827698008,
+              "absolute_error": 4.016977445120418e-09,
+              "scaled_relative_error": 1.1909766247392595e-07
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.03372843988547203,
+              "absolute_error": 7.591514500360219e-09,
+              "scaled_relative_error": 2.2507754660867488e-07
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "tou",
+      "household_id": 259,
+      "date": "2010-10-15",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.5717879327163174,
+      "actual_grid_min_abs_kw": 0.0067291047889739275,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": -0.17642563303636308,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.17642563303632564,
+              "absolute_error": 3.7442271505483404e-14,
+              "scaled_relative_error": 2.122269358544185e-13
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.1764256330361036,
+              "absolute_error": 2.594868764305147e-13,
+              "scaled_relative_error": 1.4708003137901842e-12
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.17642563303610356,
+              "absolute_error": 2.5951463200613034e-13,
+              "scaled_relative_error": 1.4709576354624262e-12
+            }
+          ]
+        },
+        {
+          "adjoint": -0.03981724536512377,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.03981724536505915,
+              "absolute_error": 6.462191892708802e-14,
+              "scaled_relative_error": 1.6229630737763403e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.039817245365281195,
+              "absolute_error": 1.574226859979433e-13,
+              "scaled_relative_error": 3.9536307585759966e-12
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.03981724537860387,
+              "absolute_error": 1.3480098981499822e-11,
+              "scaled_relative_error": 3.3854926058605415e-10
+            }
+          ]
+        },
+        {
+          "adjoint": -0.12583194520421667,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.12583194520421337,
+              "absolute_error": 3.3029134982598407e-15,
+              "scaled_relative_error": 2.624860875272521e-14
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.12583194520354724,
+              "absolute_error": 6.694367282733538e-13,
+              "scaled_relative_error": 5.320085668125876e-12
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.12583194520798813,
+              "absolute_error": 3.771455370227272e-12,
+              "scaled_relative_error": 2.997216139346347e-11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "tou",
+      "household_id": 278,
+      "date": "2011-09-08",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.3951432606705734,
+      "actual_grid_min_abs_kw": 0.030372101813554764,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.049260091421228884,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.04926009142081078,
+              "absolute_error": 4.1810305217993005e-13,
+              "scaled_relative_error": 8.48766293599988e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.049260091421476915,
+              "absolute_error": 2.480307625951639e-13,
+              "scaled_relative_error": 5.035125908983289e-12
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.049260091405933785,
+              "absolute_error": 1.529509852105093e-11,
+              "scaled_relative_error": 3.1049675467024066e-10
+            }
+          ]
+        },
+        {
+          "adjoint": -0.0222279202537676,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.022227920253747868,
+              "absolute_error": 1.9730744815760204e-14,
+              "scaled_relative_error": 8.876559115968518e-13
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.02222792025330378,
+              "absolute_error": 4.638199546658228e-13,
+              "scaled_relative_error": 2.086654753888664e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.022227920304374035,
+              "absolute_error": 5.0606435708644426e-11,
+              "scaled_relative_error": 2.2767058283309587e-09
+            }
+          ]
+        },
+        {
+          "adjoint": -0.022332389902116168,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.022332389901791316,
+              "absolute_error": 3.248512570053208e-13,
+              "scaled_relative_error": 1.4546193149463983e-11
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.02233238989957087,
+              "absolute_error": 2.545297306255634e-12,
+              "scaled_relative_error": 1.1397335069877349e-10
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.022332389848500608,
+              "absolute_error": 5.3615559908459787e-11,
+              "scaled_relative_error": 2.400798129687826e-09
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "tou",
+      "household_id": 289,
+      "date": "2011-02-06",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.40609232304899645,
+      "actual_grid_min_abs_kw": 0.02152569705187868,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.03764403284431869,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0376440328433425,
+              "absolute_error": 9.761913499772845e-13,
+              "scaled_relative_error": 2.5932167098420038e-11
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.03764403268213812,
+              "absolute_error": 1.6218057452555001e-10,
+              "scaled_relative_error": 4.308267798943508e-09
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.037644030514982774,
+              "absolute_error": 2.3293359185938556e-09,
+              "scaled_relative_error": 6.187795893779758e-08
+            }
+          ]
+        },
+        {
+          "adjoint": -0.00491397556873209,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.0049139755651239625,
+              "absolute_error": 3.608127685517104e-12,
+              "scaled_relative_error": 7.342583688197044e-10
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.004913975351072963,
+              "absolute_error": 2.1765912683324729e-10,
+              "scaled_relative_error": 4.4293896823220865e-08
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.00491397593727072,
+              "absolute_error": 3.6853863016883537e-10,
+              "scaled_relative_error": 7.499805348528549e-08
+            }
+          ]
+        },
+        {
+          "adjoint": -0.0833855596490567,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.08338555965403671,
+              "absolute_error": 4.980016399258602e-12,
+              "scaled_relative_error": 5.972276758614426e-11
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.08338555965270444,
+              "absolute_error": 3.647748769708414e-12,
+              "scaled_relative_error": 4.3745569195686355e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.08338556019005239,
+              "absolute_error": 5.409956926882842e-10,
+              "scaled_relative_error": 6.487882211923103e-09
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "tou",
+      "household_id": 300,
+      "date": "2011-12-31",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.358200312503571,
+      "actual_grid_min_abs_kw": 0.018016576766967773,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.012093850553080605,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.012093850553118735,
+              "absolute_error": 3.812922200197022e-14,
+              "scaled_relative_error": 3.152777672793182e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.01209385055100931,
+              "absolute_error": 2.0712945247858272e-12,
+              "scaled_relative_error": 1.7126840750138233e-10
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.012093850532135518,
+              "absolute_error": 2.0945087678136964e-11,
+              "scaled_relative_error": 1.7318791551299373e-09
+            }
+          ]
+        },
+        {
+          "adjoint": 0.029955227782882104,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.02995522778326265,
+              "absolute_error": 3.8054628892503217e-13,
+              "scaled_relative_error": 1.2703835593520699e-11
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.02995522778381776,
+              "absolute_error": 9.356578012376104e-13,
+              "scaled_relative_error": 3.12352090256201e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.029955227820455118,
+              "absolute_error": 3.7573014144420824e-11,
+              "scaled_relative_error": 1.2543057382045299e-09
+            }
+          ]
+        },
+        {
+          "adjoint": -0.009555104033131888,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.009555104032776818,
+              "absolute_error": 3.550701399568368e-13,
+              "scaled_relative_error": 3.716025892817569e-11
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.009555104034664197,
+              "absolute_error": 1.5323090019059293e-12,
+              "scaled_relative_error": 1.6036549642442283e-10
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.009555104041325535,
+              "absolute_error": 8.193647149656869e-12,
+              "scaled_relative_error": 8.575152205794508e-10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "flat",
+      "household_id": 1,
+      "date": "2010-07-08",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.06730000000000003,
+      "actual_grid_min_abs_kw": 0.164000004529953,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.005565549834606543,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.005565549835218064,
+              "absolute_error": 6.115212503043921e-13,
+              "scaled_relative_error": 1.0987616109998088e-10
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.00556554984321167,
+              "absolute_error": 8.605127027605519e-12,
+              "scaled_relative_error": 1.5461414002250356e-09
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.00556554988762059,
+              "absolute_error": 5.301404714525004e-11,
+              "scaled_relative_error": 9.52539249772404e-09
+            }
+          ]
+        },
+        {
+          "adjoint": -0.003391933841905559,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.0033919338422450096,
+              "absolute_error": 3.394506897791416e-13,
+              "scaled_relative_error": 1.0007585806994111e-10
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.0033919338360277607,
+              "absolute_error": 5.877798248121735e-12,
+              "scaled_relative_error": 1.7328752629266021e-09
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.0033919339337273864,
+              "absolute_error": 9.182182748521117e-11,
+              "scaled_relative_error": 2.707064149221457e-08
+            }
+          ]
+        },
+        {
+          "adjoint": -0.007863742129002045,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.007863742128577655,
+              "absolute_error": 4.2438969005687e-13,
+              "scaled_relative_error": 5.3967905240901834e-11
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.007863742128577655,
+              "absolute_error": 4.2438969005687e-13,
+              "scaled_relative_error": 5.3967905240901834e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.007863742101932303,
+              "absolute_error": 2.7069742281060627e-11,
+              "scaled_relative_error": 3.44234867280623e-09
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "flat",
+      "household_id": 13,
+      "date": "2011-06-08",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.2990900700457974,
+      "actual_grid_min_abs_kw": 0.01111876661889255,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": -0.0008591524762436402,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.0008591524762735503,
+              "absolute_error": 2.991010217279211e-14,
+              "scaled_relative_error": 2.991010217279211e-11
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.0008591524824907992,
+              "absolute_error": 6.247159040073669e-12,
+              "scaled_relative_error": 6.247159040073669e-09
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.0008591524824907991,
+              "absolute_error": 6.2471589316534515e-12,
+              "scaled_relative_error": 6.2471589316534515e-09
+            }
+          ]
+        },
+        {
+          "adjoint": -0.05907610300296444,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.059076103002375646,
+              "absolute_error": 5.88792903322144e-13,
+              "scaled_relative_error": 9.966684892749245e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.0590761029961584,
+              "absolute_error": 6.8060418412230206e-12,
+              "scaled_relative_error": 1.152080366723156e-10
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.05907610312050337,
+              "absolute_error": 1.175389299779006e-10,
+              "scaled_relative_error": 1.9896188775035623e-09
+            }
+          ]
+        },
+        {
+          "adjoint": -0.022581850384288733,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.022581850384284508,
+              "absolute_error": 4.225786387479502e-15,
+              "scaled_relative_error": 1.8713198057585142e-13
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.022581850380731794,
+              "absolute_error": 3.5569394651879804e-12,
+              "scaled_relative_error": 1.5751319775206342e-10
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.022581850345204654,
+              "absolute_error": 3.908407972263994e-11,
+              "scaled_relative_error": 1.7307740091056752e-09
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "flat",
+      "household_id": 28,
+      "date": "2010-11-06",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.17152334389231105,
+      "actual_grid_min_abs_kw": 0.0,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": -0.04098065271364107,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.040980652713740184,
+              "absolute_error": 9.911516052341085e-14,
+              "scaled_relative_error": 2.4185842332906293e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.040980652711297694,
+              "absolute_error": 2.3433754936519335e-12,
+              "scaled_relative_error": 5.718248340324514e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.040980652693534125,
+              "absolute_error": 2.0106943887654438e-11,
+              "scaled_relative_error": 4.906447934871842e-10
+            }
+          ]
+        },
+        {
+          "adjoint": -0.012700703986336477,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.012700703986512352,
+              "absolute_error": 1.7587493961190859e-13,
+              "scaled_relative_error": 1.3847652838667908e-11
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.012700703986290307,
+              "absolute_error": 4.616966531312272e-14,
+              "scaled_relative_error": 3.6352052108916506e-12
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.012700703999612982,
+              "absolute_error": 1.327650489546528e-11,
+              "scaled_relative_error": 1.0453361400966312e-09
+            }
+          ]
+        },
+        {
+          "adjoint": 0.035020371212926275,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.03502037121294599,
+              "absolute_error": 1.9713397581000436e-14,
+              "scaled_relative_error": 5.629122964211464e-13
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.035020371211835766,
+              "absolute_error": 1.0905096270441561e-12,
+              "scaled_relative_error": 3.1139293767441306e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.03502037120295398,
+              "absolute_error": 9.972293824045408e-12,
+              "scaled_relative_error": 2.8475694227834345e-10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "flat",
+      "household_id": 43,
+      "date": "2011-10-25",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.4125310733572426,
+      "actual_grid_min_abs_kw": 0.012714954325929284,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.13550956480917614,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.13550956484320587,
+              "absolute_error": 3.402972348354183e-11,
+              "scaled_relative_error": 2.511241440625732e-10
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.1355095649802074,
+              "absolute_error": 1.7103124472228615e-10,
+              "scaled_relative_error": 1.2621341139075096e-09
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.1355095648025717,
+              "absolute_error": 6.6044392177389e-12,
+              "scaled_relative_error": 4.873780848635472e-11
+            }
+          ]
+        },
+        {
+          "adjoint": -0.0050365157224379065,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.0050365157396869975,
+              "absolute_error": 1.7249091044391207e-11,
+              "scaled_relative_error": 3.4248063415092553e-09
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.005036515722256496,
+              "absolute_error": 1.8141044222375058e-13,
+              "scaled_relative_error": 3.6019036218939775e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.0050365140280561604,
+              "absolute_error": 1.6943817460202126e-09,
+              "scaled_relative_error": 3.3641942950196e-07
+            }
+          ]
+        },
+        {
+          "adjoint": -0.058290277972175245,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.05829027797199515,
+              "absolute_error": 1.800920523820082e-13,
+              "scaled_relative_error": 3.0895727151614343e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.0582902779722172,
+              "absolute_error": 4.19525525430231e-14,
+              "scaled_relative_error": 7.197178329295132e-13
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.05829027628356797,
+              "absolute_error": 1.688607274841214e-09,
+              "scaled_relative_error": 2.8968935019442995e-08
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "flat",
+      "household_id": 56,
+      "date": "2011-03-25",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.1312128427019576,
+      "actual_grid_min_abs_kw": 0.001999974250793457,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": -0.012688988863238153,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.012688988858755579,
+              "absolute_error": 4.482574034181397e-12,
+              "scaled_relative_error": 3.5326487259895595e-10
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.012688989143860852,
+              "absolute_error": 2.806226986895588e-10,
+              "scaled_relative_error": 2.211544950571014e-08
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.012688988659803611,
+              "absolute_error": 2.0343454178173292e-10,
+              "scaled_relative_error": 1.6032368218961275e-08
+            }
+          ]
+        },
+        {
+          "adjoint": -0.020456560736695113,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.020456560719139816,
+              "absolute_error": 1.755529749347673e-11,
+              "scaled_relative_error": 8.58174437015012e-10
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.020456561058423972,
+              "absolute_error": 3.217288588319711e-10,
+              "scaled_relative_error": 1.5727416642177195e-08
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.020456556182324448,
+              "absolute_error": 4.5543706653217164e-09,
+              "scaled_relative_error": 2.2263618620661177e-07
+            }
+          ]
+        },
+        {
+          "adjoint": -0.013612497790003111,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.013612497805404189,
+              "absolute_error": 1.5401077982368783e-11,
+              "scaled_relative_error": 1.1313925043392494e-09
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.013612497786752442,
+              "absolute_error": 3.2506688313338472e-12,
+              "scaled_relative_error": 2.3880032022639574e-10
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.013612499305537538,
+              "absolute_error": 1.5155344271211568e-09,
+              "scaled_relative_error": 1.113340315473618e-07
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "flat",
+      "household_id": 69,
+      "date": "2010-08-22",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.2271678344308454,
+      "actual_grid_min_abs_kw": 0.010283641575369984,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": -0.01819978506684813,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.018199785067007923,
+              "absolute_error": 1.597923182661276e-13,
+              "scaled_relative_error": 8.77990139322001e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.018199785070116548,
+              "absolute_error": 3.268416787216566e-12,
+              "scaled_relative_error": 1.7958546074168753e-10
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.01819978505679387,
+              "absolute_error": 1.0054259508285313e-11,
+              "scaled_relative_error": 5.524383651430959e-10
+            }
+          ]
+        },
+        {
+          "adjoint": 0.02596191815388594,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.02596191815351645,
+              "absolute_error": 3.69489161489156e-13,
+              "scaled_relative_error": 1.4231966964037727e-11
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.02596191815307236,
+              "absolute_error": 8.135783713392186e-13,
+              "scaled_relative_error": 3.133737524773159e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.025961918126427005,
+              "absolute_error": 2.7458934431789928e-11,
+              "scaled_relative_error": 1.0576620059053655e-09
+            }
+          ]
+        },
+        {
+          "adjoint": 0.013886609134874533,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.013886609134594607,
+              "absolute_error": 2.7992538842447345e-13,
+              "scaled_relative_error": 2.0157936736440204e-11
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.013886609133706429,
+              "absolute_error": 1.1681038081245987e-12,
+              "scaled_relative_error": 8.411728138808544e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.013886609151469996,
+              "absolute_error": 1.659546285115443e-11,
+              "scaled_relative_error": 1.195069485296033e-09
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "flat",
+      "household_id": 82,
+      "date": "2011-07-16",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.0,
+      "actual_grid_min_abs_kw": 0.09000000357627869,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -4.440892098500626e-13,
+              "absolute_error": 4.440892098500626e-13,
+              "scaled_relative_error": 4.440892098500626e-10
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 4.4408920985006255e-11,
+              "absolute_error": 4.4408920985006255e-11,
+              "scaled_relative_error": 4.4408920985006255e-08
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -4.440892098500626e-13,
+              "absolute_error": 4.440892098500626e-13,
+              "scaled_relative_error": 4.440892098500626e-10
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -4.440892098500626e-12,
+              "absolute_error": 4.440892098500626e-12,
+              "scaled_relative_error": 4.440892098500626e-09
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "flat",
+      "household_id": 93,
+      "date": "2010-12-29",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.21144476820200586,
+      "actual_grid_min_abs_kw": 0.0021516336128115654,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.04479861229923221,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.044798612299272456,
+              "absolute_error": 4.0245584642661925e-14,
+              "scaled_relative_error": 8.98366770242915e-13
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.04479861229891163,
+              "absolute_error": 3.2057689836051395e-13,
+              "scaled_relative_error": 7.155955997458614e-12
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.044798612299293265,
+              "absolute_error": 6.10553274604797e-14,
+              "scaled_relative_error": 1.3628843467868513e-12
+            }
+          ]
+        },
+        {
+          "adjoint": -0.030934608694440483,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.03093460869446618,
+              "absolute_error": 2.569819357312042e-14,
+              "scaled_relative_error": 8.307263177929744e-13
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.030934608694563326,
+              "absolute_error": 1.2284270822782162e-13,
+              "scaled_relative_error": 3.971044516538878e-12
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.030934608696853157,
+              "absolute_error": 2.412674227070255e-12,
+              "scaled_relative_error": 7.799271846990215e-11
+            }
+          ]
+        },
+        {
+          "adjoint": 0.006147168729899323,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.006147168729916941,
+              "absolute_error": 1.7617851622020453e-14,
+              "scaled_relative_error": 2.866010743495323e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.006147168730222252,
+              "absolute_error": 3.229291833939385e-13,
+              "scaled_relative_error": 5.2532994873928397e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.006147168727169138,
+              "absolute_error": 2.73018500168698e-12,
+              "scaled_relative_error": 4.441369875545444e-10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "flat",
+      "household_id": 106,
+      "date": "2011-11-22",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.21658306720517184,
+      "actual_grid_min_abs_kw": 0.001455384772270918,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.01787439507035704,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.017874395070505145,
+              "absolute_error": 1.4810375148499588e-13,
+              "scaled_relative_error": 8.28580496854881e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.017874395068506743,
+              "absolute_error": 1.850297692840286e-12,
+              "scaled_relative_error": 1.035166608747966e-10
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.01787439507516808,
+              "absolute_error": 4.811040454910653e-12,
+              "scaled_relative_error": 2.691582251974708e-10
+            }
+          ]
+        },
+        {
+          "adjoint": 0.015193637883564273,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.015193637883825772,
+              "absolute_error": 2.614991556626478e-13,
+              "scaled_relative_error": 1.7211095700854103e-11
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.015193637883381683,
+              "absolute_error": 1.825900541874148e-13,
+              "scaled_relative_error": 1.2017533627343567e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.015193637903365696,
+              "absolute_error": 1.9801422654341927e-11,
+              "scaled_relative_error": 1.303270670282034e-09
+            }
+          ]
+        },
+        {
+          "adjoint": 0.002886827883848718,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0028868278838523054,
+              "absolute_error": 3.587408148320037e-15,
+              "scaled_relative_error": 1.2426816882248094e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.002886827883408216,
+              "absolute_error": 4.405018017017426e-13,
+              "scaled_relative_error": 1.5259025457190253e-10
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.002886827887849108,
+              "absolute_error": 4.0003898631180146e-12,
+              "scaled_relative_error": 1.3857389558816372e-09
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "flat",
+      "household_id": 119,
+      "date": "2011-04-22",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.425087276332755,
+      "actual_grid_min_abs_kw": 0.007600701879709959,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": -0.056292294175720736,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.056292294175808166,
+              "absolute_error": 8.743006318923108e-14,
+              "scaled_relative_error": 1.5531444306777693e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.05629229417936088,
+              "absolute_error": 3.640143741989732e-12,
+              "scaled_relative_error": 6.466504510175678e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.05629229415937686,
+              "absolute_error": 1.634387764015699e-11,
+              "scaled_relative_error": 2.9033951945781985e-10
+            }
+          ]
+        },
+        {
+          "adjoint": -0.04429311078979564,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.04429311078935072,
+              "absolute_error": 4.449218771185315e-13,
+              "scaled_relative_error": 1.0044945346693367e-11
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.0442931107902389,
+              "absolute_error": 4.4325654258159375e-13,
+              "scaled_relative_error": 1.0007347297884448e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.04429311077913666,
+              "absolute_error": 1.0658980642563876e-11,
+              "scaled_relative_error": 2.4064646741902623e-10
+            }
+          ]
+        },
+        {
+          "adjoint": 0.041497917171481796,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.04149791717145135,
+              "absolute_error": 3.044786645034492e-14,
+              "scaled_relative_error": 7.3372035334991e-13
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.041497917173671794,
+              "absolute_error": 2.189998182799968e-12,
+              "scaled_relative_error": 5.277368918624679e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0414979171692309,
+              "absolute_error": 2.250893915700658e-12,
+              "scaled_relative_error": 5.424112989573167e-11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "flat",
+      "household_id": 136,
+      "date": "2010-09-19",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.13994606996982803,
+      "actual_grid_min_abs_kw": 0.006283232571643538,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.043846656172260905,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.04384665617207517,
+              "absolute_error": 1.8573337312588478e-13,
+              "scaled_relative_error": 4.235975769650296e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.04384665617251926,
+              "absolute_error": 2.5835583672417783e-13,
+              "scaled_relative_error": 5.892258595676025e-12
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.043846656216928175,
+              "absolute_error": 4.4667269882836536e-11,
+              "scaled_relative_error": 1.0187155358403713e-09
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0005259505840617641,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0005259505839738665,
+              "absolute_error": 8.789757116600683e-14,
+              "scaled_relative_error": 8.789757116600683e-11
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0005259505853061341,
+              "absolute_error": 1.244370058384181e-12,
+              "scaled_relative_error": 1.244370058384181e-09
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0005259506163923788,
+              "absolute_error": 3.2330614747888564e-11,
+              "scaled_relative_error": 3.2330614747888564e-08
+            }
+          ]
+        },
+        {
+          "adjoint": -0.02814186965864755,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.028141869658604435,
+              "absolute_error": 4.3114817271927564e-14,
+              "scaled_relative_error": 1.5320523403347888e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.02814186966126897,
+              "absolute_error": 2.621420441828448e-12,
+              "scaled_relative_error": 9.315018772317928e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.028141869679032535,
+              "absolute_error": 2.0384985366384e-11,
+              "scaled_relative_error": 7.243649977375917e-10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "flat",
+      "household_id": 148,
+      "date": "2011-08-13",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.4095320286619839,
+      "actual_grid_min_abs_kw": 0.008089049952104688,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.06599387531656815,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0659938753165279,
+              "absolute_error": 4.025946243046974e-14,
+              "scaled_relative_error": 6.100484664273438e-13
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.06599387531724954,
+              "absolute_error": 6.81385503575882e-13,
+              "scaled_relative_error": 1.0324980921339845e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.06599387531447398,
+              "absolute_error": 2.0941720579870093e-12,
+              "scaled_relative_error": 3.173282441652968e-11
+            }
+          ]
+        },
+        {
+          "adjoint": -0.07019672495063156,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.07019672495056639,
+              "absolute_error": 6.517009154549669e-14,
+              "scaled_relative_error": 9.283921948115095e-13
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.07019672495056639,
+              "absolute_error": 6.517009154549669e-14,
+              "scaled_relative_error": 9.283921948115095e-13
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.07019672497166063,
+              "absolute_error": 2.1029067376332478e-11,
+              "scaled_relative_error": 2.9957334027794315e-10
+            }
+          ]
+        },
+        {
+          "adjoint": -0.033755255075886156,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.033755255075929025,
+              "absolute_error": 4.286848653833886e-14,
+              "scaled_relative_error": 1.2699796355237294e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.03375525507665067,
+              "absolute_error": 7.645134525446906e-13,
+              "scaled_relative_error": 2.2648723904134356e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.033755255074430224,
+              "absolute_error": 1.4559325967056225e-12,
+              "scaled_relative_error": 4.313202769265108e-11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "flat",
+      "household_id": 163,
+      "date": "2011-01-11",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.2208065839145201,
+      "actual_grid_min_abs_kw": 0.0005747784161940217,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.00014929944830734685,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.00014929944835984088,
+              "absolute_error": 5.2494033425665165e-14,
+              "scaled_relative_error": 5.2494033425665165e-11
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.00014929944835984088,
+              "absolute_error": 5.2494033425665165e-14,
+              "scaled_relative_error": 5.2494033425665165e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.00014929943947805668,
+              "absolute_error": 8.829290163575587e-12,
+              "scaled_relative_error": 8.829290163575587e-09
+            }
+          ]
+        },
+        {
+          "adjoint": -0.006588549038731967,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.0065885490387884715,
+              "absolute_error": 5.650428042125455e-14,
+              "scaled_relative_error": 8.57613415163178e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.006588549035235758,
+              "absolute_error": 3.4962093983792464e-12,
+              "scaled_relative_error": 5.306493702674371e-10
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.006588549039676649,
+              "absolute_error": 9.446818327596418e-13,
+              "scaled_relative_error": 1.4338237858908077e-10
+            }
+          ]
+        },
+        {
+          "adjoint": -0.03260049238772784,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.032600492387624413,
+              "absolute_error": 1.0342421363773724e-13,
+              "scaled_relative_error": 3.1724739739412754e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.03260049238562601,
+              "absolute_error": 2.101825657963019e-12,
+              "scaled_relative_error": 6.447220590920376e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.032600492350098875,
+              "absolute_error": 3.762896244596803e-11,
+              "scaled_relative_error": 1.154245218091648e-09
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "flat",
+      "household_id": 174,
+      "date": "2011-12-05",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.0,
+      "actual_grid_min_abs_kw": 0.024000003933906555,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "flat",
+      "household_id": 187,
+      "date": "2011-05-04",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.3697601215653197,
+      "actual_grid_min_abs_kw": 0.005665911361575127,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.006444666818614379,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.006444666818539169,
+              "absolute_error": 7.521067102445045e-14,
+              "scaled_relative_error": 1.167021866936807e-11
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.00644466681909428,
+              "absolute_error": 4.799008412881278e-13,
+              "scaled_relative_error": 7.44648024109293e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.006444666800220488,
+              "absolute_error": 1.839389144470127e-11,
+              "scaled_relative_error": 2.854126049088137e-09
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0300015414413333,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.030001541441171398,
+              "absolute_error": 1.619017420129154e-13,
+              "scaled_relative_error": 5.396447456858414e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.030001541441171398,
+              "absolute_error": 1.619017420129154e-13,
+              "scaled_relative_error": 5.396447456858414e-12
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.03000154142895894,
+              "absolute_error": 1.237435848233659e-11,
+              "scaled_relative_error": 4.124574234471954e-10
+            }
+          ]
+        },
+        {
+          "adjoint": -0.004755118875282785,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.004755118875154896,
+              "absolute_error": 1.2788901881943815e-13,
+              "scaled_relative_error": 2.6895020329398736e-11
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.004755118876431652,
+              "absolute_error": 1.1488674594994919e-12,
+              "scaled_relative_error": 2.4160646439224836e-10
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.004755118887533882,
+              "absolute_error": 1.2251097705751057e-11,
+              "scaled_relative_error": 2.576401977639042e-09
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "flat",
+      "household_id": 198,
+      "date": "2010-10-02",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.4149368769764867,
+      "actual_grid_min_abs_kw": 0.002701960504055023,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": -0.04445855296978361,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.04445855296975054,
+              "absolute_error": 3.307076834602185e-14,
+              "scaled_relative_error": 7.438561567331824e-13
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.04445855297019463,
+              "absolute_error": 4.1101844150404077e-13,
+              "scaled_relative_error": 9.244980190416697e-12
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.04445855297241507,
+              "absolute_error": 2.63145755186045e-12,
+              "scaled_relative_error": 5.918900584760765e-11
+            }
+          ]
+        },
+        {
+          "adjoint": -0.02541621531088048,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.025416215310825052,
+              "absolute_error": 5.542788450441094e-14,
+              "scaled_relative_error": 2.180807953758666e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.025416215312379364,
+              "absolute_error": 1.4988843499708082e-12,
+              "scaled_relative_error": 5.8973546279361e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.025416215299056685,
+              "absolute_error": 1.1823795414978022e-11,
+              "scaled_relative_error": 4.6520676939325224e-10
+            }
+          ]
+        },
+        {
+          "adjoint": -0.06962479838150658,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.0696247983814624,
+              "absolute_error": 4.4172998592273416e-14,
+              "scaled_relative_error": 6.344434686938562e-13
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.06962479838112934,
+              "absolute_error": 3.772399059798204e-13,
+              "scaled_relative_error": 5.4181831006927715e-12
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.06962479838223956,
+              "absolute_error": 7.329831186453362e-13,
+              "scaled_relative_error": 1.0527615672526115e-11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "flat",
+      "household_id": 209,
+      "date": "2011-08-26",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.11799699148707138,
+      "actual_grid_min_abs_kw": 0.009999990463256836,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.006310765803676948,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.006310765803707596,
+              "absolute_error": 3.064822701182024e-14,
+              "scaled_relative_error": 4.856498872738123e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.006310765803263507,
+              "absolute_error": 4.134409828382424e-13,
+              "scaled_relative_error": 6.551359941092289e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.006310765798822614,
+              "absolute_error": 4.8543339487006065e-12,
+              "scaled_relative_error": 7.69214719689367e-10
+            }
+          ]
+        },
+        {
+          "adjoint": -0.002026588080895189,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.0020265880809056114,
+              "absolute_error": 1.0422218643668657e-14,
+              "scaled_relative_error": 5.142741508186179e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.0020265880795733437,
+              "absolute_error": 1.3218454109065192e-12,
+              "scaled_relative_error": 6.522516456934014e-10
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.002026588097336912,
+              "absolute_error": 1.6441722983095985e-11,
+              "scaled_relative_error": 8.11300678450724e-09
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0038315119990150037,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.003831511999008441,
+              "absolute_error": 6.562458909620261e-15,
+              "scaled_relative_error": 1.7127595871570606e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0038315120010068426,
+              "absolute_error": 1.9918389854156615e-12,
+              "scaled_relative_error": 5.198571699350666e-10
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0038315119743614896,
+              "absolute_error": 2.4653514039268964e-11,
+              "scaled_relative_error": 6.4344086735489365e-09
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "flat",
+      "household_id": 220,
+      "date": "2011-01-24",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.26525842790055654,
+      "actual_grid_min_abs_kw": 0.012000009417533875,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": -0.0076289941994424765,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.007628994184161186,
+              "absolute_error": 1.5281290122182156e-11,
+              "scaled_relative_error": 2.0030543637454734e-09
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.0076289945982743745,
+              "absolute_error": 3.9883189806300123e-10,
+              "scaled_relative_error": 5.22784349792585e-08
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.007629001164133341,
+              "absolute_error": 6.964690864828815e-09,
+              "scaled_relative_error": 9.129230308119907e-07
+            }
+          ]
+        },
+        {
+          "adjoint": 0.03708983508922463,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.03708983496553131,
+              "absolute_error": 1.23693319475926e-10,
+              "scaled_relative_error": 3.334965474458566e-09
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.03708983407735289,
+              "absolute_error": 1.0118717391760512e-09,
+              "scaled_relative_error": 2.7281645678441453e-08
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.03708982860839427,
+              "absolute_error": 6.480830358479572e-09,
+              "scaled_relative_error": 1.7473332903446607e-07
+            }
+          ]
+        },
+        {
+          "adjoint": -0.06873073809402624,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.06873073811952679,
+              "absolute_error": 2.5500546119161527e-11,
+              "scaled_relative_error": 3.7102098445115746e-10
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.06873073902902149,
+              "absolute_error": 9.349952478920898e-10,
+              "scaled_relative_error": 1.3603742097073754e-08
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.06873072364577126,
+              "absolute_error": 1.444825498131408e-08,
+              "scaled_relative_error": 2.1021533278965112e-07
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "flat",
+      "household_id": 233,
+      "date": "2011-12-18",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.418999806085874,
+      "actual_grid_min_abs_kw": 0.01227175910025835,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.0012966681346764826,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0012966681346426867,
+              "absolute_error": 3.3795882758980156e-14,
+              "scaled_relative_error": 2.6063633288414384e-11
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.001296668135086776,
+              "absolute_error": 4.1029332709108246e-13,
+              "scaled_relative_error": 3.1642123068261005e-10
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0012966681728343588,
+              "absolute_error": 3.8157876164346405e-11,
+              "scaled_relative_error": 2.9427633810844553e-08
+            }
+          ]
+        },
+        {
+          "adjoint": -0.005212440225679928,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.005212440225665915,
+              "absolute_error": 1.4013096238940648e-14,
+              "scaled_relative_error": 2.6883946160001734e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.005212440223889558,
+              "absolute_error": 1.7903699356391911e-12,
+              "scaled_relative_error": 3.4348018550287534e-10
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.005212440212787328,
+              "absolute_error": 1.2892600181890757e-11,
+              "scaled_relative_error": 2.4734288785458452e-09
+            }
+          ]
+        },
+        {
+          "adjoint": 0.05446895544995667,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.05446895545002661,
+              "absolute_error": 6.994405055138486e-14,
+              "scaled_relative_error": 1.2841085343660778e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.054468955448250256,
+              "absolute_error": 1.7064127888488656e-12,
+              "scaled_relative_error": 3.132817170354279e-11
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.05446895543492757,
+              "absolute_error": 1.5029096023244648e-11,
+              "scaled_relative_error": 2.759204008795914e-10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "flat",
+      "household_id": 248,
+      "date": "2011-05-17",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.3111269837220809,
+      "actual_grid_min_abs_kw": 0.017523229122161865,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.045881034907948766,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.04588103490799078,
+              "absolute_error": 4.201500258815827e-14,
+              "scaled_relative_error": 9.15737900690658e-13
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.045881034913541896,
+              "absolute_error": 5.593130125713941e-12,
+              "scaled_relative_error": 1.2190505589626784e-10
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.045881034926864565,
+              "absolute_error": 1.8915799482321916e-11,
+              "scaled_relative_error": 4.122792677295562e-10
+            }
+          ]
+        },
+        {
+          "adjoint": -0.08431556560245024,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.0843155656022887,
+              "absolute_error": 1.6153745008296028e-13,
+              "scaled_relative_error": 1.9158674786647693e-12
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.08431556560273279,
+              "absolute_error": 2.8255175976710234e-13,
+              "scaled_relative_error": 3.351122153392095e-12
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.08431556557386699,
+              "absolute_error": 2.8583246880486968e-11,
+              "scaled_relative_error": 3.390032039310228e-10
+            }
+          ]
+        },
+        {
+          "adjoint": -0.010688640857025606,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.010688640857514642,
+              "absolute_error": 4.890358951126217e-13,
+              "scaled_relative_error": 4.575286059581704e-11
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.010688640854628062,
+              "absolute_error": 2.3975439689127853e-12,
+              "scaled_relative_error": 2.2430765529341254e-10
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.01068864090569832,
+              "absolute_error": 4.867271342912094e-11,
+              "scaled_relative_error": 4.553685904367185e-09
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "flat",
+      "household_id": 259,
+      "date": "2010-10-15",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.42400432913944797,
+      "actual_grid_min_abs_kw": 0.003154525300487876,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": -0.06583776464337993,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.06583776468394031,
+              "absolute_error": 4.056038838129439e-11,
+              "scaled_relative_error": 6.16065696883968e-10
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.06583776428925603,
+              "absolute_error": 3.5412389687294876e-10,
+              "scaled_relative_error": 5.378735119442674e-09
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.06583776854807155,
+              "absolute_error": 3.904691625589152e-09,
+              "scaled_relative_error": 5.930777594228661e-08
+            }
+          ]
+        },
+        {
+          "adjoint": -0.021083407392849397,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.021083407358846173,
+              "absolute_error": 3.400322384772281e-11,
+              "scaled_relative_error": 1.6127954658436885e-09
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.02108340728002034,
+              "absolute_error": 1.1282905859610892e-10,
+              "scaled_relative_error": 5.351557103353976e-09
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.02108340840800693,
+              "absolute_error": 1.0151575344230501e-09,
+              "scaled_relative_error": 4.814959302488869e-08
+            }
+          ]
+        },
+        {
+          "adjoint": -0.024029551413322893,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.024029551375370772,
+              "absolute_error": 3.7952120612860796e-11,
+              "scaled_relative_error": 1.5793936374450462e-09
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.024029551292104046,
+              "absolute_error": 1.2121884745974754e-10,
+              "scaled_relative_error": 5.044573882163244e-09
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.024029545042658636,
+              "absolute_error": 6.370664256544201e-09,
+              "scaled_relative_error": 2.651179019934622e-07
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "flat",
+      "household_id": 278,
+      "date": "2011-09-08",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.0,
+      "actual_grid_min_abs_kw": 0.13600000739097595,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -2.2204460492503128e-11,
+              "absolute_error": 2.2204460492503128e-11,
+              "scaled_relative_error": 2.2204460492503127e-08
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "flat",
+      "household_id": 289,
+      "date": "2011-02-06",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.1722841837107199,
+      "actual_grid_min_abs_kw": 0.0016812438612591185,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.0033056843232376404,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.003305684327159497,
+              "absolute_error": 3.9218567629561996e-12,
+              "scaled_relative_error": 1.1863978452915878e-09
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.003305684210808124,
+              "absolute_error": 1.124295162177602e-10,
+              "scaled_relative_error": 3.401096572574266e-08
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0033056824388921764,
+              "absolute_error": 1.884345463953191e-09,
+              "scaled_relative_error": 5.700318843838158e-07
+            }
+          ]
+        },
+        {
+          "adjoint": 0.052382304763990875,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.05238230471782401,
+              "absolute_error": 4.616686199998554e-11,
+              "scaled_relative_error": 8.813446107037656e-10
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.05238230506243724,
+              "absolute_error": 2.9844636484366305e-10,
+              "scaled_relative_error": 5.697465288859072e-09
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.052382306714449094,
+              "absolute_error": 1.950458218547002e-09,
+              "scaled_relative_error": 3.723505780643656e-08
+            }
+          ]
+        },
+        {
+          "adjoint": -0.01511570408553638,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.015115704135038044,
+              "absolute_error": 4.950166318518079e-11,
+              "scaled_relative_error": 3.2748499668259882e-09
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.015115704043999756,
+              "absolute_error": 4.153662483408205e-11,
+              "scaled_relative_error": 2.747912012502732e-09
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.01511569842627125,
+              "absolute_error": 5.659265131172098e-09,
+              "scaled_relative_error": 3.743963959037293e-07
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "flat",
+      "household_id": 300,
+      "date": "2011-12-31",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.3107466418859674,
+      "actual_grid_min_abs_kw": 0.0275605168178433,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.07915364779581317,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0791536477885435,
+              "absolute_error": 7.269670976306486e-12,
+              "scaled_relative_error": 9.184252626056502e-11
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.07915364830468619,
+              "absolute_error": 5.088730131719288e-10,
+              "scaled_relative_error": 6.428926828655119e-09
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0791536456823394,
+              "absolute_error": 2.113473770992691e-09,
+              "scaled_relative_error": 2.670090172527062e-08
+            }
+          ]
+        },
+        {
+          "adjoint": -0.023218524688577366,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.02321852485331899,
+              "absolute_error": 1.6474162312096752e-10,
+              "scaled_relative_error": 7.095266566748249e-09
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.023218524973778187,
+              "absolute_error": 2.85200821292797e-10,
+              "scaled_relative_error": 1.2283330729014362e-08
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.023218527478441327,
+              "absolute_error": 2.789863961377703e-09,
+              "scaled_relative_error": 1.2015679995073436e-07
+            }
+          ]
+        },
+        {
+          "adjoint": -0.02591182447047304,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": -0.02591182443578699,
+              "absolute_error": 3.468604917178375e-11,
+              "scaled_relative_error": 1.3386185604687577e-09
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.025911823932078804,
+              "absolute_error": 5.383942354442173e-10,
+              "scaled_relative_error": 2.077793619116734e-08
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.025911819245827413,
+              "absolute_error": 5.22464562585645e-09,
+              "scaled_relative_error": 2.01631715736961e-07
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "equal",
+      "household_id": 1,
+      "date": "2010-07-08",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.0,
+      "actual_grid_min_abs_kw": 0.05456944008285902,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "equal",
+      "household_id": 13,
+      "date": "2011-06-08",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.0,
+      "actual_grid_min_abs_kw": 0.06000000238418692,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "equal",
+      "household_id": 28,
+      "date": "2010-11-06",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.0,
+      "actual_grid_min_abs_kw": 1.1314363591442541e-15,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "equal",
+      "household_id": 43,
+      "date": "2011-10-25",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.0,
+      "actual_grid_min_abs_kw": 7.190740285340467e-16,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "equal",
+      "household_id": 56,
+      "date": "2011-03-25",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.0,
+      "actual_grid_min_abs_kw": 0.07000005245208668,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "equal",
+      "household_id": 69,
+      "date": "2010-08-22",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.0,
+      "actual_grid_min_abs_kw": 0.044071647529399405,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "equal",
+      "household_id": 82,
+      "date": "2011-07-16",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.0,
+      "actual_grid_min_abs_kw": 0.0539282828523755,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "equal",
+      "household_id": 93,
+      "date": "2010-12-29",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.0,
+      "actual_grid_min_abs_kw": 0.16200000047685442,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "equal",
+      "household_id": 106,
+      "date": "2011-11-22",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.0,
+      "actual_grid_min_abs_kw": 0.03400000929832119,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "equal",
+      "household_id": 119,
+      "date": "2011-04-22",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.0,
+      "actual_grid_min_abs_kw": 0.003490718591903641,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "equal",
+      "household_id": 136,
+      "date": "2010-09-19",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.0,
+      "actual_grid_min_abs_kw": 0.02599999308586599,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "equal",
+      "household_id": 148,
+      "date": "2011-08-13",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.0,
+      "actual_grid_min_abs_kw": 0.001999996602563756,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "equal",
+      "household_id": 163,
+      "date": "2011-01-11",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.0,
+      "actual_grid_min_abs_kw": 0.024000018835072162,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "equal",
+      "household_id": 174,
+      "date": "2011-12-05",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.0,
+      "actual_grid_min_abs_kw": 0.009652290389766005,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "equal",
+      "household_id": 187,
+      "date": "2011-05-04",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.0,
+      "actual_grid_min_abs_kw": 0.02800000458952914,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "equal",
+      "household_id": 198,
+      "date": "2010-10-02",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.0,
+      "actual_grid_min_abs_kw": 0.025999993085863062,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "equal",
+      "household_id": 209,
+      "date": "2011-08-26",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.0,
+      "actual_grid_min_abs_kw": 0.005652245030631331,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "equal",
+      "household_id": 220,
+      "date": "2011-01-24",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.0,
+      "actual_grid_min_abs_kw": 0.013999998569505782,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "equal",
+      "household_id": 233,
+      "date": "2011-12-18",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.0,
+      "actual_grid_min_abs_kw": 0.010071727638041983,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "equal",
+      "household_id": 248,
+      "date": "2011-05-17",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.0,
+      "actual_grid_min_abs_kw": 0.027999997138976558,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "equal",
+      "household_id": 259,
+      "date": "2010-10-15",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.0,
+      "actual_grid_min_abs_kw": 2.3138056325074374e-15,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "equal",
+      "household_id": 278,
+      "date": "2011-09-08",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.0,
+      "actual_grid_min_abs_kw": 0.14599999785423193,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "equal",
+      "household_id": 289,
+      "date": "2011-02-06",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.0,
+      "actual_grid_min_abs_kw": 0.021384912922318255,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "equal",
+      "household_id": 300,
+      "date": "2011-12-31",
+      "batch_single_gradient_max_gap": 0.0,
+      "gradient_l2": 0.0,
+      "actual_grid_min_abs_kw": 0.027999997138959794,
+      "batch_warnings": [],
+      "directions": [
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        },
+        {
+          "adjoint": 0.0,
+          "step_checks": [
+            {
+              "step": 0.001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.0,
+              "absolute_error": 0.0,
+              "scaled_relative_error": 0.0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

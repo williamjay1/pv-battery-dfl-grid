@@ -1,0 +1,369 @@
+When does decision-focused learning add value to residential battery control? Private costs and AC feeder consequences
+
+Junjie Zhang. Shanghai Academy of Global Governance & Area Studies, Shanghai International Studies University, Shanghai 201620, China; School of Economics and Finance, Shanghai International Studies University, Shanghai 201620, China. ORCID 0009-0004-8821-4018. Corresponding author: junjiezhang2024@shisu.edu.cn
+
+Abstract
+
+Decision-focused learning optimizes a battery schedule against realized operating cost, so its practical value depends on the operating conditions rather than on whether the resulting schedules change. We hold initialization, data, update budget and checkpoint selection fixed, and compare this objective with simpler calibration and with explicit uncertainty representation on public household traces, simulated batteries and AC feeder models. Across 108,641 paired household-days, the decision loss lowers operating cost by 1.131 Australian cents per day relative to continued squared-error training, while three trainable offsets already recover 54.1% of that gain and twenty-scenario control reaches a further 2.462 cents below decision-focused learning. Voltage consequences depend on the feeder: matched exposure falls by 0.853 percentage points on the high-source benchmark, by 0.00848 points at a 1.025 pu source, and the two alternative networks show no screening-band events at all. The cost benefit survives a continuous state of charge and a matched transfer to ten independent Irish PV households, and a deployable load substitution reverses it until the learners are retrained, so the results define the conditions in which a task-trained deterministic signal earns its place, the conditions in which low-dimensional calibration or scenario control is the better engineering choice, and the conditions in which private savings accompany a measurable worsening of feeder voltage.
+
+Keywords: residential battery; decision-focused learning; scenario optimization; voltage exposure; AC power flow; Ausgrid data
+
+1. Introduction
+
+Residential batteries are increasingly operated by controllers that already optimize an announced electricity tariff. In this setting, a forecasting improvement has value only through the actions it changes. Replacing a statistical forecasting loss with realized operating cost produces such a change, and a differentiable controller makes that replacement practical. The worth of the additional learning system then depends on what a simpler calibration already recovers, on how well a scenario controller represents the residual uncertainty, and on what the changed battery action does to voltages elsewhere on the feeder. Those three considerations decide whether decision-focused learning belongs in a residential controller, and they frame the study reported here.
+
+Decision-focused learning connects prediction to a downstream optimization objective [1, 2]. Differentiable optimization layers make this connection practical for constrained decisions [3, 4], and a broad review documents both its promise and its dependence on the optimization problem and learning formulation [5]. Energy applications include wind scheduling [6], storage arbitrage [7], PV battery operation [8], robust energy management [9] and joint renewable learning in distribution networks [10]. Together these studies establish that decision value and forecast error are distinct quantities, and they deliver the training machinery that this study reuses rather than replaces.
+
+That distinction sets up a concrete engineering question. A household battery controller already optimizes a published tariff, so a cost-trained predictor has to justify its training and maintenance burden against alternatives a practitioner can build in a day: a few calibrated offsets on the existing forecast, or a scenario controller that prices the uncertainty the deterministic signal ignores. The closest residential study, the decision-focused PV battery scheduling model of Depoortere et al. [11], establishes that forecast error and operating value diverge, that pretrained initialization matters and that performance depends on load-prediction quality. Alkhulaifi et al. show that decision-focused storage models compete with rather than dominate conventional alternatives [12]. The open question is the incremental engineering value: how much of a cost-trained controller's gain survives against a low-dimensional correction, against explicit scenario uncertainty and against a changed deployment input, and what that gain costs the feeder that hosts it.
+
+Feeder consequences require a separate assessment because the household learner optimizes a private bill and nothing else. Low-voltage PV battery strategy comparisons evaluate voltage and loss impacts directly [13]. Recent work addresses distributed-battery phase balancing [14], stochastic storage flexibility [15], open-source predictive flexibility control [16] and grid-aware smart-home management that represents conflicting private and network objectives [17]. Those approaches optimize or coordinate system services, whereas the comparison here isolates what a separable, private-cost signal learner does to the network as a by-product. Forecast-uncertain prosumer scheduling [18], tariff and grid-charge design [19] and tariff-driven storage operation [20] show why household settlement and network operation do not reduce to one scalar objective, and price-responsive devices can concentrate demand in the same inexpensive intervals [21]. Network-aware scheduling that embeds carbon or other system objectives solves a different problem [22]. In this study the household learner receives neither feeder voltages nor network constraints, so any voltage change follows from its altered injections. The operational replay also holds prices fixed, which keeps the private comparison clean and leaves the price feedback of widespread deployment outside the experiment.
+
+We investigate the question with measured residential consumption and PV traces, simulated batteries and public AC feeder models. Two comparisons are kept distinct. The first controls model initialization, update budget, data and downstream checkpoint selection to isolate the effect of replacing continued squared-error training with a decision loss. The second compares deployable implementations, including training-only low-dimensional calibration, direct net-load prediction and residual-scenario control. Computational cost, household-level benefits and harms, voltage severity and system scale are all evaluated alongside average operating cost, and a frozen-model transfer to a separate public residential dataset tests how far the control signal travels.
+
+The study delivers a conditional method-selection account of a task-trained deterministic signal. It traces the signal change through battery action and nodal injection to the AC voltage a feeder actually experiences; it establishes the source-voltage, controller and data conditions under which the private increment survives; and it documents a case in which household savings accompany a measurable network penalty. Those distinctions matter because the learning components are mature and the deployed decision is a choice among them. The contribution is therefore the engineering boundary of the method, quantified on matched terms.
+
+2. Methods
+
+2.1. Data, information and evaluation units
+
+The residential load and PV measurements come from the public Solar Home Electricity Data collection [23], which reports half-hourly electricity measurements for 300 PV households between July 2010 and June 2013. The analysis retains general consumption (GC), gross PV generation (GG) and separately metered controlled load (CL). Published interval kWh are multiplied by two to obtain average kW. The battery offsets GC minus GG. CL is added to feeder demand and settled at the same assumed AUD 0.18/kWh in all methods, so it contributes no paired battery advantage. A household without any observed CL circuit is treated as having no such circuit, whereas intermittent CL gaps remain missing. Estimated observations and missing required channels are excluded from clean evaluation, without imputation.
+
+Dates and 48 daily intervals follow the published source clock. The predictor uses only measurements before the target day, calendar information and the last available nominal PV capacity, so no future realized load, generation or weather enters a deployable prediction. Training is July 2010 to December 2011, validation is January to June 2012 and testing is July 2012 to June 2013. Customer 2 is excluded under the established missing-record rule. Identifier hashing allocates 244 known households and 55 household-held-out households; the held-out group is excluded from model fitting and supplies its own past measurements at deployment.
+
+Private economics and feeder consequences use different evaluation units. Three disjoint 55-household panels cover 219, 129 and 276 common clean test dates, and the held-out panel covers 274; Table 1 reports this scale together with the load, PV and transformer ratios that define it. The expanded private comparison retains every paired usable household-day among the 299 included households. Absolute operating cost and retail bill additionally require a valid CL observation; GC and GG only cost differences remain estimable when the same CL charge cancels on both sides of the pair. The feeder analysis requires all assigned households to have clean observations on a date, which is a stricter condition and selects a different sample. Neither block resampling nor expansion of private coverage corrects that selection.
+
+2.2. Household control and cost accounting
+
+Each simulated battery has 10 kWh capacity, 3 kW charge and discharge limits, one-way efficiency 0.95 and an energy range of 1 to 9 kWh. The reference day-ahead controller uses half-hour steps and initial and terminal energy of 5 kWh, which lets plans be concatenated physically while excluding interday inventory choice. Charging from the grid is permitted. Let c_t and d_t denote charge and discharge power and e_t stored energy. The reference state equation and constraints are
+
+[[EQ_BATTERY]]
+
+The controller sees a net-demand signal n_hat_t, and g_hat_t=n_hat_t+c_t−d_t. Its estimated objective combines retail settlement, a throughput proxy and a small strictly convex action-selection term:
+
+[[EQ_OBJECTIVE]]
+
+[[EQ_SELECTION]]
+
+The reference throughput price κ is AUD 0.02/kWh, a linear operating-cost proxy rather than an observed battery-degradation law. Reported realized operating cost replaces n_hat with actual GC minus GG, adds CL settlement and excludes the artificial selection term. The pure retail bill and battery throughput are reported separately, and capital expenditure, fixed service fees and life extension lie outside the estimated outcomes.
+
+The time-of-use purchase prices are AUD 0.18/kWh at 00:00 to 07:00 and 22:00 to 24:00, AUD 0.50/kWh at 16:00 to 21:00 and AUD 0.30/kWh otherwise. The flat price is AUD 0.30/kWh, and both tariffs pay AUD 0.08/kWh for exports. These are stated study tariffs and not reconstructed contracts of the historical households. A no-battery reference and a perfect-information optimization set the scale, with perfect information treated as privileged: its cost gap is an upper bound on what any causal controller can recover. A self-consumption rule provides a secondary reference with a different continuous-state policy.
+
+The import epigraph gives a convex quadratic program, solved with sparse Clarabel [23]. The selection term ε=10⁻⁴ AUD is strictly convex in battery actions and state, so objective comparisons follow a reproducible action-selection rule instead of an arbitrary choice among economic optima. Gradients of the selected solution come from its active-constraint KKT system. Supplementary Methods S3 reports the implementation checks, finite-difference diagnostics, alternative ε values and an equal-buy and equal-sell negative control. Those checks establish consistency of the stated model.
+
+2.3. Statistical and decision-focused training
+
+The common PV network has 774 historical and calendar inputs, ReLU hidden layers of 128 and 64 units, and 48 softplus outputs. Demand histories are divided by a fixed 10 kW scale, and PV histories and targets use capacity observed before the target day. Initial MSE training uses 132,200 known-household training days and selects a configuration on 44,373 validation days; seeds 11, 23 and 47 then use that selected configuration. A shared histogram gradient-boosted demand model supplies the reference load forecast.
+
+The reference decision-focused comparison initializes from the corresponding MSE checkpoint and uses the same fixed 4,096 training household-days, four epochs, batches of 32, AdamW regularization and two candidate learning rates as continued MSE, selecting by realized cost on 1,024 fixed validation household-days. The initial checkpoint remains eligible, an exactly matched learning-rate control and the frozen MSE model are kept for attribution, and time-of-use and flat-price models are fitted separately. The decision loss is
+
+[[EQ_DFL]]
+
+Actual training consumption and generation enter the realized cost C_i as targets rather than as prediction-time inputs, and at deployment A_ε sees the load forecast minus the learned signal. An adjustment to that signal can therefore be algebraically equivalent to a net-load correction. We call it a controller task signal and treat reduced operating cost as a control outcome, not as improved physical PV information.
+
+A support rule fixes the learned signal to zero between 00:00 and 04:00 and between 21:00 and 24:00 in training, validation and deployment, and the matched models were fitted with that rule in place. The rule keeps the controller from scheduling on a positive signal in hours where generation cannot occur. It is neither a full irradiance model nor a verified installed-capacity ceiling: real generation occasionally exceeds published nominal capacity, so measurements are not clipped to that field.
+
+2.4. Practical alternatives and resource measurement
+
+A three-parameter controller-cost calibration adds bounded capacity-normalized offsets at 06:00 to 10:00, 10:00 to 14:00 and 14:00 to 18:00. A seasonal extension allocates the same three windows to four calendar seasons, giving 12 parameters. Both reuse the original frozen supervised PV checkpoint and the reference histogram gradient-boosted load forecast, fit only training examples and choose shrinkage only on validation data. They test how far a shared low-complexity signal correction captures the decision benefit without deploying the across-household correction obtained from the test-set signal decomposition.
+
+A direct net-load MLP predicts GC minus GG, and the primary comparison projects net demand to nonnegative values in the same fixed nighttime windows used by the PV support rule, with the 24-offset calibration refitted under that projection in training, validation and deployment. The underlying supervised network is unchanged, and the unrestricted signed results are reported in Supplementary Table S2. Nighttime negative outputs in that unrestricted candidate, which appear mainly after cost calibration, motivate the projection and also show how much freedom the signed form has. For the reference demand forecaster, a previous-day persistence profile and a model trained on the full demand history supply deployable input changes. Frozen-signal transport is separated from newly matched MSE and DFL training under each input, and true-load substitution is retained as a privileged diagnostic.
+
+The residual-scenario controller uses the original frozen supervised PV checkpoint and the reference load forecast and minimizes expected cost across 20 joint daily load and PV residual paths selected deterministically from validation records. Every scenario shares one planned battery action sequence, so no scenario-specific perfect-information recourse is allowed. Residual-day pairing preserves the within-household load and PV association, and unseen households draw on established training-household donors. Optimizations are separable by household, so this controller represents uncertainty without network coordination or cross-household correlation awareness. All methods see the same pre-day information and differ in how they represent uncertainty, which is the engineering distinction of interest.
+
+Training and scheduling times are measured in serial, single-thread method subprocesses on fixed sample counts, and process CPU time and peak resident memory are retained alongside wall time. Wall-time multiples describe this measurement environment only. Cached dispatch reuse during expansion of already verified schedules is excluded from any algorithmic speed comparison, and differing training sample sizes are stated explicitly rather than presented as a matched training-budget effect. Cost and feeder outcomes are compared together with the update and maintenance requirements each method imposes.
+
+2.5. Feeder conditions and voltage interpretation
+
+The principal network is the public European low-voltage benchmark [24], with 55 single-phase locations, published impedances, a 21/19/15 phase allocation and an unchanged 800 kVA transformer. Historical households are assigned to those locations, and their true feeder connections are unknown. Gross load has power factor 0.95, PV and batteries have unity power factor, and unbalanced constant-power AC replay is performed in OpenDSS. Additional SimBench rural and semiurban systems use their 160 and 400 kVA transformers with balanced pandapower replay [25, 26], and native generation and storage are disabled before household injection.
+
+Continued MSE is the primary comparator across source voltages 1.000, 1.025 and 1.050 pu, the two alternative topologies and ten fixed mappings, with frozen MSE retained as a secondary operational reference; changing only the feeder model does not retrain household signals. Gross-demand power factors of 0.90, 0.95 and 1.00 bracket the modeled reactive demand, with 0.95 as the reference [27]. Line resistance and reactance are jointly scaled by 0.90 or 1.10 in separate sensitivity cases while transformer parameters stay unchanged. Published-network reference checks and numerical power balance confirm that the replay solves the stated model.
+
+We separate samples above 1.05 pu and below 0.95 pu, report voltage quantiles and worst locations, and distinguish the mean excursion over all customer half-hours from the magnitude conditional on exceeding a limit; the conditional magnitude is undefined when no exceedance occurs. Consecutive exceedance duration is computed within valid contiguous observations. The complete fixed upper and lower threshold curves are evaluated, including the wider 0.90 to 1.10 pu range, so no threshold is chosen to favor a method. These are screening criteria rather than legal compliance tests. Relative import and export peaks, losses, transformer loading, and the nominal PV-to-transformer and battery-to-daily-load ratios make the engineering scale explicit.
+
+Main deployment cells contain 28 time-of-use battery owners, 55 time-of-use owners, or 55 owners split into 28 time-of-use and 27 flat-price tariffs, on each of three panels and three seeds. A separate held-out panel tests household portability. A 27-household postcode cohort is compared with 27 dispersed households matched on pretest load and PV capacity, with identical roles, electrical locations and clean dates. The cohort check is a constructed sensitivity: it separates size and load composition from geographic concentration and cannot recover actual neighborhood wiring.
+
+2.6. Uncertainty and claim scope
+
+The original deployment-cell contrasts and the external seed-mean contrasts average paired daily differences across three seeds before calendar-block resampling. The expanded private comparison and the fixed-model engineering comparisons use seed 11 and therefore carry a narrower training-replication scope. Confidence intervals use 2,000 circular moving-block resamples with seven-day blocks on the complete calendar axis and retain missing masks, while established primary checks also use 14- and 28-day blocks [28]. Intervals are pointwise and are neither simultaneous bands nor adjusted for multiple comparisons. Dates are synchronized across methods, and household half-hours and seeds are not treated as independent observations. Private expanded contrasts preserve their household-day denominators, with household-average distributions reported separately. The intervals describe temporal stability conditional on the records and models and do not measure national population representativeness or uncertainty in the feeder construction, so physical sensitivities, worst cases and household harm tails are reported directly alongside the interval estimates.
+
+2.7. Operational transfers, protection and mechanism
+
+The continuous-state variant removes the daily terminal equality and credits a fixed inventory value V(e)=λe−ρ(e−5)², with λ=(lowest purchase price+κ)/0.95 and ρ=0.01 AUD/kWh², while each controller still optimizes the next 24 hours. Test states carry across identical clean evaluation segments and start at 5 kWh at each segment boundary, which defines observable evaluation episodes from the offline data. Newly matched learning uses two consecutive daily controllers on 4,088 training and 1,021 validation anchors, passing the first end state into the second, so this is a two-day differentiable training rollout. The realized settlement-plus-wear total is reported both before and after the boundary correction V(e_start)−V(e_end), and the fixed terminal value stands in for remaining inventory.
+
+Wear prices of 0, 0.01 and 0.04 AUD per throughput kWh bracket the reference. Throughput-based degradation costing has precedent [29], and within that convention these values are accounting sensitivities rather than cell-calibrated aging estimates. For each value we separate repricing unchanged actions, reoptimizing with frozen signals and reoptimizing after matched retraining, which keeps an accounting decomposition apart from a new operational policy.
+
+A separate protection scenario imposes a 3 kW per-site export limit, the fixed-export option that current connection guidance associates with changes from late 2026 [30]. Applied to a previously planned battery action and to all controllers alike, the rule curtails PV only as far as the site limit requires, and the lost export income enters actual retail settlement. This is a common post-scheduling protection layer rather than matched retraining of every learner inside an export-constrained optimizer. All three fixed panels are retained because the rule may bind very differently across their capacity distributions.
+
+For the mechanism analysis, we prescribe the first jointly clean date in each season at 02:00, 12:00, 18:00 and 22:00, plus the nearest exogenous gross-load-minus-PV samples to its fifth, fiftieth and ninety-fifth percentiles. At these 19 operating points, centered 0.10 kW/kvar perturbations estimate the AC Jacobians Sᴾ and Sᑫ of continuous nodal voltage with respect to demand-positive active and reactive injections, and steps of 0.05 check the stability of those sensitivities. Actual load and PV are unchanged between methods, so ΔP=Δc−Δd and ΔQ=0 under unity-power-factor battery operation, and full AC replay evaluates Δv against SᴾΔP+SᑫΔQ. The daily signal, action and phase-voltage example uses the first date of this prescription. The local approximation and the binary screening metric describe modeled transmission of a small action change, while dynamic response and real-feeder causation rest on measurements this experiment does not contain.
+
+2.8. Frozen transfer to a separate public dataset
+
+The independent residential records come from StoreNet, which provides direct consumption and generation power measurements for an Irish energy community [31]. We inspect all 20 household files and retain the ten households with verified PV production. The downloaded power pipeline supplies minute-grid records, and its missing values remain missing: we retain half-hours with at least 27 valid minute observations out of 30 in each required power channel and average the available observations without interpolation. Target days require all 48 retained half-hours and complete preceding seven-day retained histories, which yields 2,224 paired household-days in 2020. The interpolated cumulative-energy files are not used, and the study battery is simulated from gross consumption and production.
+
+2.9. Generative AI use in the analysis
+
+OpenAI Codex was used only for limited Python code assistance and English language polishing between 5 and 9 October 2026, covering implementation of the analysis scripts and of the figure code. Study design, data collection and processing, analysis, interpretation and manuscript preparation were performed by the author, who validated every assisted output by rerunning the scripts and recomputing the reported costs, state transitions and power-flow checks against saved outputs. The study uses publicly distributed, non-identifiable measurement data together with simulated batteries and public feeder models. The same disclosure appears under Statements and Declarations.
+
+Published documentation gives differing nominal PV ranges for these households. A 2.2 kWp normalization reference is therefore fixed before any external outcome is computed, and 2.0 and 2.4 kWp are reported as full sensitivities rather than verified household capacities. Original Australian prices and source-clock calendar inputs are retained without hemisphere adjustment, and no external target data fit weights, offsets or hyperparameters. The primary time-of-use checkpoints and analysis files were hashed before evaluation and verified unchanged; the six flat-price checkpoints carry hashes and original timestamps documented separately, which places the flat-price group at secondary transfer status. External cost transfer speaks to the portability of the control signal and does not validate the household-to-feeder assignments of the primary case or represent actual Irish bills.
+
+Table 1. Scale of the constructed European LV panels.
+
+Panel | Clean days | PV median (kWp) | Daily demand median (kWh) | Battery / demand | PV / 800 kVA (%) | Max loading (%)
+
+Panel 1 | 219 | 1.50 | 16.47 | 0.61 | 11.12 | 25.29
+
+Panel 2 | 129 | 1.50 | 17.71 | 0.56 | 12.98 | 27.50
+
+Panel 3 | 276 | 1.48 | 16.69 | 0.60 | 11.01 | 28.74
+
+Held-out | 274 | 1.50 | 15.06 | 0.66 | 11.62 | 28.70
+
+55 households per panel; 10 kWh and 3 kW batteries at full adoption. Demand includes GC and CL. Battery/demand is the median of household capacity-to-mean-daily-gross-energy ratios. Loading refers to continued MSE, seed 11, full time-of-use adoption at a 1.050 pu source voltage.
+
+3. Results
+
+3.1. The incremental benefit is modest against practical alternatives
+
+Expanded time-of-use comparisons include 108,641 paired GC and PV household-days from all 299 eligible households, of which 107,713 also support full-cost settlement including CL. Decision-focused learning (DFL) reduces paired operating cost by 1.131 cents per household-day relative to continued MSE, with a 95% calendar-block interval for DFL minus MSE of -1.282 to -0.997 cents (Table 2), and household-average weighting reproduces the same 1.131-cent reduction. Three-offset calibration recovers 54.1% of the mean gain, leaving 0.519 cents for DFL, and the 12-offset seasonal extension adds nothing clear over three offsets for time-of-use prices. Direct net-load prediction and its 24-offset calibration cost more than continued MSE in this implementation, at +3.568 and +2.087 cents per day (Supplementary Table S2), so the separately named PV output is a convenient interface rather than a demonstrated requirement.
+
+Scenario control yields a 3.593-cent reduction relative to continued MSE and a further 2.462 cents relative to DFL, with an interval of -2.729 to -2.202 cents for scenario minus DFL, and it also reaches lower cost in all four fixed feeder panels. Scenario control is therefore a substantive practical comparator rather than a straw alternative. In the first feeder panel, DFL closes approximately 1.7% of the continued-MSE to perfect-information cost gap under a common seed and mask, a fraction that measures scale rather than the share of an attainable improvement. The three-seed, nine-cell deployment results are consistent with the same modest increment, at approximately 0.787 to 1.236 cents per battery-owner day, and the fixed-seed engineering extensions below are kept separate from those training-replicated estimates.
+
+Household-level results spread widely around that mean (Fig. 1b). Under time-of-use prices, 96.7% of households have a lower mean DFL cost, compared with 92.6% for calibration and 91.3% for scenario control, and the largest household mean increases reach 13.42, 2.41 and 19.24 cents over their observed valid days. A favorable population mean therefore coexists with a material adverse tail, which is why the household-average distributions are reported next to the mean rather than replaced by it.
+
+The time-of-use DFL gain separates into 0.495 cents of retail settlement and 0.636 cents of throughput-proxy cost (Fig. 1c), so 56.3% of the total comes from reduced battery throughput. Calibration's retail term increases slightly while its throughput term falls. Flat-price results follow a different mechanism: DFL reduces retail settlement by 2.322 cents while increasing the wear term by 1.105 cents, for a net 1.216-cent saving, and scenario control lowers flat-price operating cost by 4.725 cents relative to continued MSE. Reduced throughput is consequently a condition-dependent accounting outcome, and the benefit itself survives at zero throughput price in every case reported below.
+
+Table 2. Matched private costs and practical alternatives.
+
+Method | Full cost (AUD/day) | Retail (AUD/day) | Throughput (kWh/day) | Paired Δ (cents/day) | 95% interval (cents/day)
+
+Continued MSE | 3.53815 | 3.29425 | 12.195 | 0 | Reference
+
+3-offset calibration | 3.53202 | 3.29433 | 11.884 | -0.612 | -0.685 to -0.537
+
+DFL | 3.52683 | 3.28929 | 11.877 | -1.131 | -1.282 to -0.997
+
+20 scenarios | 3.50217 | 3.28616 | 10.801 | -3.593 | -3.899 to -3.277
+
+Absolute full cost, retail and throughput all use the same 107,713 CL-valid household-days; full cost = retail + 0.02 × throughput. Paired changes use all 108,641 GC/PV-valid days, for which the identical CL charge cancels. 299 households, seed 11, time-of-use tariff; Δ is method minus continued MSE. Figure 1 retains all seven implemented alternatives.
+
+Fig. 1. Cost, practical alternatives and household distributions.
+
+a, Paired operating-cost changes and 95% seven-day calendar-block intervals. b, Empirical CDF of household mean cost differences, retaining adverse tails. c, Mean retail and throughput-proxy components. 299 households and 108,641 paired days; seed 11, time-of-use prices. Negative costs favor the alternative.
+
+3.2. Computational overhead is measurable but not a scheduling bottleneck
+
+Incremental matched DFL training takes 385.6 s, against 21.8 s for continued MSE and 87.3 s for three-offset calibration. The scenario bank requires no iterative task-specific learning, and deterministic schedules take about 1.5 ms per household against 9.3 ms for 20 scenarios, both small on a daily control timescale (Table 3). These timings include validation selection where appropriate and exclude shared supervised pretraining, and peak process memory includes loaded data and libraries. The maintenance distinction for DFL is concrete: it requires preserving and testing controller gradients and refitting a coupled task signal whenever the input or the objective economics change materially. Scenario scheduling stays well inside a daily control cycle on the measured hardware.
+
+Table 3. Incremental resource and maintenance comparison.
+
+Method | Learning (s) | Mean / p95 solve (ms) | Replay RSS (MB) | Update requirement
+
+Continued MSE | 21.76 | 1.45 / 1.88 | 618 | refit neural signal on a change of controller or input economics
+
+3-offset calibration | 87.31 | 1.48 / 1.89 | 808 | refit 3 offsets on a change of cost or input setting
+
+DFL | 385.58 | 1.46 / 1.92 | 619 | refit neural signal on a change of controller or input economics
+
+20 scenarios | 0.01 | 9.34 / 11.75 | 618 | refresh residual bank when the distribution changes
+
+1,024 fixed validation pairs, 20 warm-ups and three repetitions; scheduling benchmarks executed serially in single-thread subprocesses, on a shared measurement host. Solve time includes QP updating and solving, and excludes forecast features and prediction inference. Learning includes each method’s own validation selection; common supervised fitting is excluded. Scenario learning column times residual extraction, not iterative fitting. Replay RSS is peak process working set including data and libraries; training RSS is reported separately in Table S3. Absolute times are hardware/environment dependent.
+
+3.3. Voltage frequency, magnitude and thermal loading answer different questions
+
+At a 1.050 pu source on the first 55-household panel, DFL reduces overvoltage exposure from 18.751% to 17.901% and undervoltage from 0.02577% to 0.02318% relative to continued MSE, a combined change of -0.853 percentage points (Fig. 2c and Table 4). Zero-inclusive excursion falls from 0.0005914 to 0.0005671 pu, the 99th-percentile voltage moves from 1.058341 to 1.058259 pu and the maximum from 1.071964 to 1.071583 pu. The magnitude conditional on an exceedance moves the other way, from 0.0031444 to 0.0031594 pu, so fewer observed events coexist with slightly larger remaining events (Fig. 2d). The largest exposure location and the largest instantaneous voltage are different nodes, and Supplementary Table S4a and Table S4b retain both summaries together with continuous episode lengths.
+
+Source settings determine whether a voltage problem is present at all. At 1.025 pu neither method exceeds 1.05 pu and the combined reduction is only 0.00848 percentage points, entirely from reduced undervoltage. At 1.000 pu undervoltage falls from 1.4598% to 1.3588% while its conditional magnitude rises from 0.0133455 to 0.0134594 pu, and wide-band samples below 0.90 pu change only from 0.04393% to 0.04151% of half-hours. That wide-band underexposure is 0.001038% for both methods at 1.025 pu. The two SimBench cases contain no 0.95 to 1.05 pu events for either method, so conditional excursion has no value to report there.
+
+The complete threshold curves make the dependence continuous (Fig. 2a,b). At the reference source, 9.64% of continued-MSE samples lie within ±0.001 pu of the upper screening limit, so small continuous shifts move many binary classifications. Power-factor and impedance brackets retain a combined reduction of approximately 0.734 to 1.083 percentage points and ten fixed mappings retain 0.667 to 0.965 points. The exposure reduction is therefore robust within the constructed high-source case, and the lower-source and alternative-topology results define the range over which it carries engineering weight.
+
+Fig. 2. Voltage changes across source settings and network models.
+
+a,b, Complete prescribed upper and lower threshold curves. c, Matched over/under-exposure changes at fixed 1.05/0.95 pu screening limits, with 95% calendar-block intervals. d, Pooled magnitude conditional on an event; absent points denote undefined outcomes when no event occurs. Continued MSE and DFL, seed 11, panel 1 and full time-of-use adoption.
+
+The reference mean daily import peak is 144.00 kW and falls by 1.77 kW (1.23%), losses fall by 0.419 kWh/day (2.45%) and export peak rises by 0.387 kW (4.31%), so no single direction summarizes the network outcome. The unchanged 800 kVA transformer reaches 25.29% aggregate loading with a maximum phase loading of 36.44%, and Table 1 places that against the panel's installed PV and battery ratios. The constructed 160 kVA rural SimBench case, by contrast, reaches 119.83% loading and exceeds nominal loading in 0.761% of valid half-hours with no narrow-band voltage events at all, which separates voltage safety from thermal loading.
+
+Scenario control reaches lower cost, lower import peaks and lower losses than DFL in every fixed panel, while its overvoltage ranking moves across panels: DFL minus scenario exposure is about -0.343, +1.138, +0.132 and -0.207 percentage points for the three fixed panels and the held-out panel. No stable voltage premium offsets DFL's higher mean private cost, and the calibration and direct-net alternatives also produce different cost and network rankings. A network requirement therefore has to be evaluated explicitly instead of being inferred from private objective alignment.
+
+Table 4. Joint private and network outcomes under common feeder conditions.
+
+Method | Cost (AUD/owner-day) | Over (%) | Under (%) | Import peak (kW) | Export peak (kW) | Loss (kWh/day)
+
+Continued MSE | 3.70905 | 18.751 | 0.0258 | 144.00 | 8.98 | 17.073
+
+3 offsets | 3.70345 | 18.376 | 0.0240 | 142.48 | 9.36 | 16.840
+
+DFL | 3.69782 | 17.901 | 0.0232 | 142.23 | 9.36 | 16.654
+
+20 scenarios | 3.66710 | 18.244 | 0.0192 | 137.35 | 9.75 | 16.256
+
+Panel 1, 55 time-of-use owners, 219 identical clean dates, seed 11, 1.050 pu source, reference power factor and impedances. Private costs include CL and the throughput proxy. Voltage percentages pool customer half-hours and peaks and losses are means of daily outcomes. This common-feeder subset differs from the expanded private sample of the paired comparison.
+
+3.4. The mechanism is a timing adjustment transmitted through phase-coupled injections
+
+On the first prescribed date, the task signal changes during daylight while the resulting battery differences also appear at off-peak boundaries (Fig. 3a,b). Because true gross demand and PV are held fixed, the injection difference is exactly the difference in discharge minus charge. The phase-resolved voltage response changes sign over the day and differs substantially between phases (Fig. 3c). On that date at 22:00, the aggregate demand difference is -2.417 kW and the mean voltage change is +0.000734 pu, with a maximum absolute receiving-node change of 0.002064 pu; the dominant sender and the dominant receiver are different locations, and cross-phase contributions appear in the local matrices.
+
+Across the 19 prescribed operating points, the largest absolute discrepancy between local linear voltage prediction and the full AC change is 5.01×10⁻⁶ pu (Fig. 3d), and halving the perturbation moves the predicted voltage difference by at most 6.62×10⁻⁸ pu. Eighteen cases have a relative L2 discrepancy of at most 0.216%. The summer 02:00 case has essentially no action change and a voltage difference near 10⁻⁹ pu, so its relative error near one reflects a near-zero denominator and is retained as reported. The phase-resolved sensitivities therefore transmit a small action change accurately in the continuous-voltage sense, which is what the mechanism claim requires.
+
+The shared-signal decomposition attributes approximately 90% of the first-panel private gain to a signal component that is common across households. That decomposition uses test-derived corrections and serves as a diagnostic; the deployable three- and twelve-offset tests ask the same question on training and validation data alone, and they show that a simple trained correction recovers a substantial fraction of the DFL gain without recovering all of it. The mechanism is thus a timing correction transmitted through battery action, and the deployable alternatives bound how much of the gain any single correction can carry.
+
+Fig. 3. Task signal to action, injection and continuous voltage.
+
+a–c, First prescribed clean date, 24 August 2012; no selection by effect magnitude. Charging/discharging changes are summed over 55 households, and net injection change equals discharge minus charge under identical truth. Voltage curves show phase means, not worst nodes. d, Full AC versus local linear voltage changes at all 19 prescribed points and all 55 receiving locations; the dashed line is identity. DFL minus continued MSE, seed 11.
+
+3.5. Controller conditions separate transport from adaptation
+
+Figure 4 separates changes to a frozen signal from matched learning in the changed environment. Replacing the reference load input with previous-day persistence moves frozen DFL minus MSE cost to +0.312 cents per day with an interval spanning zero, and matching both learners to persistence restores a 1.475-cent DFL saving. Adding a stronger demand model to that mixture improves validation RMSE from 0.5473 to 0.5423 kW, a small deployable error gain that leaves the control comparison intact; the single neural load model alone is inferior and remains reported. Neither the small error improvement nor the privileged true-load diagnostic identifies the task signal as a transferable physical PV forecast.
+
+Under a continuous state of charge, matched DFL retains a 1.313-cent daily benefit. Raw operating and inventory-adjusted contrasts are nearly identical and average daily terminal energy is about 5.22 kWh for both methods, so the difference is not produced by exhausting the terminal stock. Frozen transport to the continuous controller gives a 1.135-cent inventory-adjusted saving, against 1.313 cents after matched two-day training, and the stronger load mixture gives 1.194 cents under frozen transport and 1.235 cents after matched retraining. Figure 4 and Supplementary Table S6 report the complete intervals and cohort estimates, and action repricing and policy reoptimization are reported separately even when they agree. At zero wear, repricing and frozen-signal reoptimization both give a 0.495-cent benefit while matched retraining gives 0.792 cents; at wear prices of 0.01 and 0.04 AUD/kWh, frozen-signal reoptimization gives 0.813 and 1.767 cents while matched retraining gives 0.868 and 2.416 cents. The gain therefore survives the removal of throughput pricing, and the throughput proxy sets its reference magnitude.
+
+Fig. 4. Input, controller, wear and external-transfer boundaries.
+
+a, Deployable load-input changes. b, Continuous-SOC raw and inventory-adjusted costs. c, Wear-price sensitivities distinguish unchanged-action repricing, frozen-signal reoptimization and matched retraining. d, All predeclared StoreNet normalization references under both tariffs, with three-seed averaging. Points and intervals are paired mean differences and 95% calendar-block intervals. Negative values favor DFL; frozen transport and matched adaptation estimate different questions.
+
+The persistence case supplies a direct private and network counterexample. Under matched retraining, the first and held-out panels save approximately 1.625 and 1.580 cents per owner-day, and overvoltage exposure rises by 0.373 percentage points (95% interval 0.177 to 0.576) and 0.606 points (0.465 to 0.750) while mean daily import peaks rise by about 2.51 kW in both panels. Continuous-state matched retraining instead reduces overexposure by approximately 1.136 and 1.040 points under the same input change. Private gains obtained by adapting the input therefore carry no reliable network signal, in either direction.
+
+A common 3 kW export protection layer retains DFL's matched private and voltage-frequency benefit on the three fixed panels, and its physical importance is heterogeneous: continued-MSE curtailment is approximately 0.0006, 10.676 and 0.090 kWh per feeder-day across those panels. The second panel gives up about 1.553 cents of export income per household-day against 1.584 cents under DFL. After repricing this protection, DFL minus continued-MSE costs are -1.123, -1.267 and -1.125 cents per day and overvoltage changes are -0.850, -1.254 and -1.044 percentage points. The private and screening-band benefits therefore survive a shared export limit that binds very differently across the three capacity distributions.
+
+3.6. Separate data and cohort checks define portability
+
+Frozen time-of-use transfer to the ten StoreNet PV households gives a three-seed mean DFL reduction of 1.252 cents per paired day at the fixed 2.2 kWp reference, with a 95% DFL-minus-MSE interval of -1.741 to -0.767 cents. The 2.0 and 2.4 kWp references yield 1.573 and 0.803 cents. One seed's interval crosses zero, so the time-of-use transfer is positive on average and variable across fitted models. At 2.2 kWp the flat-price mean cost changes by about +0.122 cents with an interval of -0.194 to +0.458 cents, which leaves flat-price transfer open. These outcomes apply original Australian prices to a separate dataset and concern the portability of the control signal.
+
+The size- and load-matched postcode check uses 27 households in each cohort, the same 27 electrical positions and 160 common clean dates. The difference between the grouped and dispersed DFL-minus-MSE cost gaps is -0.070 cents per day (interval -0.286 to +0.118) and the overvoltage-gap difference is +0.147 percentage points (-0.024 to +0.310), with the grouped cohort showing a 0.218 kW less favorable import-peak reduction. Both outcomes are small relative to their intervals, so geographic concentration within this constructed comparison changes neither the private nor the voltage result.
+
+The private expansion retains usable household-days that a feeder-complete mask would discard. The feeder masks themselves stay selective: the first panel has no jointly clean dates in July 2012 or March 2013, and the second has 129 of 365 test dates. Supplementary Table S1a and Table S1b report the monthly counts and the retained demand and PV descriptions, which makes the coverage of each panel visible alongside its results. This study establishes how far the private and network consequences of a task-trained battery signal diverge. Sourcing the load input from a previous-day profile yields a private benefit against continued MSE while overvoltage exposure rises on both evaluated panels [32], and a common 3 kW export limit leaves the reference private and screening-band advantage intact on all three fixed panels. Which objective a controller should carry therefore depends on whether the deployment requirement is private cost alone or private cost together with a stated voltage criterion.
+
+4. Discussion
+
+4.1. An engineering selection rule from the combined evidence
+
+The results shift the question from whether a differentiable learner can obtain a statistically stable saving to whether that saving justifies a particular implementation. For an existing deterministic day-ahead controller, three trainable offsets provide an inexpensive structural correction that carries about half of the observed time-of-use DFL benefit, while DFL adds roughly half a cent per household-day on top of that correction. The increment suits an operator who already maintains differentiable training infrastructure and needs a deterministic deployment, and it is small enough that the engineering case has to include maintenance, customer harm and operational requirements rather than mean cost alone.
+
+When 20 residual scenarios are acceptable, scenario control reaches the lower modeled mean cost under both tariffs, and its additional solve time of several milliseconds leaves no daily scheduling bottleneck. The evidence therefore favors considering uncertainty representation before deploying a task-trained deterministic signal for private cost savings alone. This conclusion covers the tested residual construction, price regimes and common battery, and it complements modern probabilistic forecasting evaluated under a wider set of objectives [32, 33, 34, 35, 36].
+
+Network outcomes do not reverse that choice consistently. In the matched-persistence case a private saving accompanies higher overvoltage and higher import peak on both evaluated panels, so network consequences have to be rechecked after retraining even when private validation selects a better operating model. Against matched statistical training, DFL reduces reference exposure, yet source voltage and topology decide whether a voltage problem is present and which direction dominates, and the same DFL action can lower import losses while raising export peak. Scenario control holds lower import peaks and losses throughout the fixed-panel comparison while its voltage ordering changes sign. Deployment requirements that concern the network are therefore best evaluated directly. Recent phase-balancing, stochastic-flexibility and grid-aware controllers already pursue such system objectives [14, 15, 17], and the contribution here is the bounded AC consequence of changing a private learner's objective under otherwise fixed information.
+
+4.2. What the task signal represents
+
+The learner modifies the optimizer's net-demand input. With a frozen demand forecaster, placing that correction in a nonnegative PV-shaped output is a modeling convention. The shift may compensate a combination of load error, PV error and the asymmetric operating objective, and cost gains alone cannot attribute the compensation among them. Matched retraining after persistence substitution shows a coupled learning and control system adapting to a changed environment, while the weak frozen transport shows that the original output is not a calibrated conditional physical forecast to be passed to another input pipeline.
+
+Direct net-load prediction is conceptually consistent with that reading. Its higher measured cost in this implementation prevents a strong empirical architecture comparison, and adding 24 cost-calibration parameters improves it without removing the deficit, while its network ranking is favorable in places. The architecture question therefore stays open, and the low-dimensional calibration test carries the stronger evidence about practical complexity because it reuses the competitive common forecasting backbone.
+
+4.3. Operational scope and unresolved uncertainty
+
+Continuous-state replay and a sourced export limit address the two boundaries that matter most for the reference controller. They show that the modeled incremental saving survives the removal of the daily terminal equality and of unconstrained export. The experiment reproduces a day-ahead planner with a fixed terminal inventory value, open-loop actions within each day and an identical post-scheduling protection layer. A fully integrated inverter and controller with measured state error, degradation, network feedback and fault response would be the next step, and Table 5 separates the conclusions this evidence supports from the stronger claims that require those additional measurements.
+
+Table 5. Supported conclusions and stronger claims requiring different evidence.
+
+Domain | Supported by this study | Boundary
+
+Private cost | Small matched time-of-use benefit; calibration captures about half; tested scenarios lower mean cost. | No universal method ranking, profitable deployment or customer-level guarantee.
+
+Voltage / thermal | Exposure depends on source and topology; frequency and conditional magnitude differ. | No observed field compliance, transient response or thermal-congestion benefit in the main 800 kVA case.
+
+Signal transport | Deployable persistence transport can lose the gain; matching can recover it. | No improved physical PV information or architecture necessity.
+
+SOC / wear / protection | Benefit survives specified inventory and protection models; wear affects magnitude. | No measured lifetime extension, full aging economics or integrated inverter validation.
+
+Independent data | Frozen time-of-use transfer to ten external households; all capacity references reported. | Flat transfer inconclusive; no real Irish bills, future-year or feeder validation.
+
+The study is a computational application and validation exercise. Numerical consistency, uncertainty conditional on the retained records, and field-model validity are distinct.
+
+The study is a computational application and validation exercise. The stated model reproduces its own numerical consistency, the interval machinery describes stability conditional on the retained records, and both are distinct from field-model validity.
+
+The main transformer is lightly loaded and the upper screening limit lies close to its retained source voltage, which is why the broad voltage curves, the near-threshold density and the conditional severity together determine how much weight a percentage-point reduction deserves. The smaller rural transformer, in contrast, can be overloaded without screening-band voltage excursions. A field engineering assessment of either case would need simultaneous voltage and thermal measurements and the actual connectivity of the sites.
+
+5. Conclusion
+
+Matched decision-focused training changes residential battery actions and their AC consequences, and this study establishes where the resulting private increment is worth having. The increment is real but small: 1.131 cents per household-day over continued squared-error training on 108,641 paired days, of which three trainable offsets already recover 54.1%. A feasible residual-scenario controller reaches lower mean private cost under both tested tariffs and keeps lower import peaks and losses, which shifts the engineering decision from whether a differentiable learner can save money to which representation of uncertainty earns its place in a controller. Source voltage decides whether the associated voltage-frequency improvement addresses a present screening problem, and remaining-event magnitude can move in the opposite direction to event frequency. Deployable input substitutions separate frozen-signal transport from matched adaptation, and the benefit survives a continuous state of charge, wear repricing and an export limit. Because private savings and feeder outcomes can move in opposite directions, as the matched-persistence case shows on both panels, the selection rule this study supports is to compare the required information, the controller boundary and the network outcomes together, and to treat forecast RMSE and the mere availability of a differentiable optimizer as insufficient grounds for deployment.
+
+Statements and Declarations
+
+Funding
+
+This research received no external funding.
+
+Competing interests
+
+The author declares no competing interests, financial or non-financial, that are directly or indirectly related to this work.
+
+Data availability
+
+Ausgrid source records are publicly distributed under their stated license [23], and StoreNet records and documentation are available through their public collection [32]. The European benchmark and SimBench networks are publicly described [25, 26]. The accompanying reproduction package contains source-data acquisition instructions, cohort and date masks, model checkpoints, saved dispatch, derived figure data and executable table, figure and consistency checks. A public archival identifier has not yet been assigned, so no public repository or DOI is claimed here.
+
+Generative AI declaration
+
+OpenAI Codex was used only for limited Python code assistance and English language polishing. Codex assisted the implementation of the analysis and figure scripts and the wording of the manuscript between 5 and 9 October 2026. All substantive research tasks, including study design, data collection and processing, analysis, interpretation and manuscript preparation, were performed by the author, who validated the assisted outputs by rerunning the analysis scripts and recomputing the reported costs, state transitions and power-flow checks against saved outputs. The study uses publicly distributed, non-identifiable measurement data together with simulated batteries and public feeder models, so no sensitive, proprietary or human-subject data were processed with the tool. AI did not generate or alter data or determine conclusions, and the author takes full responsibility for the manuscript.
+
+References
+
+[1] Adam N. Elmachtoub and P. Grigas (2022) Smart predict, then optimize. Manage Sci 68:9-26. https://doi.org/10.1287/mnsc.2020.3922
+
+[2] Donti PL, Amos B, Kolter JZ (2017) Task-based end-to-end model learning in stochastic optimization. In: Advances in Neural Information Processing Systems 30, pp 5484-5494. https://arxiv.org/abs/1703.04529
+
+[3] Agrawal A, Amos B, Barratt S, Boyd S, Diamond S, Kolter JZ (2019) Differentiable convex optimization layers. In: Advances in Neural Information Processing Systems 32, pp 9432-9442. https://arxiv.org/abs/1910.12430
+
+[4] Amos B, Kolter JZ (2017) OptNet: differentiable optimization as a layer in neural networks. In: Proceedings of the 34th International Conference on Machine Learning, PMLR 70, pp 136-145. https://proceedings.mlr.press/v70/amos17a.html
+
+[5] Jayanta Mandi, J. Kotary, S. Berden, M. Mulamba, V. Bucarey, T. Guns et al. (2024) Decision-focused learning: foundations, state of the art, benchmark and future opportunities. J Artif Intell Res 80:1623-1701. https://doi.org/10.1613/jair.1.15320
+
+[6] Dariush Wahdany, C. Schmitt and J. L. Cremer (2023) More than accuracy: end-to-end wind power forecasting that optimises the energy system. Electr Power Syst Res 221:109384. https://doi.org/10.1016/j.epsr.2023.109384
+
+[7] Linwei Sang, Y. Xu, H. Long, Q. Hu and H. Sun (2022) Electricity price prediction for energy storage system arbitrage: a decision-focused approach. IEEE Trans Smart Grid 13:2822-2832. https://doi.org/10.1109/TSG.2022.3166791
+
+[8] Xiaoge Huang, T. Zhao, B. Huang, Z. Zhang and M. Yue (2025) Advancing energy system optimization via data-centric task-oriented forecasting: an application in PV-battery operation. Appl Energy 378:124753. https://doi.org/10.1016/j.apenergy.2024.124753
+
+[9] Guotao Wang, Z. Lin, X. Zhong, H. Ji, P. Li, Y. Chen et al. (2026) Decision-focused learning integrated with data-driven robust optimization for energy management. Appl Energy 408:127343. https://doi.org/10.1016/j.apenergy.2025.127343
+
+[10] Chenghan Li, Y. Xu and H. Sun (2026) A generative pre-trained transformer-based decision focused framework for wind-solar joint learning on distributed network. Appl Energy 417:128034. https://doi.org/10.1016/j.apenergy.2026.128034
+
+[11] Joris Depoortere, H. Kazmi and J. Driesen (2026) Decision-focused learning for optimal PV-battery scheduling. J Energy Storage 154:121152. https://doi.org/10.1016/j.est.2026.121152
+
+[12] Nasser Alkhulaifi, I. G. Dogan, T. R. Cargan, A. L. Bowler, D. Pekaslan, N. J. Watson et al. (2026) Decision-focused learning enhanced by automated feature engineering for energy storage optimisation. Expert Syst Appl 302:130554. https://doi.org/10.1016/j.eswa.2025.130554
+
+[13] Lucas López, I. López, J. Gomez-Cornejo, I. Aranzabal and P. Eguia (2025) Analysis of impact for PV-BES strategies in low-voltage distribution system. Electr Eng 107:2147-2162. https://doi.org/10.1007/s00202-024-02620-4
+
+[14] Watcharakorn Pinthurat and B. Hredzak (2025) Multi-agent deep reinforcement learning for mitigation of unbalanced active powers using distributed batteries in low voltage residential distribution system. Electr Power Syst Res 245:111599. https://doi.org/10.1016/j.epsr.2025.111599
+
+[15] Lílian Venturi Pinheiro, T. R. De Barros, L. W. De Oliveira, J. G. Oliveira, T. A. Soares and B. H. Dias (2026) Flexibility optimization from distributed storage resources under stochastic uncertainties. Electr Power Syst Res 254:112674. https://doi.org/10.1016/j.epsr.2025.112674
+
+[16] Cesar Diaz-Londono, S. Orfanoudakis, P. P. Vergara, P. Palensky, F. Ruiz and G. Gruosso (2026) Open source algorithms for maximizing V2G flexibility based on model predictive control. Electr Power Syst Res 250:112082. https://doi.org/10.1016/j.epsr.2025.112082
+
+[17] Arman Ali, B. Hredzak, C. Li and S. S. Chand (2026) Grid-aware smart homes energy management in unbalanced low voltage distribution network. IEEE Trans Smart Grid 17:1-12. Advance online publication, 3 July 2026. https://doi.org/10.1109/TSG.2026.3710088
+
+[18] Aleksei Mashlakov, E. Pournaras, P. H. J. Nardelli and S. Honkapuro (2021) Decentralized cooperative scheduling of prosumer flexibility under forecast uncertainties. Appl Energy 290:116706. https://doi.org/10.1016/j.apenergy.2021.116706
+
+[19] Judith Stute and M. Klobasa (2024) How do dynamic electricity tariffs and different grid charge designs interact? Implications for residential consumers and grid reinforcement requirements. Energy Policy 189:114062. https://doi.org/10.1016/j.enpol.2024.114062
+
+[20] Luis Rodriguez-Garcia, G. L. Barbose, S. Forrester, M. Blonsky and M. Heleno (2026) Estimating the impact of tariff-driven behind-the-meter storage operation on distribution grid investments. Energy Rep 16:109531. https://doi.org/10.1016/j.egyr.2026.109531
+
+[21] Matthias Kühnbach, J. Stute and A. Klingler (2021) Impacts of avalanche effects of price-optimized electric vehicle charging: does demand response make it worse?. Energy Strategy Rev 34:100608. https://doi.org/10.1016/j.esr.2020.100608
+
+[22] Haoxuan Chen, Y. Xu, W. Wu and H. Sun (2025) Prediction optimization fusion learning-based approach for day-ahead carbon aware scheduling in distribution network. Appl Energy 397:126369. https://doi.org/10.1016/j.apenergy.2025.126369
+
+[23] Ausgrid (2010-2013) Solar home electricity data [dataset]. Data.gov.au, NSW solar home electricity data. https://data.gov.au/data/dataset/nsw-solar-home-electricty-data. Data schema: UNSW Centre for Energy and Environmental Markets, DARTH Ausgrid 300 documentation. https://unsw-ceem.github.io/DARTH-docs/ausgrid300/. Accessed 5 October 2026
+
+[24] Paul J. Goulart and Y. Chen (2026) Clarabel: an interior-point solver for conic programs with quadratic objectives. Math Program Comput 18:1-38. Published online 21 May 2026. https://doi.org/10.1007/s12532-026-00320-7
+
+[25] IEEE Power & Energy Society, Distribution System Analysis Subcommittee (2015) European low voltage test feeder. Distribution Test Feeders Working Group meeting minutes, 28 July 2015, and distribution test feeder repository [technical benchmark]. https://ewh.ieee.org/soc/pes/dsacom/testfeeders/Minutes07282015.pdf. https://github.com/ieee-pes-amps/dtf-dev. Accessed 5 October 2026
+
+[26] Steffen Meinecke, D. Sarajlić, S. R. Drauz, A. Klettke, L. Lauven, C. Rehtanz et al. (2020) SimBench: a benchmark dataset of electric power systems to compare innovative solutions based on power flow analysis. Energies 13:3290. https://doi.org/10.3390/en13123290
+
+[27] Leon Thurner, A. Scheidler, F. Schäfer, J. Menke, J. Dollichon, F. Meier et al. (2018) pandapower: an open-source Python tool for convenient modeling, analysis, and optimization of electric power systems. IEEE Trans Power Syst 33:6510-6521. https://doi.org/10.1109/TPWRS.2018.2829021
+
+[28] Ausgrid (2026) Power factor correction [technical customer brochure]. https://www.ausgrid.com.au/-/media/Documents/Demand-Mgmt/PFC-Brochure. Accessed 9 October 2026
+
+[29] Hans Rudolf Künsch (1989) The jackknife and the bootstrap for general stationary observations. Ann Stat 17:1217-1241. https://doi.org/10.1214/aos/1176347265
+
+[30] Atri Bera, S. Almasabi, Y. Tian, R. H. Byrne, B. Chalamala, T. A. Nguyen et al. (2020) Maximising the investment returns of a grid-connected battery considering degradation cost. IET Gener Transm Distrib 14:4711-4718. https://doi.org/10.1049/iet-gtd.2020.0403
+
+[31] Ausgrid (2026) Choosing a solar system [online connection guidance]. Fixed and flexible export options from late 2026. https://www.ausgrid.com.au/connections/connection-application-help/solar-support/choosing-a-solar-system. Accessed 9 October 2026
+
+[32] Rohit Trivedi, M. Bahloul, A. Saif, S. Patra and S. Khadem (2024) Comprehensive dataset on electrical load profiles for energy community in Ireland. Sci Data 11:621. Companion StoreNet collection: https://doi.org/10.6084/m9.figshare.c.6829134. Accessed 9 October 2026. https://doi.org/10.1038/s41597-024-03454-2
+
+[33] Tao Hong and S. Fan (2016) Probabilistic electric load forecasting: a tutorial review. Int J Forecast 32:914-938. https://doi.org/10.1016/j.ijforecast.2015.11.011
+
+[34] Pierre Pinson (2013) Wind energy: forecasting challenges for its operational management. Stat Sci 28:564-585. https://doi.org/10.1214/13-STS445
+
+[35] Tilmann Gneiting and A. E. Raftery (2007) Strictly proper scoring rules, prediction, and estimation. J Am Stat Assoc 102:359-378. https://doi.org/10.1198/016214506000001437
+
+[36] Yi Wang, Q. Chen, N. Zhang and Y. Wang (2018) Conditional residual modeling for probabilistic load forecasting. IEEE Trans Power Syst 33:7327-7330. https://doi.org/10.1109/TPWRS.2018.2868167

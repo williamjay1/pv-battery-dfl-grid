@@ -1,0 +1,30 @@
+{
+  "model": "persistence",
+  "tariff": "flat",
+  "seed": 11,
+  "period": "test",
+  "battery": {
+    "capacity": 10,
+    "power": 3,
+    "efficiency": 0.95,
+    "dt": 0.5,
+    "throughput": 0.02,
+    "epsilon": 0.0001,
+    "initial_fraction": 0.5,
+    "minimum_fraction": 0.1,
+    "maximum_fraction": 0.9
+  },
+  "solver_tolerance": 1e-13,
+  "n_households": 220,
+  "n_dates": 365,
+  "clean_household_days": 79397,
+  "n_failed": 0,
+  "failures": [],
+  "max_energy_balance_residual": 1.1646239528317892e-13,
+  "max_simultaneous_charge_discharge_kw": 8.045266873105199e-13,
+  "elapsed_seconds": 85.00994949997403,
+  "mean_clean_bill_aud": 3.7942029093269607,
+  "test_used_for_fitting": false,
+  "night_zero": false,
+  "output": "D:\\MLWork\\pv_battery_dfl_grid_20261005\\results\\dispatch\\persistence_flat_seed11_test_tight.npz"
+}

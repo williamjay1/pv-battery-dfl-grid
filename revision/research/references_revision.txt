@@ -1,0 +1,19 @@
+Verified revision references; stable keys continue the existing L01–L34 sequence. Access checked 9 October 2026. Access limitations and supported claims are recorded in literature_revision_evidence.txt, not concealed as full-text verification.
+
+[L35] Lucas López; Iraide López; Julen Gomez-Cornejo; Itxaso Aranzabal; Pablo Eguia. Analysis of impact for PV-BES strategies in low-voltage distribution system. Electrical Engineering 107:2147–2162; 2025. Published online 26 July 2024. https://doi.org/10.1007/s00202-024-02620-4
+
+[L36] Watcharakorn Pinthurat; Branislav Hredzak. Multi-agent deep reinforcement learning for mitigation of unbalanced active powers using distributed batteries in low voltage residential distribution system. Electric Power Systems Research 245:111599; 2025. https://doi.org/10.1016/j.epsr.2025.111599
+
+[L37] Lílian Venturi Pinheiro; Thiago Ribeiro De Barros; Leonardo Willer De Oliveira; Janaína G. Oliveira; Tiago André Soares; Bruno Henriques Dias. Flexibility optimization from distributed storage resources under stochastic uncertainties. Electric Power Systems Research 254:112674; 2026. https://doi.org/10.1016/j.epsr.2025.112674
+
+[L38] Cesar Diaz-Londono; Stavros Orfanoudakis; Pedro P. Vergara; Peter Palensky; Fredy Ruiz; Giambattista Gruosso. Open source algorithms for maximizing V2G flexibility based on model predictive control. Electric Power Systems Research 250:112082; 2026. https://doi.org/10.1016/j.epsr.2025.112082
+
+[L39] Arman Ali; Branislav Hredzak; Chaojie Li; Shyamal S. Chand. Grid-Aware Smart Homes Energy Management in Unbalanced Low Voltage Distribution Network. IEEE Transactions on Smart Grid; 2026. Advance online publication, 3 July 2026. https://doi.org/10.1109/TSG.2026.3710088
+
+[L40] Rohit Trivedi; Mohamed Bahloul; Aziz Saif; Sandipan Patra; Shafi Khadem. Comprehensive Dataset on Electrical Load Profiles for Energy Community in Ireland. Scientific Data 11:621; 2024. https://doi.org/10.1038/s41597-024-03454-2 . Companion StoreNet dataset collection: https://doi.org/10.6084/m9.figshare.c.6829134 . Accessed 9 October 2026.
+
+[L41] Ausgrid. Choosing a solar system [online connection guidance]. Changes from late 2026: fixed and flexible export options. https://www.ausgrid.com.au/connections/connection-application-help/solar-support/choosing-a-solar-system . Accessed 9 October 2026.
+
+[L42] Ausgrid. Power Factor Correction [technical customer brochure]. https://www.ausgrid.com.au/-/media/Documents/Demand-Mgmt/PFC-Brochure?rev=5a92be294ea744e1b6af6dd7da35ed58 . Accessed 9 October 2026.
+
+[L43] Atri Bera; Saleh Almasabi; Yuting Tian; Raymond H. Byrne; Babu Chalamala; Tu A. Nguyen; Joydeep Mitra. Maximising the investment returns of a grid-connected battery considering degradation cost. IET Generation, Transmission & Distribution 14(21):4711–4718; 2020. https://doi.org/10.1049/iet-gtd.2020.0403

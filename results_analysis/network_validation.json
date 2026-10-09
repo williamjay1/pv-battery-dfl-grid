@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-05",
+  "solver": "DSS C-API Library version 0.14.5 revision 87d85c2622c8281b92255335bc7c09b11191b21d based on OpenDSS SVN 3723 [FPC 3.2.2] (64-bit build) MVMULT INCREMENTAL_Y CONTEXT_API PM 20240329033747; License Status: Open \nDSS-Python version: 0.15.7\nOpenDSSDirect.py version: 0.9.4",
+  "nodes": 2721,
+  "lines": 905,
+  "households": 55,
+  "phase_counts": [
+    21,
+    19,
+    15
+  ],
+  "transformer_kva": 800,
+  "source_pu": 1.05,
+  "reference_snapshots": [
+    {
+      "minute": 1,
+      "compared_node_phases": 2718,
+      "max_voltage_error_v": 0.0004999354829919866,
+      "mean_voltage_error_v": 0.00023960794921694484,
+      "max_voltage_error_pu": 2.0815232140591517e-06,
+      "load_kw_total": 2.797,
+      "tolerance_pu": 0.001,
+      "pass_0p001pu": true
+    },
+    {
+      "minute": 566,
+      "compared_node_phases": 2718,
+      "max_voltage_error_v": 0.0017095219999418987,
+      "mean_voltage_error_v": 0.0005318855657517342,
+      "max_voltage_error_pu": 7.11773788595223e-06,
+      "load_kw_total": 57.358000000000004,
+      "tolerance_pu": 0.001,
+      "pass_0p001pu": true
+    },
+    {
+      "minute": 1440,
+      "compared_node_phases": 2718,
+      "max_voltage_error_v": 0.0005140765860573993,
+      "mean_voltage_error_v": 0.0002573384712481451,
+      "max_voltage_error_pu": 2.1404008798869466e-06,
+      "load_kw_total": 9.698000000000002,
+      "tolerance_pu": 0.001,
+      "pass_0p001pu": true
+    }
+  ],
+  "physical_balance_max_abs_kw": 1.3434696153336034e-06,
+  "sparse_current_operator_max_error_a": 0.0,
+  "negative_net_power_cases_converged": true,
+  "linearization_check_max_abs_voltage_error_pu": 7.113165443328739e-07,
+  "timing": {
+    "samples": 1000,
+    "seconds": 1.060155000013765,
+    "seconds_per_1000": 1.060155000013765,
+    "estimated_1261440_step_minutes_serial": 22.288698720289396,
+    "converged": 1000,
+    "data_period": "2012-01 to 2012-06 validation period",
+    "vmin_pu": 0.9985064752285889,
+    "vmax_pu": 1.0750490829358226
+  },
+  "study_model_note": "Constant-PQ loads over 0.5-1.5 pu reproduce the IEEE document's explicit constant-PQ specification. Modern engine default bounds (0.95/1.05 of load rating 0.23kV) produced a diagnosed peak-snapshot mismatch of 0.001665pu; using documented constant PQ removes this mismatch.",
+  "line_thermal_note": "No explicit ampacity in source: output current only. No line overload claims."
+}

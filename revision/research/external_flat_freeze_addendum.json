@@ -1,0 +1,38 @@
+{
+  "recorded_utc": "2026-10-08T19:25:48.563051+00:00",
+  "record_type": "Post-run addendum; not a pre-run freeze and not backdated.",
+  "reason": "The pre-external 19-item freeze included ToU but omitted the six previously trained flat-tariff checkpoints actually used in the secondary external evaluation.",
+  "scope": "ToU primary external contrast remains covered by pre-run hashes; flat comparison is a transparently documented frozen-model secondary transfer.",
+  "artifacts": [
+    {
+      "relative_path": "checkpoints/decision_physical_flat_seed11.pt",
+      "sha256": "47583e479b0ae41372c00071588b8efa6d847c8accf057b971c516762b8d80aa",
+      "last_modified_utc": "2026-10-05T16:10:14.252527+00:00"
+    },
+    {
+      "relative_path": "checkpoints/decision_physical_flat_seed23.pt",
+      "sha256": "cd8f761e0ca1c5268ced5c3a9842b3a2336e0cd62c410b1ee7823cc15b6ae17a",
+      "last_modified_utc": "2026-10-05T16:13:11.882629+00:00"
+    },
+    {
+      "relative_path": "checkpoints/decision_physical_flat_seed47.pt",
+      "sha256": "48a8d7f5eff28fb44586edfaddca04948de93cf8685a730e3c48d2380007fcde",
+      "last_modified_utc": "2026-10-05T16:16:08.047992+00:00"
+    },
+    {
+      "relative_path": "checkpoints/mse_continuation_physical_flat_seed11.pt",
+      "sha256": "b86fdba55cd7db6e6ac79e87477697173d0462c98e06ebad4948da82cf75af6a",
+      "last_modified_utc": "2026-10-05T16:16:32.846015+00:00"
+    },
+    {
+      "relative_path": "checkpoints/mse_continuation_physical_flat_seed23.pt",
+      "sha256": "08f3dd843cfe22455459c914d43e5b67d1eed5c0e0a72e23e900994f8eb0dff8",
+      "last_modified_utc": "2026-10-05T16:16:40.539749+00:00"
+    },
+    {
+      "relative_path": "checkpoints/mse_continuation_physical_flat_seed47.pt",
+      "sha256": "79dfc54e2814730a12479aa0f882ba93c701ba5ebb79eefdc5889994f9edbaf8",
+      "last_modified_utc": "2026-10-05T16:16:48.462657+00:00"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "night_definition": "00:00-04:00 and 21:00-24:00 source-clock interval start (14 half hours)",
+  "not_applied": "No nighttime mask applied to forecast or any controller; all learned arms use identical nonnegative activation",
+  "truth_pv_kw": {
+    "mean_night_prediction_kw": 0.00012806986342184246,
+    "mean_night_energy_kwh": 0.0008964890148490667,
+    "fraction_of_mean_daily_energy": 0.00014868818107061088,
+    "max_night_kw": 0.026000000536441803
+  },
+  "pv_persistence": {
+    "mean_night_prediction_kw": 0.00012820368283428252,
+    "mean_night_energy_kwh": 0.0008974258089438081,
+    "fraction_of_mean_daily_energy": 0.00014863599790260196,
+    "max_night_kw": 0.026000000536441803
+  },
+  "pv_weekly": {
+    "mean_night_prediction_kw": 0.00012829879415221512,
+    "mean_night_energy_kwh": 0.0008980916463769972,
+    "fraction_of_mean_daily_energy": 0.00014813948655501008,
+    "max_night_kw": 0.026000000536441803
+  },
+  "pv_hgb": {
+    "mean_night_prediction_kw": 0.001683010603301227,
+    "mean_night_energy_kwh": 0.011781075038015842,
+    "fraction_of_mean_daily_energy": 0.0020404343958944082,
+    "max_night_kw": 0.06410614401102066
+  },
+  "pv_mlp_seed11": {
+    "mean_night_prediction_kw": 0.0038153245113790035,
+    "mean_night_energy_kwh": 0.026707271113991737,
+    "fraction_of_mean_daily_energy": 0.004544761963188648,
+    "max_night_kw": 0.10750073194503784
+  },
+  "pv_mlp_seed23": {
+    "mean_night_prediction_kw": 0.002305472968146205,
+    "mean_night_energy_kwh": 0.016138309612870216,
+    "fraction_of_mean_daily_energy": 0.0027488351333886385,
+    "max_night_kw": 0.10757657140493393
+  },
+  "pv_mlp_seed47": {
+    "mean_night_prediction_kw": 0.003622883465141058,
+    "mean_night_energy_kwh": 0.025360185652971268,
+    "fraction_of_mean_daily_energy": 0.004164158366620541,
+    "max_night_kw": 0.2890905737876892
+  }
+}

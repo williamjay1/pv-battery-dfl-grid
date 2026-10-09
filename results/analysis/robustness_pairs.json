@@ -1,0 +1,473 @@
+{
+  "external_mapping_pairs": [],
+  "controls": [
+    {
+      "control": "epsilon_low",
+      "baseline": "mlp",
+      "outcomes": {
+        "bill_aud": {
+          "baseline_mean": 3.709848822336344,
+          "dfl_mean": 3.688766710300288,
+          "delta": {
+            "mean": -0.021082112036056116,
+            "ci95": [
+              -0.023379960351142294,
+              -0.01891074628858344
+            ],
+            "n_clean_days": 219
+          }
+        },
+        "voltage_percentage_points": {
+          "baseline_mean": 19.719800747198008,
+          "dfl_mean": 18.10329320603293,
+          "delta": {
+            "mean": -1.6165075411650753,
+            "ci95": [
+              -1.8843224588963225,
+              -1.3365513623860823
+            ],
+            "n_clean_days": 219
+          }
+        },
+        "mean_voltage_excursion_pu": {
+          "baseline_mean": 0.0006469716446083127,
+          "dfl_mean": 0.0005933663704710225,
+          "delta": {
+            "mean": -5.360527413729027e-05,
+            "ci95": [
+              -7.043385702745116e-05,
+              -3.7402137245156265e-05
+            ],
+            "n_clean_days": 219
+          }
+        },
+        "daily_import_peak_kw": {
+          "baseline_mean": 146.7821369694655,
+          "dfl_mean": 140.0523547660389,
+          "delta": {
+            "mean": -6.7297822034265975,
+            "ci95": [
+              -7.558837461257296,
+              -5.902657416563067
+            ],
+            "n_clean_days": 219
+          },
+          "observed_peak_delta": -2.5222578763552974
+        },
+        "daily_export_peak_kw": {
+          "baseline_mean": 9.795856599621304,
+          "dfl_mean": 9.661819128615443,
+          "delta": {
+            "mean": -0.13403747100586066,
+            "ci95": [
+              -0.48480814317415805,
+              0.23413930558158874
+            ],
+            "n_clean_days": 219
+          },
+          "observed_peak_delta": 4.484190413858769
+        },
+        "loss_kwh": {
+          "baseline_mean": 17.535052273254077,
+          "dfl_mean": 16.493890546074116,
+          "delta": {
+            "mean": -1.041161727179965,
+            "ci95": [
+              -1.190483874923742,
+              -0.8960790625940621
+            ],
+            "n_clean_days": 219
+          }
+        },
+        "voltage_090_110_percentage_points": {
+          "baseline_mean": 0.0,
+          "dfl_mean": 0.0,
+          "delta": {
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n_clean_days": 219
+          }
+        }
+      },
+      "max_charge_difference_kw": 2.0598678588867188,
+      "max_discharge_difference_kw": 2.5781514644622803
+    },
+    {
+      "control": "epsilon_high",
+      "baseline": "mlp",
+      "outcomes": {
+        "bill_aud": {
+          "baseline_mean": 3.709848822444326,
+          "dfl_mean": 3.688766717863185,
+          "delta": {
+            "mean": -0.02108210458114052,
+            "ci95": [
+              -0.0233799571876731,
+              -0.01891073509573975
+            ],
+            "n_clean_days": 219
+          }
+        },
+        "voltage_percentage_points": {
+          "baseline_mean": 19.719800747198008,
+          "dfl_mean": 18.10329320603293,
+          "delta": {
+            "mean": -1.6165075411650753,
+            "ci95": [
+              -1.8843224588963225,
+              -1.3365513623860823
+            ],
+            "n_clean_days": 219
+          }
+        },
+        "mean_voltage_excursion_pu": {
+          "baseline_mean": 0.000646971646960149,
+          "dfl_mean": 0.0005933663777478938,
+          "delta": {
+            "mean": -5.360526921225501e-05,
+            "ci95": [
+              -7.04339082095888e-05,
+              -3.74021628538413e-05
+            ],
+            "n_clean_days": 219
+          }
+        },
+        "daily_import_peak_kw": {
+          "baseline_mean": 146.78213735979213,
+          "dfl_mean": 140.052355114901,
+          "delta": {
+            "mean": -6.729782244891174,
+            "ci95": [
+              -7.558837866480763,
+              -5.902657391434578
+            ],
+            "n_clean_days": 219
+          },
+          "observed_peak_delta": -2.522257876390256
+        },
+        "daily_export_peak_kw": {
+          "baseline_mean": 9.795856489962764,
+          "dfl_mean": 9.66181926233803,
+          "delta": {
+            "mean": -0.13403722762473202,
+            "ci95": [
+              -0.4848078533491392,
+              0.23414234427862027
+            ],
+            "n_clean_days": 219
+          },
+          "observed_peak_delta": 4.484187379204116
+        },
+        "loss_kwh": {
+          "baseline_mean": 17.535052249858126,
+          "dfl_mean": 16.493890666513,
+          "delta": {
+            "mean": -1.0411615833451258,
+            "ci95": [
+              -1.1904835314566906,
+              -0.8960789984292874
+            ],
+            "n_clean_days": 219
+          }
+        },
+        "voltage_090_110_percentage_points": {
+          "baseline_mean": 0.0,
+          "dfl_mean": 0.0,
+          "delta": {
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n_clean_days": 219
+          }
+        }
+      },
+      "max_charge_difference_kw": 2.0598678588867188,
+      "max_discharge_difference_kw": 2.578151226043701
+    },
+    {
+      "control": "night_zero",
+      "baseline": "mlp",
+      "outcomes": {
+        "bill_aud": {
+          "baseline_mean": 3.7102492827276503,
+          "dfl_mean": 3.6975509518883123,
+          "delta": {
+            "mean": -0.01269833083933754,
+            "ci95": [
+              -0.01549172256312813,
+              -0.010039897988717553
+            ],
+            "n_clean_days": 219
+          }
+        },
+        "voltage_percentage_points": {
+          "baseline_mean": 19.713401134634008,
+          "dfl_mean": 17.741282689912826,
+          "delta": {
+            "mean": -1.9721184447211841,
+            "ci95": [
+              -2.250033218176986,
+              -1.6971112522742962
+            ],
+            "n_clean_days": 219
+          }
+        },
+        "mean_voltage_excursion_pu": {
+          "baseline_mean": 0.0006463957979805345,
+          "dfl_mean": 0.0005603225964369142,
+          "delta": {
+            "mean": -8.607320154362043e-05,
+            "ci95": [
+              -0.00010015810664853982,
+              -7.199485373951749e-05
+            ],
+            "n_clean_days": 219
+          }
+        },
+        "daily_import_peak_kw": {
+          "baseline_mean": 146.81676378149692,
+          "dfl_mean": 141.37497106552257,
+          "delta": {
+            "mean": -5.441792715974342,
+            "ci95": [
+              -6.1541473552903145,
+              -4.7446108976754555
+            ],
+            "n_clean_days": 219
+          },
+          "observed_peak_delta": -2.218895651336595
+        },
+        "daily_export_peak_kw": {
+          "baseline_mean": 9.783337951863372,
+          "dfl_mean": 9.194964629737887,
+          "delta": {
+            "mean": -0.5883733221254832,
+            "ci95": [
+              -0.9206741266544436,
+              -0.2346126430985656
+            ],
+            "n_clean_days": 219
+          },
+          "observed_peak_delta": 4.4841887795619115
+        },
+        "loss_kwh": {
+          "baseline_mean": 17.537410845016996,
+          "dfl_mean": 16.523766517863034,
+          "delta": {
+            "mean": -1.0136443271539666,
+            "ci95": [
+              -1.1412333983284406,
+              -0.8858870134674603
+            ],
+            "n_clean_days": 219
+          }
+        },
+        "voltage_090_110_percentage_points": {
+          "baseline_mean": 0.0,
+          "dfl_mean": 0.0,
+          "delta": {
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n_clean_days": 219
+          }
+        }
+      },
+      "max_charge_difference_kw": 2.0598678588867188,
+      "max_discharge_difference_kw": 2.578151226043701
+    },
+    {
+      "control": "night_zero",
+      "baseline": "msecont",
+      "outcomes": {
+        "bill_aud": {
+          "baseline_mean": 3.7090090489381344,
+          "dfl_mean": 3.6975509518883123,
+          "delta": {
+            "mean": -0.011458097049822646,
+            "ci95": [
+              -0.013235269412499102,
+              -0.009704073480110828
+            ],
+            "n_clean_days": 219
+          }
+        },
+        "voltage_percentage_points": {
+          "baseline_mean": 18.76746921267469,
+          "dfl_mean": 17.741282689912826,
+          "delta": {
+            "mean": -1.0261865227618654,
+            "ci95": [
+              -1.2063216353309483,
+              -0.8534201438878305
+            ],
+            "n_clean_days": 219
+          }
+        },
+        "mean_voltage_excursion_pu": {
+          "baseline_mean": 0.0005909773568851452,
+          "dfl_mean": 0.0005603225964369142,
+          "delta": {
+            "mean": -3.065476044823094e-05,
+            "ci95": [
+              -4.242986869291482e-05,
+              -1.947822723670937e-05
+            ],
+            "n_clean_days": 219
+          }
+        },
+        "daily_import_peak_kw": {
+          "baseline_mean": 143.97328155089136,
+          "dfl_mean": 141.37497106552257,
+          "delta": {
+            "mean": -2.598310485368786,
+            "ci95": [
+              -3.1364736522936223,
+              -2.0502455148493817
+            ],
+            "n_clean_days": 219
+          },
+          "observed_peak_delta": -2.1876675322956203
+        },
+        "daily_export_peak_kw": {
+          "baseline_mean": 8.970955215246294,
+          "dfl_mean": 9.194964629737887,
+          "delta": {
+            "mean": 0.2240094144915943,
+            "ci95": [
+              -0.1089882093455687,
+              0.5719397210224795
+            ],
+            "n_clean_days": 219
+          },
+          "observed_peak_delta": 6.192129500351648
+        },
+        "loss_kwh": {
+          "baseline_mean": 17.068468021873063,
+          "dfl_mean": 16.523766517863034,
+          "delta": {
+            "mean": -0.5447015040100331,
+            "ci95": [
+              -0.664434119173427,
+              -0.4285682814465221
+            ],
+            "n_clean_days": 219
+          }
+        },
+        "voltage_090_110_percentage_points": {
+          "baseline_mean": 0.0,
+          "dfl_mean": 0.0,
+          "delta": {
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n_clean_days": 219
+          }
+        }
+      }
+    },
+    {
+      "control": "equal_price",
+      "baseline": "mlp",
+      "outcomes": {
+        "bill_aud": {
+          "baseline_mean": 1.8173930979780313,
+          "dfl_mean": 1.8173930979780313,
+          "delta": {
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n_clean_days": 219
+          }
+        },
+        "voltage_percentage_points": {
+          "baseline_mean": 28.655043586550438,
+          "dfl_mean": 28.655043586550438,
+          "delta": {
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n_clean_days": 219
+          }
+        },
+        "mean_voltage_excursion_pu": {
+          "baseline_mean": 0.0026645809166031607,
+          "dfl_mean": 0.0026645809166031607,
+          "delta": {
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n_clean_days": 219
+          }
+        },
+        "daily_import_peak_kw": {
+          "baseline_mean": 182.70113944118336,
+          "dfl_mean": 182.70113944118336,
+          "delta": {
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n_clean_days": 219
+          },
+          "observed_peak_delta": 0.0
+        },
+        "daily_export_peak_kw": {
+          "baseline_mean": 114.25229916715043,
+          "dfl_mean": 114.25229916715043,
+          "delta": {
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n_clean_days": 219
+          },
+          "observed_peak_delta": 0.0
+        },
+        "loss_kwh": {
+          "baseline_mean": 32.34242736688527,
+          "dfl_mean": 32.34242736688527,
+          "delta": {
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n_clean_days": 219
+          }
+        },
+        "voltage_090_110_percentage_points": {
+          "baseline_mean": 0.055693925556939264,
+          "dfl_mean": 0.055693925556939264,
+          "delta": {
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n_clean_days": 219
+          }
+        }
+      },
+      "max_charge_difference_kw": 0.0,
+      "max_discharge_difference_kw": 0.0
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "interpretation": "Descriptive transformer-rating exceedance at observed half-hourly snapshots, not transformer aging or dynamic thermal simulation. EULV apparent-power loading; SimBench native pandapower loading metric.",
+  "records": [
+    {
+      "network": "eulv",
+      "source_pu": 1.05,
+      "method": "dfl",
+      "observed_max_loading_pct": 25.074350802364933,
+      "fraction_clean_halfhours_above_rating_pct": 0.0
+    },
+    {
+      "network": "eulv",
+      "source_pu": 1.05,
+      "method": "mlp",
+      "observed_max_loading_pct": 25.28854339540681,
+      "fraction_clean_halfhours_above_rating_pct": 0.0
+    },
+    {
+      "network": "eulv",
+      "source_pu": 1.05,
+      "method": "msecont",
+      "observed_max_loading_pct": 25.286020324239296,
+      "fraction_clean_halfhours_above_rating_pct": 0.0
+    },
+    {
+      "network": "eulv",
+      "source_pu": 1.025,
+      "method": "dfl",
+      "observed_max_loading_pct": 25.163146838369492,
+      "fraction_clean_halfhours_above_rating_pct": 0.0
+    },
+    {
+      "network": "eulv",
+      "source_pu": 1.0,
+      "method": "dfl",
+      "observed_max_loading_pct": 25.261200403856776,
+      "fraction_clean_halfhours_above_rating_pct": 0.0
+    },
+    {
+      "network": "simbench_rural1",
+      "source_pu": 1.025,
+      "method": "dfl",
+      "observed_max_loading_pct": 118.87628808785541,
+      "fraction_clean_halfhours_above_rating_pct": 0.6563926940639269
+    },
+    {
+      "network": "simbench_semiurb4",
+      "source_pu": 1.025,
+      "method": "dfl",
+      "observed_max_loading_pct": 47.18274031062908,
+      "fraction_clean_halfhours_above_rating_pct": 0.0
+    },
+    {
+      "network": "eulv",
+      "source_pu": 1.025,
+      "method": "mlp",
+      "observed_max_loading_pct": 25.379086002467314,
+      "fraction_clean_halfhours_above_rating_pct": 0.0
+    },
+    {
+      "network": "eulv",
+      "source_pu": 1.0,
+      "method": "mlp",
+      "observed_max_loading_pct": 25.479094120245076,
+      "fraction_clean_halfhours_above_rating_pct": 0.0
+    },
+    {
+      "network": "simbench_rural1",
+      "source_pu": 1.025,
+      "method": "mlp",
+      "observed_max_loading_pct": 119.84053306182219,
+      "fraction_clean_halfhours_above_rating_pct": 0.8276255707762558
+    },
+    {
+      "network": "simbench_semiurb4",
+      "source_pu": 1.025,
+      "method": "mlp",
+      "observed_max_loading_pct": 47.55880382671396,
+      "fraction_clean_halfhours_above_rating_pct": 0.0
+    },
+    {
+      "network": "eulv",
+      "source_pu": 1.025,
+      "method": "msecont",
+      "observed_max_loading_pct": 25.376550696589444,
+      "fraction_clean_halfhours_above_rating_pct": 0.0
+    },
+    {
+      "network": "eulv",
+      "source_pu": 1.0,
+      "method": "msecont",
+      "observed_max_loading_pct": 25.476545392759224,
+      "fraction_clean_halfhours_above_rating_pct": 0.0
+    },
+    {
+      "network": "simbench_rural1",
+      "source_pu": 1.025,
+      "method": "msecont",
+      "observed_max_loading_pct": 119.82867131049673,
+      "fraction_clean_halfhours_above_rating_pct": 0.76103500761035
+    },
+    {
+      "network": "simbench_semiurb4",
+      "source_pu": 1.025,
+      "method": "msecont",
+      "observed_max_loading_pct": 47.55415047682867,
+      "fraction_clean_halfhours_above_rating_pct": 0.0
+    }
+  ],
+  "paired": [
+    {
+      "network": "eulv",
+      "source_pu": 1.0,
+      "dfl_minus_continued_transformer_above_rating_pp": {
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n_clean_days": 219
+      }
+    },
+    {
+      "network": "eulv",
+      "source_pu": 1.025,
+      "dfl_minus_continued_transformer_above_rating_pp": {
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n_clean_days": 219
+      }
+    },
+    {
+      "network": "eulv",
+      "source_pu": 1.05,
+      "dfl_minus_continued_transformer_above_rating_pp": {
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n_clean_days": 219
+      }
+    },
+    {
+      "network": "simbench_rural1",
+      "source_pu": 1.025,
+      "dfl_minus_continued_transformer_above_rating_pp": {
+        "mean": -0.10464231354642313,
+        "ci95": [
+          -0.188634025439581,
+          -0.03457457448875783
+        ],
+        "n_clean_days": 219
+      }
+    },
+    {
+      "network": "simbench_semiurb4",
+      "source_pu": 1.025,
+      "dfl_minus_continued_transformer_above_rating_pp": {
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n_clean_days": 219
+      }
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "status": "complete",
+  "tag": "matched_pv_hgb_dfl_tou_wear0",
+  "seed": 11,
+  "mode": "pv",
+  "loss": "dfl",
+  "load": "hgb",
+  "wear": 0.0,
+  "tariff": "tou",
+  "train_days": 4096,
+  "validation_days": 1024,
+  "epochs_completed": 4,
+  "batch_size": 32,
+  "test_used_for_selection": false,
+  "selected": 0,
+  "candidates": [
+    {
+      "learning_rate": 0.0001,
+      "start_validation_cost": 3.0168203644588765,
+      "best_validation_cost": 3.0056833462765677,
+      "selected_epoch": 3,
+      "trace": [
+        {
+          "epoch": 1,
+          "mean_training_loss": 3.1426423378288746,
+          "validation_operating_excluding_cl": 3.0080961831896658
+        },
+        {
+          "epoch": 2,
+          "mean_training_loss": 3.139959268271923,
+          "validation_operating_excluding_cl": 3.0062691418900127
+        },
+        {
+          "epoch": 3,
+          "mean_training_loss": 3.138541922904551,
+          "validation_operating_excluding_cl": 3.0056833462765677
+        },
+        {
+          "epoch": 4,
+          "mean_training_loss": 3.1374049615114927,
+          "validation_operating_excluding_cl": 3.0068557225659025
+        }
+      ],
+      "elapsed_seconds": 189.98499869997613,
+      "peak_process_rss_bytes": 936931328,
+      "logical_threads_per_process": 1,
+      "python": "3.12.14",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "resource_note": "Peak process RSS includes data and imports. Wall times are comparable only when run serially without competing workload."
+    },
+    {
+      "learning_rate": 3e-05,
+      "start_validation_cost": 3.0168203644588765,
+      "best_validation_cost": 3.0073111855986783,
+      "selected_epoch": 3,
+      "trace": [
+        {
+          "epoch": 1,
+          "mean_training_loss": 3.1435607858002186,
+          "validation_operating_excluding_cl": 3.0090665153316714
+        },
+        {
+          "epoch": 2,
+          "mean_training_loss": 3.1414365768432617,
+          "validation_operating_excluding_cl": 3.007872324391031
+        },
+        {
+          "epoch": 3,
+          "mean_training_loss": 3.14060621522367,
+          "validation_operating_excluding_cl": 3.0073111855986783
+        },
+        {
+          "epoch": 4,
+          "mean_training_loss": 3.1398100377991796,
+          "validation_operating_excluding_cl": 3.0076726762244537
+        }
+      ],
+      "elapsed_seconds": 177.8845183000667,
+      "peak_process_rss_bytes": 938897408,
+      "logical_threads_per_process": 1,
+      "python": "3.12.14",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "resource_note": "Peak process RSS includes data and imports. Wall times are comparable only when run serially without competing workload."
+    }
+  ],
+  "process_resources": {
+    "elapsed_seconds": 371.4852798000211,
+    "peak_process_rss_bytes": 938897408,
+    "logical_threads_per_process": 1,
+    "python": "3.12.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "resource_note": "Peak process RSS includes data and imports. Wall times are comparable only when run serially without competing workload."
+  },
+  "full_pipeline_resources": {
+    "elapsed_seconds": 376.86447340005543,
+    "peak_process_rss_bytes": 1051475968,
+    "logical_threads_per_process": 1,
+    "python": "3.12.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "resource_note": "Peak process RSS includes data and imports. Wall times are comparable only when run serially without competing workload."
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "recorded_utc": "2026-10-08T19:02:21.930670+00:00",
+  "scope": "Pre-existing Oct6 selected nighttime-restricted Ausgrid models and controller definitions before external outcome inspection; not public preregistration.",
+  "external_primary_reference_capacity_kwp": 2.2,
+  "external_capacity_sensitivity_kwp": [
+    2.0,
+    2.4
+  ],
+  "external_metadata_caveat": "StoreNet nominal PV capacity differs across paper and repository. Reference scales are not verified nameplate values.",
+  "artifacts": [
+    {
+      "relative_path": "checkpoints/forecast_gc_shared.joblib",
+      "bytes": 284672,
+      "sha256": "bb976670e29f2f06ae5083f87c9fc6fab6df46d31874edc96bb06b6768b3e652"
+    },
+    {
+      "relative_path": "checkpoints/forecast_mlp_seed11.pt",
+      "bytes": 445733,
+      "sha256": "e0bba8867b9e9ac2d1ba74fe5b6ed13630e924394f8ff80181f6d73d190a0b77"
+    },
+    {
+      "relative_path": "checkpoints/forecast_mlp_seed23.pt",
+      "bytes": 445733,
+      "sha256": "595c9830475c7ef45894c868d48ccfa3343ad270c27e381873e1767ea74ab8dc"
+    },
+    {
+      "relative_path": "checkpoints/forecast_mlp_seed47.pt",
+      "bytes": 445733,
+      "sha256": "cdcabffd4df0bb5db902634b166c6c32a8a9384eb8ab4949b6838d84e47e87af"
+    },
+    {
+      "relative_path": "checkpoints/decision_physical_tou_seed11.pt",
+      "bytes": 446673,
+      "sha256": "4c41ad32fe16145e3cd38fbabe894bab00c47b031a87661868a4bcb877ef07e7"
+    },
+    {
+      "relative_path": "checkpoints/decision_physical_tou_seed23.pt",
+      "bytes": 446673,
+      "sha256": "4ac6992256a2242e7a26ff5cc44336e7e1ea0359315df90f15ff2b3075868a46"
+    },
+    {
+      "relative_path": "checkpoints/decision_physical_tou_seed47.pt",
+      "bytes": 446673,
+      "sha256": "b769321bb3a23881ad1a09a194c3096959fafde80978ad2d3a6a00de3746ceae"
+    },
+    {
+      "relative_path": "checkpoints/mse_continuation_physical_tou_seed11.pt",
+      "bytes": 446449,
+      "sha256": "15d75c3535e3b326ae30d878e640628ddb20cbba052e1b311971869b3703d75e"
+    },
+    {
+      "relative_path": "checkpoints/mse_continuation_physical_tou_seed23.pt",
+      "bytes": 446449,
+      "sha256": "7a703b7115be3160d1bc3ba49813857e71a37e5978f9f59d15cd2bb58c799f16"
+    },
+    {
+      "relative_path": "checkpoints/mse_continuation_physical_tou_seed47.pt",
+      "bytes": 446449,
+      "sha256": "12a057bc8560bdfde8ce2bae287a9e6199862362f10e8fd812ece1d3dc561b29"
+    },
+    {
+      "relative_path": "scripts/forecast_models.py",
+      "bytes": 13137,
+      "sha256": "6032744a468e53be50ccb7b7cca6053258ef48717150e1f0f5bb492015968c6c"
+    },
+    {
+      "relative_path": "scripts/battery_model.py",
+      "bytes": 7475,
+      "sha256": "63b05a1de00e5d7bbb49a00f528699e153095d2feac58d551570a85a9d1bc074"
+    },
+    {
+      "relative_path": "scripts/decision_layer.py",
+      "bytes": 5790,
+      "sha256": "be868f453579d901af5027951b088b4c010531ca9133d62d83d46875425dd358"
+    },
+    {
+      "relative_path": "scripts/train_decision_physical.py",
+      "bytes": 6569,
+      "sha256": "e53ba6dd1b292b429dd51379de0b5ab4d20bf980dd36342f32bd1d5f2898bae8"
+    },
+    {
+      "relative_path": "scripts/train_matched_mse_physical.py",
+      "bytes": 5305,
+      "sha256": "a2218cdf0646ccb4e2b17645fcbc9b3f636c3cd5b5bf9d1d7b2f0e3f96f3cb60"
+    },
+    {
+      "relative_path": "scripts/run_physical_dispatch.py",
+      "bytes": 1756,
+      "sha256": "a71fda1dcba6c2be7673c3421b73bea7b36053237881e928c47922e5361d4f0f"
+    },
+    {
+      "relative_path": "scripts/decision_baselines_physical.py",
+      "bytes": 5851,
+      "sha256": "b4e3aa7515e5310b013cfe2940647f0bb2a9a45681db5c9bcaaa7e40286544ef"
+    },
+    {
+      "relative_path": "research/executed_protocol_final.json",
+      "bytes": 143942,
+      "sha256": "239cacdd75db2b432733ff6c757b7cc178bf6b14df4442c4a7eb9ad2003c1c39"
+    },
+    {
+      "relative_path": "datasets/splits_v1.json",
+      "bytes": 45028,
+      "sha256": "65c147f713887ea5d1b3cc2b0306e285681f1a29b362288d2af9b1f469521e17"
+    }
+  ]
+}

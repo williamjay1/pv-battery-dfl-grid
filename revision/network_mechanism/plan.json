@@ -1,0 +1,109 @@
+{
+  "created_utc": "2026-10-08T19:01:47.946406+00:00",
+  "selection": "First common clean date within each season at 02:00,12:00,18:00,22:00; nearest observed p05,p50,p95 exogenous gross-load-minus-PV sample. No ranking on method effect.",
+  "cases": [
+    {
+      "date": "2012-08-24",
+      "slot": 4,
+      "label": "winter_first_clean_02h"
+    },
+    {
+      "date": "2012-08-24",
+      "slot": 24,
+      "label": "winter_first_clean_12h"
+    },
+    {
+      "date": "2012-08-24",
+      "slot": 36,
+      "label": "winter_first_clean_18h"
+    },
+    {
+      "date": "2012-08-24",
+      "slot": 44,
+      "label": "winter_first_clean_22h"
+    },
+    {
+      "date": "2012-09-01",
+      "slot": 4,
+      "label": "spring_first_clean_02h"
+    },
+    {
+      "date": "2012-09-01",
+      "slot": 24,
+      "label": "spring_first_clean_12h"
+    },
+    {
+      "date": "2012-09-01",
+      "slot": 36,
+      "label": "spring_first_clean_18h"
+    },
+    {
+      "date": "2012-09-01",
+      "slot": 44,
+      "label": "spring_first_clean_22h"
+    },
+    {
+      "date": "2012-12-01",
+      "slot": 4,
+      "label": "summer_first_clean_02h"
+    },
+    {
+      "date": "2012-12-01",
+      "slot": 24,
+      "label": "summer_first_clean_12h"
+    },
+    {
+      "date": "2012-12-01",
+      "slot": 36,
+      "label": "summer_first_clean_18h"
+    },
+    {
+      "date": "2012-12-01",
+      "slot": 44,
+      "label": "summer_first_clean_22h"
+    },
+    {
+      "date": "2013-04-14",
+      "slot": 4,
+      "label": "autumn_first_clean_02h"
+    },
+    {
+      "date": "2013-04-14",
+      "slot": 24,
+      "label": "autumn_first_clean_12h"
+    },
+    {
+      "date": "2013-04-14",
+      "slot": 36,
+      "label": "autumn_first_clean_18h"
+    },
+    {
+      "date": "2013-04-14",
+      "slot": 44,
+      "label": "autumn_first_clean_22h"
+    },
+    {
+      "date": "2012-10-17",
+      "slot": 24,
+      "label": "exogenous_net_q0.05"
+    },
+    {
+      "date": "2012-12-25",
+      "slot": 12,
+      "label": "exogenous_net_q0.5"
+    },
+    {
+      "date": "2013-05-17",
+      "slot": 38,
+      "label": "exogenous_net_q0.95"
+    }
+  ],
+  "finite_difference_kw_kvar": [
+    0.1,
+    0.05
+  ],
+  "reference": "msecont",
+  "target": "dfl",
+  "sign_convention": "P is net demand-positive kW; Q is gross-demand-positive kvar. Battery/PV unity PF implies deltaQ=0.",
+  "sensitivity_role": "Continuous voltage local Jacobian, not derivative of an exceedance indicator; full AC target verifies finite intervention error."
+}

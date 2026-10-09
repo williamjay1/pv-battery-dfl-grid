@@ -1,0 +1,84 @@
+{
+  "contrast": "(DFL-continuedMSE) in narrow27 minus same gap in matched dispersed27",
+  "records": [
+    {
+      "metric": "daily_operating_cost_aud",
+      "narrow_method_gap": -0.012901245546114232,
+      "matched_dispersed_method_gap": -0.01219983091997745,
+      "difference_of_method_gaps": {
+        "mean": -0.0007014146261367801,
+        "ci95": [
+          -0.002855589645708343,
+          0.0011784876284705794
+        ],
+        "n_clean_days": 160
+      }
+    },
+    {
+      "metric": "daily_over_pct",
+      "narrow_method_gap": -0.4827353395061727,
+      "matched_dispersed_method_gap": -0.6298225308641974,
+      "difference_of_method_gaps": {
+        "mean": 0.14708719135802484,
+        "ci95": [
+          -0.024193212561182034,
+          0.3095367891075506
+        ],
+        "n_clean_days": 160
+      }
+    },
+    {
+      "metric": "daily_under_pct",
+      "narrow_method_gap": 0.0,
+      "matched_dispersed_method_gap": 0.0,
+      "difference_of_method_gaps": {
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n_clean_days": 160
+      }
+    },
+    {
+      "metric": "daily_import_peak_kw",
+      "narrow_method_gap": -0.3735856699402528,
+      "matched_dispersed_method_gap": -0.5914512280998625,
+      "difference_of_method_gaps": {
+        "mean": 0.2178655581596097,
+        "ci95": [
+          0.07506657881651858,
+          0.3660675108697592
+        ],
+        "n_clean_days": 160
+      }
+    },
+    {
+      "metric": "daily_export_peak_kw",
+      "narrow_method_gap": 0.08126842473367929,
+      "matched_dispersed_method_gap": 0.0038523130125143355,
+      "difference_of_method_gaps": {
+        "mean": 0.07741611172116497,
+        "ci95": [
+          -0.02667253559136909,
+          0.17879961342649553
+        ],
+        "n_clean_days": 160
+      }
+    },
+    {
+      "metric": "daily_loss_kwh",
+      "narrow_method_gap": -0.05847700247328687,
+      "matched_dispersed_method_gap": -0.05558406035703015,
+      "difference_of_method_gaps": {
+        "mean": -0.002892942116256716,
+        "ci95": [
+          -0.010446443335584145,
+          0.004785429635600417
+        ],
+        "n_clean_days": 160
+      }
+    }
+  ],
+  "interpretation": "Descriptive difference of method gaps under matched sizes, nodes and dates. Not causal effect of geographic clustering or known real feeder connectivity."
+}

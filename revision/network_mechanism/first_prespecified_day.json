@@ -1,0 +1,139 @@
+{
+  "date": "2012-08-24",
+  "selection": "First date in previously frozen19-case plan, winter first clean date; not largest observed effect.",
+  "reference": "continued MSE seed11",
+  "target": "DFL seed11",
+  "panel": 0,
+  "n_customers": 55,
+  "n_slots": 48,
+  "arrays": "revision_20261009/network_mechanism/first_prespecified_day.npz",
+  "shapes": {
+    "date": [],
+    "slot": [
+      48
+    ],
+    "hour": [
+      48
+    ],
+    "household_id": [
+      55
+    ],
+    "house_phase": [
+      55
+    ],
+    "house_bus": [
+      55
+    ],
+    "actual_gross_load_kw": [
+      48,
+      55
+    ],
+    "actual_pv_kw": [
+      48,
+      55
+    ],
+    "baseline_forecast_pv_kw": [
+      48,
+      55
+    ],
+    "baseline_forecast_load_kw": [
+      48,
+      55
+    ],
+    "baseline_charge_kw": [
+      48,
+      55
+    ],
+    "baseline_discharge_kw": [
+      48,
+      55
+    ],
+    "baseline_battery_net_demand_kw": [
+      48,
+      55
+    ],
+    "baseline_net_demand_kw": [
+      48,
+      55
+    ],
+    "baseline_net_injection_kw": [
+      48,
+      55
+    ],
+    "baseline_voltage_pu": [
+      48,
+      55
+    ],
+    "baseline_source_import_kw": [
+      48
+    ],
+    "target_forecast_pv_kw": [
+      48,
+      55
+    ],
+    "target_forecast_load_kw": [
+      48,
+      55
+    ],
+    "target_charge_kw": [
+      48,
+      55
+    ],
+    "target_discharge_kw": [
+      48,
+      55
+    ],
+    "target_battery_net_demand_kw": [
+      48,
+      55
+    ],
+    "target_net_demand_kw": [
+      48,
+      55
+    ],
+    "target_net_injection_kw": [
+      48,
+      55
+    ],
+    "target_voltage_pu": [
+      48,
+      55
+    ],
+    "target_source_import_kw": [
+      48
+    ],
+    "delta_forecast_pv_kw": [
+      48,
+      55
+    ],
+    "delta_battery_net_demand_kw": [
+      48,
+      55
+    ],
+    "delta_net_demand_kw": [
+      48,
+      55
+    ],
+    "delta_net_injection_kw": [
+      48,
+      55
+    ],
+    "delta_voltage_pu": [
+      48,
+      55
+    ],
+    "delta_source_import_kw": [
+      48
+    ]
+  },
+  "units": "Power kW, voltage pu, hour local dataset clock; all deltas target minus baseline.",
+  "signs": "Net demand=GC+CL-PV+charge-discharge. Net injection is its negative. Forecast PV is decision signal, actual PV is shared fixed truth.",
+  "precision": "Original stored AC voltage float32 converted to float64 for calculation, no additional precision claimed.",
+  "source_sha256": {
+    "results\\dispatch\\msecont_tou_seed11_test_physical.npz": "92066cc7388951841dc9a5e96d2ac8e383968a66cdc0889690650b008014ec64",
+    "results\\network_replay\\main_physical\\msecont_seed11_panel0_b55_all_tou_eulv_src1p05_fixed_test_physical.npz": "76aa1c7a918922d924efdaea4199e6e414e0b0e053a11d4dc8b76027bd20d6cd",
+    "results\\dispatch\\dfl_tou_seed11_test_physical.npz": "12fa5a3494c9842f54fb8c4820f589e72cc92900e57f5910a7511d1991bd6327",
+    "results\\network_replay\\main_physical\\dfl_seed11_panel0_b55_all_tou_eulv_src1p05_fixed_test_physical.npz": "d4b8745cb0cc0572e62bee953048371af3115aa64042f7116ad40e19096046f2"
+  },
+  "code_sha256": "841c93cba8042023ea1896720910fc3de07223cd773cdb3ef9205e6ac301b7da"
+}

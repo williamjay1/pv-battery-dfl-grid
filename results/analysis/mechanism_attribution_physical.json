@@ -1,0 +1,79 @@
+{
+  "bill_aud": {
+    "values": {
+      "mse": 3.7090538453400526,
+      "common_only": 3.6989948790885996,
+      "idiosyncratic_only": 3.7080455611690626,
+      "dfl": 3.697819139435557
+    },
+    "common_attribution": -0.010142693992479357,
+    "idiosyncratic_attribution": -0.0010920119120163552,
+    "total_difference": -0.011234705904495712
+  },
+  "voltage_percentage_points": {
+    "values": {
+      "mse": 18.776982150269824,
+      "common_only": 17.809948803099488,
+      "idiosyncratic_only": 18.95911166459112,
+      "dfl": 17.92427701674277
+    },
+    "common_attribution": -1.0009339975093425,
+    "idiosyncratic_attribution": 0.14822886398228974,
+    "total_difference": -0.8527051335270528
+  },
+  "mean_voltage_excursion_pu": {
+    "values": {
+      "mse": 0.0005914383846860347,
+      "common_only": 0.0005638838104901527,
+      "idiosyncratic_only": 0.0005980903348300226,
+      "dfl": 0.000567149059750257
+    },
+    "common_attribution": -2.924792463782376e-05,
+    "idiosyncratic_attribution": 4.9585997020461085e-06,
+    "total_difference": -2.428932493577765e-05
+  },
+  "daily_import_peak_kw": {
+    "values": {
+      "mse": 144.00219057955354,
+      "common_only": 140.48682675974712,
+      "idiosyncratic_only": 145.71503559367545,
+      "dfl": 142.22806449489235
+    },
+    "common_attribution": -3.501167459294763,
+    "idiosyncratic_attribution": 1.727041374633572,
+    "total_difference": -1.7741260846611908
+  },
+  "daily_export_peak_kw": {
+    "values": {
+      "mse": 8.978057600436578,
+      "common_only": 9.325538231230277,
+      "idiosyncratic_only": 9.045190864105717,
+      "dfl": 9.364988070884737
+    },
+    "common_attribution": 0.33363891878635954,
+    "idiosyncratic_attribution": 0.053291551661798664,
+    "total_difference": 0.3869304704481582
+  },
+  "loss_kwh": {
+    "values": {
+      "mse": 17.07301434199774,
+      "common_only": 16.486645041800386,
+      "idiosyncratic_only": 17.2641295527613,
+      "dfl": 16.6541045048985
+    },
+    "common_attribution": -0.5981971740300782,
+    "idiosyncratic_attribution": 0.17928733693083565,
+    "total_difference": -0.41890983709924257
+  },
+  "voltage_090_110_percentage_points": {
+    "values": {
+      "mse": 0.0,
+      "common_only": 0.0,
+      "idiosyncratic_only": 0.0,
+      "dfl": 0.0
+    },
+    "common_attribution": 0.0,
+    "idiosyncratic_attribution": 0.0,
+    "total_difference": 0.0
+  }
+}

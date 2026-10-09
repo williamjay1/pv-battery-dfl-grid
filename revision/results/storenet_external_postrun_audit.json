@@ -1,0 +1,141 @@
+{
+  "status": "PASS",
+  "recorded_utc": "2026-10-08T19:19:36.886839+00:00",
+  "timing_disclosure": "This is a post-run audit. Six flat-tariff weight files were not listed in the original pre-run freeze; their current hashes/mtimes are disclosed here without backdating. The primary ToU model files were in the pre-run freeze.",
+  "loaded_model_weights": [
+    {
+      "relative_path": "checkpoints/mse_continuation_physical_tou_seed11.pt",
+      "sha256": "15d75c3535e3b326ae30d878e640628ddb20cbba052e1b311971869b3703d75e",
+      "mtime_utc": "2026-10-05T16:16:29.015495+00:00",
+      "included_in_original_freeze": true,
+      "matches_original_hash": true
+    },
+    {
+      "relative_path": "checkpoints/mse_continuation_physical_tou_seed23.pt",
+      "sha256": "7a703b7115be3160d1bc3ba49813857e71a37e5978f9f59d15cd2bb58c799f16",
+      "mtime_utc": "2026-10-05T16:16:37.195340+00:00",
+      "included_in_original_freeze": true,
+      "matches_original_hash": true
+    },
+    {
+      "relative_path": "checkpoints/mse_continuation_physical_tou_seed47.pt",
+      "sha256": "12a057bc8560bdfde8ce2bae287a9e6199862362f10e8fd812ece1d3dc561b29",
+      "mtime_utc": "2026-10-05T16:16:45.169437+00:00",
+      "included_in_original_freeze": true,
+      "matches_original_hash": true
+    },
+    {
+      "relative_path": "checkpoints/decision_physical_tou_seed11.pt",
+      "sha256": "4c41ad32fe16145e3cd38fbabe894bab00c47b031a87661868a4bcb877ef07e7",
+      "mtime_utc": "2026-10-05T16:10:15.864830+00:00",
+      "included_in_original_freeze": true,
+      "matches_original_hash": true
+    },
+    {
+      "relative_path": "checkpoints/decision_physical_tou_seed23.pt",
+      "sha256": "4ac6992256a2242e7a26ff5cc44336e7e1ea0359315df90f15ff2b3075868a46",
+      "mtime_utc": "2026-10-05T16:13:09.661752+00:00",
+      "included_in_original_freeze": true,
+      "matches_original_hash": true
+    },
+    {
+      "relative_path": "checkpoints/decision_physical_tou_seed47.pt",
+      "sha256": "b769321bb3a23881ad1a09a194c3096959fafde80978ad2d3a6a00de3746ceae",
+      "mtime_utc": "2026-10-05T16:16:02.555174+00:00",
+      "included_in_original_freeze": true,
+      "matches_original_hash": true
+    },
+    {
+      "relative_path": "checkpoints/mse_continuation_physical_flat_seed11.pt",
+      "sha256": "b86fdba55cd7db6e6ac79e87477697173d0462c98e06ebad4948da82cf75af6a",
+      "mtime_utc": "2026-10-05T16:16:32.846015+00:00",
+      "included_in_original_freeze": false,
+      "matches_original_hash": null
+    },
+    {
+      "relative_path": "checkpoints/mse_continuation_physical_flat_seed23.pt",
+      "sha256": "08f3dd843cfe22455459c914d43e5b67d1eed5c0e0a72e23e900994f8eb0dff8",
+      "mtime_utc": "2026-10-05T16:16:40.539749+00:00",
+      "included_in_original_freeze": false,
+      "matches_original_hash": null
+    },
+    {
+      "relative_path": "checkpoints/mse_continuation_physical_flat_seed47.pt",
+      "sha256": "79dfc54e2814730a12479aa0f882ba93c701ba5ebb79eefdc5889994f9edbaf8",
+      "mtime_utc": "2026-10-05T16:16:48.462657+00:00",
+      "included_in_original_freeze": false,
+      "matches_original_hash": null
+    },
+    {
+      "relative_path": "checkpoints/decision_physical_flat_seed11.pt",
+      "sha256": "47583e479b0ae41372c00071588b8efa6d847c8accf057b971c516762b8d80aa",
+      "mtime_utc": "2026-10-05T16:10:14.252527+00:00",
+      "included_in_original_freeze": false,
+      "matches_original_hash": null
+    },
+    {
+      "relative_path": "checkpoints/decision_physical_flat_seed23.pt",
+      "sha256": "cd8f761e0ca1c5268ced5c3a9842b3a2336e0cd62c410b1ee7823cc15b6ae17a",
+      "mtime_utc": "2026-10-05T16:13:11.882629+00:00",
+      "included_in_original_freeze": false,
+      "matches_original_hash": null
+    },
+    {
+      "relative_path": "checkpoints/decision_physical_flat_seed47.pt",
+      "sha256": "48a8d7f5eff28fb44586edfaddca04948de93cf8685a730e3c48d2380007fcde",
+      "mtime_utc": "2026-10-05T16:16:08.047992+00:00",
+      "included_in_original_freeze": false,
+      "matches_original_hash": null
+    }
+  ],
+  "checked_dispatch_files": [
+    "storenet_2p2_msecont_tou_seed11",
+    "storenet_2p2_msecont_tou_seed23",
+    "storenet_2p2_msecont_tou_seed47",
+    "storenet_2p2_dfl_tou_seed11",
+    "storenet_2p2_dfl_tou_seed23",
+    "storenet_2p2_dfl_tou_seed47",
+    "storenet_2p2_msecont_flat_seed11",
+    "storenet_2p2_msecont_flat_seed23",
+    "storenet_2p2_msecont_flat_seed47",
+    "storenet_2p2_dfl_flat_seed11",
+    "storenet_2p2_dfl_flat_seed23",
+    "storenet_2p2_dfl_flat_seed47",
+    "storenet_2p0_msecont_tou_seed11",
+    "storenet_2p0_msecont_tou_seed23",
+    "storenet_2p0_msecont_tou_seed47",
+    "storenet_2p0_dfl_tou_seed11",
+    "storenet_2p0_dfl_tou_seed23",
+    "storenet_2p0_dfl_tou_seed47",
+    "storenet_2p0_msecont_flat_seed11",
+    "storenet_2p0_msecont_flat_seed23",
+    "storenet_2p0_msecont_flat_seed47",
+    "storenet_2p0_dfl_flat_seed11",
+    "storenet_2p0_dfl_flat_seed23",
+    "storenet_2p0_dfl_flat_seed47",
+    "storenet_2p4_msecont_tou_seed11",
+    "storenet_2p4_msecont_tou_seed23",
+    "storenet_2p4_msecont_tou_seed47",
+    "storenet_2p4_dfl_tou_seed11",
+    "storenet_2p4_dfl_tou_seed23",
+    "storenet_2p4_dfl_tou_seed47",
+    "storenet_2p4_msecont_flat_seed11",
+    "storenet_2p4_msecont_flat_seed23",
+    "storenet_2p4_msecont_flat_seed47",
+    "storenet_2p4_dfl_flat_seed11",
+    "storenet_2p4_dfl_flat_seed23",
+    "storenet_2p4_dfl_flat_seed47"
+  ],
+  "max_cost_recomputation_error_aud": 0.0,
+  "max_storage_rounded_soc_bound_violation_kwh": 1.430511474609375e-06,
+  "max_storage_rounded_cyclic_end_error_kwh": 1.9073486328125e-06,
+  "max_night_signal_kw": 0.0,
+  "mask_pairs_per_scale": 2224,
+  "uncertainty_scope": "paired calendar-block uncertainty conditional on these 10 households, not population household-sampling uncertainty",
+  "elapsed_seconds": 1.1251431999262422,
+  "peak_process_rss_bytes": 60997632,
+  "logical_threads_per_process": 1,
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "resource_note": "Peak process RSS includes data and imports. Wall times are comparable only when run serially without competing workload."
+}

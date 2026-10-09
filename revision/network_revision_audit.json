@@ -1,0 +1,1220 @@
+{
+  "status": "PASS",
+  "created_utc": "2026-10-08T19:58:32.284184+00:00",
+  "new_scenarios": 133,
+  "records": [
+    {
+      "file": "revision_20261009\\network_replay\\export_limit\\calibrated_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_cap3p0.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.356663623918735e-06,
+      "sha256": "beb8f7560a543f83a06daac9c93952a122e846db1ac19fff3983bc5a07f321bd",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\export_limit\\calibrated_seed11_panel1_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_cap3p0.npz",
+      "H": 55,
+      "clean_days": 129,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 8.067760179031325e-06,
+      "sha256": "1d2aa164eb54da65c5c3763be25f1192657fb1295888a868b40da1a172f61de6",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\export_limit\\calibrated_seed11_panel2_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_cap3p0.npz",
+      "H": 55,
+      "clean_days": 276,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 7.332055117714731e-06,
+      "sha256": "8f800a7e7da6df817ced5ef9cb8f68cd3b2560caf30db6c7b004694e44c91257",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\export_limit\\dfl_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_cap3p0.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 5.813484227346066e-06,
+      "sha256": "4a8a640c9aaa86c32ae946d6efc460e66ac14cdb068f0d1a8a6152991f59e4f2",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\export_limit\\dfl_seed11_panel1_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_cap3p0.npz",
+      "H": 55,
+      "clean_days": 129,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 8.021637343702537e-06,
+      "sha256": "3dbab5a5ebf2048f822b77287e48ca5e8d78161804abf7ad07f12f7834d926a4",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\export_limit\\dfl_seed11_panel2_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_cap3p0.npz",
+      "H": 55,
+      "clean_days": 276,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 7.488685048073762e-06,
+      "sha256": "33bc9b902df51072fc2e4d68ff91444defdd4e3f5acdb57ad708dcd04b78f0ef",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\export_limit\\hgb_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_cap3p0.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.060652868455918e-06,
+      "sha256": "bf77c65728865773f58118e6e24a3f7c4022c22619b6e7497403b1037a408a47",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\export_limit\\hgb_seed11_panel1_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_cap3p0.npz",
+      "H": 55,
+      "clean_days": 129,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 1.0782348431881417e-05,
+      "sha256": "d521d0a23e3d375d2162ca52245612f7597482802c4ed892215c6e0bcd89ba76",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\export_limit\\hgb_seed11_panel2_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_cap3p0.npz",
+      "H": 55,
+      "clean_days": 276,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 7.393166855607092e-06,
+      "sha256": "ebfc0dae5112721c889abf58e5dd0ad11c8ab93007d961fd446280099b173da1",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\export_limit\\mlp_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_cap3p0.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.7086993436049625e-06,
+      "sha256": "51362d60d2b6233615b8b6ea86af15d2a20828eabffcaa1e184a35fa2b8d3b53",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\export_limit\\mlp_seed11_panel1_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_cap3p0.npz",
+      "H": 55,
+      "clean_days": 129,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 8.99151290933986e-06,
+      "sha256": "48c95a58575dc679461cafa99a78f8609979e4c6c52cdbc0b86ca2cbc04c8879",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\export_limit\\mlp_seed11_panel2_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_cap3p0.npz",
+      "H": 55,
+      "clean_days": 276,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 7.55029723720213e-06,
+      "sha256": "fd9a613faba6ade4f6f2d80a31eeb72662ab131a5c1959b9bb894d03ee1ecc3d",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\export_limit\\msecont_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_cap3p0.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.3062282018577775e-06,
+      "sha256": "08aeda04c80bb515e0ae36feea0c8acaa7a3fadb4512fc997bba45d1c65f743d",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\export_limit\\msecont_seed11_panel1_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_cap3p0.npz",
+      "H": 55,
+      "clean_days": 129,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 8.359815779179769e-06,
+      "sha256": "0a54b38ea372039f16cf5912c1fabfc0bcec7aed2b1a5f0f1d147092237bab93",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\export_limit\\msecont_seed11_panel2_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_cap3p0.npz",
+      "H": 55,
+      "clean_days": 276,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 7.573702163199414e-06,
+      "sha256": "212ffa438718380c8b34f494dc5cb7443695e2ea3e1a23beddb03bbd6a74518f",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\export_limit\\none_seed11_panel0_b0_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_cap3p0.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 4.095485498734064e-06,
+      "sha256": "35d8c878fc26006518adcf7dddf231989fbcf3a48105241e4fb548886b1f5040",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\export_limit\\none_seed11_panel1_b0_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_cap3p0.npz",
+      "H": 55,
+      "clean_days": 129,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.477463655618632e-06,
+      "sha256": "8181cd5b41b3ddf248b52057a2d1e008a2ca2f07e859fae02e905dbe39cf6201",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\export_limit\\none_seed11_panel2_b0_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_cap3p0.npz",
+      "H": 55,
+      "clean_days": 276,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 5.1811267294255e-06,
+      "sha256": "fb670ae0b1f870f3cddd6e127fce1ea4ad8a8d12ec0e9b4b1bff69a81166905d",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\export_limit\\oracle_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_cap3p0.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 9.01252540952413e-06,
+      "sha256": "2bf0463ee223b765773cd84927d24c3f25eb4b36dc9e4cfc930986e316894d3b",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\export_limit\\oracle_seed11_panel1_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_cap3p0.npz",
+      "H": 55,
+      "clean_days": 129,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.285150728757571e-06,
+      "sha256": "7dcea147195656009ad0c7dc9861dbbd7de96ec5e92e4531c9d91b5dc8912833",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\export_limit\\oracle_seed11_panel2_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_cap3p0.npz",
+      "H": 55,
+      "clean_days": 276,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 5.613590289055281e-06,
+      "sha256": "53acf5d8d58bcda06b68241a5f10d23170fa0e9d2fcf31f6ec610f43eeccee77",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\export_limit\\self_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_cap3p0.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 4.539434813516374e-06,
+      "sha256": "109c61de73af2e71fae3a916ea54da51d16c0e84cc64b437167ab65b7ef5b31f",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\export_limit\\self_seed11_panel1_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_cap3p0.npz",
+      "H": 55,
+      "clean_days": 129,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.325095211479059e-06,
+      "sha256": "d077e2ea0c0e488fec6d93bfd1995fa7de3d93def34b7210343b0769b9a412c9",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\export_limit\\self_seed11_panel2_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_cap3p0.npz",
+      "H": 55,
+      "clean_days": 276,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 3.77089878467185e-06,
+      "sha256": "1e81f751c0f38fe4dc7665cf29c9041c585d0a234e9b3d80e401d2a898fecb9e",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\export_limit\\stochastic_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_cap3p0.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.6725824243718534e-06,
+      "sha256": "69a183d708b8267682e423c2aaee475089de8c2e08c676f4e1c9491bc847b3c8",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\export_limit\\stochastic_seed11_panel1_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_cap3p0.npz",
+      "H": 55,
+      "clean_days": 129,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 7.921271729216528e-06,
+      "sha256": "a9fad2edae9ff9ed90dc92e68e683974ade773968e22719f6d800611e35aac21",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\export_limit\\stochastic_seed11_panel2_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_cap3p0.npz",
+      "H": 55,
+      "clean_days": 276,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 7.230011775050116e-06,
+      "sha256": "81ba33f3415d8f7c9de4ebc1977db1d85fd6d03f503aedbc6f4d6c9b519834de",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\geo_comparison\\dfl_seed11_geo_matched_b27_all_tou_eulv_matched_dates_revision.npz",
+      "H": 27,
+      "clean_days": 160,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 5.4769944959343064e-06,
+      "sha256": "bc4a588a5eca79936cf6d1684518ddac673a7e9b6bad73f87c250ab794a95455",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\geo_comparison\\dfl_seed11_geo_narrow_b27_all_tou_eulv_matched_dates_revision.npz",
+      "H": 27,
+      "clean_days": 160,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 5.7171500936759045e-06,
+      "sha256": "b7686d80a5ba31dccec20e37221995b5d99ff26cc2e1036e5f595e1995ede752",
+      "reused_original_geo_ac": true
+    },
+    {
+      "file": "revision_20261009\\network_replay\\geo_comparison\\mlp_seed11_geo_matched_b27_all_tou_eulv_matched_dates_revision.npz",
+      "H": 27,
+      "clean_days": 160,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 4.269382864879878e-06,
+      "sha256": "093de4b613dcd01fce72f770dbdc7c616a14d47c870980e43ddea7dd2650013f",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\geo_comparison\\mlp_seed11_geo_narrow_b27_all_tou_eulv_matched_dates_revision.npz",
+      "H": 27,
+      "clean_days": 160,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 3.4469559717920095e-06,
+      "sha256": "2491b860cac9f5d0e415d4c6e50279aa2fd53ba2ae5af8a1ed86cc9695347dcf",
+      "reused_original_geo_ac": true
+    },
+    {
+      "file": "revision_20261009\\network_replay\\geo_comparison\\msecont_seed11_geo_matched_b27_all_tou_eulv_matched_dates_revision.npz",
+      "H": 27,
+      "clean_days": 160,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 4.68588896170713e-06,
+      "sha256": "e9c0f3f7442550e79ca921bc11fd0b36587aa045f1b80c6a2f7441e16c4b9b1d",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\geo_comparison\\msecont_seed11_geo_narrow_b27_all_tou_eulv_matched_dates_revision.npz",
+      "H": 27,
+      "clean_days": 160,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 3.5627520889869313e-06,
+      "sha256": "d0a3333f53c68fd6fa152f43191b9f688b30dbba1f494d8083d03c3493a4bd72",
+      "reused_original_geo_ac": true
+    },
+    {
+      "file": "revision_20261009\\network_replay\\matched_external\\msecont_seed11_panel0_b55_all_tou_eulv_src1p025_fixed_test_physical.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 7.654213874275229e-06,
+      "sha256": "8eaa76a6fa51a63e3ce76ec0baa1366d73bdf5c9574d0c71d24ca89351e90069",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\matched_external\\msecont_seed11_panel0_b55_all_tou_eulv_src1p0_fixed_test_physical.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 9.369666612357719e-06,
+      "sha256": "670dbbb3f7ce864ae89247c92a0801389e1d970b14375825357b7ea88a8a41fc",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\matched_external\\msecont_seed11_panel0_b55_all_tou_simbench_rural1_src1p025_fixed_test_physical.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 2.9984350096157186e-06,
+      "sha256": "5e2c4fba4fb6bf5215d135442b0b736334c7b61f0e41dfec572af4e67b5c88fc",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\matched_external\\msecont_seed11_panel0_b55_all_tou_simbench_semiurb4_src1p025_fixed_test_physical.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 2.672689485061497e-06,
+      "sha256": "36420dccaf84e0b4532bf57a06f6ae0a2292ccd95ba6394df240997def424146",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\matched_mapping\\msecont_seed11_panel0_b55_all_tou_eulv_src1p05_map0_test_physical.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 5.263504258223861e-06,
+      "sha256": "95ee26fdad3c115fe55bd766e20f3724c42c54ae824f2c48a64291296cba1535",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\matched_mapping\\msecont_seed11_panel0_b55_all_tou_eulv_src1p05_map1_test_physical.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.148118553817028e-06,
+      "sha256": "2cdf65226a0098ae3727ea85c0164f617cc1a15e2ce45d9443391307e695ab4f",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\matched_mapping\\msecont_seed11_panel0_b55_all_tou_eulv_src1p05_map2_test_physical.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 9.56348902647619e-06,
+      "sha256": "06d99f98bc09c2eec50c847725b4360330586b879b7799abebf985596fdd9cda",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\matched_mapping\\msecont_seed11_panel0_b55_all_tou_eulv_src1p05_map3_test_physical.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 5.457581989887217e-06,
+      "sha256": "058b61527badc768b94b9538b3f307b3513308585879a8eba3b0758af9dbaad0",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\matched_mapping\\msecont_seed11_panel0_b55_all_tou_eulv_src1p05_map4_test_physical.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.239515349726332e-06,
+      "sha256": "8a054dcc89d3facd160559ccc5c7562a9f454f5cb0a900cf78d4f7a29da390f3",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\matched_mapping\\msecont_seed11_panel0_b55_all_tou_eulv_src1p05_map5_test_physical.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 5.896028196339387e-06,
+      "sha256": "4014b4ea1228efadcdd2fdf18dcb5002d5f4537c8b5f243a6ffd4ddea945bdd2",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\matched_mapping\\msecont_seed11_panel0_b55_all_tou_eulv_src1p05_map6_test_physical.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.087627494988368e-06,
+      "sha256": "7bb62028a60c63c15510d11205c9e4b92c1d0cfc96364d7c27bb46ab2bad5470",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\matched_mapping\\msecont_seed11_panel0_b55_all_tou_eulv_src1p05_map7_test_physical.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.853135923634568e-06,
+      "sha256": "1c7448c181a97b5c15f574f326b063ca9e064a1ecfa0f83b9b55b65f9b00b1af",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\matched_mapping\\msecont_seed11_panel0_b55_all_tou_eulv_src1p05_map8_test_physical.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 5.877731894088356e-06,
+      "sha256": "2e68d902e0d8f91ccfde037ce6c55294bab59c78c3b2f1c29d4cc36e7fbd7d58",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\matched_mapping\\msecont_seed11_panel0_b55_all_tou_eulv_src1p05_map9_test_physical.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 5.7541656022230825e-06,
+      "sha256": "11d7a20a8586f1ac05546ef2824b522c8ec235a63cbc4c6bb381c109d16a30cb",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\calibrated_seed11_panel1_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 129,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 8.067760179031325e-06,
+      "sha256": "d9a5e7d96be3a9870fa1d336fc2ec79ad406cea5ae728224c79575e0051f70dc",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\calibrated_seed11_panel2_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 276,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 7.332055117714731e-06,
+      "sha256": "3456a47e960ea96e4bd90ea47b759e16b1874ae16c0a869be4a0d518639e27ba",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\calibrated_seed11_panel3_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 274,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 7.1824441372214665e-06,
+      "sha256": "ecf6724b3775bdfaca96d50ec1f1e9c1d5645dcd4a3e558069dce314ddf0263a",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\continuous_frozen_transfer_dfl_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 5.5039670687762055e-06,
+      "sha256": "deeab767551640985e6d3f1b153cfbd7db3106f07d2dcdef7f95c94e8f5b928d",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\continuous_frozen_transfer_dfl_seed11_panel3_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 274,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 7.02267579733018e-06,
+      "sha256": "910c0f0715bed2781b103858bbd6e0b6daa3b8b6bee6a3076fe0d7d8729c5e70",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\continuous_frozen_transfer_msecont_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 4.998286661894724e-06,
+      "sha256": "f9d295c30e241bf62f37fa1dc120284943175975267cc676db81792c81bf2907",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\continuous_frozen_transfer_msecont_seed11_panel3_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 274,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.590723398147702e-06,
+      "sha256": "da69aa7d80007a1b9d1cc11cb0c60b3e016301a96b91e1579858f3a37ac4fcc5",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\continuous_matched_retraining_dfl_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 5.536947850437457e-06,
+      "sha256": "3925291262e83afce69e64ca966e54e4dc8d98fe2cfe6f1271593c85b10b5704",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\continuous_matched_retraining_dfl_seed11_panel3_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 274,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.584930717146165e-06,
+      "sha256": "dd66a9b82ab4b197ea2ea26f241d75db86854fcd53b24a9fd20b8567900998f7",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\continuous_matched_retraining_msecont_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 5.51511841351271e-06,
+      "sha256": "6237e0839933236ec47ea43c2ec432ff2d0a6275b321478e9dda0629a21f94a0",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\continuous_matched_retraining_msecont_seed11_panel3_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 274,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.588362795767466e-06,
+      "sha256": "d21b9b902c1a560d211ceb8c04cd532209e8ae0094f934bef426671430faa12a",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\load_persistence_frozen_transfer_dfl_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.2570751042656525e-06,
+      "sha256": "8cb2e620f1746fe23817427d9ccc7391a399f8c519625edd1775abf86fa2948a",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\load_persistence_frozen_transfer_dfl_seed11_panel3_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 274,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 5.813333249449215e-06,
+      "sha256": "7a9737e15cdbdabd9a745355a066f01632983da8ff01f51522bf771ae4570dee",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\load_persistence_frozen_transfer_msecont_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.503241750888122e-06,
+      "sha256": "3841dc195c36c5fc667b19bd847e3c14591ae750f66151aaf6b6e124d8d18576",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\load_persistence_frozen_transfer_msecont_seed11_panel3_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 274,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.228413807818356e-06,
+      "sha256": "73cf689839a0e2df85c6f2203dc41fedc64cc8f72b3e59e55252076e3ad88a78",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\load_persistence_matched_retraining_dfl_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 5.866433948398253e-06,
+      "sha256": "c669a52737ae48f5527f61052b27e5be292faefed3a3d8707c6ac584309d8e2a",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\load_persistence_matched_retraining_dfl_seed11_panel3_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 274,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.614719936237634e-06,
+      "sha256": "ff205354a1bd28d8f6371579ecdfee4a221e40a8f922637da4b215525de13891",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\load_persistence_matched_retraining_msecont_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.6519970132183914e-06,
+      "sha256": "1e7b0e6b512a190ced434bd57775520e90d417e8bdee1374523a6c352523e9f7",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\load_persistence_matched_retraining_msecont_seed11_panel3_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 274,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.816064788139897e-06,
+      "sha256": "20f3587f014064a65f2bce4c6a057af8f61b7421f4dc69cf4679064b6abedce1",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\load_strong_frozen_transfer_dfl_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.29783303374154e-06,
+      "sha256": "4a7d97491380764db61f4951435b8e047b8a803199565d4a9f3a0b8466fd897c",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\load_strong_frozen_transfer_dfl_seed11_panel3_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 274,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.9439059249276625e-06,
+      "sha256": "9eca3be988192f83e41f7b50c3e9fbdd200c7d6dcd1b7e04d7353c382451779e",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\load_strong_frozen_transfer_msecont_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.967789825118587e-06,
+      "sha256": "beaf4954f39a4fc21ecfc2129a5ab05cd2ec1055f315425abe74cbaa90862e18",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\load_strong_frozen_transfer_msecont_seed11_panel3_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 274,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.799958398584494e-06,
+      "sha256": "be6180b1be0a219aa312337fe2d8f4edc4d0345c9c80550272b50de6ffb2a275",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\load_strong_matched_retraining_dfl_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.441013531421902e-06,
+      "sha256": "32bebfd2d7a48025ea1b8674bad3bb254d591d0ee807c810168e129bf34d378b",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\load_strong_matched_retraining_dfl_seed11_panel3_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 274,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.421309465931557e-06,
+      "sha256": "a825191aafdb2a7671657deac51b7da41e37622bebc32d8c42f9f63cdb3d6217",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\load_strong_matched_retraining_msecont_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.967789825118587e-06,
+      "sha256": "beaf4954f39a4fc21ecfc2129a5ab05cd2ec1055f315425abe74cbaa90862e18",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\load_strong_matched_retraining_msecont_seed11_panel3_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 274,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.799958398584494e-06,
+      "sha256": "be6180b1be0a219aa312337fe2d8f4edc4d0345c9c80550272b50de6ffb2a275",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\net_calibrated24_night_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 7.374169954665888e-06,
+      "sha256": "c0e3012426e8fcd240575f0f7c83a7394d6a51ed01d7bd21d346484675ad1cdf",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\net_calibrated24_night_seed11_panel1_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 129,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 7.452227197113359e-06,
+      "sha256": "016efd80a9333d5767e3f044aeaee23cfb00d249df1462a4d0928ebcef116ebe",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\net_calibrated24_night_seed11_panel2_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 276,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 5.248824905379479e-06,
+      "sha256": "27ea724b9e35c98bbc71d6e265d36929f471dafcb8a55882df86bdd12ca5e701",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\net_calibrated24_night_seed11_panel3_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 274,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 7.07076978301302e-06,
+      "sha256": "37807ce49b7de9110b7073fe3523979f81642e158abb062b35bfef3702da5aed",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\net_calibrated24_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 7.709416295575977e-06,
+      "sha256": "1f8dd44c1f62a431f14ffd7a27f7a1f5d050c2c59c963be8079004f1c23e4c6b",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\net_calibrated24_seed11_panel1_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 129,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.99826782835089e-06,
+      "sha256": "126d12a537c2306e989d6fa453a2e0b4a2c4c63b97ecea6a78ad1db841144d99",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\net_calibrated24_seed11_panel2_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 276,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 5.855013814226595e-06,
+      "sha256": "32ddcf06cba001a8b7b4fb5d228385087f7a0d79f453112cc10d4ef5d44b9e2c",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\net_calibrated24_seed11_panel3_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 274,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.710530131570636e-06,
+      "sha256": "eca195b2e62b2117e412ea8e605aae3f62b042df1bf8cabbc6e441f0dfb1a687",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\net_mse_night_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 7.719180576515328e-06,
+      "sha256": "2e898419b358401c91c3fed46ea2cacd911fd0b84a16bba19776833b4218c009",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\net_mse_night_seed11_panel1_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 129,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 7.047538238325046e-06,
+      "sha256": "242e7b23ae2849ef578fcecf0db4be6add6fd69988daad42a3521c18f213a90d",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\net_mse_night_seed11_panel2_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 276,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 7.737246758843241e-06,
+      "sha256": "23259ec9662859acf503083e19392d4b2a8b24dd5151113190355819671bbb09",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\net_mse_night_seed11_panel3_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 274,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 5.8037440622271674e-06,
+      "sha256": "35c415e84a4624f239844167227ee2b91153bdaeb377f3ebcf73ce40765699df",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\net_mse_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 7.71918043485087e-06,
+      "sha256": "98470469eabaa1c1474e3488377baedca6881daf60e38a086652e3e8d12511cf",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\net_mse_seed11_panel1_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 129,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.499849846353101e-06,
+      "sha256": "56db7ed6c67a20c12cfb02d0b8ac8015fedb414d128a8642015adea5ef3c5062",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\net_mse_seed11_panel2_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 276,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 7.737246758843241e-06,
+      "sha256": "7de1f2864c01e54c15102e9401494039e2a9f169b82d6007a8fcd1099d4fdb62",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\net_mse_seed11_panel3_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 274,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 5.804005842158233e-06,
+      "sha256": "2866468decb203ea86d2c871fb6b5502ef086f0232452dc256ea64a14a2555f8",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\seasonal12_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 5.554992304368511e-06,
+      "sha256": "ea61db23f33496f29e1afb01a5a345dcc5a4de4c1dec48178f60ca52a5f151a8",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\seasonal12_seed11_panel1_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 129,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 7.5776382981729284e-06,
+      "sha256": "d3ef9ffe9724ec6670034eeddefc2e1094c01cafffdde2ddebf44280df708270",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\seasonal12_seed11_panel2_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 276,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 7.15322778965799e-06,
+      "sha256": "b609300f442a3174334daa0d2085f5651b6f9c19b68b204469d2a1c052db0430",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\seasonal12_seed11_panel3_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 274,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.3904558480487594e-06,
+      "sha256": "52db97fb53e2ed313fef4da326fbf7189b1a6f03657f7a09f4a177303cb1e59b",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\stochastic_seed11_panel1_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 129,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 7.921271729216528e-06,
+      "sha256": "be0d93f96de3398ae461a6804f77128df4ca2a836990f7e50a4f7670ef91eaa0",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\stochastic_seed11_panel2_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 276,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 7.230011775050116e-06,
+      "sha256": "07af320715edf194cae989daff1d6a158b80a42316bb728c70eee56db6a4bde2",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\stochastic_seed11_panel3_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 274,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.4354533595434305e-06,
+      "sha256": "941c5a65cde707421fad71bca85307940c2512a177c4a0108d271352f5b0ffaa",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\wear0.01_frozen_transfer_dfl_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 5.8134895475348e-06,
+      "sha256": "cf5edb58c8311e44512770ae53f421c3d50c15ac9519c1ab14461c13c1c9bb12",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\wear0.01_frozen_transfer_dfl_seed11_panel3_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 274,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.8299156255058335e-06,
+      "sha256": "71f1264ecfb9a0632f9f1019b7a7466db5753a4a9fc2476181b0ba77ceecfb9d",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\wear0.01_frozen_transfer_msecont_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.3062314605843994e-06,
+      "sha256": "2d3158ac1b3f801f070833d4ec2af57e8c2e6b3ec21f330ab33345201ffbe7b5",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\wear0.01_frozen_transfer_msecont_seed11_panel3_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 274,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.442888416557935e-06,
+      "sha256": "fd66b1e3bb47c216ad9f9f84fdc0de2e74776c8580fe9f2473adcc0ac4ebeae6",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\wear0.01_matched_retraining_dfl_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.325043211852233e-06,
+      "sha256": "59376b93e50d6ec0d91de8e607cc4ec63ad6996ba32df32fdb6f00ab9abae1c4",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\wear0.01_matched_retraining_dfl_seed11_panel3_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 274,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.949955618562598e-06,
+      "sha256": "405ef67b2ce8a19689535a9b8434b54c7f6816d52af676e207937c2854efb329",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\wear0.01_matched_retraining_msecont_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.3062314605843994e-06,
+      "sha256": "2d3158ac1b3f801f070833d4ec2af57e8c2e6b3ec21f330ab33345201ffbe7b5",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\wear0.01_matched_retraining_msecont_seed11_panel3_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 274,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.442888416557935e-06,
+      "sha256": "fd66b1e3bb47c216ad9f9f84fdc0de2e74776c8580fe9f2473adcc0ac4ebeae6",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\wear0.04_frozen_transfer_dfl_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 5.8134833409440034e-06,
+      "sha256": "06d08a9db8ec9e7b76199632de253c7d808b9c36cbba86789928eb667b3a765e",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\wear0.04_frozen_transfer_dfl_seed11_panel3_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 274,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.829907863714624e-06,
+      "sha256": "4d52f52a638d21aa3b459e123a7e8a12dd95387a309e6cea0039eddaca5c05d1",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\wear0.04_frozen_transfer_msecont_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.306224687335771e-06,
+      "sha256": "46b9543d18e6e43254801e9e5b476068af39ff823cff8ce71c3a18bbcabf6e0d",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\wear0.04_frozen_transfer_msecont_seed11_panel3_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 274,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.44288832951645e-06,
+      "sha256": "bac7bad5ef092d6eb5330fdeb72924a43e99b2c9363b9390a88c4cf3fb5819fa",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\wear0.04_matched_retraining_dfl_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 5.89031066411394e-06,
+      "sha256": "659b20c6f91855b617c226a5530c10df74429dd3efe75c87adcde38047b5cb61",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\wear0.04_matched_retraining_dfl_seed11_panel3_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 274,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.85112638443286e-06,
+      "sha256": "85a70888612a2e7b3c3a3b2ea891b2726e2ca2ee754224575873b3e74f4c7d08",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\wear0.04_matched_retraining_msecont_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.306224687335771e-06,
+      "sha256": "46b9543d18e6e43254801e9e5b476068af39ff823cff8ce71c3a18bbcabf6e0d",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\wear0.04_matched_retraining_msecont_seed11_panel3_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 274,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.44288832951645e-06,
+      "sha256": "bac7bad5ef092d6eb5330fdeb72924a43e99b2c9363b9390a88c4cf3fb5819fa",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\wear0_frozen_transfer_dfl_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 5.813479362792862e-06,
+      "sha256": "c36906619fc589fef6170a9230dea5833c7006090467c432090dba8b69815482",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\wear0_frozen_transfer_dfl_seed11_panel3_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 274,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.829915941253262e-06,
+      "sha256": "3f9c542febdea909db5c10bb2e56099da67617077975bf9e4a2d45a28fcadbc1",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\wear0_frozen_transfer_msecont_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.30623113995199e-06,
+      "sha256": "5d7011e00240b833017a6e1643c4b9a1ae99c1e0682c70988d75df4525e31b81",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\wear0_frozen_transfer_msecont_seed11_panel3_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 274,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.442888038193928e-06,
+      "sha256": "f7ce6339c0270d8be02390b466067957d1c2d46c4279cc309068d16660147657",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\wear0_matched_retraining_dfl_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.40372862248384e-06,
+      "sha256": "3c94b6da34765bb0a45d780e9d84fc11aedb16e3f9a756305b7237dbf54c0f82",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\wear0_matched_retraining_dfl_seed11_panel3_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 274,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.582695565526819e-06,
+      "sha256": "a4734c8a37295061f79e3f4faf849652ab80ceb853b6bc8c6b7292e68411351a",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\wear0_matched_retraining_msecont_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.30623113995199e-06,
+      "sha256": "5d7011e00240b833017a6e1643c4b9a1ae99c1e0682c70988d75df4525e31b81",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\new_dispatch\\wear0_matched_retraining_msecont_seed11_panel3_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 274,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.442888038193928e-06,
+      "sha256": "f7ce6339c0270d8be02390b466067957d1c2d46c4279cc309068d16660147657",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\physical_brackets\\dfl_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z0p9_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 8.187486552735379e-06,
+      "sha256": "d1ebfea3232ccecb511f89daa78886fb4d1f6b7ac3a76371d1ccaf4bd40c6170",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\physical_brackets\\dfl_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p9_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 5.997494575638029e-06,
+      "sha256": "abd201d003a608639b54fc10bbd1ede311e7090e547d9507187a54301a14bd13",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\physical_brackets\\dfl_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf1p0_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.354623645066226e-06,
+      "sha256": "72ee26b921d3738f2724de4de52f75b5cd134250db7b69e44d8eaaec583b15b1",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\physical_brackets\\dfl_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p1_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 5.619852069926878e-06,
+      "sha256": "f4c0b9a580585df298c880f0848990a044ddf9ec5f57bac137625c234d8d1d7f",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\physical_brackets\\mlp_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z0p9_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 7.001306394194273e-06,
+      "sha256": "1c89165e399d5814f6c3353730302a5f5212dc2eace490a69a5861ddacfa8c20",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\physical_brackets\\mlp_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p9_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 7.038784751500771e-06,
+      "sha256": "827f63b725846f420994fc9b9b3c880b5a552f126e65173f84b65e64a38c296c",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\physical_brackets\\mlp_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf1p0_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 7.647532445531624e-06,
+      "sha256": "88ac806665948f2ac8f8b11fd58669473f1da9f047ad8737f3aefe580e1dad54",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\physical_brackets\\mlp_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p1_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.250876118940596e-06,
+      "sha256": "bc0f52b9b241e938fd8e436994f20c824fd8543d0f59763993e0827be607a8f8",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\physical_brackets\\msecont_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z0p9_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 7.311361974071673e-06,
+      "sha256": "931d54eedfc3d883189ccec00649fd48aa00b0238c759d97a0dbe187dcfb90e4",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\physical_brackets\\msecont_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf0p9_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.945917592204864e-06,
+      "sha256": "7630a4c9bcb0063ac93f68ab8a2a497b91fdebe36118c7464531f9f7c2890007",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\physical_brackets\\msecont_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p0_pf1p0_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 6.6419472384282585e-06,
+      "sha256": "e1a126a28a0892f9dc9e99be1978fe5b5702ba5f5bac9d75bdc7c00a7b587481",
+      "reused_original_geo_ac": false
+    },
+    {
+      "file": "revision_20261009\\network_replay\\physical_brackets\\msecont_seed11_panel0_b55_all_tou_eulv_src1.05_fixed_test_revision_z1p1_pf0p95_capNone.npz",
+      "H": 55,
+      "clean_days": 219,
+      "solver_failed_slots": 0,
+      "max_balance_kw": 9.851286356443723e-06,
+      "sha256": "2d4f4c0dd310b85a38997e7f126f2de92bd27e8502289a29f38cc17cfb40f558",
+      "reused_original_geo_ac": false
+    }
+  ],
+  "newly_executed_ac_replays": 130,
+  "reused_original_geo_replays_with_new_common_mask": 3,
+  "pass_definition": "Numerical convergence, finite source-clean outputs, power balance and export-settlement consistency. PASS does not mean network constraints are never violated or establish real-feeder validity.",
+  "maximum_balance_residual_kw": 1.0782348431881417e-05,
+  "matching_plan": "network_geography/cohort_plan.json",
+  "mechanism": "network_mechanism/summary.json",
+  "sources": "research/engineering_sources.json",
+  "stored_historical_voltage_precision": "Float32 historical node voltages: <=6e-8pu rounding near1pu; fixed curves and direction splits are diagnostic. Original float64 counts retained in daily_original_voltage_pct.",
+  "coverage": "Every metric uses common source-clean dates. Missing months retained as zero coverage, not imputed.",
+  "control_economics": "Export cap curtails PV only; battery actions unchanged, preserved SOC; lost export retail revenue included separately from unchanged wear/CL.",
+  "files": {
+    "scenarios": "network_diagnostics/scenarios.json",
+    "pooled_three_seed_comparisons": "network_diagnostics/paired.json",
+    "uniform_seed11_comparisons": "network_diagnostics/fixed_seed11_paired.json",
+    "scale": "network_system_scale.json"
+  }
+}

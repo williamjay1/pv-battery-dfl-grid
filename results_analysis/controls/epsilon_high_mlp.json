@@ -1,0 +1,21 @@
+{
+  "status": "complete",
+  "control": "epsilon_high",
+  "model": "mlp",
+  "battery": {
+    "capacity": 10.0,
+    "power": 3.0,
+    "efficiency": 0.95,
+    "dt": 0.5,
+    "throughput": 0.02,
+    "epsilon": 0.001,
+    "initial_fraction": 0.5,
+    "minimum_fraction": 0.1,
+    "maximum_fraction": 0.9
+  },
+  "night_zero": false,
+  "tariff": "tou",
+  "n_clean_days": 219,
+  "elapsed_seconds": 34.464345999993384,
+  "test_used_for_fitting": false
+}

@@ -1,0 +1,55 @@
+{
+  "calibrated_tou": {
+    "shape": [
+      220,
+      365,
+      48
+    ],
+    "clean_days": 79397,
+    "failed": 0,
+    "max_energy_residual": 2.7780000522170667e-12,
+    "max_terminal_error": 0.0,
+    "finite_all_scored": true,
+    "elapsed_seconds": 91.68835060001584
+  },
+  "calibrated_flat": {
+    "shape": [
+      220,
+      365,
+      48
+    ],
+    "clean_days": 79397,
+    "failed": 0,
+    "max_energy_residual": 3.4416913763379853e-13,
+    "max_terminal_error": 0.0,
+    "finite_all_scored": true,
+    "elapsed_seconds": 85.75945780001348
+  },
+  "stochastic_tou": {
+    "shape": [
+      220,
+      365,
+      48
+    ],
+    "clean_days": 79397,
+    "failed": 0,
+    "max_energy_residual": 3.128164394183841e-12,
+    "max_terminal_error": 0.0,
+    "finite_all_scored": true,
+    "elapsed_seconds": 579.049282299995
+  },
+  "stochastic_flat": {
+    "shape": [
+      220,
+      365,
+      48
+    ],
+    "clean_days": 79397,
+    "failed": 0,
+    "max_energy_residual": 2.3163693185779266e-12,
+    "max_terminal_error": 0.0,
+    "finite_all_scored": true,
+    "elapsed_seconds": 575.2160234000185
+  },
+  "status": "PASS"
+}

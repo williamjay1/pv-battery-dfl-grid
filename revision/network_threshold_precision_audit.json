@@ -1,0 +1,178 @@
+{
+  "max_absolute_difference_of_clean_mean_pp": 0.00034592500346164456,
+  "nonzero_records": [
+    {
+      "scenario": "dfl_seed11_panel0_b28_all_tou_eulv_src1p05_fixed_test_physical",
+      "difference_pp": -0.00017296250173082228
+    },
+    {
+      "scenario": "dfl_seed11_panel0_b28_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_physical",
+      "difference_pp": -0.00017296250173082228
+    },
+    {
+      "scenario": "dfl_seed11_panel0_b55_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_physical",
+      "difference_pp": -0.00017296250173082228
+    },
+    {
+      "scenario": "dfl_seed11_panel1_b28_all_tou_eulv_src1p05_fixed_test_physical",
+      "difference_pp": -0.000293634014562727
+    },
+    {
+      "scenario": "dfl_seed11_panel1_b28_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_physical",
+      "difference_pp": -0.000293634014562727
+    },
+    {
+      "scenario": "dfl_seed11_panel1_b55_all_tou_eulv_src1p05_fixed_test_physical",
+      "difference_pp": -0.00029363401456450333
+    },
+    {
+      "scenario": "dfl_seed11_panel2_b28_all_tou_eulv_src1p05_fixed_test_physical",
+      "difference_pp": -0.0001372419850689255
+    },
+    {
+      "scenario": "dfl_seed11_panel2_b28_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_physical",
+      "difference_pp": -0.0001372419850689255
+    },
+    {
+      "scenario": "dfl_seed11_panel2_b55_all_tou_eulv_src1p05_fixed_test_physical",
+      "difference_pp": -0.0001372419850689255
+    },
+    {
+      "scenario": "dfl_seed23_panel2_b28_all_tou_eulv_src1p05_fixed_test_physical",
+      "difference_pp": -0.0001372419850689255
+    },
+    {
+      "scenario": "dfl_seed23_panel2_b28_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_physical",
+      "difference_pp": -0.0001372419850689255
+    },
+    {
+      "scenario": "dfl_seed47_panel0_b55_all_tou_eulv_src1p05_fixed_test_physical",
+      "difference_pp": -0.00017296250172904593
+    },
+    {
+      "scenario": "mlp_seed11_panel0_b55_all_tou_eulv_src1p05_fixed_test_physical",
+      "difference_pp": -0.0001729625017254932
+    },
+    {
+      "scenario": "mlp_seed11_panel1_b55_all_tou_eulv_src1p05_fixed_test_physical",
+      "difference_pp": -0.00029363401456450333
+    },
+    {
+      "scenario": "mlp_seed11_panel2_b55_all_tou_eulv_src1p05_fixed_test_physical",
+      "difference_pp": -0.0001372419850689255
+    },
+    {
+      "scenario": "mlp_seed11_panel2_b55_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_physical",
+      "difference_pp": -0.0001372419850689255
+    },
+    {
+      "scenario": "mlp_seed23_panel1_b55_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_physical",
+      "difference_pp": -0.0002936340145609506
+    },
+    {
+      "scenario": "mlp_seed23_panel2_b28_all_tou_eulv_src1p05_fixed_test_physical",
+      "difference_pp": -0.00013724198506537277
+    },
+    {
+      "scenario": "mlp_seed23_panel2_b28_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_physical",
+      "difference_pp": -0.00013724198506537277
+    },
+    {
+      "scenario": "mlp_seed23_panel2_b55_all_tou_eulv_src1p05_fixed_test_physical",
+      "difference_pp": -0.0001372419850689255
+    },
+    {
+      "scenario": "mlp_seed23_panel2_b55_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_physical",
+      "difference_pp": -0.0001372419850724782
+    },
+    {
+      "scenario": "mlp_seed47_panel0_b55_all_tou_eulv_src1p05_fixed_test_physical",
+      "difference_pp": -0.00017296250172904593
+    },
+    {
+      "scenario": "msecont_seed23_panel1_b28_all_tou_eulv_src1p05_fixed_test_physical",
+      "difference_pp": -0.00029363401456450333
+    },
+    {
+      "scenario": "msecont_seed23_panel1_b28_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_physical",
+      "difference_pp": -0.00029363401456450333
+    },
+    {
+      "scenario": "msecont_seed23_panel2_b28_all_tou_eulv_src1p05_fixed_test_physical",
+      "difference_pp": -0.0001372419850689255
+    },
+    {
+      "scenario": "msecont_seed23_panel2_b28_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_physical",
+      "difference_pp": -0.0001372419850689255
+    },
+    {
+      "scenario": "msecont_seed23_panel2_b55_all_tou_eulv_src1p05_fixed_test_physical",
+      "difference_pp": -0.00027448397013429826
+    },
+    {
+      "scenario": "msecont_seed47_panel0_b55_all_tou_eulv_src1p05_fixed_test_physical",
+      "difference_pp": -0.00017296250172904593
+    },
+    {
+      "scenario": "dfl_seed11_panel3_b55_all_tou_eulv_src1p05_fixed_test_physical",
+      "difference_pp": -0.00013824375137971856
+    },
+    {
+      "scenario": "dfl_seed23_panel3_b55_all_tou_eulv_src1p05_fixed_test_physical",
+      "difference_pp": -0.00013824375138327127
+    },
+    {
+      "scenario": "dfl_seed47_panel3_b55_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_physical",
+      "difference_pp": -0.00013824375138327127
+    },
+    {
+      "scenario": "mlp_seed11_panel3_b55_all_tou_eulv_src1p05_fixed_test_physical",
+      "difference_pp": -0.00013824375137971856
+    },
+    {
+      "scenario": "mlp_seed47_panel3_b55_all_tou_eulv_src1p05_fixed_test_physical",
+      "difference_pp": -0.00013824375137971856
+    },
+    {
+      "scenario": "msecont_seed11_panel3_b55_all_tou_eulv_src1p05_fixed_test_physical",
+      "difference_pp": -0.00013824375137616585
+    },
+    {
+      "scenario": "msecont_seed47_panel3_b55_all_tou_eulv_src1p05_fixed_test_physical",
+      "difference_pp": -0.00013824375137971856
+    },
+    {
+      "scenario": "dfl_seed11_panel0_b55_all_tou_eulv_src1p05_map1_test_physical",
+      "difference_pp": -0.00017296250172904593
+    },
+    {
+      "scenario": "dfl_seed11_panel0_b55_all_tou_eulv_src1p05_map9_test_physical",
+      "difference_pp": -0.00017296250173259864
+    },
+    {
+      "scenario": "mlp_seed11_panel0_b55_all_tou_eulv_src1p05_map4_test_physical",
+      "difference_pp": -0.00017296250173259864
+    },
+    {
+      "scenario": "calibrated_seed11_panel0_b55_all_tou_eulv_src1p05_fixed_test_physical",
+      "difference_pp": -0.00034592500346164456
+    },
+    {
+      "scenario": "msecont_seed11_panel0_b55_all_tou_eulv_src1p05_map0_test_physical",
+      "difference_pp": -0.00034592500345809185
+    },
+    {
+      "scenario": "msecont_seed11_panel0_b55_all_tou_eulv_src1p05_map2_test_physical",
+      "difference_pp": -0.00017296250172904593
+    },
+    {
+      "scenario": "msecont_seed11_panel0_b55_all_tou_eulv_src1p05_map6_test_physical",
+      "difference_pp": -0.00017296250172904593
+    },
+    {
+      "scenario": "msecont_seed11_panel0_b55_all_tou_eulv_src1p05_map7_test_physical",
+      "difference_pp": -0.00017296250173259864
+    }
+  ],
+  "interpretation": "Reconstructed historical float32 node threshold fraction minus original stored float64 count fraction. Rounding near fixed band edge, not new physical runs."
+}

@@ -1,0 +1,204 @@
+{
+  "status": "PASS",
+  "recorded_utc": "2026-10-08T20:33:48.393229+00:00",
+  "scope": "Revised local manuscript, supplement, response, figure delivery and saved-artifact reconstruction; not a claim of full fresh retraining or field deployment.",
+  "documents": [
+    {
+      "file": "EPSR_Revised_Manuscript.docx",
+      "sha256": "ef4d37d09e6952811e25041d0faac997ce72e5c1b96d42c1611c8646a6935bc5",
+      "tables": 5,
+      "table_cells_exactly_match_source": true,
+      "references": 37,
+      "native_math_objects": 18
+    },
+    {
+      "file": "EPSR_Supplementary_Material.docx",
+      "sha256": "ef8c82f5289e668ef177f235514ac6f89a2149db8919b10d512191e5c0da1ffc",
+      "tables": 12,
+      "table_cells_exactly_match_source": true,
+      "references": 0,
+      "native_math_objects": 0
+    },
+    {
+      "file": "逐条修改说明.docx",
+      "sha256": "e25ad4fd8f76dc1dd7d5c44af12539fee7e7660b7cf74ed0f5b4a79fdaec0186",
+      "tables": 1,
+      "table_cells_exactly_match_source": true,
+      "references": 0,
+      "native_math_objects": 0
+    }
+  ],
+  "visual_audit": {
+    "status": "PASS",
+    "recorded_utc": "2026-10-08T20:28:47.800846+00:00",
+    "documents": [
+      {
+        "file": "EPSR_Revised_Manuscript.docx",
+        "sha256": "ef4d37d09e6952811e25041d0faac997ce72e5c1b96d42c1611c8646a6935bc5",
+        "pages": 18,
+        "status": "PASS",
+        "review": "Independent agent actually viewed final rendered pages; numeric and extraction checks are auxiliary."
+      },
+      {
+        "file": "EPSR_Supplementary_Material.docx",
+        "sha256": "ef8c82f5289e668ef177f235514ac6f89a2149db8919b10d512191e5c0da1ffc",
+        "pages": 10,
+        "status": "PASS",
+        "review": "All ten pages actually viewed. Final pages 1–7 are byte-identical to the viewed prior render; changed final pages 8–10 were directly viewed again.",
+        "findings": []
+      },
+      {
+        "file": "逐条修改说明.docx",
+        "sha256": "e25ad4fd8f76dc1dd7d5c44af12539fee7e7660b7cf74ed0f5b4a79fdaec0186",
+        "pages": 12,
+        "status": "PASS",
+        "review": "All twelve actual final page PNGs directly viewed by root.",
+        "findings": []
+      }
+    ],
+    "figures": [
+      {
+        "figure": "figure1_economics",
+        "status": "PASS",
+        "collision_failures": 0,
+        "collision_warnings": 0,
+        "minimum_pdf_font_pt": 6.0,
+        "editable_svg_text": true,
+        "raster": {
+          "png": {
+            "pixels": [
+              8503,
+              5858
+            ],
+            "dpi": [
+              1199.9976,
+              1199.9976
+            ]
+          },
+          "tiff": {
+            "pixels": [
+              8503,
+              5858
+            ],
+            "dpi": [
+              1200.0,
+              1200.0
+            ]
+          }
+        },
+        "visual": "Final rendered preview actually viewed; no text/text, text/data or label/line collision observed."
+      },
+      {
+        "figure": "figure2_voltage",
+        "status": "PASS",
+        "collision_failures": 0,
+        "collision_warnings": 0,
+        "minimum_pdf_font_pt": 6.0,
+        "editable_svg_text": true,
+        "raster": {
+          "png": {
+            "pixels": [
+              8503,
+              6566
+            ],
+            "dpi": [
+              1199.9976,
+              1199.9976
+            ]
+          },
+          "tiff": {
+            "pixels": [
+              8503,
+              6566
+            ],
+            "dpi": [
+              1200.0,
+              1200.0
+            ]
+          }
+        },
+        "visual": "Final rendered preview actually viewed; no text/text, text/data or label/line collision observed."
+      },
+      {
+        "figure": "figure3_mechanism",
+        "status": "PASS",
+        "collision_failures": 0,
+        "collision_warnings": 0,
+        "minimum_pdf_font_pt": 6.0,
+        "editable_svg_text": true,
+        "raster": {
+          "png": {
+            "pixels": [
+              8503,
+              6566
+            ],
+            "dpi": [
+              1199.9976,
+              1199.9976
+            ]
+          },
+          "tiff": {
+            "pixels": [
+              8503,
+              6566
+            ],
+            "dpi": [
+              1200.0,
+              1200.0
+            ]
+          }
+        },
+        "visual": "Final rendered preview actually viewed; no text/text, text/data or label/line collision observed."
+      },
+      {
+        "figure": "figure4_boundaries",
+        "status": "PASS",
+        "collision_failures": 0,
+        "collision_warnings": 0,
+        "minimum_pdf_font_pt": 6.0,
+        "editable_svg_text": true,
+        "raster": {
+          "png": {
+            "pixels": [
+              8503,
+              6566
+            ],
+            "dpi": [
+              1199.9976,
+              1199.9976
+            ]
+          },
+          "tiff": {
+            "pixels": [
+              8503,
+              6566
+            ],
+            "dpi": [
+              1200.0,
+              1200.0
+            ]
+          }
+        },
+        "visual": "Final rendered preview actually viewed; no text/text, text/data or label/line collision observed."
+      }
+    ],
+    "scope": "Delivery visual and structural quality only; does not certify a publisher endorsement."
+  },
+  "figure_bundle": {
+    "file": "Nature_Style_Figures.zip",
+    "bytes": 8270402,
+    "sha256": "300f672b0636b5bd0cca044495c2b8a8a6d1647d4eb8a2361ab4d00f79960413"
+  },
+  "reproduction": {
+    "file": "reproducibility/revision_offline_reproduction.zip",
+    "bytes": 2607533902,
+    "sha256": "35567c0c2170a875c9eb6822914e5141d07a128f8f13a899ac12d835561ec4ad",
+    "status": "PASS",
+    "actual_run_evidence": [
+      "reproducibility/reproduction_audit.json",
+      "reproducibility/portable_figure_entry_audit.json"
+    ]
+  },
+  "review_items_addressed": 29,
+  "original_manuscript_preserved": true
+}

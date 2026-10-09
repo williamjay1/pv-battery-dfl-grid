@@ -1,0 +1,23 @@
+[
+  {
+    "path": "F:\\AcademicData\\pv_battery_dfl_grid_20261005\\raw\\revision_external_20261009\\opsd_20200415_datapackage_20261009.json",
+    "url": "https://data.open-power-system-data.org/household_data/2020-04-15/datapackage.json",
+    "bytes": 127598,
+    "sha256": "93500241f4bb19f84f2668b100f53ec531e0c7dcbfa5d8759425c1375d588670",
+    "downloaded_utc": "2026-10-08T18:55:04Z"
+  },
+  {
+    "path": "F:\\AcademicData\\pv_battery_dfl_grid_20261005\\raw\\revision_external_20261009\\opsd_20200415_notebook_20261009.ipynb",
+    "url": "https://raw.githubusercontent.com/isc-konstanz/household_data/2020-04-15/main.ipynb",
+    "bytes": 8719,
+    "sha256": "5620dd0ac50d8bcc143894dd6b6fc27f44e859f4d4f98649944ea53333b577a0",
+    "downloaded_utc": "2026-10-08T18:55:08Z"
+  },
+  {
+    "path": "F:\\AcademicData\\pv_battery_dfl_grid_20261005\\raw\\revision_external_20261009\\opsd_20200415_15min_20261009.csv",
+    "url": "https://data.open-power-system-data.org/household_data/2020-04-15/household_data_15min_singleindex.csv",
+    "bytes": 60485116,
+    "sha256": "eca7dee5ac6e53373cd0209bc05ba3383cd860bfa5d5e995f74fa78db8857c58",
+    "downloaded_utc": "2026-10-08T18:55:52Z"
+  }
+]

@@ -1,0 +1,861 @@
+{
+  "status": "complete",
+  "currency": "AUD per household-day; negative DFL-minus-MSE favors DFL",
+  "selection": "post-freeze descriptive contrasts; no test-selected models or settings",
+  "load": {
+    "persistence": {
+      "frozen": {
+        "all299": {
+          "household_days": 108641,
+          "micro_mean_difference_aud": 0.003120429897609274,
+          "macro_mean_difference_aud": 0.0031196043423164957,
+          "calendar_block95": [
+            -0.0006396558047438087,
+            0.00673364592626961
+          ],
+          "macro_calendar_block95": [
+            -0.0006330030235976064,
+            0.006727157152273404
+          ],
+          "fraction_households_benefit": 0.5551839464882943
+        },
+        "known244": {
+          "household_days": 88609,
+          "micro_mean_difference_aud": 0.0030256093855690327,
+          "macro_mean_difference_aud": 0.0030250160789880736,
+          "calendar_block95": [
+            -0.0006750063125962791,
+            0.006596473369108872
+          ],
+          "macro_calendar_block95": [
+            -0.0006788745220295499,
+            0.006583930290138441
+          ],
+          "fraction_households_benefit": 0.5450819672131147
+        },
+        "heldout55": {
+          "household_days": 20032,
+          "micro_mean_difference_aud": 0.003539856352849578,
+          "macro_mean_difference_aud": 0.003539232274173494,
+          "calendar_block95": [
+            -0.0005065650803719174,
+            0.007354787389882981
+          ],
+          "macro_calendar_block95": [
+            -0.000513703831164007,
+            0.007357808563310912
+          ],
+          "fraction_households_benefit": 0.6
+        }
+      },
+      "frozen_files": [
+        "frozen_msecont_loadpersistence_tou",
+        "frozen_dfl_loadpersistence_tou"
+      ],
+      "matched": {
+        "all299": {
+          "household_days": 108641,
+          "micro_mean_difference_aud": -0.014752894046419466,
+          "macro_mean_difference_aud": -0.014738926608128755,
+          "calendar_block95": [
+            -0.018470557124716545,
+            -0.01137698433368533
+          ],
+          "macro_calendar_block95": [
+            -0.018453762754553255,
+            -0.011374151425075805
+          ],
+          "fraction_households_benefit": 0.9765886287625418
+        },
+        "known244": {
+          "household_days": 88609,
+          "micro_mean_difference_aud": -0.014597228345492473,
+          "macro_mean_difference_aud": -0.014582421571158303,
+          "calendar_block95": [
+            -0.018291995574774768,
+            -0.011286273295881208
+          ],
+          "macro_calendar_block95": [
+            -0.01826526577018072,
+            -0.011280552016851441
+          ],
+          "fraction_households_benefit": 0.9795081967213115
+        },
+        "heldout55": {
+          "household_days": 20032,
+          "micro_mean_difference_aud": -0.01544146144325652,
+          "macro_mean_difference_aud": -0.015433239863052223,
+          "calendar_block95": [
+            -0.019376241711739857,
+            -0.011821198207694054
+          ],
+          "macro_calendar_block95": [
+            -0.019375266106704106,
+            -0.011809514083481278
+          ],
+          "fraction_households_benefit": 0.9636363636363636
+        }
+      },
+      "matched_files": [
+        "matched_pv_persistence_mse_tou_wear002_expanded",
+        "matched_pv_persistence_dfl_tou_wear002_expanded"
+      ]
+    },
+    "strong": {
+      "frozen": {
+        "all299": {
+          "household_days": 108641,
+          "micro_mean_difference_aud": -0.011941101730825753,
+          "macro_mean_difference_aud": -0.011943789250739882,
+          "calendar_block95": [
+            -0.013427355726583396,
+            -0.010572803431993658
+          ],
+          "macro_calendar_block95": [
+            -0.01341944517941059,
+            -0.010579654326961629
+          ],
+          "fraction_households_benefit": 0.9665551839464883
+        },
+        "known244": {
+          "household_days": 88609,
+          "micro_mean_difference_aud": -0.012233611331512509,
+          "macro_mean_difference_aud": -0.012235182201864673,
+          "calendar_block95": [
+            -0.013677672809170548,
+            -0.01088945884530993
+          ],
+          "macro_calendar_block95": [
+            -0.013673782504648268,
+            -0.010901072240998877
+          ],
+          "fraction_households_benefit": 0.9713114754098361
+        },
+        "heldout55": {
+          "household_days": 20032,
+          "micro_mean_difference_aud": -0.01064722277678957,
+          "macro_mean_difference_aud": -0.010651064158477164,
+          "calendar_block95": [
+            -0.012355328162340444,
+            -0.009004804108206478
+          ],
+          "macro_calendar_block95": [
+            -0.012357838563843737,
+            -0.009011380458907207
+          ],
+          "fraction_households_benefit": 0.9454545454545454
+        }
+      },
+      "frozen_files": [
+        "frozen_msecont_loadstrong_tou",
+        "frozen_dfl_loadstrong_tou"
+      ],
+      "matched": {
+        "all299": {
+          "household_days": 108641,
+          "micro_mean_difference_aud": -0.012354775320871782,
+          "macro_mean_difference_aud": -0.012358301144114334,
+          "calendar_block95": [
+            -0.01417378204265194,
+            -0.010587417084935363
+          ],
+          "macro_calendar_block95": [
+            -0.014169391550225584,
+            -0.010598419805074605
+          ],
+          "fraction_households_benefit": 0.9665551839464883
+        },
+        "known244": {
+          "household_days": 88609,
+          "micro_mean_difference_aud": -0.012753005597337734,
+          "macro_mean_difference_aud": -0.01275493679052741,
+          "calendar_block95": [
+            -0.014529048660995974,
+            -0.010983135574536293
+          ],
+          "macro_calendar_block95": [
+            -0.014530183273801607,
+            -0.010990714493977117
+          ],
+          "fraction_households_benefit": 0.9713114754098361
+        },
+        "heldout55": {
+          "household_days": 20032,
+          "micro_mean_difference_aud": -0.010593254425935105,
+          "macro_mean_difference_aud": -0.010598681185481781,
+          "calendar_block95": [
+            -0.01275198190286975,
+            -0.008542800120274294
+          ],
+          "macro_calendar_block95": [
+            -0.01275227680117242,
+            -0.008556477020317303
+          ],
+          "fraction_households_benefit": 0.9454545454545454
+        }
+      },
+      "matched_files": [
+        "matched_pv_strong_mse_tou_wear002_expanded",
+        "matched_pv_strong_dfl_tou_wear002_expanded"
+      ]
+    }
+  },
+  "wear": {
+    "0": {
+      "frozen_actions_repriced": {
+        "all299": {
+          "household_days": 108641,
+          "micro_mean_difference_aud": -0.004946024269905276,
+          "macro_mean_difference_aud": -0.004933607586160875,
+          "calendar_block95": [
+            -0.00660360217846474,
+            -0.003464720402270676
+          ],
+          "macro_calendar_block95": [
+            -0.0065933690645732625,
+            -0.003458487880335132
+          ],
+          "fraction_households_benefit": 0.8595317725752508
+        },
+        "known244": {
+          "household_days": 88609,
+          "micro_mean_difference_aud": -0.005271320783669534,
+          "macro_mean_difference_aud": -0.005254722377037888,
+          "calendar_block95": [
+            -0.00686397498738492,
+            -0.0038361734813925174
+          ],
+          "macro_calendar_block95": [
+            -0.006840694136565669,
+            -0.0038216799641341815
+          ],
+          "fraction_households_benefit": 0.8647540983606558
+        },
+        "heldout55": {
+          "household_days": 20032,
+          "micro_mean_difference_aud": -0.003507116582797789,
+          "macro_mean_difference_aud": -0.0035090256048155802,
+          "calendar_block95": [
+            -0.005386500192274759,
+            -0.001760275680837729
+          ],
+          "macro_calendar_block95": [
+            -0.005382316114330759,
+            -0.0017652885650880847
+          ],
+          "fraction_households_benefit": 0.8363636363636363
+        }
+      },
+      "frozen_signals_reoptimized": {
+        "all299": {
+          "household_days": 108641,
+          "micro_mean_difference_aud": -0.004946024686554899,
+          "macro_mean_difference_aud": -0.004933608002414007,
+          "calendar_block95": [
+            -0.006603603644412914,
+            -0.0034647208704973917
+          ],
+          "macro_calendar_block95": [
+            -0.0065933704584424276,
+            -0.0034584873918835804
+          ],
+          "fraction_households_benefit": 0.8595317725752508
+        },
+        "known244": {
+          "household_days": 88609,
+          "micro_mean_difference_aud": -0.005271321381463992,
+          "macro_mean_difference_aud": -0.005254722972874792,
+          "calendar_block95": [
+            -0.006863976461289994,
+            -0.0038361737396982068
+          ],
+          "macro_calendar_block95": [
+            -0.006840693703033387,
+            -0.0038216798463557564
+          ],
+          "fraction_households_benefit": 0.8647540983606558
+        },
+        "heldout55": {
+          "household_days": 20032,
+          "micro_mean_difference_aud": -0.0035071161981763198,
+          "macro_mean_difference_aud": -0.0035090252243697973,
+          "calendar_block95": [
+            -0.005386500339526019,
+            -0.0017602745623414486
+          ],
+          "macro_calendar_block95": [
+            -0.005382316261288903,
+            -0.0017652882661429168
+          ],
+          "fraction_households_benefit": 0.8363636363636363
+        }
+      },
+      "frozen_files": [
+        "frozen_msecont_tou_wear0",
+        "frozen_dfl_tou_wear0"
+      ],
+      "matched_signals_reoptimized": {
+        "all299": {
+          "household_days": 108641,
+          "micro_mean_difference_aud": -0.00792257683357028,
+          "macro_mean_difference_aud": -0.007904882958949746,
+          "calendar_block95": [
+            -0.009868074926958834,
+            -0.006048390365882693
+          ],
+          "macro_calendar_block95": [
+            -0.009853474470382843,
+            -0.006035713287427408
+          ],
+          "fraction_households_benefit": 0.9431438127090301
+        },
+        "known244": {
+          "household_days": 88609,
+          "micro_mean_difference_aud": -0.008264415481153555,
+          "macro_mean_difference_aud": -0.008242501978730058,
+          "calendar_block95": [
+            -0.010215108763633173,
+            -0.006397744369874786
+          ],
+          "macro_calendar_block95": [
+            -0.010189512906577403,
+            -0.006383525335397369
+          ],
+          "fraction_households_benefit": 0.9467213114754098
+        },
+        "heldout55": {
+          "household_days": 20032,
+          "micro_mean_difference_aud": -0.006410497124918795,
+          "macro_mean_difference_aud": -0.006407082216651638,
+          "calendar_block95": [
+            -0.00855905132863907,
+            -0.004432667795911239
+          ],
+          "macro_calendar_block95": [
+            -0.008558983630808628,
+            -0.004431459097249579
+          ],
+          "fraction_households_benefit": 0.9272727272727272
+        }
+      },
+      "matched_files": [
+        "matched_pv_hgb_mse_tou_wear0_expanded",
+        "matched_pv_hgb_dfl_tou_wear0_expanded"
+      ]
+    },
+    "0.01": {
+      "frozen_actions_repriced": {
+        "all299": {
+          "household_days": 108641,
+          "micro_mean_difference_aud": -0.00812786342309485,
+          "macro_mean_difference_aud": -0.008120607684496111,
+          "calendar_block95": [
+            -0.009686748716111634,
+            -0.0067517087704105855
+          ],
+          "macro_calendar_block95": [
+            -0.009676962836669281,
+            -0.006762346908160872
+          ],
+          "fraction_households_benefit": 0.9464882943143813
+        },
+        "known244": {
+          "household_days": 88609,
+          "micro_mean_difference_aud": -0.008470835096179173,
+          "macro_mean_difference_aud": -0.00846055066694607,
+          "calendar_block95": [
+            -0.009992766982959006,
+            -0.0071352222705140765
+          ],
+          "macro_calendar_block95": [
+            -0.009976588753088211,
+            -0.00712646352693286
+          ],
+          "fraction_households_benefit": 0.9467213114754098
+        },
+        "heldout55": {
+          "household_days": 20032,
+          "micro_mean_difference_aud": -0.006610771920482601,
+          "macro_mean_difference_aud": -0.006612496998718123,
+          "calendar_block95": [
+            -0.008436896644491654,
+            -0.004907020701091165
+          ],
+          "macro_calendar_block95": [
+            -0.00844016793443677,
+            -0.004913150612626597
+          ],
+          "fraction_households_benefit": 0.9454545454545454
+        }
+      },
+      "frozen_signals_reoptimized": {
+        "all299": {
+          "household_days": 108641,
+          "micro_mean_difference_aud": -0.008127863694317335,
+          "macro_mean_difference_aud": -0.008120607955584095,
+          "calendar_block95": [
+            -0.009686748825589401,
+            -0.006751709180438495
+          ],
+          "macro_calendar_block95": [
+            -0.009676963076671078,
+            -0.006762346892169221
+          ],
+          "fraction_households_benefit": 0.9464882943143813
+        },
+        "known244": {
+          "household_days": 88609,
+          "micro_mean_difference_aud": -0.008470835418289293,
+          "macro_mean_difference_aud": -0.008460550988436172,
+          "calendar_block95": [
+            -0.009992767686688645,
+            -0.007135222439378767
+          ],
+          "macro_calendar_block95": [
+            -0.009976589466028961,
+            -0.007126463703379564
+          ],
+          "fraction_households_benefit": 0.9467213114754098
+        },
+        "heldout55": {
+          "household_days": 20032,
+          "micro_mean_difference_aud": -0.006610771966610116,
+          "macro_mean_difference_aud": -0.006612497046203962,
+          "calendar_block95": [
+            -0.008436896554227455,
+            -0.004907020815349744
+          ],
+          "macro_calendar_block95": [
+            -0.008440167844559414,
+            -0.004913150727466652
+          ],
+          "fraction_households_benefit": 0.9454545454545454
+        }
+      },
+      "frozen_files": [
+        "frozen_msecont_tou_wear0.01",
+        "frozen_dfl_tou_wear0.01"
+      ],
+      "matched_signals_reoptimized": {
+        "all299": {
+          "household_days": 108641,
+          "micro_mean_difference_aud": -0.008678883469107999,
+          "macro_mean_difference_aud": -0.008668261110521953,
+          "calendar_block95": [
+            -0.010377013234402368,
+            -0.007137586149233658
+          ],
+          "macro_calendar_block95": [
+            -0.010355238124275657,
+            -0.00714428251821718
+          ],
+          "fraction_households_benefit": 0.959866220735786
+        },
+        "known244": {
+          "household_days": 88609,
+          "micro_mean_difference_aud": -0.009007152796853782,
+          "macro_mean_difference_aud": -0.008993654144972503,
+          "calendar_block95": [
+            -0.01067097426473436,
+            -0.007492961453938982
+          ],
+          "macro_calendar_block95": [
+            -0.010654302607275715,
+            -0.007484697878090189
+          ],
+          "fraction_households_benefit": 0.9631147540983607
+        },
+        "heldout55": {
+          "household_days": 20032,
+          "micro_mean_difference_aud": -0.007226825918078336,
+          "macro_mean_difference_aud": -0.007224699284959515,
+          "calendar_block95": [
+            -0.009101129349079263,
+            -0.0055111399633659625
+          ],
+          "macro_calendar_block95": [
+            -0.009098242207347474,
+            -0.005513370418964794
+          ],
+          "fraction_households_benefit": 0.9454545454545454
+        }
+      },
+      "matched_files": [
+        "matched_pv_hgb_mse_tou_wear0.01_expanded",
+        "matched_pv_hgb_dfl_tou_wear0.01_expanded"
+      ]
+    },
+    "0.04": {
+      "frozen_actions_repriced": {
+        "all299": {
+          "household_days": 108641,
+          "micro_mean_difference_aud": -0.01767338088266358,
+          "macro_mean_difference_aud": -0.017681607979501836,
+          "calendar_block95": [
+            -0.01910004377035301,
+            -0.016343679949133365
+          ],
+          "macro_calendar_block95": [
+            -0.019108977064794593,
+            -0.016364728856403724
+          ],
+          "fraction_households_benefit": 0.9698996655518395
+        },
+        "known244": {
+          "household_days": 88609,
+          "micro_mean_difference_aud": -0.01806937803370809,
+          "macro_mean_difference_aud": -0.018078035536670624,
+          "calendar_block95": [
+            -0.01945673582161359,
+            -0.01674649015686592
+          ],
+          "macro_calendar_block95": [
+            -0.019468082130541787,
+            -0.01676753457126334
+          ],
+          "fraction_households_benefit": 0.9713114754098361
+        },
+        "heldout55": {
+          "household_days": 20032,
+          "micro_mean_difference_aud": -0.01592173793353704,
+          "macro_mean_difference_aud": -0.01592291118042576,
+          "calendar_block95": [
+            -0.017679316208360517,
+            -0.014240694063748631
+          ],
+          "macro_calendar_block95": [
+            -0.017683702217662245,
+            -0.014242662428888695
+          ],
+          "fraction_households_benefit": 0.9636363636363636
+        }
+      },
+      "frozen_signals_reoptimized": {
+        "all299": {
+          "household_days": 108641,
+          "micro_mean_difference_aud": -0.017673381642508423,
+          "macro_mean_difference_aud": -0.017681608736146086,
+          "calendar_block95": [
+            -0.01910004397010962,
+            -0.016343680837710664
+          ],
+          "macro_calendar_block95": [
+            -0.019108977927699135,
+            -0.016364729745296305
+          ],
+          "fraction_households_benefit": 0.9698996655518395
+        },
+        "known244": {
+          "household_days": 88609,
+          "micro_mean_difference_aud": -0.018069378978296347,
+          "macro_mean_difference_aud": -0.01807803647710503,
+          "calendar_block95": [
+            -0.019456737285124186,
+            -0.0167464901692474
+          ],
+          "macro_calendar_block95": [
+            -0.01946808320067907,
+            -0.01676753594951541
+          ],
+          "fraction_households_benefit": 0.9713114754098361
+        },
+        "heldout55": {
+          "household_days": 20032,
+          "micro_mean_difference_aud": -0.0159217378761929,
+          "macro_mean_difference_aud": -0.015922911121710022,
+          "calendar_block95": [
+            -0.017679316224930495,
+            -0.014240694046806654
+          ],
+          "macro_calendar_block95": [
+            -0.017683702236415473,
+            -0.014242662335551546
+          ],
+          "fraction_households_benefit": 0.9636363636363636
+        }
+      },
+      "frozen_files": [
+        "frozen_msecont_tou_wear0.04",
+        "frozen_dfl_tou_wear0.04"
+      ],
+      "matched_signals_reoptimized": {
+        "all299": {
+          "household_days": 108641,
+          "micro_mean_difference_aud": -0.024163971108794695,
+          "macro_mean_difference_aud": -0.024184661557707893,
+          "calendar_block95": [
+            -0.025657511548050082,
+            -0.02265326867286757
+          ],
+          "macro_calendar_block95": [
+            -0.025666814119980515,
+            -0.022676191458681334
+          ],
+          "fraction_households_benefit": 0.9565217391304348
+        },
+        "known244": {
+          "household_days": 88609,
+          "micro_mean_difference_aud": -0.024808699192819233,
+          "macro_mean_difference_aud": -0.024829907426521265,
+          "calendar_block95": [
+            -0.02621132721194811,
+            -0.023390300030722774
+          ],
+          "macro_calendar_block95": [
+            -0.026229051276081505,
+            -0.023412030641193633
+          ],
+          "fraction_households_benefit": 0.9631147540983607
+        },
+        "heldout55": {
+          "household_days": 20032,
+          "micro_mean_difference_aud": -0.021312098564998272,
+          "macro_mean_difference_aud": -0.021322116248790383,
+          "calendar_block95": [
+            -0.02348935460045292,
+            -0.019185711906928655
+          ],
+          "macro_calendar_block95": [
+            -0.02349875558410091,
+            -0.019191864034769933
+          ],
+          "fraction_households_benefit": 0.9272727272727272
+        }
+      },
+      "matched_files": [
+        "matched_pv_hgb_mse_tou_wear0.04_expanded",
+        "matched_pv_hgb_dfl_tou_wear0.04_expanded"
+      ]
+    }
+  },
+  "continuous": {
+    "frozen": {
+      "files": [
+        "continuous_frozen_msecont_tou",
+        "continuous_frozen_dfl_tou"
+      ],
+      "raw_operating_contrast": {
+        "all299": {
+          "household_days": 108641,
+          "micro_mean_difference_aud": -0.011346723480655149,
+          "macro_mean_difference_aud": -0.011343292272466471,
+          "calendar_block95": [
+            -0.012817691827326203,
+            -0.01003491148428167
+          ],
+          "macro_calendar_block95": [
+            -0.012809836440198775,
+            -0.010036142927484787
+          ],
+          "fraction_households_benefit": 0.9665551839464883
+        },
+        "known244": {
+          "household_days": 88609,
+          "micro_mean_difference_aud": -0.01171014453253424,
+          "macro_mean_difference_aud": -0.011704628110373639,
+          "calendar_block95": [
+            -0.013138072176202413,
+            -0.010432827426825414
+          ],
+          "macro_calendar_block95": [
+            -0.013124856412863642,
+            -0.010434299604136017
+          ],
+          "fraction_households_benefit": 0.9713114754098361
+        },
+        "heldout55": {
+          "household_days": 20032,
+          "micro_mean_difference_aud": -0.009739176756116697,
+          "macro_mean_difference_aud": -0.009740275100660115,
+          "calendar_block95": [
+            -0.011464474798422514,
+            -0.008114234262937439
+          ],
+          "macro_calendar_block95": [
+            -0.011463409688511582,
+            -0.008111069813544088
+          ],
+          "fraction_households_benefit": 0.9454545454545454
+        }
+      },
+      "inventory_adjusted_contrast": {
+        "all299": {
+          "household_days": 108641,
+          "micro_mean_difference_aud": -0.011348921469096907,
+          "macro_mean_difference_aud": -0.011345499012934522,
+          "calendar_block95": [
+            -0.01282561790109614,
+            -0.010007568173385103
+          ],
+          "macro_calendar_block95": [
+            -0.012821284009178462,
+            -0.010013261616797749
+          ],
+          "fraction_households_benefit": 0.9665551839464883
+        },
+        "known244": {
+          "household_days": 88609,
+          "micro_mean_difference_aud": -0.011712645666512398,
+          "macro_mean_difference_aud": -0.011707138475154482,
+          "calendar_block95": [
+            -0.013170237145753307,
+            -0.010422325074185982
+          ],
+          "macro_calendar_block95": [
+            -0.013160909266605911,
+            -0.010423372546917007
+          ],
+          "fraction_households_benefit": 0.9713114754098361
+        },
+        "heldout55": {
+          "household_days": 20032,
+          "micro_mean_difference_aud": -0.00974003381889776,
+          "macro_mean_difference_aud": -0.00974113485326779,
+          "calendar_block95": [
+            -0.011483714027395196,
+            -0.00810638119804128
+          ],
+          "macro_calendar_block95": [
+            -0.011482557710446156,
+            -0.008110517240458831
+          ],
+          "fraction_households_benefit": 0.9454545454545454
+        }
+      },
+      "arms": {
+        "continuous_frozen_msecont_tou": {
+          "household_days": 108641,
+          "segment_count": 328,
+          "mean_raw_operating_cost": 3.1397976358259436,
+          "mean_linear_inventory_adjustment": -3.488632104002143e-05,
+          "mean_quadratic_inventory_adjustment": 4.693554857669388e-06,
+          "mean_inventory_adjusted_cost": 3.1397674430597613,
+          "mean_daily_end_energy": 5.228158989255278
+        },
+        "continuous_frozen_dfl_tou": {
+          "household_days": 108641,
+          "segment_count": 328,
+          "mean_raw_operating_cost": 3.128450912345288,
+          "mean_linear_inventory_adjustment": -3.771770902052432e-05,
+          "mean_quadratic_inventory_adjustment": 5.326954396413168e-06,
+          "mean_inventory_adjusted_cost": 3.128418521590664,
+          "mean_daily_end_energy": 5.221842254657512
+        }
+      }
+    },
+    "matched": {
+      "files": [
+        "continuous_matched_mse_tou_expanded",
+        "continuous_matched_dfl_tou_expanded"
+      ],
+      "raw_operating_contrast": {
+        "all299": {
+          "household_days": 108641,
+          "micro_mean_difference_aud": -0.013125786956947884,
+          "macro_mean_difference_aud": -0.01311292979365126,
+          "calendar_block95": [
+            -0.014554679651512482,
+            -0.011739233876440837
+          ],
+          "macro_calendar_block95": [
+            -0.014537035762177611,
+            -0.01173333300800355
+          ],
+          "fraction_households_benefit": 0.9632107023411371
+        },
+        "known244": {
+          "household_days": 88609,
+          "micro_mean_difference_aud": -0.013724293802074308,
+          "macro_mean_difference_aud": -0.01370667017234689,
+          "calendar_block95": [
+            -0.015149452436620739,
+            -0.01232306912256428
+          ],
+          "macro_calendar_block95": [
+            -0.015134020751272974,
+            -0.01231735734652381
+          ],
+          "fraction_households_benefit": 0.9672131147540983
+        },
+        "heldout55": {
+          "household_days": 20032,
+          "micro_mean_difference_aud": -0.010478368175008627,
+          "macro_mean_difference_aud": -0.010478881568165191,
+          "calendar_block95": [
+            -0.01221339476050543,
+            -0.008787983391634467
+          ],
+          "macro_calendar_block95": [
+            -0.012214327758321564,
+            -0.00879438370364133
+          ],
+          "fraction_households_benefit": 0.9454545454545454
+        }
+      },
+      "inventory_adjusted_contrast": {
+        "all299": {
+          "household_days": 108641,
+          "micro_mean_difference_aud": -0.013128738722113885,
+          "macro_mean_difference_aud": -0.013115897282195796,
+          "calendar_block95": [
+            -0.01456707546367577,
+            -0.011721756677946135
+          ],
+          "macro_calendar_block95": [
+            -0.014545344398648248,
+            -0.011710114881755995
+          ],
+          "fraction_households_benefit": 0.9632107023411371
+        },
+        "known244": {
+          "household_days": 88609,
+          "micro_mean_difference_aud": -0.013727325896913231,
+          "macro_mean_difference_aud": -0.013709713099981079,
+          "calendar_block95": [
+            -0.015147060655237543,
+            -0.012333430282424783
+          ],
+          "macro_calendar_block95": [
+            -0.01513478892542593,
+            -0.012321898915012144
+          ],
+          "fraction_households_benefit": 0.9672131147540983
+        },
+        "heldout55": {
+          "household_days": 20032,
+          "micro_mean_difference_aud": -0.010480964612100149,
+          "macro_mean_difference_aud": -0.010481514381475623,
+          "calendar_block95": [
+            -0.012209464004385658,
+            -0.008766389982113253
+          ],
+          "macro_calendar_block95": [
+            -0.012209004544825711,
+            -0.008771902326261113
+          ],
+          "fraction_households_benefit": 0.9454545454545454
+        }
+      },
+      "arms": {
+        "continuous_matched_mse_tou_expanded": {
+          "household_days": 108641,
+          "segment_count": 328,
+          "mean_raw_operating_cost": 3.140363289921138,
+          "mean_linear_inventory_adjustment": -3.4501699416739904e-05,
+          "mean_quadratic_inventory_adjustment": 4.593906758165541e-06,
+          "mean_inventory_adjusted_cost": 3.1403333821284796,
+          "mean_daily_end_energy": 5.219777256261307
+        },
+        "continuous_matched_dfl_tou_expanded": {
+          "household_days": 108641,
+          "segment_count": 328,
+          "mean_raw_operating_cost": 3.1272375029641903,
+          "mean_linear_inventory_adjustment": -3.825791982072567e-05,
+          "mean_quadratic_inventory_adjustment": 5.398361996150289e-06,
+          "mean_inventory_adjusted_cost": 3.1272046434063654,
+          "mean_daily_end_energy": 5.220805441136475
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+THIRD PARTY SOURCES, LICENCES AND ATTRIBUTION
+
+1. Ausgrid Solar Home Electricity Data (2010-2013)
+   Publisher : Ausgrid, distributed through data.gov.au
+   URL       : https://data.gov.au/data/dataset/nsw-solar-home-electricty-data
+   Schema    : UNSW Centre for Energy and Environmental Markets, DARTH Ausgrid 300
+   Use here  : processed half-hourly household consumption and PV panel used for all
+               private-cost and feeder comparisons. The processed derivative is included
+               under datasets/. The raw download is not redistributed.
+
+2. IEEE European Low Voltage Test Feeder
+   Publisher : IEEE Power & Energy Society, Distribution System Analysis Subcommittee
+   URL       : https://ewh.ieee.org/soc/pes/dsacom/testfeeders/
+   Use here  : unbalanced 55-location low-voltage network for the principal AC replay.
+
+3. SimBench benchmark systems
+   Reference : Meinecke S, Sarajlic D, Drauz S R, Klettke A, Lauven L-P, Rehtanz C,
+               Moser A, Braun M (2020) Energies 13:3290
+   Licence   : CC BY 4.0
+   Use here  : rural and semiurban networks for the alternative-topology checks.
+
+4. pandapower
+   Reference : Thurner L, Scheidler A, Schaefer F, Menke J-H, Dollichon J, Meier F,
+               Meinecke S, Braun M (2018) IEEE Trans Power Syst 33:6510-6521
+   Licence   : BSD 3-Clause
+   Use here  : balanced power flow for the SimBench cases.
+
+5. StoreNet Irish energy-community load profiles
+   Reference : Trivedi R, Bahloul M, Saif A, Patra S, Khadem S (2024) Scientific Data 11:621
+   Collection: https://doi.org/10.6084/m9.figshare.c.6829134
+   Licence   : CC BY 4.0 as stated by the collection
+   Use here  : independent frozen-transfer check on ten verified PV households.
+
+6. Clarabel
+   Reference : Goulart P J, Chen Y (2026) Math Program Comput
+   Licence   : Apache 2.0
+   Use here  : convex quadratic program solver for the battery dispatch.
+
+7. EPRI low-voltage network material under datasets/network_eulv/
+   Licence text is preserved in datasets/network_eulv/EPRI_License.txt.
+
+8. Graphical style
+   SciencePlots (MIT) and the nature-figure skill from
+   https://github.com/Yuan1z0825/nature-skills (Apache 2.0), used for figure style only.
+   Their use does not imply endorsement by any journal or publisher.

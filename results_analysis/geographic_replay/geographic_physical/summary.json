@@ -1,0 +1,635 @@
+{
+  "run_tag": "geographic_physical",
+  "postcode": "2259",
+  "n_households": 27,
+  "seed": 11,
+  "n_calendar_dates": 365,
+  "n_common_clean_dates": 340,
+  "n_common_physical_complete_dates": 365,
+  "customer_metric_denominator": 27,
+  "battery_owner_cost_denominator": 27,
+  "inference": "Paired circular calendar-block percentile intervals on the full 365-date axis with common non-clean dates retained as missing; 7-day primary blocks and 14/28-day sensitivity, 2000 replicates by default. Fixed postcode cohort, fixed benchmark mapping, one training seed. No iid half-hour or household inference; intervals do not represent training-seed variability or real-feeder population uncertainty.",
+  "assumptions": "Time blocks accommodate short-range dependence; normality and equal group variances are not required. Seasonal and longer-range dependence remain a limitation, assessed only through fixed block-length sensitivity, not optimized against outcomes.",
+  "geographic_boundary": "Postcode membership does not demonstrate a compact physical feeder; unused benchmark load points remain zero-injection points, not invented households.",
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 20261005,
+  "analysis_script_sha256": "808a184e079dfe3821f04d3e2f392b2f90a993a9ed6dc2120e2afb49b8fdcf42",
+  "bootstrap_helper_sha256": "764019c734207b2e686c19c098f6dae456bc12abe9a973d1153a23b403548f12",
+  "models": {
+    "dfl": {
+      "bill_aud": 3.232669251443458,
+      "voltage_percentage_points": 25.3125,
+      "mean_voltage_excursion_pu": 0.0003313046130001837,
+      "daily_import_peak_kw": 75.41205674271335,
+      "daily_export_peak_kw": 6.702091036049339,
+      "loss_kwh": 3.444815444597637,
+      "voltage_090_110_percentage_points": 0.0
+    },
+    "mlp": {
+      "bill_aud": 3.2447462734409194,
+      "voltage_percentage_points": 26.36574074074074,
+      "mean_voltage_excursion_pu": 0.0003495011671895054,
+      "daily_import_peak_kw": 77.09885301607615,
+      "daily_export_peak_kw": 6.848019338739687,
+      "loss_kwh": 3.54862745087544,
+      "voltage_090_110_percentage_points": 0.0
+    },
+    "msecont": {
+      "bill_aud": 3.2439182950959555,
+      "voltage_percentage_points": 25.697848583877995,
+      "mean_voltage_excursion_pu": 0.00033326120152208304,
+      "daily_import_peak_kw": 75.63875727480492,
+      "daily_export_peak_kw": 6.457057200191819,
+      "loss_kwh": 3.483812649760877,
+      "voltage_090_110_percentage_points": 0.0
+    }
+  },
+  "comparisons": {
+    "mlp": {
+      "bill_aud": {
+        "baseline_mean": 3.2447462734409194,
+        "dfl_mean": 3.232669251443458,
+        "delta_dfl_minus_baseline": {
+          "mean": -0.012077021997461503,
+          "ci95": [
+            -0.013649491869062228,
+            -0.01054584348528687
+          ],
+          "n_clean_days": 340
+        },
+        "block_sensitivity": {
+          "14": [
+            -0.013594221793564886,
+            -0.010621364614166236
+          ],
+          "28": [
+            -0.013855426687844084,
+            -0.010454763510346821
+          ]
+        },
+        "lag1_correlation_of_adjacent_clean_daily_differences": -0.06059454968925706
+      },
+      "voltage_percentage_points": {
+        "baseline_mean": 26.36574074074074,
+        "dfl_mean": 25.3125,
+        "delta_dfl_minus_baseline": {
+          "mean": -1.0532407407407411,
+          "ci95": [
+            -1.1723689161070467,
+            -0.9401962130468983
+          ],
+          "n_clean_days": 340
+        },
+        "block_sensitivity": {
+          "14": [
+            -1.1810053335681956,
+            -0.9315372445274408
+          ],
+          "28": [
+            -1.2023617039869998,
+            -0.9252670842709164
+          ]
+        },
+        "lag1_correlation_of_adjacent_clean_daily_differences": 0.11443046663926963
+      },
+      "mean_voltage_excursion_pu": {
+        "baseline_mean": 0.0003495011671895054,
+        "dfl_mean": 0.0003313046130001837,
+        "delta_dfl_minus_baseline": {
+          "mean": -1.8196554189321705e-05,
+          "ci95": [
+            -2.087240253940924e-05,
+            -1.5353478405172428e-05
+          ],
+          "n_clean_days": 340
+        },
+        "block_sensitivity": {
+          "14": [
+            -2.1809739403488504e-05,
+            -1.4621932210373252e-05
+          ],
+          "28": [
+            -2.273552907400269e-05,
+            -1.3913380369930242e-05
+          ]
+        },
+        "lag1_correlation_of_adjacent_clean_daily_differences": 0.23242349999583245
+      },
+      "daily_import_peak_kw": {
+        "baseline_mean": 77.09885301607615,
+        "dfl_mean": 75.41205674271335,
+        "delta_dfl_minus_baseline": {
+          "mean": -1.6867962733628252,
+          "ci95": [
+            -1.9238823582249867,
+            -1.4609603647696203
+          ],
+          "n_clean_days": 340
+        },
+        "block_sensitivity": {
+          "14": [
+            -1.9760479582547974,
+            -1.4017098619278339
+          ],
+          "28": [
+            -2.072318247553038,
+            -1.3377330370337661
+          ]
+        },
+        "lag1_correlation_of_adjacent_clean_daily_differences": 0.6650320789440431
+      },
+      "daily_export_peak_kw": {
+        "baseline_mean": 6.848019338739687,
+        "dfl_mean": 6.702091036049339,
+        "delta_dfl_minus_baseline": {
+          "mean": -0.14592830269034815,
+          "ci95": [
+            -0.26574060770554153,
+            -0.016746467778852973
+          ],
+          "n_clean_days": 340
+        },
+        "block_sensitivity": {
+          "14": [
+            -0.29230267688706923,
+            0.007462003666748461
+          ],
+          "28": [
+            -0.3222157795835366,
+            0.035563381709619334
+          ]
+        },
+        "lag1_correlation_of_adjacent_clean_daily_differences": 0.12445846166323526
+      },
+      "loss_kwh": {
+        "baseline_mean": 3.54862745087544,
+        "dfl_mean": 3.444815444597637,
+        "delta_dfl_minus_baseline": {
+          "mean": -0.10381200627780257,
+          "ci95": [
+            -0.11632107175669619,
+            -0.09067006406106981
+          ],
+          "n_clean_days": 340
+        },
+        "block_sensitivity": {
+          "14": [
+            -0.120800019751485,
+            -0.08668054047185203
+          ],
+          "28": [
+            -0.12670053743259832,
+            -0.08258138833021009
+          ]
+        },
+        "lag1_correlation_of_adjacent_clean_daily_differences": 0.6325315773206548
+      },
+      "voltage_090_110_percentage_points": {
+        "baseline_mean": 0.0,
+        "dfl_mean": 0.0,
+        "delta_dfl_minus_baseline": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "n_clean_days": 340
+        },
+        "block_sensitivity": {
+          "14": [
+            0.0,
+            0.0
+          ],
+          "28": [
+            0.0,
+            0.0
+          ]
+        },
+        "lag1_correlation_of_adjacent_clean_daily_differences": null
+      }
+    },
+    "msecont": {
+      "bill_aud": {
+        "baseline_mean": 3.2439182950959555,
+        "dfl_mean": 3.232669251443458,
+        "delta_dfl_minus_baseline": {
+          "mean": -0.011249043652497712,
+          "ci95": [
+            -0.012963969581892075,
+            -0.009564029418333559
+          ],
+          "n_clean_days": 340
+        },
+        "block_sensitivity": {
+          "14": [
+            -0.012930712960035803,
+            -0.009495158419171729
+          ],
+          "28": [
+            -0.01320599931851164,
+            -0.00936787816146199
+          ]
+        },
+        "lag1_correlation_of_adjacent_clean_daily_differences": 0.001330665535936539
+      },
+      "voltage_percentage_points": {
+        "baseline_mean": 25.697848583877995,
+        "dfl_mean": 25.3125,
+        "delta_dfl_minus_baseline": {
+          "mean": -0.3853485838779959,
+          "ci95": [
+            -0.4951349505177106,
+            -0.27129444877129094
+          ],
+          "n_clean_days": 340
+        },
+        "block_sensitivity": {
+          "14": [
+            -0.5171332058033422,
+            -0.24743217168850426
+          ],
+          "28": [
+            -0.5491961639733213,
+            -0.2240839340419584
+          ]
+        },
+        "lag1_correlation_of_adjacent_clean_daily_differences": 0.14333267642117875
+      },
+      "mean_voltage_excursion_pu": {
+        "baseline_mean": 0.00033326120152208304,
+        "dfl_mean": 0.0003313046130001837,
+        "delta_dfl_minus_baseline": {
+          "mean": -1.9565885218993912e-06,
+          "ci95": [
+            -5.659158582583783e-06,
+            1.7968329723245397e-06
+          ],
+          "n_clean_days": 340
+        },
+        "block_sensitivity": {
+          "14": [
+            -6.779777321781745e-06,
+            3.2716846291071132e-06
+          ],
+          "28": [
+            -8.766592439219046e-06,
+            4.529490217033579e-06
+          ]
+        },
+        "lag1_correlation_of_adjacent_clean_daily_differences": 0.5326064607430187
+      },
+      "daily_import_peak_kw": {
+        "baseline_mean": 75.63875727480492,
+        "dfl_mean": 75.41205674271335,
+        "delta_dfl_minus_baseline": {
+          "mean": -0.2267005320915929,
+          "ci95": [
+            -0.4494923562694257,
+            0.006997390080816685
+          ],
+          "n_clean_days": 340
+        },
+        "block_sensitivity": {
+          "14": [
+            -0.5171363226376614,
+            0.0783453947625143
+          ],
+          "28": [
+            -0.6169832826119714,
+            0.13841238501013964
+          ]
+        },
+        "lag1_correlation_of_adjacent_clean_daily_differences": 0.6613366636826585
+      },
+      "daily_export_peak_kw": {
+        "baseline_mean": 6.457057200191819,
+        "dfl_mean": 6.702091036049339,
+        "delta_dfl_minus_baseline": {
+          "mean": 0.24503383585751987,
+          "ci95": [
+            0.10288745644680106,
+            0.3851085558181518
+          ],
+          "n_clean_days": 340
+        },
+        "block_sensitivity": {
+          "14": [
+            0.07925159336688269,
+            0.42818493447544737
+          ],
+          "28": [
+            0.020128400016136246,
+            0.4576897915550574
+          ]
+        },
+        "lag1_correlation_of_adjacent_clean_daily_differences": 0.19437300825632187
+      },
+      "loss_kwh": {
+        "baseline_mean": 3.483812649760877,
+        "dfl_mean": 3.444815444597637,
+        "delta_dfl_minus_baseline": {
+          "mean": -0.03899720516323974,
+          "ci95": [
+            -0.0534645047518282,
+            -0.024075333967941526
+          ],
+          "n_clean_days": 340
+        },
+        "block_sensitivity": {
+          "14": [
+            -0.059659666101259196,
+            -0.017981155816804647
+          ],
+          "28": [
+            -0.06785200654561023,
+            -0.012093598872782902
+          ]
+        },
+        "lag1_correlation_of_adjacent_clean_daily_differences": 0.756011599267141
+      },
+      "voltage_090_110_percentage_points": {
+        "baseline_mean": 0.0,
+        "dfl_mean": 0.0,
+        "delta_dfl_minus_baseline": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "n_clean_days": 340
+        },
+        "block_sensitivity": {
+          "14": [
+            0.0,
+            0.0
+          ],
+          "28": [
+            0.0,
+            0.0
+          ]
+        },
+        "lag1_correlation_of_adjacent_clean_daily_differences": null
+      }
+    }
+  },
+  "provenance": {
+    "dfl": {
+      "output": "D:\\MLWork\\pv_battery_dfl_grid_20261005\\results\\geographic_replay\\geographic_physical\\dfl_seed11_postcode2259_protocol_eligible_b27_all_tou_test_physical.npz",
+      "output_sha256": "35b58ab79583a4554baa9b07542d596b521c69b9cea0758e9dbffc6c13d28b9d",
+      "cohort": {
+        "postcode": "2259",
+        "selection": "largest static postcode group; ties lexical; ascending household IDs",
+        "original_household_ids": [
+          2,
+          7,
+          9,
+          19,
+          20,
+          29,
+          30,
+          38,
+          39,
+          49,
+          64,
+          67,
+          84,
+          106,
+          155,
+          160,
+          169,
+          171,
+          177,
+          184,
+          186,
+          202,
+          206,
+          215,
+          223,
+          227,
+          232,
+          267
+        ],
+        "protocol_excluded_in_original_group": [
+          2
+        ],
+        "cohort_rule": "protocol_eligible",
+        "household_ids": [
+          7,
+          9,
+          19,
+          20,
+          29,
+          30,
+          38,
+          39,
+          49,
+          64,
+          67,
+          84,
+          106,
+          155,
+          160,
+          169,
+          171,
+          177,
+          184,
+          186,
+          202,
+          206,
+          215,
+          223,
+          227,
+          232,
+          267
+        ],
+        "metadata_sha256": "9a0dd9be41dd7e590a71c6d7c4b1d04b7edbd0377e240b05bf01d4d7cf580614",
+        "split_sha256": "65c147f713887ea5d1b3cc2b0306e285681f1a29b362288d2af9b1f469521e17",
+        "metadata_provenance": {
+          "source_zip": "F:\\AcademicData\\pv_battery_dfl_grid_20261005\\raw\\data_feasibility_20261005\\ausgrid_mirror_full_range_verified_20261005.zip",
+          "source_zip_sha256": "5a766f52b6c8b3b72730380f4422e478934bc94640a4b089dd0e0e3c055c5d82",
+          "source_zip_bytes": 57038633,
+          "existing_manifest_hash_matched": true,
+          "source_members": [
+            "Solar home 2010-2011.csv",
+            "Solar home 2011-2012.csv",
+            "Solar home 2012-2013.csv"
+          ],
+          "extracted_at_utc": "2026-10-05T15:53:10.074096+00:00",
+          "method": "Read source ZIP CSV streams without extraction; skip each preamble line and parse Customer/Postcode in every row of all three annual files; no raw modification."
+        }
+      }
+    },
+    "mlp": {
+      "output": "D:\\MLWork\\pv_battery_dfl_grid_20261005\\results\\geographic_replay\\geographic_physical\\mlp_seed11_postcode2259_protocol_eligible_b27_all_tou_test_physical.npz",
+      "output_sha256": "d56c64fa2926031b51be7a51f2b376d505414608ecf2fd313189e1a5529408d4",
+      "cohort": {
+        "postcode": "2259",
+        "selection": "largest static postcode group; ties lexical; ascending household IDs",
+        "original_household_ids": [
+          2,
+          7,
+          9,
+          19,
+          20,
+          29,
+          30,
+          38,
+          39,
+          49,
+          64,
+          67,
+          84,
+          106,
+          155,
+          160,
+          169,
+          171,
+          177,
+          184,
+          186,
+          202,
+          206,
+          215,
+          223,
+          227,
+          232,
+          267
+        ],
+        "protocol_excluded_in_original_group": [
+          2
+        ],
+        "cohort_rule": "protocol_eligible",
+        "household_ids": [
+          7,
+          9,
+          19,
+          20,
+          29,
+          30,
+          38,
+          39,
+          49,
+          64,
+          67,
+          84,
+          106,
+          155,
+          160,
+          169,
+          171,
+          177,
+          184,
+          186,
+          202,
+          206,
+          215,
+          223,
+          227,
+          232,
+          267
+        ],
+        "metadata_sha256": "9a0dd9be41dd7e590a71c6d7c4b1d04b7edbd0377e240b05bf01d4d7cf580614",
+        "split_sha256": "65c147f713887ea5d1b3cc2b0306e285681f1a29b362288d2af9b1f469521e17",
+        "metadata_provenance": {
+          "source_zip": "F:\\AcademicData\\pv_battery_dfl_grid_20261005\\raw\\data_feasibility_20261005\\ausgrid_mirror_full_range_verified_20261005.zip",
+          "source_zip_sha256": "5a766f52b6c8b3b72730380f4422e478934bc94640a4b089dd0e0e3c055c5d82",
+          "source_zip_bytes": 57038633,
+          "existing_manifest_hash_matched": true,
+          "source_members": [
+            "Solar home 2010-2011.csv",
+            "Solar home 2011-2012.csv",
+            "Solar home 2012-2013.csv"
+          ],
+          "extracted_at_utc": "2026-10-05T15:53:10.074096+00:00",
+          "method": "Read source ZIP CSV streams without extraction; skip each preamble line and parse Customer/Postcode in every row of all three annual files; no raw modification."
+        }
+      }
+    },
+    "msecont": {
+      "output": "D:\\MLWork\\pv_battery_dfl_grid_20261005\\results\\geographic_replay\\geographic_physical\\msecont_seed11_postcode2259_protocol_eligible_b27_all_tou_test_physical.npz",
+      "output_sha256": "1b3c73c696e70b6257084df167bf147ec28f87f8b6c6225204b0b0f05379bc84",
+      "cohort": {
+        "postcode": "2259",
+        "selection": "largest static postcode group; ties lexical; ascending household IDs",
+        "original_household_ids": [
+          2,
+          7,
+          9,
+          19,
+          20,
+          29,
+          30,
+          38,
+          39,
+          49,
+          64,
+          67,
+          84,
+          106,
+          155,
+          160,
+          169,
+          171,
+          177,
+          184,
+          186,
+          202,
+          206,
+          215,
+          223,
+          227,
+          232,
+          267
+        ],
+        "protocol_excluded_in_original_group": [
+          2
+        ],
+        "cohort_rule": "protocol_eligible",
+        "household_ids": [
+          7,
+          9,
+          19,
+          20,
+          29,
+          30,
+          38,
+          39,
+          49,
+          64,
+          67,
+          84,
+          106,
+          155,
+          160,
+          169,
+          171,
+          177,
+          184,
+          186,
+          202,
+          206,
+          215,
+          223,
+          227,
+          232,
+          267
+        ],
+        "metadata_sha256": "9a0dd9be41dd7e590a71c6d7c4b1d04b7edbd0377e240b05bf01d4d7cf580614",
+        "split_sha256": "65c147f713887ea5d1b3cc2b0306e285681f1a29b362288d2af9b1f469521e17",
+        "metadata_provenance": {
+          "source_zip": "F:\\AcademicData\\pv_battery_dfl_grid_20261005\\raw\\data_feasibility_20261005\\ausgrid_mirror_full_range_verified_20261005.zip",
+          "source_zip_sha256": "5a766f52b6c8b3b72730380f4422e478934bc94640a4b089dd0e0e3c055c5d82",
+          "source_zip_bytes": 57038633,
+          "existing_manifest_hash_matched": true,
+          "source_members": [
+            "Solar home 2010-2011.csv",
+            "Solar home 2011-2012.csv",
+            "Solar home 2012-2013.csv"
+          ],
+          "extracted_at_utc": "2026-10-05T15:53:10.074096+00:00",
+          "method": "Read source ZIP CSV streams without extraction; skip each preamble line and parse Customer/Postcode in every row of all three annual files; no raw modification."
+        }
+      }
+    }
+  }
+}

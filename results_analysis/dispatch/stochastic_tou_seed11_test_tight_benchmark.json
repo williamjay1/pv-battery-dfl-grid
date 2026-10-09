@@ -1,0 +1,27 @@
+{
+  "method": "stochastic",
+  "tariff": "tou",
+  "seed": 11,
+  "n_households": 220,
+  "n_dates": 2,
+  "date_range": [
+    "2012-07-01",
+    "2012-07-02"
+  ],
+  "dates": [
+    "2012-07-01",
+    "2012-07-02"
+  ],
+  "clean_household_days": 438,
+  "failed": 0,
+  "failures": [],
+  "max_energy_balance_residual": 8.455458555545192e-13,
+  "max_simultaneous_kw": 5.655848857849538e-13,
+  "max_terminal_error_kwh": 0.0,
+  "mean_clean_bill_aud": 5.692276363385677,
+  "elapsed_seconds": 3.0018174999859184,
+  "solver_tolerance": 1e-13,
+  "test_used_for_fitting": false,
+  "actual_measurements_used_only_after_actions_for_settlement": true,
+  "output": "D:\\MLWork\\pv_battery_dfl_grid_20261005\\results\\dispatch\\stochastic_tou_seed11_test_tight_benchmark.npz"
+}

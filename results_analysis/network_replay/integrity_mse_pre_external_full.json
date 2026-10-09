@@ -1,0 +1,749 @@
+{
+  "n_scenarios": 53,
+  "all_passed": true,
+  "scope": "schema, coverage, paired household order, bills, convergence and saved file integrity; no comparison-based selection",
+  "scenarios": [
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed11_panel0_b28_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed11_panel0_b28_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed11_panel0_b55_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed11_panel0_b55_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed11_panel1_b28_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed11_panel1_b28_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed11_panel1_b55_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed11_panel1_b55_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed11_panel2_b28_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed11_panel2_b28_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed11_panel2_b55_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed11_panel2_b55_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed23_panel0_b28_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed23_panel0_b28_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed23_panel0_b55_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed23_panel0_b55_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed23_panel1_b28_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed23_panel1_b28_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed23_panel1_b55_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed23_panel1_b55_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed23_panel2_b28_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed23_panel2_b28_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed23_panel2_b55_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed23_panel2_b55_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed47_panel0_b28_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed47_panel0_b28_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed47_panel0_b55_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed47_panel0_b55_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed47_panel1_b28_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed47_panel1_b28_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed47_panel1_b55_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed47_panel1_b55_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed47_panel2_b28_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed47_panel2_b28_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed47_panel2_b55_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\main_v1\\mlp_seed47_panel2_b55_mixed_first28_tou_rest_flat_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\none_v1\\none_seed11_panel0_b0_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\none_v1\\none_seed11_panel1_b0_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\none_v1\\none_seed11_panel2_b0_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\external_prespecified_v1\\mlp_seed11_panel0_b55_all_tou_eulv_src1p025_fixed_seasonal_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\external_prespecified_v1\\mlp_seed11_panel0_b55_all_tou_eulv_src1p0_fixed_seasonal_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\external_prespecified_v1\\mlp_seed11_panel0_b55_all_tou_simbench_rural1_src1p025_fixed_seasonal_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\external_prespecified_v1\\mlp_seed11_panel0_b55_all_tou_simbench_semiurb4_src1p025_fixed_seasonal_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\mapping_prespecified_v1\\mlp_seed11_panel0_b55_all_tou_eulv_src1p05_map0_seasonal_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\mapping_prespecified_v1\\mlp_seed11_panel0_b55_all_tou_eulv_src1p05_map1_seasonal_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\mapping_prespecified_v1\\mlp_seed11_panel0_b55_all_tou_eulv_src1p05_map2_seasonal_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\mapping_prespecified_v1\\mlp_seed11_panel0_b55_all_tou_eulv_src1p05_map3_seasonal_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\mapping_prespecified_v1\\mlp_seed11_panel0_b55_all_tou_eulv_src1p05_map4_seasonal_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\mapping_prespecified_v1\\mlp_seed11_panel0_b55_all_tou_eulv_src1p05_map5_seasonal_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\mapping_prespecified_v1\\mlp_seed11_panel0_b55_all_tou_eulv_src1p05_map6_seasonal_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\mapping_prespecified_v1\\mlp_seed11_panel0_b55_all_tou_eulv_src1p05_map7_seasonal_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\mapping_prespecified_v1\\mlp_seed11_panel0_b55_all_tou_eulv_src1p05_map8_seasonal_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    },
+    {
+      "file": "results\\network_replay\\mapping_prespecified_v1\\mlp_seed11_panel0_b55_all_tou_eulv_src1p05_map9_seasonal_tight.npz",
+      "checks": {
+        "dimensions": true,
+        "clean_subset_physical": true,
+        "valid_converged": true,
+        "voltage_nan_missing": true,
+        "voltage_finite_valid": true,
+        "mean_bill": true,
+        "house_id_mapping": true,
+        "sha256": true
+      },
+      "passed": true
+    }
+  ]
+}

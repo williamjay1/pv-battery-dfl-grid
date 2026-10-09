@@ -1,0 +1,1898 @@
+{
+  "audit_type": "fixed deterministic arithmetic/feasibility checks, not model selection",
+  "source_hashes": {
+    "analyze_dispatch.py": "9ffdb84c8b0bf763e879be39d36ead1614b56352a2e31a1cff59b7a3f7d98143",
+    "analyze_network.py": "789b2ccd44d7537217570dfa8b2747c093485332aed60dae6aa5f441ef29fe79"
+  },
+  "dispatch": [
+    {
+      "file": "calibrated_flat_seed11_test_tight.npz",
+      "model": "calibrated",
+      "tariff": "flat",
+      "seed": 11,
+      "clean_household_days": 79397,
+      "max_independent_cost_error_aud": 7.766465355274477e-07,
+      "panels": [
+        {
+          "panel": 0,
+          "household_days": 12045,
+          "n_clean_days": 219,
+          "operating_cost": 3.894494150931669,
+          "retail_independent": 3.8239948050078727,
+          "wear_independent": 0.07049933179961412,
+          "minimum_oracle_difference": -1.0018652574217413e-12,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 1,
+          "household_days": 7095,
+          "n_clean_days": 129,
+          "operating_cost": 4.030162949975669,
+          "retail_independent": 3.9617103228828485,
+          "wear_independent": 0.06845261486838797,
+          "minimum_oracle_difference": -4.501288231040235e-12,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 2,
+          "household_days": 15180,
+          "n_clean_days": 276,
+          "operating_cost": 3.8043904132613537,
+          "retail_independent": 3.729556299211915,
+          "wear_independent": 0.07483409765672647,
+          "minimum_oracle_difference": -5.009326287108706e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 3,
+          "household_days": 15070,
+          "n_clean_days": 274,
+          "operating_cost": 3.9754059714830485,
+          "retail_independent": 3.9062908251441857,
+          "wear_independent": 0.06911513075382353,
+          "minimum_oracle_difference": -5.7340798775840085e-12,
+          "reported_mean_difference": 0.0
+        }
+      ]
+    },
+    {
+      "file": "calibrated_tou_seed11_test_tight.npz",
+      "model": "calibrated",
+      "tariff": "tou",
+      "seed": 11,
+      "clean_household_days": 79397,
+      "max_independent_cost_error_aud": 7.894336029323767e-07,
+      "panels": [
+        {
+          "panel": 0,
+          "household_days": 12045,
+          "n_clean_days": 219,
+          "operating_cost": 3.7027746337755807,
+          "retail_independent": 3.4660825753754447,
+          "wear_independent": 0.23669203958414525,
+          "minimum_oracle_difference": -9.592326932761353e-14,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 1,
+          "household_days": 7095,
+          "n_clean_days": 129,
+          "operating_cost": 3.833834150139857,
+          "retail_independent": 3.590556011350585,
+          "wear_independent": 0.24327812109410726,
+          "minimum_oracle_difference": -1.7408297026122455e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 2,
+          "household_days": 15180,
+          "n_clean_days": 276,
+          "operating_cost": 3.5828945896508566,
+          "retail_independent": 3.340116678399677,
+          "wear_independent": 0.2427778905757767,
+          "minimum_oracle_difference": -1.0302869668521453e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 3,
+          "household_days": 15070,
+          "n_clean_days": 274,
+          "operating_cost": 3.751781562993057,
+          "retail_independent": 3.517120902162305,
+          "wear_independent": 0.2346606411698821,
+          "minimum_oracle_difference": -9.023892744153272e-13,
+          "reported_mean_difference": 0.0
+        }
+      ]
+    },
+    {
+      "file": "dfl_flat_seed11_test_tight.npz",
+      "model": "dfl",
+      "tariff": "flat",
+      "seed": 11,
+      "clean_household_days": 79397,
+      "max_independent_cost_error_aud": 8.054948228419789e-07,
+      "panels": [
+        {
+          "panel": 0,
+          "household_days": 12045,
+          "n_clean_days": 219,
+          "operating_cost": 3.8797639238429085,
+          "retail_independent": 3.8053152168036513,
+          "wear_independent": 0.07444869201712641,
+          "minimum_oracle_difference": -1.0302869668521453e-12,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 1,
+          "household_days": 7095,
+          "n_clean_days": 129,
+          "operating_cost": 4.016979012718839,
+          "retail_independent": 3.9481605774696216,
+          "wear_independent": 0.06881842249519582,
+          "minimum_oracle_difference": -4.519051799434237e-12,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 2,
+          "household_days": 15180,
+          "n_clean_days": 276,
+          "operating_cost": 3.7874878618006234,
+          "retail_independent": 3.7082545528255206,
+          "wear_independent": 0.07923329222660776,
+          "minimum_oracle_difference": -5.186961971048731e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 3,
+          "household_days": 15070,
+          "n_clean_days": 274,
+          "operating_cost": 3.9636973997238756,
+          "retail_independent": 3.894701741556793,
+          "wear_independent": 0.06899564170010877,
+          "minimum_oracle_difference": -5.314859663485549e-12,
+          "reported_mean_difference": 0.0
+        }
+      ]
+    },
+    {
+      "file": "dfl_flat_seed23_test_tight.npz",
+      "model": "dfl",
+      "tariff": "flat",
+      "seed": 23,
+      "clean_household_days": 79397,
+      "max_independent_cost_error_aud": 7.91428719892906e-07,
+      "panels": [
+        {
+          "panel": 0,
+          "household_days": 12045,
+          "n_clean_days": 219,
+          "operating_cost": 3.8803575999481015,
+          "retail_independent": 3.8039739957543417,
+          "wear_independent": 0.07638358916199439,
+          "minimum_oracle_difference": -1.0231815394945443e-12,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 1,
+          "household_days": 7095,
+          "n_clean_days": 129,
+          "operating_cost": 4.017252870795231,
+          "retail_independent": 3.9462787148179324,
+          "wear_independent": 0.07097414329776265,
+          "minimum_oracle_difference": -4.508393658397836e-12,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 2,
+          "household_days": 15180,
+          "n_clean_days": 276,
+          "operating_cost": 3.786701534970699,
+          "retail_independent": 3.705293384819745,
+          "wear_independent": 0.08140813338619289,
+          "minimum_oracle_difference": -5.400124791776761e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 3,
+          "household_days": 15070,
+          "n_clean_days": 274,
+          "operating_cost": 3.9647461195855698,
+          "retail_independent": 3.8945419230567015,
+          "wear_independent": 0.07020418005970935,
+          "minimum_oracle_difference": -5.6736837450444e-12,
+          "reported_mean_difference": 0.0
+        }
+      ]
+    },
+    {
+      "file": "dfl_flat_seed47_test_tight.npz",
+      "model": "dfl",
+      "tariff": "flat",
+      "seed": 47,
+      "clean_household_days": 79397,
+      "max_independent_cost_error_aud": 7.779810147212629e-07,
+      "panels": [
+        {
+          "panel": 0,
+          "household_days": 12045,
+          "n_clean_days": 219,
+          "operating_cost": 3.8815637501283575,
+          "retail_independent": 3.8024020670653136,
+          "wear_independent": 0.07916166806790156,
+          "minimum_oracle_difference": -1.0160761121369433e-12,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 1,
+          "household_days": 7095,
+          "n_clean_days": 129,
+          "operating_cost": 4.017783963864528,
+          "retail_independent": 3.9448772804703753,
+          "wear_independent": 0.07290667069593296,
+          "minimum_oracle_difference": -4.476419235288631e-12,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 2,
+          "household_days": 15180,
+          "n_clean_days": 276,
+          "operating_cost": 3.787813758279804,
+          "retail_independent": 3.7046391118097866,
+          "wear_independent": 0.08317462969280326,
+          "minimum_oracle_difference": -4.991562718714704e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 3,
+          "household_days": 15070,
+          "n_clean_days": 274,
+          "operating_cost": 3.965400476090298,
+          "retail_independent": 3.8926926884444266,
+          "wear_independent": 0.07270777122379642,
+          "minimum_oracle_difference": -5.307754236127948e-12,
+          "reported_mean_difference": 0.0
+        }
+      ]
+    },
+    {
+      "file": "dfl_tou_seed11_test_tight.npz",
+      "model": "dfl",
+      "tariff": "tou",
+      "seed": 11,
+      "clean_household_days": 79397,
+      "max_independent_cost_error_aud": 8.14227874457174e-07,
+      "panels": [
+        {
+          "panel": 0,
+          "household_days": 12045,
+          "n_clean_days": 219,
+          "operating_cost": 3.6887667175481513,
+          "retail_independent": 3.460631310284188,
+          "wear_independent": 0.22813538830006908,
+          "minimum_oracle_difference": -9.592326932761353e-14,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 1,
+          "household_days": 7095,
+          "n_clean_days": 129,
+          "operating_cost": 3.822852995818787,
+          "retail_independent": 3.5869045094230967,
+          "wear_independent": 0.2359484695250531,
+          "minimum_oracle_difference": -1.4210854715202004e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 2,
+          "household_days": 15180,
+          "n_clean_days": 276,
+          "operating_cost": 3.57010661337572,
+          "retail_independent": 3.334502633287345,
+          "wear_independent": 0.23560395937275622,
+          "minimum_oracle_difference": -1.0302869668521453e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 3,
+          "household_days": 15070,
+          "n_clean_days": 274,
+          "operating_cost": 3.7413683157870627,
+          "retail_independent": 3.5148833817080494,
+          "wear_independent": 0.22648491353666672,
+          "minimum_oracle_difference": -8.171241461241152e-13,
+          "reported_mean_difference": 0.0
+        }
+      ]
+    },
+    {
+      "file": "dfl_tou_seed23_test_tight.npz",
+      "model": "dfl",
+      "tariff": "tou",
+      "seed": 23,
+      "clean_household_days": 79397,
+      "max_independent_cost_error_aud": 8.082380631435626e-07,
+      "panels": [
+        {
+          "panel": 0,
+          "household_days": 12045,
+          "n_clean_days": 219,
+          "operating_cost": 3.68790800003226,
+          "retail_independent": 3.461330853553185,
+          "wear_independent": 0.22657712780574163,
+          "minimum_oracle_difference": -8.881784197001252e-14,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 1,
+          "household_days": 7095,
+          "n_clean_days": 129,
+          "operating_cost": 3.8234873530991864,
+          "retail_independent": 3.5892094680073874,
+          "wear_independent": 0.23427786820277338,
+          "minimum_oracle_difference": -1.5276668818842154e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 2,
+          "household_days": 15180,
+          "n_clean_days": 276,
+          "operating_cost": 3.568271854301562,
+          "retail_independent": 3.334261143630566,
+          "wear_independent": 0.23401069011407002,
+          "minimum_oracle_difference": -9.592326932761353e-14,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 3,
+          "household_days": 15070,
+          "n_clean_days": 274,
+          "operating_cost": 3.741269353645865,
+          "retail_independent": 3.5164030950636924,
+          "wear_independent": 0.2248662382155184,
+          "minimum_oracle_difference": -7.531752999057062e-13,
+          "reported_mean_difference": 0.0
+        }
+      ]
+    },
+    {
+      "file": "dfl_tou_seed47_test_tight.npz",
+      "model": "dfl",
+      "tariff": "tou",
+      "seed": 47,
+      "clean_household_days": 79397,
+      "max_independent_cost_error_aud": 8.204092445396327e-07,
+      "panels": [
+        {
+          "panel": 0,
+          "household_days": 12045,
+          "n_clean_days": 219,
+          "operating_cost": 3.688595524008772,
+          "retail_independent": 3.459984693084486,
+          "wear_independent": 0.22861081193535615,
+          "minimum_oracle_difference": -9.592326932761353e-14,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 1,
+          "household_days": 7095,
+          "n_clean_days": 129,
+          "operating_cost": 3.8206831703893016,
+          "retail_independent": 3.586579066650276,
+          "wear_independent": 0.2341040868752489,
+          "minimum_oracle_difference": -1.7408297026122455e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 2,
+          "household_days": 15180,
+          "n_clean_days": 276,
+          "operating_cost": 3.5700183254487823,
+          "retail_independent": 3.333623503340648,
+          "wear_independent": 0.23639480126005288,
+          "minimum_oracle_difference": -9.592326932761353e-14,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 3,
+          "household_days": 15070,
+          "n_clean_days": 274,
+          "operating_cost": 3.7399167839950596,
+          "retail_independent": 3.5146514527368296,
+          "wear_independent": 0.22526531075396578,
+          "minimum_oracle_difference": -8.171241461241152e-13,
+          "reported_mean_difference": 0.0
+        }
+      ]
+    },
+    {
+      "file": "hgb_flat_seed11_test_tight.npz",
+      "model": "hgb",
+      "tariff": "flat",
+      "seed": 11,
+      "clean_household_days": 79397,
+      "max_independent_cost_error_aud": 7.82476607952276e-07,
+      "panels": [
+        {
+          "panel": 0,
+          "household_days": 12045,
+          "n_clean_days": 219,
+          "operating_cost": 3.905020576358958,
+          "retail_independent": 3.8493560162571945,
+          "wear_independent": 0.0556645451590357,
+          "minimum_oracle_difference": -1.0089706847793423e-12,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 1,
+          "household_days": 7095,
+          "n_clean_days": 129,
+          "operating_cost": 4.033518395439786,
+          "retail_independent": 3.975469922936437,
+          "wear_independent": 0.05804845973899598,
+          "minimum_oracle_difference": -4.515499085755437e-12,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 2,
+          "household_days": 15180,
+          "n_clean_days": 276,
+          "operating_cost": 3.8150290278494747,
+          "retail_independent": 3.7545211584107583,
+          "wear_independent": 0.060507852690465116,
+          "minimum_oracle_difference": -5.080380560684716e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 3,
+          "household_days": 15070,
+          "n_clean_days": 274,
+          "operating_cost": 3.9841747936979917,
+          "retail_independent": 3.9288592570901906,
+          "wear_independent": 0.0553155202083587,
+          "minimum_oracle_difference": -5.289990667733946e-12,
+          "reported_mean_difference": 0.0
+        }
+      ]
+    },
+    {
+      "file": "hgb_tou_seed11_test_tight.npz",
+      "model": "hgb",
+      "tariff": "tou",
+      "seed": 11,
+      "clean_household_days": 79397,
+      "max_independent_cost_error_aud": 8.256632533232278e-07,
+      "panels": [
+        {
+          "panel": 0,
+          "household_days": 12045,
+          "n_clean_days": 219,
+          "operating_cost": 3.711511162134405,
+          "retail_independent": 3.4692173180684613,
+          "wear_independent": 0.24229382428589039,
+          "minimum_oracle_difference": -1.0302869668521453e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 1,
+          "household_days": 7095,
+          "n_clean_days": 129,
+          "operating_cost": 3.8441833970555006,
+          "retail_independent": 3.593303461979405,
+          "wear_independent": 0.25087991709390184,
+          "minimum_oracle_difference": -1.7408297026122455e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 2,
+          "household_days": 15180,
+          "n_clean_days": 276,
+          "operating_cost": 3.5918812041042636,
+          "retail_independent": 3.3440500965259905,
+          "wear_independent": 0.24783108616896293,
+          "minimum_oracle_difference": -9.947598300641403e-14,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 3,
+          "household_days": 15070,
+          "n_clean_days": 274,
+          "operating_cost": 3.762163202168434,
+          "retail_independent": 3.521318407408321,
+          "wear_independent": 0.24084477349640787,
+          "minimum_oracle_difference": -8.313350008393172e-13,
+          "reported_mean_difference": 0.0
+        }
+      ]
+    },
+    {
+      "file": "mlp_flat_seed11_test_tight.npz",
+      "model": "mlp",
+      "tariff": "flat",
+      "seed": 11,
+      "clean_household_days": 79397,
+      "max_independent_cost_error_aud": 7.880098316093154e-07,
+      "panels": [
+        {
+          "panel": 0,
+          "household_days": 12045,
+          "n_clean_days": 219,
+          "operating_cost": 3.9018402003720314,
+          "retail_independent": 3.8451770998491077,
+          "wear_independent": 0.056663085548553906,
+          "minimum_oracle_difference": -9.876544027065393e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 1,
+          "household_days": 7095,
+          "n_clean_days": 129,
+          "operating_cost": 4.033750024033054,
+          "retail_independent": 3.9787899275155785,
+          "wear_independent": 0.05496008382448311,
+          "minimum_oracle_difference": -4.533262654149439e-12,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 2,
+          "household_days": 15180,
+          "n_clean_days": 276,
+          "operating_cost": 3.814242258493917,
+          "retail_independent": 3.7531133444823492,
+          "wear_independent": 0.061128897284940066,
+          "minimum_oracle_difference": -5.080380560684716e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 3,
+          "household_days": 15070,
+          "n_clean_days": 274,
+          "operating_cost": 3.9817891508063568,
+          "retail_independent": 3.9249668300443465,
+          "wear_independent": 0.0568223042918653,
+          "minimum_oracle_difference": -5.307754236127948e-12,
+          "reported_mean_difference": 0.0
+        }
+      ]
+    },
+    {
+      "file": "mlp_flat_seed23_test_tight.npz",
+      "model": "mlp",
+      "tariff": "flat",
+      "seed": 23,
+      "clean_household_days": 79397,
+      "max_independent_cost_error_aud": 7.856247670190442e-07,
+      "panels": [
+        {
+          "panel": 0,
+          "household_days": 12045,
+          "n_clean_days": 219,
+          "operating_cost": 3.902061789645508,
+          "retail_independent": 3.844963255669478,
+          "wear_independent": 0.05709851903401624,
+          "minimum_oracle_difference": -1.0231815394945443e-12,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 1,
+          "household_days": 7095,
+          "n_clean_days": 129,
+          "operating_cost": 4.034087296880167,
+          "retail_independent": 3.9791969192512098,
+          "wear_independent": 0.054890364900354205,
+          "minimum_oracle_difference": -4.526157226791838e-12,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 2,
+          "household_days": 15180,
+          "n_clean_days": 276,
+          "operating_cost": 3.8140193760405623,
+          "retail_independent": 3.7524910611230866,
+          "wear_independent": 0.06152829818735876,
+          "minimum_oracle_difference": -5.009326287108706e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 3,
+          "household_days": 15070,
+          "n_clean_days": 274,
+          "operating_cost": 3.9826511772320807,
+          "retail_independent": 3.926325812191135,
+          "wear_independent": 0.05632534857712678,
+          "minimum_oracle_difference": -5.31841237716435e-12,
+          "reported_mean_difference": 0.0
+        }
+      ]
+    },
+    {
+      "file": "mlp_flat_seed47_test_tight.npz",
+      "model": "mlp",
+      "tariff": "flat",
+      "seed": 47,
+      "clean_household_days": 79397,
+      "max_independent_cost_error_aud": 7.850855414659463e-07,
+      "panels": [
+        {
+          "panel": 0,
+          "household_days": 12045,
+          "n_clean_days": 219,
+          "operating_cost": 3.900317090680034,
+          "retail_independent": 3.8380014336113835,
+          "wear_independent": 0.062315642128653925,
+          "minimum_oracle_difference": -1.0054179711005418e-12,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 1,
+          "household_days": 7095,
+          "n_clean_days": 129,
+          "operating_cost": 4.034915763260832,
+          "retail_independent": 3.976730978909817,
+          "wear_independent": 0.058184771649325694,
+          "minimum_oracle_difference": -4.504840944719035e-12,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 2,
+          "household_days": 15180,
+          "n_clean_days": 276,
+          "operating_cost": 3.8127738187564764,
+          "retail_independent": 3.747799470353711,
+          "wear_independent": 0.06497433166081971,
+          "minimum_oracle_difference": -5.151434834260726e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 3,
+          "household_days": 15070,
+          "n_clean_days": 274,
+          "operating_cost": 3.9827917144953164,
+          "retail_independent": 3.9224296214542895,
+          "wear_independent": 0.06036207662058115,
+          "minimum_oracle_difference": -5.4143356464919634e-12,
+          "reported_mean_difference": 0.0
+        }
+      ]
+    },
+    {
+      "file": "mlp_tou_seed11_test_tight.npz",
+      "model": "mlp",
+      "tariff": "tou",
+      "seed": 11,
+      "clean_household_days": 79397,
+      "max_independent_cost_error_aud": 8.321265809740908e-07,
+      "panels": [
+        {
+          "panel": 0,
+          "household_days": 12045,
+          "n_clean_days": 219,
+          "operating_cost": 3.709848824039215,
+          "retail_independent": 3.4680188708555924,
+          "wear_independent": 0.24182993343443943,
+          "minimum_oracle_difference": -1.0302869668521453e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 1,
+          "household_days": 7095,
+          "n_clean_days": 129,
+          "operating_cost": 3.840484857934517,
+          "retail_independent": 3.590552255038247,
+          "wear_independent": 0.24993258503512628,
+          "minimum_oracle_difference": -1.7053025658242404e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 2,
+          "household_days": 15180,
+          "n_clean_days": 276,
+          "operating_cost": 3.590898905402037,
+          "retail_independent": 3.3429241119737036,
+          "wear_independent": 0.24797477199043697,
+          "minimum_oracle_difference": -1.1368683772161603e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 3,
+          "household_days": 15070,
+          "n_clean_days": 274,
+          "operating_cost": 3.759342096216557,
+          "retail_independent": 3.518870577941081,
+          "wear_independent": 0.24047149714134264,
+          "minimum_oracle_difference": -3.481659405224491e-13,
+          "reported_mean_difference": 0.0
+        }
+      ]
+    },
+    {
+      "file": "mlp_tou_seed23_test_tight.npz",
+      "model": "mlp",
+      "tariff": "tou",
+      "seed": 23,
+      "clean_household_days": 79397,
+      "max_independent_cost_error_aud": 8.29891263265381e-07,
+      "panels": [
+        {
+          "panel": 0,
+          "household_days": 12045,
+          "n_clean_days": 219,
+          "operating_cost": 3.711067091006793,
+          "retail_independent": 3.469130938334029,
+          "wear_independent": 0.24193613300848704,
+          "minimum_oracle_difference": -1.0302869668521453e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 1,
+          "household_days": 7095,
+          "n_clean_days": 129,
+          "operating_cost": 3.843466796679128,
+          "retail_independent": 3.5933891163446723,
+          "wear_independent": 0.2500776626031591,
+          "minimum_oracle_difference": -1.7763568394002505e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 2,
+          "household_days": 15180,
+          "n_clean_days": 276,
+          "operating_cost": 3.5911695839389375,
+          "retail_independent": 3.3434889607087146,
+          "wear_independent": 0.24768060182045804,
+          "minimum_oracle_difference": -9.947598300641403e-14,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 3,
+          "household_days": 15070,
+          "n_clean_days": 274,
+          "operating_cost": 3.761549475004257,
+          "retail_independent": 3.5208604556218135,
+          "wear_independent": 0.2406889981245335,
+          "minimum_oracle_difference": -8.526512829121202e-13,
+          "reported_mean_difference": 0.0
+        }
+      ]
+    },
+    {
+      "file": "mlp_tou_seed47_test_tight.npz",
+      "model": "mlp",
+      "tariff": "tou",
+      "seed": 47,
+      "clean_household_days": 79397,
+      "max_independent_cost_error_aud": 8.373360280700126e-07,
+      "panels": [
+        {
+          "panel": 0,
+          "household_days": 12045,
+          "n_clean_days": 219,
+          "operating_cost": 3.7090951276646975,
+          "retail_independent": 3.4674938607778922,
+          "wear_independent": 0.24160124747720588,
+          "minimum_oracle_difference": -1.0125233984581428e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 1,
+          "household_days": 7095,
+          "n_clean_days": 129,
+          "operating_cost": 3.8401323363738387,
+          "retail_independent": 3.5926845667194423,
+          "wear_independent": 0.24744775217706133,
+          "minimum_oracle_difference": -1.6697754290362354e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 2,
+          "household_days": 15180,
+          "n_clean_days": 276,
+          "operating_cost": 3.5892946824623633,
+          "retail_independent": 3.3417256806916633,
+          "wear_independent": 0.247568980466824,
+          "minimum_oracle_difference": -9.947598300641403e-14,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 3,
+          "household_days": 15070,
+          "n_clean_days": 274,
+          "operating_cost": 3.7586765781651157,
+          "retail_independent": 3.5198454945313578,
+          "wear_independent": 0.2388310626378964,
+          "minimum_oracle_difference": -8.384404281969182e-13,
+          "reported_mean_difference": 0.0
+        }
+      ]
+    },
+    {
+      "file": "msecont_flat_seed11_test_tight.npz",
+      "model": "msecont",
+      "tariff": "flat",
+      "seed": 11,
+      "clean_household_days": 79397,
+      "max_independent_cost_error_aud": 7.896593601230961e-07,
+      "panels": [
+        {
+          "panel": 0,
+          "household_days": 12045,
+          "n_clean_days": 219,
+          "operating_cost": 3.898913427163888,
+          "retail_independent": 3.8348767735597287,
+          "wear_independent": 0.06403663865150466,
+          "minimum_oracle_difference": -1.0160761121369433e-12,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 1,
+          "household_days": 7095,
+          "n_clean_days": 129,
+          "operating_cost": 4.033255080542894,
+          "retail_independent": 3.9731783196043966,
+          "wear_independent": 0.06007674825100057,
+          "minimum_oracle_difference": -4.529709940470639e-12,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 2,
+          "household_days": 15180,
+          "n_clean_days": 276,
+          "operating_cost": 3.8105783317219175,
+          "retail_independent": 3.7423528286686043,
+          "wear_independent": 0.06822548625018025,
+          "minimum_oracle_difference": -4.938272013532696e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 3,
+          "household_days": 15070,
+          "n_clean_days": 274,
+          "operating_cost": 3.979995930743393,
+          "retail_independent": 3.9176462640035963,
+          "wear_independent": 0.06234965034123498,
+          "minimum_oracle_difference": -5.307754236127948e-12,
+          "reported_mean_difference": 0.0
+        }
+      ]
+    },
+    {
+      "file": "msecont_flat_seed23_test_tight.npz",
+      "model": "msecont",
+      "tariff": "flat",
+      "seed": 23,
+      "clean_household_days": 79397,
+      "max_independent_cost_error_aud": 7.779253632378413e-07,
+      "panels": [
+        {
+          "panel": 0,
+          "household_days": 12045,
+          "n_clean_days": 219,
+          "operating_cost": 3.900119677314612,
+          "retail_independent": 3.8365466416387277,
+          "wear_independent": 0.06357302068939989,
+          "minimum_oracle_difference": -1.0231815394945443e-12,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 1,
+          "household_days": 7095,
+          "n_clean_days": 129,
+          "operating_cost": 4.034242106813513,
+          "retail_independent": 3.9742962075592168,
+          "wear_independent": 0.059945886477155555,
+          "minimum_oracle_difference": -4.508393658397836e-12,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 2,
+          "household_days": 15180,
+          "n_clean_days": 276,
+          "operating_cost": 3.8112882687137555,
+          "retail_independent": 3.7433473891437448,
+          "wear_independent": 0.0679408628360741,
+          "minimum_oracle_difference": -4.956035581926699e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 3,
+          "household_days": 15070,
+          "n_clean_days": 274,
+          "operating_cost": 3.9810489484734224,
+          "retail_independent": 3.919436061111214,
+          "wear_independent": 0.061612870974981686,
+          "minimum_oracle_difference": -5.314859663485549e-12,
+          "reported_mean_difference": 0.0
+        }
+      ]
+    },
+    {
+      "file": "msecont_flat_seed47_test_tight.npz",
+      "model": "msecont",
+      "tariff": "flat",
+      "seed": 47,
+      "clean_household_days": 79397,
+      "max_independent_cost_error_aud": 7.850855414659463e-07,
+      "panels": [
+        {
+          "panel": 0,
+          "household_days": 12045,
+          "n_clean_days": 219,
+          "operating_cost": 3.900317090680034,
+          "retail_independent": 3.8380014336113835,
+          "wear_independent": 0.062315642128653925,
+          "minimum_oracle_difference": -1.0054179711005418e-12,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 1,
+          "household_days": 7095,
+          "n_clean_days": 129,
+          "operating_cost": 4.034915763260832,
+          "retail_independent": 3.976730978909817,
+          "wear_independent": 0.058184771649325694,
+          "minimum_oracle_difference": -4.504840944719035e-12,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 2,
+          "household_days": 15180,
+          "n_clean_days": 276,
+          "operating_cost": 3.8127738187564764,
+          "retail_independent": 3.747799470353711,
+          "wear_independent": 0.06497433166081971,
+          "minimum_oracle_difference": -5.151434834260726e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 3,
+          "household_days": 15070,
+          "n_clean_days": 274,
+          "operating_cost": 3.9827917144953164,
+          "retail_independent": 3.9224296214542895,
+          "wear_independent": 0.06036207662058115,
+          "minimum_oracle_difference": -5.4143356464919634e-12,
+          "reported_mean_difference": 0.0
+        }
+      ]
+    },
+    {
+      "file": "msecont_tou_seed11_test_tight.npz",
+      "model": "msecont",
+      "tariff": "tou",
+      "seed": 11,
+      "clean_household_days": 79397,
+      "max_independent_cost_error_aud": 8.417976040675512e-07,
+      "panels": [
+        {
+          "panel": 0,
+          "household_days": 12045,
+          "n_clean_days": 219,
+          "operating_cost": 3.7089037546386234,
+          "retail_independent": 3.4667726380961343,
+          "wear_independent": 0.24213109703262006,
+          "minimum_oracle_difference": -1.0658141036401503e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 1,
+          "household_days": 7095,
+          "n_clean_days": 129,
+          "operating_cost": 3.842651281101181,
+          "retail_independent": 3.592545314984651,
+          "wear_independent": 0.25010594844042294,
+          "minimum_oracle_difference": -1.7053025658242404e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 2,
+          "household_days": 15180,
+          "n_clean_days": 276,
+          "operating_cost": 3.5891364361873417,
+          "retail_independent": 3.3407107760322843,
+          "wear_independent": 0.24842563890162245,
+          "minimum_oracle_difference": -1.1013412404281553e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 3,
+          "household_days": 15070,
+          "n_clean_days": 274,
+          "operating_cost": 3.7592953511993334,
+          "retail_independent": 3.5183250163645257,
+          "wear_independent": 0.24097031402118116,
+          "minimum_oracle_difference": -8.455458555545192e-13,
+          "reported_mean_difference": 0.0
+        }
+      ]
+    },
+    {
+      "file": "msecont_tou_seed23_test_tight.npz",
+      "model": "msecont",
+      "tariff": "tou",
+      "seed": 23,
+      "clean_household_days": 79397,
+      "max_independent_cost_error_aud": 8.153988524384204e-07,
+      "panels": [
+        {
+          "panel": 0,
+          "household_days": 12045,
+          "n_clean_days": 219,
+          "operating_cost": 3.7107209296987436,
+          "retail_independent": 3.4678752636333097,
+          "wear_independent": 0.24284564662374386,
+          "minimum_oracle_difference": -1.0302869668521453e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 1,
+          "household_days": 7095,
+          "n_clean_days": 129,
+          "operating_cost": 3.845368599096754,
+          "retail_independent": 3.5946740219985864,
+          "wear_independent": 0.2506945593374951,
+          "minimum_oracle_difference": -1.6697754290362354e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 2,
+          "household_days": 15180,
+          "n_clean_days": 276,
+          "operating_cost": 3.5901296665308795,
+          "retail_independent": 3.34131382709971,
+          "wear_independent": 0.2488158182353034,
+          "minimum_oracle_difference": -1.0658141036401503e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 3,
+          "household_days": 15070,
+          "n_clean_days": 274,
+          "operating_cost": 3.7612075474825897,
+          "retail_independent": 3.5196631185910108,
+          "wear_independent": 0.24154440796667287,
+          "minimum_oracle_difference": -8.455458555545192e-13,
+          "reported_mean_difference": 0.0
+        }
+      ]
+    },
+    {
+      "file": "msecont_tou_seed47_test_tight.npz",
+      "model": "msecont",
+      "tariff": "tou",
+      "seed": 47,
+      "clean_household_days": 79397,
+      "max_independent_cost_error_aud": 8.373360280700126e-07,
+      "panels": [
+        {
+          "panel": 0,
+          "household_days": 12045,
+          "n_clean_days": 219,
+          "operating_cost": 3.7090951276646975,
+          "retail_independent": 3.4674938607778922,
+          "wear_independent": 0.24160124747720588,
+          "minimum_oracle_difference": -1.0125233984581428e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 1,
+          "household_days": 7095,
+          "n_clean_days": 129,
+          "operating_cost": 3.8401323363738387,
+          "retail_independent": 3.5926845667194423,
+          "wear_independent": 0.24744775217706133,
+          "minimum_oracle_difference": -1.6697754290362354e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 2,
+          "household_days": 15180,
+          "n_clean_days": 276,
+          "operating_cost": 3.5892946824623633,
+          "retail_independent": 3.3417256806916633,
+          "wear_independent": 0.247568980466824,
+          "minimum_oracle_difference": -9.947598300641403e-14,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 3,
+          "household_days": 15070,
+          "n_clean_days": 274,
+          "operating_cost": 3.7586765781651157,
+          "retail_independent": 3.5198454945313578,
+          "wear_independent": 0.2388310626378964,
+          "minimum_oracle_difference": -8.384404281969182e-13,
+          "reported_mean_difference": 0.0
+        }
+      ]
+    },
+    {
+      "file": "none_flat_seed11_test_tight.npz",
+      "model": "none",
+      "tariff": "flat",
+      "seed": 11,
+      "clean_household_days": 79397,
+      "max_independent_cost_error_aud": 7.860036568274609e-07,
+      "panels": [
+        {
+          "panel": 0,
+          "household_days": 12045,
+          "n_clean_days": 219,
+          "operating_cost": 3.9761578078344937,
+          "retail_independent": 3.9761577928837863,
+          "wear_independent": 0.0,
+          "minimum_oracle_difference": -1.0267342531733448e-12,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 1,
+          "household_days": 7095,
+          "n_clean_days": 129,
+          "operating_cost": 4.103843360478176,
+          "retail_independent": 4.103843347774575,
+          "wear_independent": 0.0,
+          "minimum_oracle_difference": -4.533262654149439e-12,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 2,
+          "household_days": 15180,
+          "n_clean_days": 276,
+          "operating_cost": 3.9066941640960904,
+          "retail_independent": 3.906694147366365,
+          "wear_independent": 0.0,
+          "minimum_oracle_difference": -7.318590178329032e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 3,
+          "household_days": 15070,
+          "n_clean_days": 274,
+          "operating_cost": 4.058422716967464,
+          "retail_independent": 4.058422700541008,
+          "wear_independent": 0.0,
+          "minimum_oracle_difference": -5.7340798775840085e-12,
+          "reported_mean_difference": 0.0
+        }
+      ]
+    },
+    {
+      "file": "none_tou_seed11_test_tight.npz",
+      "model": "none",
+      "tariff": "tou",
+      "seed": 11,
+      "clean_household_days": 79397,
+      "max_independent_cost_error_aud": 8.255941814638845e-07,
+      "panels": [
+        {
+          "panel": 0,
+          "household_days": 12045,
+          "n_clean_days": 219,
+          "operating_cost": 4.346345852414127,
+          "retail_independent": 4.3463458378820325,
+          "wear_independent": 0.0,
+          "minimum_oracle_difference": 0.04609750738413537,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 1,
+          "household_days": 7095,
+          "n_clean_days": 129,
+          "operating_cost": 4.44806217921236,
+          "retail_independent": 4.448062167039894,
+          "wear_independent": 0.0,
+          "minimum_oracle_difference": -6.772360450213455e-15,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 2,
+          "household_days": 15180,
+          "n_clean_days": 276,
+          "operating_cost": 4.2610666353533695,
+          "retail_independent": 4.2610666191819,
+          "wear_independent": 0.0,
+          "minimum_oracle_difference": -2.5979218776228663e-14,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 3,
+          "household_days": 15070,
+          "n_clean_days": 274,
+          "operating_cost": 4.380074074143105,
+          "retail_independent": 4.380074058084165,
+          "wear_independent": 0.0,
+          "minimum_oracle_difference": -2.6201263381153694e-14,
+          "reported_mean_difference": 0.0
+        }
+      ]
+    },
+    {
+      "file": "oracle_flat_seed11_test_tight.npz",
+      "model": "oracle",
+      "tariff": "flat",
+      "seed": 11,
+      "clean_household_days": 79397,
+      "max_independent_cost_error_aud": 7.817710461210936e-07,
+      "panels": [
+        {
+          "panel": 0,
+          "household_days": 12045,
+          "n_clean_days": 219,
+          "operating_cost": 3.6380409191441467,
+          "retail_independent": 3.553788467824874,
+          "wear_independent": 0.08425244017956059,
+          "minimum_oracle_difference": 0.0,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 1,
+          "household_days": 7095,
+          "n_clean_days": 129,
+          "operating_cost": 3.787983490389718,
+          "retail_independent": 3.709277075844458,
+          "wear_independent": 0.07870640509556713,
+          "minimum_oracle_difference": 0.0,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 2,
+          "household_days": 15180,
+          "n_clean_days": 276,
+          "operating_cost": 3.550618527996347,
+          "retail_independent": 3.461891089145191,
+          "wear_independent": 0.08872742602987864,
+          "minimum_oracle_difference": 0.0,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 3,
+          "household_days": 15070,
+          "n_clean_days": 274,
+          "operating_cost": 3.7415491234214913,
+          "retail_independent": 3.6625901044957487,
+          "wear_independent": 0.07895900612371724,
+          "minimum_oracle_difference": 0.0,
+          "reported_mean_difference": 0.0
+        }
+      ]
+    },
+    {
+      "file": "oracle_tou_seed11_test_tight.npz",
+      "model": "oracle",
+      "tariff": "tou",
+      "seed": 11,
+      "clean_household_days": 79397,
+      "max_independent_cost_error_aud": 8.245342577595238e-07,
+      "panels": [
+        {
+          "panel": 0,
+          "household_days": 12045,
+          "n_clean_days": 219,
+          "operating_cost": 3.049505084440725,
+          "retail_independent": 2.794940177844962,
+          "wear_independent": 0.25456489740326393,
+          "minimum_oracle_difference": 0.0,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 1,
+          "household_days": 7095,
+          "n_clean_days": 129,
+          "operating_cost": 3.1556588768232703,
+          "retail_independent": 2.895300661686631,
+          "wear_independent": 0.2603582067522141,
+          "minimum_oracle_difference": 0.0,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 2,
+          "household_days": 15180,
+          "n_clean_days": 276,
+          "operating_cost": 2.937349360544312,
+          "retail_independent": 2.6788709487120546,
+          "wear_independent": 0.258478400286258,
+          "minimum_oracle_difference": 0.0,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 3,
+          "household_days": 15070,
+          "n_clean_days": 274,
+          "operating_cost": 3.1096224922962854,
+          "retail_independent": 2.860018603012172,
+          "wear_independent": 0.2496038771951196,
+          "minimum_oracle_difference": 0.0,
+          "reported_mean_difference": 0.0
+        }
+      ]
+    },
+    {
+      "file": "persistence_flat_seed11_test_tight.npz",
+      "model": "persistence",
+      "tariff": "flat",
+      "seed": 11,
+      "clean_household_days": 79397,
+      "max_independent_cost_error_aud": 7.818638465550976e-07,
+      "panels": [
+        {
+          "panel": 0,
+          "household_days": 12045,
+          "n_clean_days": 219,
+          "operating_cost": 3.9134327501842665,
+          "retail_independent": 3.843681081399845,
+          "wear_independent": 0.06975165379884975,
+          "minimum_oracle_difference": -1.0160761121369433e-12,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 1,
+          "household_days": 7095,
+          "n_clean_days": 129,
+          "operating_cost": 4.051494516951686,
+          "retail_independent": 3.9871380916143417,
+          "wear_independent": 0.0643564126441556,
+          "minimum_oracle_difference": -4.515499085755437e-12,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 2,
+          "household_days": 15180,
+          "n_clean_days": 276,
+          "operating_cost": 3.8248029978647797,
+          "retail_independent": 3.752114087437503,
+          "wear_independent": 0.07268889368291209,
+          "minimum_oracle_difference": -5.186961971048731e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 3,
+          "household_days": 15070,
+          "n_clean_days": 274,
+          "operating_cost": 3.9929902702651714,
+          "retail_independent": 3.9273330025841,
+          "wear_independent": 0.06565725126087701,
+          "minimum_oracle_difference": -5.297096095091547e-12,
+          "reported_mean_difference": 0.0
+        }
+      ]
+    },
+    {
+      "file": "persistence_tou_seed11_test_tight.npz",
+      "model": "persistence",
+      "tariff": "tou",
+      "seed": 11,
+      "clean_household_days": 79397,
+      "max_independent_cost_error_aud": 8.29930883128327e-07,
+      "panels": [
+        {
+          "panel": 0,
+          "household_days": 12045,
+          "n_clean_days": 219,
+          "operating_cost": 3.7571708658465885,
+          "retail_independent": 3.5045393500596704,
+          "wear_independent": 0.2526314959316233,
+          "minimum_oracle_difference": -9.947598300641403e-14,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 1,
+          "household_days": 7095,
+          "n_clean_days": 129,
+          "operating_cost": 3.9007192194586535,
+          "retail_independent": 3.6374752105400945,
+          "wear_independent": 0.2632439907976572,
+          "minimum_oracle_difference": -1.6697754290362354e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 2,
+          "household_days": 15180,
+          "n_clean_days": 276,
+          "operating_cost": 3.6355096396870783,
+          "retail_independent": 3.3774200416145894,
+          "wear_independent": 0.2580895766558081,
+          "minimum_oracle_difference": -8.526512829121202e-14,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 3,
+          "household_days": 15070,
+          "n_clean_days": 274,
+          "operating_cost": 3.8009196707700967,
+          "retail_independent": 3.5503217999274765,
+          "wear_independent": 0.25059784954487085,
+          "minimum_oracle_difference": -8.384404281969182e-13,
+          "reported_mean_difference": 0.0
+        }
+      ]
+    },
+    {
+      "file": "self_flat_seed11_test_tight.npz",
+      "model": "self",
+      "tariff": "flat",
+      "seed": 11,
+      "clean_household_days": 79397,
+      "max_independent_cost_error_aud": 7.789395759516538e-07,
+      "panels": [
+        {
+          "panel": 0,
+          "household_days": 12045,
+          "n_clean_days": 219,
+          "operating_cost": 3.622789889208383,
+          "retail_independent": 3.5345394330634203,
+          "wear_independent": 0.08825044851513128,
+          "minimum_oracle_difference": -1.7678577929248962,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 1,
+          "household_days": 7095,
+          "n_clean_days": 129,
+          "operating_cost": 3.769141472918968,
+          "retail_independent": 3.6871141902791633,
+          "wear_independent": 0.08202727624342208,
+          "minimum_oracle_difference": -1.9530685904573972,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 2,
+          "household_days": 15180,
+          "n_clean_days": 276,
+          "operating_cost": 3.536239862292465,
+          "retail_independent": 3.4444697701673936,
+          "wear_independent": 0.09177008284050392,
+          "minimum_oracle_difference": -1.8380559746203249,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 3,
+          "household_days": 15070,
+          "n_clean_days": 274,
+          "operating_cost": 3.7235847394219044,
+          "retail_independent": 3.640788341791663,
+          "wear_independent": 0.08279638817259366,
+          "minimum_oracle_difference": -1.9306004238035517,
+          "reported_mean_difference": 0.0
+        }
+      ]
+    },
+    {
+      "file": "self_tou_seed11_test_tight.npz",
+      "model": "self",
+      "tariff": "tou",
+      "seed": 11,
+      "clean_household_days": 79397,
+      "max_independent_cost_error_aud": 8.185301005880774e-07,
+      "panels": [
+        {
+          "panel": 0,
+          "household_days": 12045,
+          "n_clean_days": 219,
+          "operating_cost": 3.8068570502989543,
+          "retail_independent": 3.7186065955524783,
+          "wear_independent": 0.08825044851513128,
+          "minimum_oracle_difference": -1.2535107040830549,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 1,
+          "household_days": 7095,
+          "n_clean_days": 129,
+          "operating_cost": 3.9582872655635044,
+          "retail_independent": 3.876259984308535,
+          "wear_independent": 0.08202727624342208,
+          "minimum_oracle_difference": -1.5099671956689962,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 2,
+          "household_days": 15180,
+          "n_clean_days": 276,
+          "operating_cost": 3.674694237242825,
+          "retail_independent": 3.582924146566851,
+          "wear_independent": 0.09177008284050392,
+          "minimum_oracle_difference": -1.3892255406623697,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 3,
+          "household_days": 15070,
+          "n_clean_days": 274,
+          "operating_cost": 3.8603924396037854,
+          "retail_independent": 3.77759604319062,
+          "wear_independent": 0.08279638817259366,
+          "minimum_oracle_difference": -1.4034749122232402,
+          "reported_mean_difference": 0.0
+        }
+      ]
+    },
+    {
+      "file": "stochastic_flat_seed11_test_tight.npz",
+      "model": "stochastic",
+      "tariff": "flat",
+      "seed": 11,
+      "clean_household_days": 79397,
+      "max_independent_cost_error_aud": 7.868314746417582e-07,
+      "panels": [
+        {
+          "panel": 0,
+          "household_days": 12045,
+          "n_clean_days": 219,
+          "operating_cost": 3.8535421132508785,
+          "retail_independent": 3.770862707925806,
+          "wear_independent": 0.08267939034768713,
+          "minimum_oracle_difference": -1.0018652574217413e-12,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 1,
+          "household_days": 7095,
+          "n_clean_days": 129,
+          "operating_cost": 3.9889174877256988,
+          "retail_independent": 3.90349434649698,
+          "wear_independent": 0.08542312846211096,
+          "minimum_oracle_difference": -4.508393658397836e-12,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 2,
+          "household_days": 15180,
+          "n_clean_days": 276,
+          "operating_cost": 3.7531074899924106,
+          "retail_independent": 3.6591380205807043,
+          "wear_independent": 0.0939694526531121,
+          "minimum_oracle_difference": -5.258016244624741e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 3,
+          "household_days": 15070,
+          "n_clean_days": 274,
+          "operating_cost": 3.954316416258464,
+          "retail_independent": 3.8741446444987977,
+          "wear_independent": 0.08017175530514051,
+          "minimum_oracle_difference": -5.6417093219351955e-12,
+          "reported_mean_difference": 0.0
+        }
+      ]
+    },
+    {
+      "file": "stochastic_tou_seed11_test_tight.npz",
+      "model": "stochastic",
+      "tariff": "tou",
+      "seed": 11,
+      "clean_household_days": 79397,
+      "max_independent_cost_error_aud": 8.303144696242271e-07,
+      "panels": [
+        {
+          "panel": 0,
+          "household_days": 12045,
+          "n_clean_days": 219,
+          "operating_cost": 3.6671347112804233,
+          "retail_independent": 3.4555591760481,
+          "wear_independent": 0.21157551684227222,
+          "minimum_oracle_difference": -9.592326932761353e-14,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 1,
+          "household_days": 7095,
+          "n_clean_days": 129,
+          "operating_cost": 3.7969213600665968,
+          "retail_independent": 3.577712133733539,
+          "wear_independent": 0.21920921004804772,
+          "minimum_oracle_difference": -2.0961010704922955e-13,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 2,
+          "household_days": 15180,
+          "n_clean_days": 276,
+          "operating_cost": 3.5466912904710646,
+          "retail_independent": 3.323042831802178,
+          "wear_independent": 0.2236484382691981,
+          "minimum_oracle_difference": -8.704148513061227e-14,
+          "reported_mean_difference": 0.0
+        },
+        {
+          "panel": 3,
+          "household_days": 15070,
+          "n_clean_days": 274,
+          "operating_cost": 3.743029224163007,
+          "retail_independent": 3.528025064122977,
+          "wear_independent": 0.2150041400716936,
+          "minimum_oracle_difference": -8.597567102697212e-13,
+          "reported_mean_difference": 0.0
+        }
+      ]
+    }
+  ],
+  "independent_lp": [
+    {
+      "tariff": "tou",
+      "household": 299,
+      "date": "2012-08-24",
+      "unregularized_lp": 6.200401183229138,
+      "regularized_oracle": 6.200401172679753,
+      "oracle_minus_lp": -1.0549384477087642e-08
+    },
+    {
+      "tariff": "tou",
+      "household": 91,
+      "date": "2012-12-21",
+      "unregularized_lp": 4.513590528307777,
+      "regularized_oracle": 4.51359055736504,
+      "oracle_minus_lp": 2.9057263262188826e-08
+    },
+    {
+      "tariff": "tou",
+      "household": 119,
+      "date": "2013-06-30",
+      "unregularized_lp": 8.849490983369122,
+      "regularized_oracle": 8.84949098029575,
+      "oracle_minus_lp": -3.0733726674725403e-09
+    },
+    {
+      "tariff": "tou",
+      "household": 54,
+      "date": "2012-07-01",
+      "unregularized_lp": 9.75172628769569,
+      "regularized_oracle": 9.7517262808039,
+      "oracle_minus_lp": -6.8917884732400125e-09
+    },
+    {
+      "tariff": "tou",
+      "household": 110,
+      "date": "2013-01-21",
+      "unregularized_lp": 1.4118821549396663,
+      "regularized_oracle": 1.411882176820873,
+      "oracle_minus_lp": 2.188120662438564e-08
+    },
+    {
+      "tariff": "tou",
+      "household": 98,
+      "date": "2013-06-30",
+      "unregularized_lp": 5.286630544694435,
+      "regularized_oracle": 5.286630543856242,
+      "oracle_minus_lp": -8.381926264178219e-10
+    },
+    {
+      "tariff": "tou",
+      "household": 56,
+      "date": "2012-07-01",
+      "unregularized_lp": 10.589770066410225,
+      "regularized_oracle": 10.589770030945463,
+      "oracle_minus_lp": -3.546476179394631e-08
+    },
+    {
+      "tariff": "tou",
+      "household": 213,
+      "date": "2012-11-16",
+      "unregularized_lp": 3.9482705439946764,
+      "regularized_oracle": 3.9482705167814434,
+      "oracle_minus_lp": -2.7213233000367154e-08
+    },
+    {
+      "tariff": "tou",
+      "household": 300,
+      "date": "2013-06-27",
+      "unregularized_lp": 10.369790262667756,
+      "regularized_oracle": 10.369790262667772,
+      "oracle_minus_lp": 1.5987211554602254e-14
+    },
+    {
+      "tariff": "tou",
+      "household": 70,
+      "date": "2012-07-01",
+      "unregularized_lp": 5.129610474886666,
+      "regularized_oracle": 5.129610475389567,
+      "oracle_minus_lp": 5.029008320889261e-10
+    },
+    {
+      "tariff": "tou",
+      "household": 138,
+      "date": "2012-11-23",
+      "unregularized_lp": 0.9865075913757871,
+      "regularized_oracle": 0.986507598020942,
+      "oracle_minus_lp": 6.645154870810188e-09
+    },
+    {
+      "tariff": "tou",
+      "household": 162,
+      "date": "2013-06-30",
+      "unregularized_lp": 3.3458482033018173,
+      "regularized_oracle": 3.345848229766542,
+      "oracle_minus_lp": 2.6464724633967762e-08
+    },
+    {
+      "tariff": "flat",
+      "household": 299,
+      "date": "2012-08-24",
+      "unregularized_lp": 5.517974151768907,
+      "regularized_oracle": 5.517974142520128,
+      "oracle_minus_lp": -9.248779520021344e-09
+    },
+    {
+      "tariff": "flat",
+      "household": 91,
+      "date": "2012-12-21",
+      "unregularized_lp": 5.615100000053644,
+      "regularized_oracle": 5.61510002911093,
+      "oracle_minus_lp": 2.905728546664932e-08
+    },
+    {
+      "tariff": "flat",
+      "household": 119,
+      "date": "2013-06-30",
+      "unregularized_lp": 10.002840451989323,
+      "regularized_oracle": 10.00284044891605,
+      "oracle_minus_lp": -3.073273191489534e-09
+    },
+    {
+      "tariff": "flat",
+      "household": 54,
+      "date": "2012-07-01",
+      "unregularized_lp": 8.961315740910171,
+      "regularized_oracle": 8.961315736439827,
+      "oracle_minus_lp": -4.470344094897882e-09
+    },
+    {
+      "tariff": "flat",
+      "household": 110,
+      "date": "2013-01-21",
+      "unregularized_lp": 1.7078357469320296,
+      "regularized_oracle": 1.707835779464245,
+      "oracle_minus_lp": 3.2532215366032347e-08
+    },
+    {
+      "tariff": "flat",
+      "household": 98,
+      "date": "2013-06-30",
+      "unregularized_lp": 6.306780018750578,
+      "regularized_oracle": 6.3067800179124625,
+      "oracle_minus_lp": -8.38115354895308e-10
+    },
+    {
+      "tariff": "flat",
+      "household": 56,
+      "date": "2012-07-01",
+      "unregularized_lp": 11.520519556806981,
+      "regularized_oracle": 11.520519519926616,
+      "oracle_minus_lp": -3.688036542826012e-08
+    },
+    {
+      "tariff": "flat",
+      "household": 213,
+      "date": "2012-11-16",
+      "unregularized_lp": 4.800300018209963,
+      "regularized_oracle": 4.80029999166731,
+      "oracle_minus_lp": -2.654265340851225e-08
+    },
+    {
+      "tariff": "flat",
+      "household": 300,
+      "date": "2013-06-27",
+      "unregularized_lp": 11.535539716482162,
+      "regularized_oracle": 11.535539716482266,
+      "oracle_minus_lp": 1.0302869668521453e-13
+    },
+    {
+      "tariff": "flat",
+      "household": 70,
+      "date": "2012-07-01",
+      "unregularized_lp": 6.1103999457322065,
+      "regularized_oracle": 6.110399946570396,
+      "oracle_minus_lp": 8.381899618825628e-10
+    },
+    {
+      "tariff": "flat",
+      "household": 138,
+      "date": "2012-11-23",
+      "unregularized_lp": 1.4531119091291382,
+      "regularized_oracle": 1.453111915121696,
+      "oracle_minus_lp": 5.992557783329744e-09
+    },
+    {
+      "tariff": "flat",
+      "household": 162,
+      "date": "2013-06-30",
+      "unregularized_lp": 3.9623176771272903,
+      "regularized_oracle": 3.9623177035920336,
+      "oracle_minus_lp": 2.6464743285714576e-08
+    }
+  ],
+  "network_metric_checks": [
+    {
+      "file": "mlp_seed11_panel0_b28_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "clean_days": 219,
+      "cost_error": 5.329070518200751e-15,
+      "voltage_excursion_error_due_to_float32_storage": 9.702905039762205e-10,
+      "voltage_fraction_max_pp_difference": 7.105427357601002e-15,
+      "denominator": 2640
+    },
+    {
+      "file": "dfl_seed11_panel0_b28_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "clean_days": 219,
+      "cost_error": 2.6645352591003757e-15,
+      "voltage_excursion_error_due_to_float32_storage": 8.536727041409675e-10,
+      "voltage_fraction_max_pp_difference": 7.105427357601002e-15,
+      "denominator": 2640
+    },
+    {
+      "file": "mlp_seed11_panel1_b28_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "clean_days": 129,
+      "cost_error": 2.6645352591003757e-15,
+      "voltage_excursion_error_due_to_float32_storage": 1.1451809825945014e-09,
+      "voltage_fraction_max_pp_difference": 7.105427357601002e-15,
+      "denominator": 2640
+    },
+    {
+      "file": "dfl_seed11_panel1_b28_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "clean_days": 129,
+      "cost_error": 3.552713678800501e-15,
+      "voltage_excursion_error_due_to_float32_storage": 1.0186473882282943e-09,
+      "voltage_fraction_max_pp_difference": 7.105427357601002e-15,
+      "denominator": 2640
+    },
+    {
+      "file": "mlp_seed11_panel2_b28_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "clean_days": 276,
+      "cost_error": 4.440892098500626e-15,
+      "voltage_excursion_error_due_to_float32_storage": 1.0070237759993161e-09,
+      "voltage_fraction_max_pp_difference": 7.105427357601002e-15,
+      "denominator": 2640
+    },
+    {
+      "file": "dfl_seed11_panel2_b28_all_tou_eulv_src1p05_fixed_test_tight.npz",
+      "clean_days": 276,
+      "cost_error": 2.6645352591003757e-15,
+      "voltage_excursion_error_due_to_float32_storage": 1.3804275504798735e-09,
+      "voltage_fraction_max_pp_difference": 0.0378787878787854,
+      "denominator": 2640
+    }
+  ],
+  "paired_bootstrap_checks": [
+    {
+      "panel": 0,
+      "orientation": "DFL minus MLP",
+      "seed": 11,
+      "days": 219,
+      "mean_delta": -0.010596000135609159,
+      "ci95_independent": [
+        -0.012037569895306103,
+        -0.009322904050637166
+      ],
+      "bootstrap_draws": 2000,
+      "all_bootstraps_have_valid_days": true,
+      "calendar_axis_preserved": true
+    },
+    {
+      "panel": 1,
+      "orientation": "DFL minus MLP",
+      "seed": 11,
+      "days": 129,
+      "mean_delta": -0.006505532396368965,
+      "ci95_independent": [
+        -0.009260497962156127,
+        -0.003631388960365223
+      ],
+      "bootstrap_draws": 2000,
+      "all_bootstraps_have_valid_days": true,
+      "calendar_axis_preserved": true
+    },
+    {
+      "panel": 2,
+      "orientation": "DFL minus MLP",
+      "seed": 11,
+      "days": 276,
+      "mean_delta": -0.010187441224969389,
+      "ci95_independent": [
+        -0.011241220691475795,
+        -0.009036452583495455
+      ],
+      "bootstrap_draws": 2000,
+      "all_bootstraps_have_valid_days": true,
+      "calendar_axis_preserved": true
+    }
+  ],
+  "status": "PASS_arithmetic_with_documented_scope_limits"
+}

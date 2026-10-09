@@ -1,0 +1,27 @@
+{
+  "method": "dfl",
+  "tariff": "tou",
+  "seed": 11,
+  "sample_source": "original 1024 known-household validation pairs in decision_training_v1.json, same exact order for all methods",
+  "n_pairs": 1024,
+  "repeats": 3,
+  "warmup_calls": 20,
+  "timing_scope": "QP solve including RHS update; excludes network feature/inference and data import",
+  "preparation_seconds": 2.800021320581436e-06,
+  "scenario_info": null,
+  "mean_qp_ms": 1.4608983077929831,
+  "median_qp_ms": 1.4817999908700585,
+  "p95_qp_ms": 1.915134978480637,
+  "mean_process_cpu_qp_ms": 1.4190673828125,
+  "deterministic_checksums": [
+    36519.67967174416,
+    36519.67967174416,
+    36519.67967174416
+  ],
+  "elapsed_seconds": 6.075880700023845,
+  "peak_process_rss_bytes": 619175936,
+  "logical_threads_per_process": 1,
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "resource_note": "Peak process RSS includes data and imports. Wall times are comparable only when run serially without competing workload."
+}

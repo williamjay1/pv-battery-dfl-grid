@@ -1,0 +1,100 @@
+[
+  {
+    "run": "continuous_matched_dfl_tou",
+    "selected_lr": 0.0001,
+    "epoch": 4,
+    "validation_cost": 3.223997229310614,
+    "elapsed_seconds": 696.6580473999493
+  },
+  {
+    "run": "continuous_matched_mse_tou",
+    "selected_lr": 0.0001,
+    "epoch": 1,
+    "validation_cost": 3.2377798508441584,
+    "elapsed_seconds": 35.959999500075355
+  },
+  {
+    "run": "matched_pv_hgb_dfl_tou_wear0",
+    "selected_lr": 0.0001,
+    "epoch": 3,
+    "validation_cost": 3.0056833462765677,
+    "elapsed_seconds": 371.4852798000211
+  },
+  {
+    "run": "matched_pv_hgb_dfl_tou_wear0.01",
+    "selected_lr": 0.0001,
+    "epoch": 3,
+    "validation_cost": 3.129412704796362,
+    "elapsed_seconds": 314.0343471999513
+  },
+  {
+    "run": "matched_pv_hgb_dfl_tou_wear0.04",
+    "selected_lr": 0.0001,
+    "epoch": 3,
+    "validation_cost": 3.4864040016495137,
+    "elapsed_seconds": 327.8910129000433
+  },
+  {
+    "run": "matched_pv_hgb_dfl_tou_wear002",
+    "selected_lr": 0.0001,
+    "epoch": 3,
+    "validation_cost": 3.2504687510312613,
+    "elapsed_seconds": 385.5757987999823
+  },
+  {
+    "run": "matched_pv_hgb_mse_tou_wear0",
+    "selected_lr": 0.0001,
+    "epoch": 3,
+    "validation_cost": 3.016010712496775,
+    "elapsed_seconds": 25.457122400053777
+  },
+  {
+    "run": "matched_pv_hgb_mse_tou_wear0.01",
+    "selected_lr": 0.0001,
+    "epoch": 3,
+    "validation_cost": 3.1402772335731144,
+    "elapsed_seconds": 21.323976299958304
+  },
+  {
+    "run": "matched_pv_hgb_mse_tou_wear0.04",
+    "selected_lr": 0.0001,
+    "epoch": 3,
+    "validation_cost": 3.5130767980141986,
+    "elapsed_seconds": 19.88631460000761
+  },
+  {
+    "run": "matched_pv_hgb_mse_tou_wear002",
+    "selected_lr": 0.0001,
+    "epoch": 3,
+    "validation_cost": 3.2645437550643397,
+    "elapsed_seconds": 21.75968889996875
+  },
+  {
+    "run": "matched_pv_persistence_dfl_tou_wear002",
+    "selected_lr": 0.0001,
+    "epoch": 3,
+    "validation_cost": 3.3935515789470823,
+    "elapsed_seconds": 370.91170980001334
+  },
+  {
+    "run": "matched_pv_persistence_mse_tou_wear002",
+    "selected_lr": 0.0001,
+    "epoch": 1,
+    "validation_cost": 3.411077173869918,
+    "elapsed_seconds": 20.84416910004802
+  },
+  {
+    "run": "matched_pv_strong_dfl_tou_wear002",
+    "selected_lr": 0.0001,
+    "epoch": 3,
+    "validation_cost": 3.248858465570507,
+    "elapsed_seconds": 348.48312630003784
+  },
+  {
+    "run": "matched_pv_strong_mse_tou_wear002",
+    "selected_lr": 0.0001,
+    "epoch": 3,
+    "validation_cost": 3.26525840611598,
+    "elapsed_seconds": 20.08901620004326
+  }
+]
